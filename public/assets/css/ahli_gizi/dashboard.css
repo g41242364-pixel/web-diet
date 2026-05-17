@@ -1,0 +1,174 @@
+:root {
+    --primary-blue: #90D2ED;
+    --text-blue: #2FA4D8;
+    --card-welcome: #7BB9D8;
+    --bg-light: #F0F7FA;
+    --white: #ffffff;
+    --grey-card: #BDBDBD;
+}
+
+.header-section {
+    margin-bottom: 25px;
+}
+
+.header-section h2 {
+    color: var(--text-blue);
+    font-size: 32px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.header-section p {
+    color: var(--text-blue);
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.welcome-banner-gizi {
+    background-color: var(--card-welcome);
+    border-radius: 25px;
+    padding: 0 40px;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    height: 220px;
+    overflow: hidden;
+}
+
+.banner-text-content h3 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.banner-text-content p {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.btn-mulai-gizi {
+    background: var(--white);
+    color: var(--text-blue);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.doctor-img-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.doctor-img-wrapper img {
+    height: 110%;
+    object-fit: contain;
+}
+
+.gizi-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.gizi-stat-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-bottom: 4px solid #ccc;
+    position: relative;
+}
+
+.gizi-stat-card .label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-blue);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.gizi-stat-card .value {
+    font-size: 32px;
+    font-weight: 800;
+    color: #5D99C6;
+}
+
+.panels-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 25px;
+}
+
+.panel-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.panel-card h4 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.chart-container-bmi {
+    height: 300px;
+    position: relative;
+}
+
+.progress-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.progress-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.progress-label-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+}
+
+.bar-bg {
+    background: #E0E0E0;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    background: var(--text-blue);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+    .gizi-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .panels-grid { grid-template-columns: 1fr; }
+    .doctor-img-wrapper { display: none; }
+}

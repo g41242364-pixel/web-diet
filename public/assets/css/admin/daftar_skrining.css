@@ -1,0 +1,113 @@
+:root {
+    --primary-blue: #90D2ED;
+    --text-blue: #2FA4D8;
+    --table-bg: #CFE3EE;
+    --white: #ffffff;
+}
+.skrining-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.icon-wrapper {
+    background: #E8F0F5;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.skrining-header h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #000;
+}
+
+.table-container {
+    background-color: var(--table-bg);
+    border-radius: 40px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.search-filter {
+    background: var(--white);
+    width: 300px;
+    height: 35px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.search-filter svg {
+    width: 18px;
+    height: 18px;
+    color: #999;
+}
+
+.skrining-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skrining-table th {
+    text-align: left;
+    padding: 15px 10px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #000;
+    border-bottom: 2px solid #333;
+}
+
+.skrining-table td {
+    padding: 15px 10px;
+    font-size: 20px;
+    color: #000;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.skrining-table tr:last-child td {
+    border-bottom: none;
+}
+
+.skrining-table td:not(:first-child) {
+    font-weight: 300;
+    font-style: italic;
+    color: #444;
+}
+
+.skrining-table td:first-child {
+    font-weight: 700;
+}
+
+.status-pill {
+    display: inline-block;
+    padding: 2px 25px;
+    border-radius: 15px;
+    border: 1px solid #000;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal !important;
+    color: #000 !important;
+}
+
+.status-ideal {
+    background-color: transparent;
+}
+
+.status-overweight {
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .table-container { padding: 20px; overflow-x: auto; }
+    .skrining-table { min-width: 600px; }
+}

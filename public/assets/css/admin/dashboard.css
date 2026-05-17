@@ -1,0 +1,146 @@
+/* Variabel Warna */
+:root {
+    --admin-blue: #90D2ED;
+    --admin-dark-blue: #2FA4D8;
+    --admin-banner: #7BB9D8;
+    --white: #ffffff;
+    --text-dark: #333;
+}
+
+.admin-header {
+    margin-bottom: 25px;
+}
+
+.admin-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--admin-dark-blue);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.admin-header p {
+    color: var(--admin-dark-blue);
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.admin-welcome-banner {
+    background-color: var(--admin-banner);
+    border-radius: 25px;
+    padding: 40px;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.banner-info h3 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.banner-info p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+.btn-mulai {
+    background: var(--white);
+    color: var(--admin-dark-blue);
+    border: none;
+    padding: 12px 35px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.admin-logo-wrapper {
+    width: 180px;
+    height: 180px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.admin-logo-wrapper img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-box {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border-bottom: 4px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.stat-info .label {
+    font-size: 14px;
+    color: var(--admin-dark-blue);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stat-info .number {
+    font-size: 28px;
+    font-weight: 800;
+    color: #5D99C6;
+}
+
+.stat-icon {
+    color: var(--admin-dark-blue);
+    opacity: 0.7;
+}
+
+.chart-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr 1fr;
+    gap: 20px;
+}
+
+.chart-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.chart-card h4 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.chart-content {
+    height: 250px;
+    position: relative;
+}
+
+@media (max-width: 1200px) {
+    .admin-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .chart-grid { grid-template-columns: 1fr; }
+}

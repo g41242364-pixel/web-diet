@@ -1,0 +1,181 @@
+
+
+    .sleep-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .sleep-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .sleep-header img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .sleep-header h2 {
+        font-size: 32px;
+        font-weight: 800;
+        color: #000;
+        line-height: 1;
+    }
+
+    .sleep-header p {
+        color: #333;
+        font-size: 18px;
+    }
+
+    .card-white {
+        background: #F2F2F2;
+        border-radius: 25px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+    .input-group label {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 12px 20px;
+        border: 2px solid #000;
+        border-radius: 15px;
+        background: #E8F0F5;
+        font-size: 18px;
+        color: #333;
+        height: 55px;
+    }
+
+    .btn-calculate {
+        width: 100%;
+        background-color: #2FA4D8;
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 15px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .btn-calculate:hover {
+        background-color: #2589b8;
+    }
+
+    .content-area {
+        background: #F2F2F2;
+        border-radius: 25px;
+        padding: 40px;
+        min-height: 300px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .initial-view {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .tips-list {
+        list-style: none;
+        flex: 1;
+    }
+
+    .tips-list li {
+        font-size: 18px;
+        margin-bottom: 25px;
+        color: #000;
+        font-weight: 400;
+    }
+
+    .initial-view img {
+        width: 45%;
+        max-width: 400px;
+        object-fit: contain;
+    }
+
+    .result-view {
+        display: none;
+    }
+
+    .result-view h3 {
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+
+    .result-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 25px;
+    }
+
+    .result-table tr {
+        border-bottom: 1px solid #333;
+    }
+
+    .result-table td {
+        padding: 12px 0;
+        font-size: 18px;
+    }
+
+    .result-table td:last-child {
+        text-align: right;
+        font-weight: bold;
+    }
+
+    .text-purple {
+        color: #6A5ACD;
+        font-weight: 700;
+    }
+
+    .status-pill {
+        background-color: #2FA4D8;
+        color: white;
+        padding: 5px 30px;
+        border-radius: 20px;
+        font-style: italic;
+    }
+
+    .recommendation-box {
+        background-color: #2FA4D8;
+        color: white;
+        padding: 20px 30px;
+        border-radius: 15px;
+    }
+
+    .recommendation-box h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .recommendation-box p {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+        .initial-view { flex-direction: column; text-align: center; }
+        .initial-view img { width: 80%; }
+        .sleep-header { flex-direction: column; text-align: center; }
+    }
+

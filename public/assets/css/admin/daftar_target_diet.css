@@ -1,0 +1,254 @@
+/* Variabel Warna */
+:root {
+    --bg-light-blue: #F0F7FA;
+    --card-header-blue: #2FA4D8;
+    --progress-bg: #E0E0E0;
+    --progress-fill: #2FA4D8;
+    --text-dark: #000000;
+    --modal-overlay: rgba(0, 0, 0, 0.3);
+}
+
+/* Header Halaman */
+.page-title-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.page-title-section h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #000;
+}
+
+/* Grid Kartu */
+.target-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.user-target-card {
+    background-color: var(--card-header-blue);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card-header-user {
+    padding: 15px 25px;
+    color: white;
+}
+
+.card-header-user h4 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 2px;
+}
+
+.card-header-user span {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.card-content-inner {
+    background-color: #D8EBF3;
+    margin: 0 15px 15px 15px;
+    border-radius: 25px;
+    padding: 20px;
+    position: relative;
+}
+
+.content-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.content-title-row h5 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.btn-delete-target {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    padding: 5px;
+}
+
+.goal-tag {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: 4px 20px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.target-details-text {
+    font-size: 11px;
+    color: #666;
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* Progress Bar */
+.progress-container {
+    margin-top: 10px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.progress-bar-rail {
+    background: #fff;
+    height: 10px;
+    border-radius: 10px;
+    border: 1px solid #999;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    background: var(--progress-fill);
+    height: 100%;
+}
+
+.current-bb-text {
+    font-size: 10px;
+    color: #666;
+    margin-top: 5px;
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--modal-overlay);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+.modal-confirm-box {
+    background: #A9D18E;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 25px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-icon-warning {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 20px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-icon-warning svg {
+    width: 50px;
+    height: 50px;
+    color: #A9D18E;
+}
+
+.modal-confirm-box h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #4A633B;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.modal-btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-modal {
+    padding: 10px 40px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-ya {
+    background-color: #ffffff;
+    color: #4A633B;
+}
+
+.btn-tidak {
+    background-color: #EBF1E5;
+    color: #4A633B;
+}
+
+@media (max-width: 1024px) {
+    .target-grid { grid-template-columns: 1fr; }
+}
+
+
+
+        .pagination-section {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 15px 30px;
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .page-numbers {
+            display: flex;
+            gap: 10px;
+        }
+
+        .page-btn {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: #E0F4FB;
+            color: #2FA4D8;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .page-btn.active {
+            background: #2FA4D8;
+            color: white;
+        }
+
+        .modal-icon-warning svg {
+            color: #4A633B;
+        }
+

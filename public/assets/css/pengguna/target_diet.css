@@ -1,0 +1,228 @@
+
+    .header-section {
+        margin-bottom: 25px;
+    }
+
+    .header-section h2 {
+        font-size: 32px;
+        font-weight: 800;
+        color: #000;
+        margin-bottom: 5px;
+    }
+
+    .header-section p {
+        color: #333;
+        font-size: 16px;
+    }
+
+    .skrining-banner {
+        background-color: #E0E0E0;
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .skrining-banner .icon-check {
+        background: white;
+        padding: 5px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #999;
+    }
+
+    .banner-content h4 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .tags-container {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .pill-tag {
+        background: white;
+        border: 1px solid #999;
+        padding: 4px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+
+    .date-text {
+        font-size: 12px;
+        color: #666;
+    }
+
+    .diet-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .diet-card {
+        background-color: #D8EBF3;
+        border-radius: 25px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .card-title-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        font-weight: 800;
+        font-size: 18px;
+    }
+
+    .form-row {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .input-group {
+        flex: 1;
+    }
+
+    .input-group label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .input-group input, .input-group textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #999;
+        border-radius: 8px;
+        background: #F0F7FA;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .tujuan-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .tujuan-item {
+        background: #F0F7FA;
+        border: 1px solid #999;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .tujuan-item.active {
+        background: #ffffff;
+        border-color: #000;
+    }
+
+    .btn-save-target {
+        width: 100%;
+        background-color: #2E86AB;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .right-column {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .target-active-info {
+        font-size: 12px;
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .progress-section {
+        margin-top: 10px;
+    }
+
+    .progress-header {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 800;
+        margin-bottom: 5px;
+    }
+
+    .progress-bar-bg {
+        background: #eee;
+        height: 12px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #999;
+    }
+
+    .progress-fill {
+        background: #2FA4D8;
+        height: 100%;
+        width: 40%;
+    }
+
+    .checkin-form {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        align-items: flex-end;
+    }
+
+    .checkin-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .checkin-table th {
+        padding: 10px;
+        border-bottom: 2px solid #000;
+    }
+
+    .checkin-table td {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .btn-catat {
+        background: #2FA4D8;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    @media (max-width: 1024px) {
+        .diet-grid { grid-template-columns: 1fr; }
+    }
+

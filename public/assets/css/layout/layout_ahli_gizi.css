@@ -1,0 +1,131 @@
+
+        :root {
+            --sidebar-bg: #90D2ED;
+            --main-bg: #F0F7FA;
+            --text-blue: #2FA4D8;
+            --card-welcome: #7BB9D8;
+            --white: #ffffff;
+            --gray-text: #666;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: var(--main-bg);
+        }
+
+        .sidebar {
+            width: 280px;
+            background-color: var(--sidebar-bg);
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0;
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 100;
+        }
+
+        .sidebar-header {
+            padding: 0 20px 20px 20px;
+        }
+
+        .brand-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        .brand-section h1 {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .sidebar-user-info {
+            font-size: 14px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .search-bar {
+            width: 90%;
+            margin: 0 auto 30px auto;
+            background: var(--white);
+            height: 35px;
+            border-radius: 20px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            flex-grow: 1;
+        }
+
+        .nav-item {
+            padding: 12px 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .nav-item:hover,
+        .nav-item.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-item svg {
+            width: 24px;
+            height: 24px;
+        }
+
+
+        .logout-btn {
+            margin-top: auto;
+            padding: 20px 25px;
+            color: #FF5C5C;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 600;
+        }
+
+        .main-content {
+            margin-left: 280px;
+            flex-grow: 1;
+            padding: 30px;
+            width: calc(100% - 280px);
+        }
+
+
+
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 80px;
+            }
+
+            .sidebar-user-info,
+            .sidebar-header h1,
+            .nav-item span {
+                display: none;
+            }
+
+            .main-content {
+                margin-left: 80px;
+                width: calc(100% - 80px);
+            }
+        }
+
