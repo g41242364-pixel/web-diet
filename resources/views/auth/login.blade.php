@@ -72,13 +72,13 @@
             margin-top: 40px;
             background: var(--white);
             color: var(--text-color);
-            border : none;
+            border: none;
             padding: 12px 60px;
             border-radius: 15px;
             text-decoration: none;
             font-weight: 400;
             font-size: 22px;
-            display: inline-block; 
+            display: inline-block;
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: background 0.3s, transform 0.2s;
@@ -196,51 +196,6 @@
             background-color: #79c5e4;
         }
 
-        .divider {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .divider::before,
-        .divider::after {
-            content: '';
-            flex: 1;
-            border-bottom: 1px solid #333;
-        }
-
-        .divider span {
-            padding: 0 10px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .social-login {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-
-        .social-icon:hover {
-            opacity: 0.7;
-        }
-
-        .social-icon img {
-            width: 100%;
-            height: auto;
-        }
-
         @media (max-width: 768px) {
             .main-container {
                 flex-direction: column;
@@ -278,9 +233,9 @@
         <div class="left-panel">
             <h1>SISD</h1>
             <p>Sistem Informasi Skrining Diet</p>
-            <a href="/register" class="btn-signup">SIGN UP</a>
+            {{-- DIUBAH: dari <a> jadi <button> --}}
+            <button type="button" onclick="window.location='/register'" class="btn-signup">SIGN UP</button>
         </div>
-
 
         <div class="right-panel">
             <div class="login-box">
