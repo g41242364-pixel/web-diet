@@ -74,6 +74,7 @@
                 <h3>Hasil Pola Tidur Terbaru</h3>
 
                 <table class="result-table">
+
                     <tr>
                         <td>Jam Tidur</td>
                         <td>:</td>
@@ -99,11 +100,18 @@
                     <tr>
                         <td>Status Tidur</td>
                         <td>:</td>
+
                         <td>
-                            <span class="status-pill">
-                                {{ $latest->status_tidur }}
+                            <span class="status-pill 
+                            {{ strtolower($latest->status_tidur) }}">
+
+                                {{ $latest->status_tidur == 'Baik'
+                                    ? 'Cukup'
+                                    : $latest->status_tidur }}
+
                             </span>
                         </td>
+
                     </tr>
 
                     <tr>
@@ -111,6 +119,7 @@
                         <td>:</td>
                         <td>{{ $latest->catatan ?? '-' }}</td>
                     </tr>
+
                 </table>
 
                 <!-- REKOMENDASI -->
@@ -119,6 +128,7 @@
                     <h4>Rekomendasi</h4>
 
                     <p>
+
                         @if($latest->status_tidur == 'Kurang')
 
                             Durasi tidur Anda kurang dari 6 jam.
@@ -138,9 +148,11 @@
                             untuk hidup yang lebih berkualitas.
 
                         @endif
+
                     </p>
 
                 </div>
+
             </div>
 
             <!-- RIWAYAT -->
@@ -185,9 +197,16 @@
                             </td>
 
                             <td>
-                                <span class="status-badge">
-                                    {{ $log->status_tidur }}
+
+                                <span class="status-badge 
+                                {{ strtolower($log->status_tidur) }}">
+
+                                    {{ $log->status_tidur == 'Baik'
+                                        ? 'Cukup'
+                                        : $log->status_tidur }}
+
                                 </span>
+
                             </td>
 
                         </tr>
