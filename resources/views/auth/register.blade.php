@@ -80,11 +80,14 @@
             margin-top: 40px;
             background: var(--white);
             color: var(--text-color);
-            padding: 12px 50px;
-            border-radius: 30px;
+            border: none;
+            padding: 12px 60px;
+            border-radius: 15px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 18px;
+            font-weight: 400;
+            font-size: 22px;
+            display: inline-block;
+            cursor: pointer;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s;
         }
