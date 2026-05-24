@@ -1,6 +1,5 @@
 .sleep-container {
-    width: 95%;
-    max-width: 1400px;
+    width: calc(100% - 40px);
     margin: 0 auto;
 }
 
