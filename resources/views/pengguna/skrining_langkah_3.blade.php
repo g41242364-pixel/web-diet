@@ -1,5 +1,5 @@
 @extends('layouts.layout_pengguna')
-@section('title', 'Skrining IMT - Langkah 3')
+@section('title', 'Skrining Diet - Langkah 3')
 <link rel="stylesheet" href="{{ asset('assets/css/pengguna/skrining_langkah_2.css') }}">
 
 @section('content')
@@ -7,27 +7,37 @@
     <div class="skrining-header-top">
         <div style="display:flex;align-items:flex-start;gap:15px;">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5">
-                <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
                 <line x1="3" y1="18" x2="21" y2="18"/>
-                <circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/>
+                <circle cx="4" cy="6" r="1"/>
+                <circle cx="4" cy="12" r="1"/>
+                <circle cx="4" cy="18" r="1"/>
             </svg>
+
             <div>
-                <h2>Skrining IMT</h2>
-                <p>Skrining Bertahap : Fase 1 → Fase 2 → IMT → Hasil.</p>
+                <h2>Skrining Diet</h2>
+                <p>Skrining pola makan dan kebiasaan diet secara bertahap.</p>
             </div>
         </div>
     </div>
 
     <div class="step-info">Langkah 3 dari 4</div>
-    <div class="progress-container"><div class="progress-fill" style="width:75%"></div></div>
+
+    <div class="progress-container">
+        <div class="progress-fill" style="width:75%"></div>
+    </div>
 
     <div class="nav-steps">
         <div class="nav-step-item">Fase 1</div>
         <div class="nav-arrow">→</div>
+
         <div class="nav-step-item">Fase 2</div>
         <div class="nav-arrow">→</div>
-        <div class="nav-step-item active">IMT</div>
+
+        <div class="nav-step-item active">Analisis Diet</div>
         <div class="nav-arrow">→</div>
+
         <div class="nav-step-item">Hasil</div>
     </div>
 
@@ -39,32 +49,50 @@
 
     <div class="skrining-box">
         <div class="imt-form-container">
+
             <div class="input-imt-header">
                 <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
                     <path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
                 </svg>
-                <span>Input IMT — Berat &amp; Tinggi Badan</span>
+
+                <span>Analisis Diet — Data Pola Konsumsi</span>
             </div>
 
             <form action="{{ route('skrining.langkah3.simpan') }}" method="POST">
                 @csrf
+
                 <div class="imt-input-group">
-                    <label>Berat Badan (kg)</label>
-                    <input type="number" name="berat_badan" step="0.1" placeholder="58"
-                           value="{{ old('berat_badan') }}" required>
+                    <label>Frekuensi Makan per Hari</label>
+
+                    <input type="number"
+                           name="frekuensi_makan"
+                           placeholder="3"
+                           value="{{ old('frekuensi_makan') }}"
+                           required>
                 </div>
+
                 <div class="imt-input-group">
-                    <label>Tinggi Badan (cm)</label>
-                    <input type="number" name="tinggi_badan" step="0.1" placeholder="158"
-                           value="{{ old('tinggi_badan') }}" required>
+                    <label>Konsumsi Air Putih per Hari (gelas)</label>
+
+                    <input type="number"
+                           name="konsumsi_air"
+                           placeholder="8"
+                           value="{{ old('konsumsi_air') }}"
+                           required>
                 </div>
 
                 <div class="footer-nav">
-                    <a href="{{ route('skrining.langkah2') }}" class="btn-nav">← Kembali</a>
-                    <button type="submit" class="btn-nav">Lihat Hasil →</button>
+                    <a href="{{ route('skrining.langkah2') }}" class="btn-nav">
+                        ← Kembali
+                    </a>
+
+                    <button type="submit" class="btn-nav">
+                        Lihat Hasil →
+                    </button>
                 </div>
             </form>
+
         </div>
     </div>
 </div>
