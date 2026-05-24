@@ -1,26 +1,142 @@
+.skrining-header-top {
+    margin-bottom: 20px;
+}
 
-    .skrining-header-top { margin-bottom: 20px; }
-    .skrining-header-top h2 { font-size: 36px; font-weight: 800; margin-bottom: 0; }
-    .skrining-header-top p { font-size: 16px; color: #333; }
-    .step-info { display: flex; justify-content: flex-end; font-size: 14px; color: #333; margin-bottom: 5px; }
-    .progress-container { width: 100%; height: 10px; background: #D9D9D9; border-radius: 10px; margin-bottom: 15px; overflow: hidden; }
-    .progress-fill { height: 100%; background: #2FA4D8; width: 100%; }
-    .nav-steps { display: flex; gap: 15px; margin-bottom: 25px; align-items: center; }
-    .nav-step-item { flex: 1; background: #D8EBF3; padding: 5px; text-align: center; font-weight: 600; color: #333; border: 1px solid #999; font-size: 14px; }
-    .nav-step-item.active { background: #90D2ED; }
-    .nav-arrow { color: #333; font-weight: bold; }
+.skrining-header-top h2 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 0;
+    color: #FFFFFF;
+}
 
-    .skrining-box { background-color: #B5E2F4; border-radius: 0; padding: 40px; min-height: 500px; display: flex; flex-direction: column; gap: 30px; }
+.skrining-header-top p {
+    font-size: 16px;
+    color: #EFF6FF;
+}
 
-    .result-section { border-bottom: 2px solid #2FA4D8; padding-bottom: 25px; text-align: center; }
-    .result-section:last-child { border-bottom: none; }
+.step-info {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    color: #EFF6FF;
+    margin-bottom: 5px;
+}
 
-    .section-header { display: flex; align-items: center; gap: 15px; font-size: 28px; font-weight: 600; margin-bottom: 20px; text-align: left; }
-    .label-text { font-size: 22px; color: #333; margin-bottom: 15px; display: block; }
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background: #1E3A5F;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
 
-    .status-pill { background: #F0F7FA; border: 1px solid #000; border-radius: 30px; padding: 10px 60px; font-size: 24px; display: inline-block; color: #000; margin-bottom: 15px; }
-    .advice-text { font-size: 16px; color: #333; }
+.progress-fill {
+    height: 100%;
+    background: #2563EB;
+    width: 100%;
+}
 
-    .btn-konsultasi { background: #D8EBF3; border: 2px solid #000; border-radius: 15px; padding: 12px 30px; font-weight: 600; font-size: 18px; cursor: pointer; display: inline-block; margin-top: 20px; text-decoration: none; color: #000; transition: background 0.3s; }
-    .btn-konsultasi:hover { background: #90D2ED; }
+.nav-steps {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    align-items: center;
+}
 
+.nav-step-item {
+    flex: 1;
+    background: #EFF6FF;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+    color: #1E3A5F;
+    border: 1px solid #2563EB;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.nav-step-item.active {
+    background: #DBEAFE;
+    color: #1D4ED8;
+    border: 1px solid #1D4ED8;
+}
+
+.nav-arrow {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.skrining-box {
+    background-color: #FFFFFF;
+    border-radius: 18px;
+    padding: 40px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.result-section {
+    border-bottom: 2px solid #BFDBFE;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.result-section:last-child {
+    border-bottom: none;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #1E3A5F;
+}
+
+.label-text {
+    font-size: 22px;
+    color: #1E3A5F;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.status-pill {
+    background: #EFF6FF;
+    border: 1px solid #2563EB;
+    border-radius: 30px;
+    padding: 10px 60px;
+    font-size: 24px;
+    display: inline-block;
+    color: #1E3A5F;
+    margin-bottom: 15px;
+}
+
+.advice-text {
+    font-size: 16px;
+    color: #475569;
+}
+
+.btn-konsultasi {
+    background: #2563EB;
+    border: none;
+    border-radius: 15px;
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: background 0.3s;
+}
+
+.btn-konsultasi:hover {
+    background: #1D4ED8;
+}
