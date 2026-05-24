@@ -1,5 +1,18 @@
 .skrining-header-top {
     margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 18px;
+}
+
+.skrining-header-top::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #2563EB, #BFDBFE);
+    border-radius: 10px;
 }
 
 .skrining-header-top > div{
