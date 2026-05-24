@@ -2,28 +2,29 @@
 @section('title', 'Profil')
 
 <style>
-/* ===== OUTER WRAPPER (BIAR TIDAK MEPEK) ===== */
+/* ===== OUTER WRAPPER ===== */
 .profil-page {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 30px 20px;
+    padding: 50px 40px 30px; /* lebih lega kiri kanan + atas */
     box-sizing: border-box;
 }
 
 /* ===== WRAPPER DALAM ===== */
 .profil-wrapper {
     width: 100%;
-    max-width: 950px;
+    max-width: 900px;
 }
 
 /* ===== HEADER ===== */
 .header-title {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    margin-top: -10px; /* BIKIN NAIK KE ATAS */
 }
 
 .header-title h2 {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 800;
     margin-bottom: 4px;
 }
@@ -106,6 +107,23 @@
     background: #e74c3c !important;
 }
 
+/* ===== ALERT ===== */
+.alert-success {
+    background:#e8f8e8;
+    color:#27ae60;
+    padding:12px 16px;
+    border-radius:8px;
+    margin-bottom:16px;
+}
+
+.alert-error {
+    background:#fde8e8;
+    color:#c0392b;
+    padding:12px 16px;
+    border-radius:8px;
+    margin-bottom:16px;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .form-grid {
@@ -113,7 +131,11 @@
     }
 
     .profil-page {
-        padding: 15px 12px;
+        padding: 25px 15px;
+    }
+
+    .header-title {
+        margin-top: 0;
     }
 }
 </style>
@@ -129,13 +151,13 @@
         </div>
 
         @if(session('success'))
-            <div style="background:#e8f8e8;color:#27ae60;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
+            <div class="alert-success">
                 ✓ {{ session('success') }}
             </div>
         @endif
 
         @if($errors->any())
-            <div style="background:#fde8e8;color:#c0392b;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
+            <div class="alert-error">
                 {{ $errors->first() }}
             </div>
         @endif
