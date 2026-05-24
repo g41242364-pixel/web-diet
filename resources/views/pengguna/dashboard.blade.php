@@ -36,7 +36,7 @@
                     {{ $skriningTerakhir->status_imt }}
                 </p>
 
-                <small style="color:#888;font-size:11px;">
+                <small style="color:#000000;font-size:11px;">
                     {{ $skriningTerakhir->created_at->format('d M Y') }}
                 </small>
             @else
@@ -52,7 +52,7 @@
                     {{ $skriningTerakhir->imt }}
                 </p>
 
-                <small style="color:#888;font-size:11px;">kg/m²</small>
+                <small style="color:#000000;font-size:11px;">kg/m²</small>
             @else
                 <p style="color:#aaa;">Belum ada data</p>
             @endif
@@ -66,7 +66,7 @@
                     {{ $targetDiet->berat_target }} kg
                 </p>
 
-                <small style="color:#888;font-size:11px;">
+                <small style="color:#000000;font-size:11px;">
                     {{ ucfirst($targetDiet->tujuan) }} berat
                 </small>
             @else

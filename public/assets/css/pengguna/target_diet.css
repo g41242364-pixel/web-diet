@@ -190,7 +190,7 @@
 }
 
 /* =========================================
-   BUTTON SIMPAN
+   BUTTON
 ========================================= */
 
 .btn-save-target {
@@ -315,14 +315,14 @@
 }
 
 /* =========================================
-   STATUS BAR (FIXED & SENADA THEME)
+   STATUS BAR (FIXED = SENADA BLUE THEME)
 ========================================= */
 
-/* ❌ TARGET BELUM TERCAPAI (SOFT RED HEALTH THEME) */
+/* ❌ TARGET BELUM TERCAPAI (TETAP BLUE THEME, BUKAN MERAH/ORANGE) */
 .warning-target {
-    background: #e32f3b;
-    border: 1px solid #FECACA;
-    color: #991B1B;
+    background: #EAF6FB;
+    border: 1px solid #B9DCEB;
+    color: #164863;
 
     padding: 12px 15px;
     border-radius: 12px;
@@ -337,11 +337,11 @@
     gap: 8px;
 }
 
-/* ⏳ CHECK-IN INFO (SOFT BLUE MATCH UI) */
+/* ⏳ CHECK-IN INFO (SAMA FAMILY BLUE - LEBIH SOFT) */
 .info-checkin {
-    background: #F0F9FF;
-    border: 1px solid #BAE6FD;
-    color: #0369A1;
+    background: #F6FBFD;
+    border: 1px solid #D5EAF3;
+    color: #2E86AB;
 
     padding: 12px 15px;
     border-radius: 12px;
