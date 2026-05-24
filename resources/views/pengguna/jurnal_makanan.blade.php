@@ -82,7 +82,6 @@
             @endif
 
         </div>
-
     </div>
 
 @endsection
