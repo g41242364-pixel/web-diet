@@ -181,11 +181,10 @@
     background:#2563EB;
     color:white;
     padding:6px 18px;
-    border-radius:30px;
+    border-radius:4px;
     font-size:13px;
     font-weight:600;
     display:inline-block;
-    margin-right:-5px;
 }
 
 /* ===== REKOMENDASI ===== */
@@ -245,11 +244,10 @@
     background:#2563EB;
     color:white;
     padding:6px 18px;
-    border-radius:30px;
+    border-radius:4px;
     font-size:13px;
     font-weight:600;
 }
-
 /* ===== RESPONSIVE ===== */
 @media (max-width:768px){
 
@@ -276,3 +274,5 @@
 }
 
 }
+
+
