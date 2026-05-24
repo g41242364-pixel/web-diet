@@ -35,7 +35,7 @@
         <div class="nav-step-item">Fase 2</div>
         <div class="nav-arrow">→</div>
 
-        <div class="nav-step-item">Analisis Diet</div>
+        <div class="nav-step-item">Input IMT</div>
         <div class="nav-arrow">→</div>
 
         <div class="nav-step-item">Hasil</div>
