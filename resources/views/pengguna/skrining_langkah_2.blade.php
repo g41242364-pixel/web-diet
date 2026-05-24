@@ -84,7 +84,7 @@
                 </a>
 
                 <button type="submit" class="btn-nav">
-                    Lihat Hasil Skrining →
+                    Lanjut Input IMT →
                 </button>
             </div>
         </form>
