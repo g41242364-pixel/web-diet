@@ -1,188 +1,239 @@
 @extends('layouts.layout_pengguna')
 
-@section('title', 'Jurnal Makanan')
+@section('title', 'Daftar Makanan Lainnya')
 
 @section('content')
+<link rel="stylesheet" href="{{ asset('assets/css/pengguna/jurnal_makanan.css') }}">
 
-    @php
-        $statusLower = strtolower($statusImt ?? '');
+<style>
+/* HEADER */
+.jurnal-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px;
+    margin-bottom:25px;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,.05);
+}
 
-        if (str_contains($statusLower, 'Underweight')) {
-            $statusClass = 'status-kurus';
-            $statusIcon = 'i';
-            $statusIconColor = 'var(--kurus-accent)';
-        } elseif (str_contains($statusLower, 'normal')) {
-            $statusClass = 'status-normal';
-            $statusIcon = '✓';
-            $statusIconColor = 'var(--normal-accent)';
-        } elseif (str_contains($statusLower, 'Overweight')) {
-            $statusClass = 'status-gemuk';
-            $statusIcon = '!';
-            $statusIconColor = 'var(--gemuk-accent)';
-        } elseif (str_contains($statusLower, 'obesitas 1')) {
-            $statusClass = 'status-obesitas';
-            $statusIcon = '⚠';
-            $statusIconColor = 'var(--obesitas-accent)';
-        } elseif (str_contains($statusLower, 'obesitas 2')) {
-            $statusClass = 'status-obesitas';
-            $statusIcon = '⚠';
-            $statusIconColor = 'var(--obesitas-accent2)';
-        } else {
-            $statusClass = 'status-default';
-            $statusIcon = '!';
-            $statusIconColor = 'var(--default-accent)';
-        }
-    @endphp
+.header-left{
+    flex:1;
+}
 
-    <link rel="stylesheet" href="{{ asset('assets/css/pengguna/rekomendasi_jurnal_makanan.css') }}">
+.header-center{
+    flex:2;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+}
 
-    <div class="main-wrapper">
+/* ICON */
+.header-icon{
+    width:55px;
+    height:55px;
+    border-radius:15px;
+    background:#EAF4FF;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 
-        <div class="page-header">
-            <div class="header-content">
-                <img src="{{ asset('assets/images/sendok.png') }}" alt="Food Icon"
-                    onerror="this.src='https://cdn-icons-png.flaticon.com/512/3048/3048398.png'">
-                <div class="header-text">
-                    <h2>Jurnal Makanan</h2>
-                    <p>Catat makanan harianmu, pahami manfaatnya, hidup lebih sehat</p>
-                </div>
-            </div>
+/* BAGIAN TEXT */
+.header-text h1{
+    font-size:28px !important;
+    font-weight:700;
+    margin:0;
+    line-height:1.2;
+    color:#1E293B;
+}
+
+.header-text p{
+    font-size:14px;
+    color:#64748B;
+    margin-top:4px;
+}
+
+/* tombol kembali */
+.btn-back{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    text-decoration:none;
+    color:#2563EB;
+    font-weight:600;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .jurnal-header{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .header-center{
+        flex-direction:column;
+    }
+
+    .header-text h1{
+        font-size:22px !important;
+    }
+}
+</style>
+
+<div class="main-wrapper">
+
+    <header class="jurnal-header">
+
+        <div class="header-left">
+            <a href="{{ route('pengguna.jurnalMakanan') }}" class="btn-back">
+
+                <svg width="20" height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5">
+
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+
+                    <polyline points="12 19 5 12 12 5"></polyline>
+
+                </svg>
+
+                <span>Kembali ke Rekomendasi</span>
+
+            </a>
         </div>
 
-        @php
-            $sudahSkrining = !empty($statusImt);
-        @endphp
+        <div class="header-center">
 
-        <div class="status-banner {{ $sudahSkrining ? $statusClass : 'status-default' }}">
-
-            <div class="banner-info">
-
-                <div class="warning-icon">
-                    {{ $sudahSkrining ? $statusIcon : '?' }}
-                </div>
-
-                <div class="banner-text">
-
-                    @if ($sudahSkrining)
-                        <h3>Hasil Skrining : {{ $statusImt }}</h3>
-
-                        <p>
-                            Berdasarkan data yang kamu input, hasil skrining menunjukkan
-                            bahwa status berat badanmu berada pada kategori ini.
-                        </p>
-                    @else
-                        <h3>Belum Melakukan Skrining</h3>
-
-                        <p>
-                            Kamu belum melakukan skrining kesehatan.
-                            Silakan lakukan skrining terlebih dahulu untuk mendapatkan
-                            rekomendasi makanan dan aktivitas yang sesuai.
-                        </p>
-                    @endif
-
-                </div>
-
+            <div class="header-icon">
+                🍎
             </div>
 
-            <div class="status-badge">
-                {{ $sudahSkrining ? $statusImt : 'Belum Skrining' }}
+            <div class="header-text">
+                <h1>Daftar Nutrisi Makanan Sehat</h1>
+
+                <p>
+                    Pilihan alternatif makanan bergizi
+                    penunjang diet seimbangmu
+                </p>
             </div>
 
         </div>
 
-        <div class="meals-container">
+    </header>
 
-            <div class="meals-grid">
 
-                @php
-                    $categories = [
-                        'sarapan' => 'Sarapan',
-                        'makan_siang' => 'Makan Siang',
-                        'makan_malam' => 'Makan Malam',
-                        'camilan' => 'Camilan',
-                    ];
+    <div class="content-container">
 
-                    $gambarKategori = [
-                        'sarapan' => 'Sarapan.jpg',
-                        'makan_siang' => 'Makan Siang.jpg',
-                        'makan_malam' => 'Makan Malam.jpeg',
-                        'camilan' => 'Cemilan.jpg',
-                    ];
-                @endphp
+        <div class="foods-grid">
 
-                @foreach ($categories as $key => $label)
-                    @php
-                        $plan = $mealPlans->get($key)?->first();
-                    @endphp
+            @forelse ($foods as $food)
 
-                    @if ($plan)
-                        <a href="{{ route('pengguna.jurnalMakanan.detail', $plan->id) }}" class="meal-card">
+            <div class="food-card">
 
-                            <div class="meal-card-header">
-                                {{ $label }}
-                            </div>
+                <div class="food-card-header">
+                    {{ $food->nama }}
+                </div>
 
-                            <div class="meal-card-body">
+                <div class="food-card-body">
 
-                                <img src="{{ asset('assets/images/' . ($gambarKategori[$key] ?? 'default.png')) }}"
-                                    alt="{{ $label }}" class="meal-image">
+                    <div class="image-wrapper">
 
-                                <div class="meal-info">
+                        <img src="{{ $food->gambar
+                            ? asset('assets/images/makanan/'.$food->gambar)
+                            : asset('assets/images/Cemilan.png') }}"
 
-                                    <h4>
-                                        @foreach ($plan->items as $item)
-                                            {{ $item->food->nama ?? '-' }}{{ !$loop->last ? ' + ' : '' }}
-                                        @endforeach
-                                    </h4>
+                            alt="{{ $food->nama }}"
+                            class="food-image">
 
-                                    <p>
-                                        Menu seimbang dengan nutrisi yang disesuaikan
-                                        untuk kebutuhan energi harianmu.
-                                    </p>
+                    </div>
 
-                                </div>
+                    <div class="food-nutrition-info">
 
-                            </div>
+                        <h5 class="nutrition-title">
+                            Kandungan Gizi:
+                        </h5>
 
-                        </a>
-                    @else
-                        <div class="meal-card" style="opacity: 0.6; cursor: default;">
+                        <ul class="nutrition-list">
 
-                            <div class="meal-card-header">
-                                {{ $label }}
-                            </div>
+                            <li>
+                                <span class="label">
+                                    Energi / Kalori:
+                                </span>
 
-                            <div class="meal-card-body">
+                                <span class="value">
+                                    {{ $food->kalori ?? 0 }} kkal
+                                </span>
+                            </li>
 
-                                <img src="{{ asset('assets/images/' . ($gambarKategori[$key] ?? 'default.png')) }}"
-                                    alt="{{ $label }}" class="meal-image">
+                            <li>
+                                <span class="label">
+                                    Protein:
+                                </span>
 
-                                <div class="meal-info">
-                                    <p>
-                                        Belum ada rekomendasi dari dokter untuk sesi ini.
-                                    </p>
-                                </div>
+                                <span class="value">
+                                    {{ $food->protein ?? 0 }} g
+                                </span>
+                            </li>
 
-                            </div>
+                            <li>
+                                <span class="label">
+                                    Karbohidrat:
+                                </span>
 
-                        </div>
-                    @endif
-                @endforeach
+                                <span class="value">
+                                    {{ $food->karbohidrat ?? 0 }} g
+                                </span>
+                            </li>
+
+                            <li>
+                                <span class="label">
+                                    Lemak:
+                                </span>
+
+                                <span class="value">
+                                    {{ $food->lemak ?? 0 }} g
+                                </span>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="action-container">
-                <a href="{{ route('pengguna.jurnalMakanan.lainnya') }}" class="btn-lihat-lainnya">
-                    <span>Lihat Makanan Lainnya</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </a>
+            @empty
+
+            <div class="empty-state">
+                <p>
+                    Belum ada alternatif makanan tambahan
+                    yang tersedia saat ini.
+                </p>
             </div>
+
+            @endforelse
+
         </div>
+
+
+        @if ($foods->hasPages())
+
+        <div class="pagination-wrapper">
+            {{ $foods->links('pagination::bootstrap-5') }}
+        </div>
+
+        @endif
 
     </div>
+
+</div>
 
 @endsection
