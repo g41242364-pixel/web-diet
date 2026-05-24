@@ -78,6 +78,8 @@
             text-decoration: none;
             font-weight: 400;
             font-size: 22px;
+            display: inline-block; 
+            cursor: pointer;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: background 0.3s, transform 0.2s;
         }
