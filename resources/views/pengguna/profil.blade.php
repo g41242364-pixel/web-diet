@@ -3,24 +3,19 @@
 
 <style>
 
-/* ===== FORCE FULL SCREEN ===== */
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-/* ===== PAGE ===== */
+/* ===== FULL SCREEN WRAPPER ===== */
 .profil-page {
-    width: 100vw;   /* 🔥 penting: paksa full viewport */
+    width: 100%;
     min-height: 100vh;
-    background: #f6f9fc;
 
-    padding: 25px 12px;
+    /* 🔥 TIPIS SAJA SUPAYA TIDAK NEMPEL */
+    padding: 25px 10px;
+
+    background: #f6f9fc;
     box-sizing: border-box;
 }
 
-/* ===== WRAPPER ===== */
+/* ===== FULL WIDTH WRAPPER (HAPUS LIMIT) ===== */
 .profil-wrapper {
     width: 100%;
 }
@@ -44,25 +39,39 @@ html, body {
     font-size: 14px;
 }
 
-/* ===== CARD ===== */
+/* ===== CARD FULL WIDTH ===== */
 .profil-card {
     width: 100%;
+
     background: #fff;
     border-radius: 14px;
+
     padding: 32px;
+
     margin-bottom: 18px;
+
     border: 1px solid #e8f0f5;
     box-shadow: 0 4px 14px rgba(0,0,0,0.05);
 }
 
-/* ===== GRID ===== */
+/* ===== TITLE ===== */
+.profil-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #2c3e50;
+}
+
+/* ===== GRID 2 KOLOM (FULL WIDTH FEEL) ===== */
 .form-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 22px;
 }
 
-/* ===== FORM ===== */
+/* ===== FORM GROUP ===== */
 .form-group {
     display: flex;
     flex-direction: column;
@@ -76,6 +85,7 @@ html, body {
     margin-bottom: 6px;
 }
 
+/* ===== INPUT ===== */
 .form-group input,
 .form-group select {
     padding: 13px 14px;
@@ -85,11 +95,12 @@ html, body {
     width: 100%;
 }
 
+/* focus */
 .form-group input:focus,
 .form-group select:focus {
-    border-color: #90D2ED;
     outline: none;
-    box-shadow: 0 0 0 3px rgba(144,210,237,0.2);
+    border-color: #90D2ED;
+    box-shadow: 0 0 0 3px rgba(144, 210, 237, 0.2);
 }
 
 /* ===== BUTTON ===== */
@@ -97,9 +108,10 @@ html, body {
     margin-top: 14px;
     padding: 11px 22px;
     background: #90D2ED;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 9px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
 }
@@ -134,6 +146,10 @@ html, body {
     .header-title {
         padding-left: 0;
     }
+
+    .profil-card {
+        padding: 20px;
+    }
 }
 
 </style>
@@ -167,6 +183,7 @@ html, body {
             <form action="{{ route('pengguna.profil.update') }}" method="POST">
                 @csrf
 
+                <!-- 2 ATAS + 2 BAWAH -->
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Nama Lengkap</label>
@@ -229,4 +246,4 @@ html, body {
     </div>
 </div>
 
-@endsection
+@endsection 
