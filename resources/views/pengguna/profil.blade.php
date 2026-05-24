@@ -2,30 +2,31 @@
 @section('title', 'Profil')
 
 <style>
-/* ===== OUTER WRAPPER (LEBIH MODERN + LEBIH LEBAR) ===== */
+/* ===== OUTER WRAPPER (HAMPIR FULL WIDTH) ===== */
 .profil-page {
     width: 100%;
+
     display: flex;
     justify-content: center;
 
-    /* 🔥 RESPONSIVE PADDING (LEBIH LEGA DI DESKTOP) */
-    padding: 40px clamp(20px, 5vw, 100px);
+    /* 🔥 hanya sedikit padding biar tidak nempel layar */
+    padding: 30px 20px;
 
     box-sizing: border-box;
 }
 
-/* ===== WRAPPER DALAM (DIPERLEBAR) ===== */
+/* ===== WRAPPER DALAM (JADI JAUH LEBIH LEBAR) ===== */
 .profil-wrapper {
     width: 100%;
 
-    /* 🔥 SEBELUMNYA 920px → sekarang lebih lebar */
-    max-width: 1100px;
+    /* 🔥 ini kuncinya: hampir full layar */
+    max-width: 1400px;
 }
 
 /* ===== HEADER ===== */
 .header-title {
     margin-bottom: 24px;
-    padding-left: 8px;
+    padding-left: 6px;
     margin-top: -25px;
 }
 
@@ -41,11 +42,13 @@
     font-size: 14px;
 }
 
-/* ===== CARD ===== */
+/* ===== CARD (FULL WIDTH FEEL) ===== */
 .profil-card {
     background: #fff;
     border-radius: 14px;
-    padding: 28px;
+
+    /* 🔥 lebih besar supaya tidak “kecil di tengah” */
+    padding: 32px;
 
     margin-bottom: 22px;
 
@@ -55,17 +58,19 @@
 
 /* ===== TITLE CARD ===== */
 .profil-card h3 {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
     margin-bottom: 18px;
     color: #2c3e50;
 }
 
-/* ===== FORM GRID ===== */
+/* ===== FORM GRID (LEBIH RENGGANG & LUAS) ===== */
 .form-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+
+    /* 🔥 jarak diperlebar biar isi layar */
+    gap: 24px;
 }
 
 /* ===== FORM GROUP ===== */
@@ -85,7 +90,7 @@
 /* ===== INPUT ===== */
 .form-group input,
 .form-group select {
-    padding: 12px 14px;
+    padding: 13px 14px;
     border: 1.5px solid #ddd;
     border-radius: 9px;
     font-size: 14px;
@@ -101,8 +106,8 @@
 
 /* ===== BUTTON ===== */
 .btn-save {
-    margin-top: 12px;
-    padding: 10px 22px;
+    margin-top: 14px;
+    padding: 11px 24px;
     background: #90D2ED;
     color: #fff;
     border: none;
@@ -136,16 +141,15 @@
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .profil-page {
-        padding: 20px 15px;
+        padding: 15px 10px;
     }
 
     .form-grid {
         grid-template-columns: 1fr;
     }
 
-    .header-title {
-        padding-left: 0;
-        margin-top: 0;
+    .profil-card {
+        padding: 20px;
     }
 }
 </style>
