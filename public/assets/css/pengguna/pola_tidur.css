@@ -1,10 +1,25 @@
-.sleep-container {
-    width: 100%;
-    padding: 0 20px;
+/* =======================================================
+   CONTAINER
+======================================================= */
+.sleep-container{
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== HEADER ===== */
+/* BIAR CARD PUTIH FULL */
+.sleep-header,
+.card-white,
+.content-area{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* =======================================================
+   HEADER
+======================================================= */
 .sleep-header {
     display: flex;
     align-items: center;
@@ -34,7 +49,9 @@
     font-size: 15px;
 }
 
-/* ===== FORM CARD ===== */
+/* =======================================================
+   FORM CARD
+======================================================= */
 .card-white {
     background: #ffffff;
     border-radius: 20px;
@@ -66,6 +83,7 @@
     color: #0F172A;
     height: 55px;
     transition: .3s;
+    box-sizing: border-box;
 }
 
 .input-group input:focus {
@@ -74,7 +92,9 @@
     box-shadow: 0 0 0 4px rgba(59,130,246,.2);
 }
 
-/* ===== BUTTON ===== */
+/* =======================================================
+   BUTTON
+======================================================= */
 .btn-calculate {
     width: 100%;
     background: linear-gradient(
@@ -82,7 +102,6 @@
         #2563EB,
         #38BDF8
     );
-
     color: white;
     border: none;
     padding: 16px;
@@ -98,7 +117,9 @@
     box-shadow: 0 8px 20px rgba(37,99,235,.35);
 }
 
-/* ===== CONTENT ===== */
+/* =======================================================
+   CONTENT
+======================================================= */
 .content-area {
     background: #ffffff;
     border-radius: 20px;
@@ -108,6 +129,9 @@
     box-shadow: 0 6px 15px rgba(0,0,0,.05);
 }
 
+/* =======================================================
+   INITIAL VIEW
+======================================================= */
 .initial-view {
     display: flex;
     align-items: center;
@@ -137,7 +161,9 @@
     object-fit: contain;
 }
 
-/* ===== RESULT ===== */
+/* =======================================================
+   RESULT
+======================================================= */
 .result-view {
     display:block;
 }
@@ -184,7 +210,9 @@
     font-weight:700;
 }
 
-/* ===== STATUS ===== */
+/* =======================================================
+   STATUS
+======================================================= */
 .status-pill{
     background:#2563EB;
     color:white;
@@ -195,14 +223,15 @@
     display:inline-block;
 }
 
-/* ===== REKOMENDASI ===== */
+/* =======================================================
+   RECOMMENDATION
+======================================================= */
 .recommendation-box{
     background:linear-gradient(
     135deg,
     #2563EB,
     #38BDF8
     );
-
     color:white;
     padding:22px;
     border-radius:16px;
@@ -218,7 +247,9 @@
     line-height:1.7;
 }
 
-/* ===== TABLE RIWAYAT ===== */
+/* =======================================================
+   HISTORY TABLE
+======================================================= */
 .history-table{
     width:100%;
     border-collapse:collapse;
@@ -246,7 +277,9 @@
     width:120px;
 }
 
-/* ===== STATUS TABLE ===== */
+/* =======================================================
+   STATUS TABLE
+======================================================= */
 .status-badge{
     display:inline-block;
     background:#2563EB;
@@ -257,8 +290,15 @@
     font-weight:600;
 }
 
-/* ===== RESPONSIVE ===== */
+/* =======================================================
+   RESPONSIVE
+======================================================= */
 @media (max-width:768px){
+
+.sleep-container{
+    width:100%;
+    margin:0;
+}
 
 .sleep-header{
     flex-direction:column;
@@ -283,3 +323,4 @@
 }
 
 }
+s
