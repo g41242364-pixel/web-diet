@@ -2,19 +2,16 @@
 @section('title', 'Profil')
 
 <style>
-/* ===== FULL WIDTH PAGE (TIDAK ADA KOSONG KANAN KIRI) ===== */
+/* ===== FULL WIDTH PAGE ===== */
 .profil-page {
     width: 100%;
     min-height: 100vh;
-
-    /* 🔥 HANYA SEDIKIT PADDING */
-    padding: 30px 15px;
-
-    box-sizing: border-box;
+    padding: 30px 12px;
     background: #f6f9fc;
+    box-sizing: border-box;
 }
 
-/* ===== WRAPPER FULL WIDTH (HAPUS MAX WIDTH) ===== */
+/* ===== WRAPPER FULL (HAMPIR TANPA KOSONG) ===== */
 .profil-wrapper {
     width: 100%;
 }
@@ -29,8 +26,8 @@
 .header-title h2 {
     font-size: 34px;
     font-weight: 800;
-    margin-bottom: 4px;
     color: #1f2d3d;
+    margin-bottom: 4px;
 }
 
 .header-title p {
@@ -38,27 +35,31 @@
     font-size: 14px;
 }
 
-/* ===== CARD FULL WIDTH ===== */
+/* ===== CARD ===== */
 .profil-card {
     width: 100%;
-
     background: #fff;
     border-radius: 14px;
-
-    padding: 28px;
-
+    padding: 30px;
     margin-bottom: 20px;
-
     border: 1px solid #e8f0f5;
     box-shadow: 0 4px 14px rgba(0,0,0,0.05);
 }
 
-/* ===== FORM GRID (FULL RESPONSIVE) ===== */
+/* ===== TITLE ===== */
+.profil-card h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #2c3e50;
+}
+
+/* ===== FORM GRID (4 KOLOM RESPONSIVE) ===== */
 .form-grid {
     display: grid;
 
-    /* 🔥 AUTO FIT BIAR FULL MENGISI LAYAR */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* 🔥 ini bikin 2 atas 2 bawah secara otomatis */
+    grid-template-columns: repeat(2, 1fr);
 
     gap: 20px;
 }
@@ -67,7 +68,7 @@
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 
 .form-group label {
@@ -96,7 +97,7 @@
 
 /* ===== BUTTON ===== */
 .btn-save {
-    margin-top: 12px;
+    margin-top: 14px;
     padding: 11px 22px;
     background: #90D2ED;
     color: #fff;
@@ -130,8 +131,8 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    .profil-page {
-        padding: 15px 10px;
+    .form-grid {
+        grid-template-columns: 1fr;
     }
 
     .header-title {
@@ -169,6 +170,7 @@
             <form action="{{ route('pengguna.profil.update') }}" method="POST">
                 @csrf
 
+                <!-- 🔥 2 ATAS + 2 BAWAH (SESUAI REQUEST) -->
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Nama Lengkap</label>
