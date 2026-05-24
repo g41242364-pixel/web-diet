@@ -275,7 +275,6 @@
     border-collapse: collapse;
     font-size: 13px;
     text-align: center;
-    overflow: hidden;
 }
 
 .checkin-table th {
@@ -316,31 +315,45 @@
 }
 
 /* =========================================
-   ⚠ WARNING / INFO BAR (BARU)
+   STATUS BAR (FIXED & SENADA THEME)
 ========================================= */
 
-/* ❌ Target belum tercapai (DANGER) */
+/* ❌ TARGET BELUM TERCAPAI (SOFT RED HEALTH THEME) */
 .warning-target {
-    background: #FFE8E8;
-    border: 1px solid #FFB3B3;
-    color: #B30000;
+    background: #FFF5F5;
+    border: 1px solid #FECACA;
+    color: #991B1B;
+
     padding: 12px 15px;
     border-radius: 12px;
+
     font-size: 14px;
     font-weight: 600;
+
     margin-bottom: 10px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
 }
 
-/* ⏳ Check-in info (INFO) */
+/* ⏳ CHECK-IN INFO (SOFT BLUE MATCH UI) */
 .info-checkin {
-    background: #EAF4FF;
-    border: 1px solid #B7D6FF;
-    color: #1F5FA8;
+    background: #F0F9FF;
+    border: 1px solid #BAE6FD;
+    color: #0369A1;
+
     padding: 12px 15px;
     border-radius: 12px;
+
     font-size: 14px;
     font-weight: 500;
+
     margin-bottom: 10px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
 }
 
 /* =========================================
