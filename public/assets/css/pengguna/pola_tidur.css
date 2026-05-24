@@ -125,13 +125,9 @@
     font-size: 16px;
     margin-bottom: 15px;
     color: #334155;
-
     background: #EFF6FF;
-
     padding: 12px 15px;
-
     border-radius: 12px;
-
     border-left:4px solid #3B82F6;
 }
 
@@ -186,6 +182,7 @@
     border-radius:30px;
     font-size:13px;
     font-weight:600;
+    display:inline-block;
 }
 
 /* ===== REKOMENDASI ===== */
@@ -209,6 +206,45 @@
 .recommendation-box p{
     font-size:14px;
     line-height:1.7;
+}
+
+/* ===== TABLE RIWAYAT ===== */
+.history-table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+    margin-top:15px;
+}
+
+.history-table th{
+    background:#EEF4FA;
+    padding:14px 10px;
+    font-size:15px;
+    font-weight:700;
+    text-align:center;
+}
+
+.history-table td{
+    padding:16px 10px;
+    text-align:center;
+    border-bottom:1px solid #E2E8F0;
+    font-size:15px;
+}
+
+.history-table td:last-child,
+.history-table th:last-child{
+    width:120px;
+}
+
+/* ===== STATUS TABLE ===== */
+.status-badge{
+    display:inline-block;
+    background:#2563EB;
+    color:white;
+    padding:6px 18px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:600;
 }
 
 /* ===== RESPONSIVE ===== */
