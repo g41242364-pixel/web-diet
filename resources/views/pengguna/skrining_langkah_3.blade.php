@@ -18,15 +18,15 @@
         </div>
     </div>
 
-    <div class="step-info">Langkah 3 dari 4</div>
-    <div class="progress-container"><div class="progress-fill" style="width:75%"></div></div>
+    <div class="step-info">Langkah 4 dari 4</div>
+    <div class="progress-container"><div class="progress-fill" style="width:25%"></div></div>
 
     <div class="nav-steps">
-        <div class="nav-step-item">Fase 1</div>
+        <div class="nav-step-item active">Fase 1</div>
         <div class="nav-arrow">→</div>
         <div class="nav-step-item">Fase 2</div>
         <div class="nav-arrow">→</div>
-        <div class="nav-step-item active">Input IMT</div>
+        <div class="nav-step-item">Input IMT</div>
         <div class="nav-arrow">→</div>
         <div class="nav-step-item">Hasil</div>
     </div>
