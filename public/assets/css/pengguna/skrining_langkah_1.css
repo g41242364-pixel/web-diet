@@ -2,16 +2,22 @@
     margin-bottom: 20px;
 }
 
+.skrining-header-top > div{
+    display:flex;
+    align-items:center !important;
+    gap:15px;
+}
+
 .skrining-header-top h2 {
     font-size: 36px;
     font-weight: 800;
     margin-bottom: 0;
     color: #0F172A;
+    line-height: 1.1;
 }
 
 .skrining-header-top p {
-    font-size: 16px;
-    color: #475569;
+    display: none;
 }
 
 .step-info {
@@ -79,10 +85,7 @@
 }
 
 .fase-title {
-    font-weight: 700;
-    margin-bottom: 24px;
-    color: #1E3A5F;
-    font-size: 24px;
+    display: none;
 }
 
 .question-item {
