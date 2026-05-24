@@ -222,6 +222,17 @@
     font-weight:600;
     display:inline-block;
 }
+.status-pill.baik{
+    background:#22C55E;
+}
+
+.status-pill.kurang{
+    background:#2563EB;
+}
+
+.status-pill.berlebih{
+    background:#EF4444;
+}
 
 /* =======================================================
    RECOMMENDATION
@@ -288,6 +299,17 @@
     border-radius:4px;
     font-size:13px;
     font-weight:600;
+}
+.status-badge.baik{
+    background:#22C55E;
+}
+
+.status-badge.kurang{
+    background:#2563EB;
+}
+
+.status-badge.berlebih{
+    background:#EF4444;
 }
 
 /* =======================================================
