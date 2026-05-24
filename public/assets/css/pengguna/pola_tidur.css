@@ -9,6 +9,14 @@
     box-sizing: border-box;
 }
 
+/* BIAR CARD PUTIH FULL */
+.sleep-header,
+.card-white,
+.content-area{
+    width: 100%;
+    box-sizing: border-box;
+}
+
 /* =======================================================
    HEADER
 ======================================================= */
@@ -17,12 +25,10 @@
     align-items: center;
     gap: 18px;
     margin-bottom: 25px;
-
-    background: #1E3A5F; /* sidebar tone */
+    background: #ffffff;
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-    color: #FFFFFF;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 .sleep-header img {
@@ -34,12 +40,12 @@
 .sleep-header h2 {
     font-size: 28px;
     font-weight: 700;
-    color: #FFFFFF;
+    color: #1E3A8A;
     margin-bottom: 5px;
 }
 
 .sleep-header p {
-    color: #EFF6FF;
+    color: #64748B;
     font-size: 15px;
 }
 
@@ -47,12 +53,12 @@
    FORM CARD
 ======================================================= */
 .card-white {
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
     border: 1px solid #E2E8F0;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
 }
 
 .input-group {
@@ -64,7 +70,7 @@
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 8px;
-    color: #1E3A5F;
+    color: #334155;
 }
 
 .input-group input {
@@ -82,8 +88,8 @@
 
 .input-group input:focus {
     outline: none;
-    border-color: #2563EB;
-    box-shadow: 0 0 0 4px rgba(37,99,235,.2);
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 4px rgba(59,130,246,.2);
 }
 
 /* =======================================================
@@ -91,7 +97,11 @@
 ======================================================= */
 .btn-calculate {
     width: 100%;
-    background: #2563EB;
+    background: linear-gradient(
+        135deg,
+        #2563EB,
+        #38BDF8
+    );
     color: white;
     border: none;
     padding: 16px;
@@ -103,16 +113,15 @@
 }
 
 .btn-calculate:hover {
-    background: #1D4ED8;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(29,78,216,.35);
+    box-shadow: 0 8px 20px rgba(37,99,235,.35);
 }
 
 /* =======================================================
    CONTENT
 ======================================================= */
 .content-area {
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 20px;
     padding: 35px;
     min-height: 300px;
@@ -139,11 +148,11 @@
 .tips-list li {
     font-size: 16px;
     margin-bottom: 15px;
-    color: #1E3A5F;
+    color: #334155;
     background: #EFF6FF;
     padding: 12px 15px;
     border-radius: 12px;
-    border-left:4px solid #2563EB;
+    border-left:4px solid #3B82F6;
 }
 
 .initial-view img {
@@ -155,10 +164,14 @@
 /* =======================================================
    RESULT
 ======================================================= */
+.result-view {
+    display:block;
+}
+
 .result-view h3{
     font-size:24px;
     font-weight:700;
-    color:#0F172A;
+    color:#1E293B;
     margin-bottom:20px;
 }
 
@@ -175,10 +188,20 @@
 .result-table td{
     padding:14px 0;
     font-size:15px;
-    color:#1E3A5F;
+}
+
+.result-table td:nth-child(1){
+    width:45%;
+}
+
+.result-table td:nth-child(2){
+    width:5%;
+    text-align:center;
 }
 
 .result-table td:nth-child(3){
+    width:50%;
+    text-align:right;
     font-weight:600;
 }
 
@@ -194,12 +217,11 @@
     background:#2563EB;
     color:white;
     padding:6px 18px;
-    border-radius:6px;
+    border-radius:4px;
     font-size:13px;
     font-weight:600;
     display:inline-block;
 }
-
 .status-pill.baik{
     background:#22C55E;
 }
@@ -216,7 +238,11 @@
    RECOMMENDATION
 ======================================================= */
 .recommendation-box{
-    background:linear-gradient(135deg, #1E3A5F, #2563EB);
+    background:linear-gradient(
+    135deg,
+    #2563EB,
+    #38BDF8
+    );
     color:white;
     padding:22px;
     border-radius:16px;
@@ -230,15 +256,20 @@
 .recommendation-box p{
     font-size:14px;
     line-height:1.7;
-    color:#EFF6FF;
 }
 
 /* =======================================================
    HISTORY TABLE
 ======================================================= */
+.history-table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+    margin-top:15px;
+}
+
 .history-table th{
-    background:#1E3A5F;
-    color:#FFFFFF;
+    background:#EEF4FA;
     padding:14px 10px;
     font-size:15px;
     font-weight:700;
@@ -250,22 +281,25 @@
     text-align:center;
     border-bottom:1px solid #E2E8F0;
     font-size:15px;
-    color:#1E3A5F;
+}
+
+.history-table td:last-child,
+.history-table th:last-child{
+    width:120px;
 }
 
 /* =======================================================
-   STATUS BADGE
+   STATUS TABLE
 ======================================================= */
 .status-badge{
     display:inline-block;
     background:#2563EB;
     color:white;
     padding:6px 18px;
-    border-radius:6px;
+    border-radius:4px;
     font-size:13px;
     font-weight:600;
 }
-
 .status-badge.baik{
     background:#22C55E;
 }
@@ -302,8 +336,19 @@
     width:80%;
 }
 
-.content-area,
+.content-area{
+    padding:20px;
+}
+
 .card-white{
     padding:20px;
 }
-}
+
+}  ubalah warna yang sesuai dan senada Kombinasi yang Bagus untuk UI Desktop
+Background utama → #0F172A
+Sidebar → #1E3A5F
+Tombol utama → #2563EB
+Hover tombol → #1D4ED8
+Card → #FFFFFF
+Background lembut → #EFF6FF
+Text putih → #FFFFFF  
