@@ -10,36 +10,60 @@
 /* ===== HEADER ===== */
 
 .jurnal-header{
-    padding:25px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 30px;
     background:#fff;
     border-radius:20px;
     margin-bottom:25px;
     box-shadow:0 4px 12px rgba(0,0,0,.06);
 }
 
-.skrining-header-top{
-    display:flex;
-    align-items:flex-start;
-    gap:15px;
+.header-left{
+    flex:1;
 }
 
-.header-content h2{
-    font-size:28px;
+.header-center{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.header-icon{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#eaf3ff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.header-text{
+    display:flex;
+    flex-direction:column;
+}
+
+/* UBAH UKURAN JUDUL SAJA */
+.header-text h1{
+    font-size:32px;
     font-weight:700;
     margin:0;
     color:#1e293b;
     line-height:1.2;
 }
 
-.header-content p{
-    margin-top:6px;
+.header-text p{
+    margin-top:5px;
     margin-bottom:0;
     color:#64748b;
     font-size:14px;
 }
 
 .btn-back{
-    display:inline-flex;
+    display:flex;
     align-items:center;
     gap:8px;
 
@@ -54,8 +78,6 @@
     font-weight:600;
 
     transition:.3s;
-
-    margin-bottom:20px;
 }
 
 .btn-back:hover{
@@ -67,8 +89,14 @@
 
 @media(max-width:768px){
 
-    .header-content h2{
-        font-size:22px;
+    .jurnal-header{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .header-text h1{
+        font-size:26px;
     }
 
 }
