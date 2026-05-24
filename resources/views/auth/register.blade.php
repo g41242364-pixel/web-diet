@@ -89,7 +89,7 @@
             display: inline-block;
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s;
+            transition: background 0.3s, transform 0.2s;
         }
 
         .btn-signin-link:hover {
@@ -218,12 +218,18 @@
             background-color: var(--primary-blue);
             color: var(--white);
             border: none;
-            padding: 10px 60px;
-            border-radius: 20px;
-            font-size: 20px;
-            font-weight: 600;
+            padding: 12px 60px;
+            border-radius: 15px;
+            font-size: 22px;
+            font-weight: 400;
             cursor: pointer;
+            width: auto;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
+        }
+
+        .btn-signup:hover {
+            background-color: #79c5e4;
         }
 
         .divider {
@@ -344,7 +350,7 @@
                     <div class="flex-row">
                         <div class="umur-group">
                             <label style="color: var(--text-color);">Umur</label>
-                            <input type="number" name="umur" class="umur-input" placeholder="0"
+                            <input type="number" name="umur" class="umur-input" placeholder="Contoh: 20"
                                 value="{{ old('umur') }}" required>
                         </div>
                         <div class="gender-group">
@@ -363,6 +369,7 @@
                     </div>
 
                     <div class="btn-signup-container">
+                        {{-- SIGN UP sudah pakai <button>, hanya CSS diseragamkan --}}
                         <button type="submit" class="btn-signup">SIGN UP</button>
                     </div>
                 </form>
@@ -372,7 +379,8 @@
         <div class="branding-panel">
             <h1>SISD</h1>
             <p>Sistem Informasi Skrining Diet</p>
-            <a href="/" class="btn-signin-link">SIGN IN</a>
+            {{-- DIUBAH: dari <a> jadi <button> --}}
+            <button type="button" onclick="window.location='/'" class="btn-signin-link">SIGN IN</button>
         </div>
     </div>
 
