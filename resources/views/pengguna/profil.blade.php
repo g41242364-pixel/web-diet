@@ -2,31 +2,37 @@
 @section('title', 'Profil')
 
 <style>
-/* ===== OUTER WRAPPER ===== */
+/* ===== OUTER WRAPPER (LEBIH LEGAAA KIRI KANAN) ===== */
 .profil-page {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 50px 40px 30px; /* lebih lega kiri kanan + atas */
+
+    /* 🔥 KUNCI PERBAIKAN: padding kiri-kanan diperbesar */
+    padding: 25px 80px 30px;
+
     box-sizing: border-box;
 }
 
 /* ===== WRAPPER DALAM ===== */
 .profil-wrapper {
     width: 100%;
-    max-width: 900px;
+    max-width: 950px;
 }
 
-/* ===== HEADER ===== */
+/* ===== HEADER (DINAIKKAN) ===== */
 .header-title {
-    margin-bottom: 25px;
-    margin-top: -10px; /* BIKIN NAIK KE ATAS */
+    margin-bottom: 20px;
+
+    /* 🔥 BIKIN TULISAN NAik KE ATAS */
+    margin-top: -25px;
 }
 
 .header-title h2 {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 800;
     margin-bottom: 4px;
+    color: #1f2d3d;
 }
 
 .header-title p {
@@ -126,12 +132,12 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    .form-grid {
-        grid-template-columns: 1fr;
+    .profil-page {
+        padding: 20px 15px; /* mobile tetap aman */
     }
 
-    .profil-page {
-        padding: 25px 15px;
+    .form-grid {
+        grid-template-columns: 1fr;
     }
 
     .header-title {
