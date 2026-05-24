@@ -6,97 +6,36 @@
 @section('content')
 
 <style>
-    /* =========================
-       PERBAIKAN BUTTON & PILIHAN
-    ========================== */
-
-    /* tujuan diet jangan terlihat seperti tombol submit */
-    .tujuan-container{
-        display:flex;
-        gap:12px;
-        flex-wrap:wrap;
-    }
-
-    .tujuan-item{
-        display:flex;
-        align-items:center;
-        gap:8px;
-        padding:10px 16px;
-        border:1px solid #dcdcdc;
-        border-radius:10px;
-        background:#fff;
-        transition:0.2s;
-        font-size:14px;
-        font-weight:500;
-        cursor:pointer;
-    }
-
-    .tujuan-item:hover{
-        border-color:#2D9CDB;
-        background:#f2f9fd;
-    }
-
-    .tujuan-item.active{
-        background:#D8EBF3;
-        border:1px solid #2D9CDB;
-        color:#156ea8;
-    }
-
-    /* tombol utama */
-    .btn-save-target{
-        width:100%;
-        padding:12px;
-        border:none;
-        border-radius:10px;
-        background:#2D9CDB;
-        color:white;
-        font-weight:600;
-        font-size:14px;
-        cursor:pointer;
-        transition:0.2s;
-        margin-top:14px;
-    }
-
-    .btn-save-target:hover{
-        background:#2387c2;
-        transform:translateY(-1px);
-    }
-
-    .btn-save-target:active{
-        transform:scale(0.98);
-    }
-
-    .btn-save-target:disabled{
-        background:#c7c7c7;
-        cursor:not-allowed;
-        transform:none;
-    }
-
-    /* tombol checkin */
     .btn-catat{
+        height:40px;
+        border:none;
+        border-radius:8px;
+        padding:0 16px;
         display:flex;
         align-items:center;
         justify-content:center;
         gap:6px;
-        border:none;
-        border-radius:8px;
-        background:#27ae60;
-        color:white;
-        padding:8px 16px;
         cursor:pointer;
+        background:#2D9CDB;
+        color:white;
         font-weight:600;
-        transition:0.2s;
-        min-height:38px;
-        margin-top:18px;
     }
 
     .btn-catat:hover{
-        background:#219150;
-        transform:translateY(-1px);
+        opacity:0.9;
     }
 
-    .btn-catat:active{
-        transform:scale(0.97);
+    .btn-disabled{
+        opacity:0.5;
+        cursor:not-allowed;
+        background:#ccc !important;
+        border:none !important;
+    }
+
+    .tujuan-item.active{
+        background:#2D9CDB;
+        color:white;
+        border-color:#2D9CDB;
     }
 </style>
 
@@ -109,7 +48,6 @@
         </svg>
         <h2>Target Diet</h2>
     </div>
-
     <p>Hitung Kategori, Tetapkan Target, dan Pantau Progres Mingguan.</p>
 </div>
 
@@ -133,7 +71,6 @@
 
 @if($skriningTerakhir)
 <div class="skrining-banner">
-
     <div class="icon-check">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="20 6 9 17 4 12"/>
@@ -153,7 +90,6 @@
             </span>
         </div>
     </div>
-
 </div>
 @endif
 
@@ -177,12 +113,12 @@
             <div style="background:#fff3cd;color:#856404;padding:12px 16px;border-radius:8px;margin-bottom:14px;font-size:13px;">
                 ⚠ Target diet aktif belum tercapai
                 (progres <strong>{{ $progressAktif }}%</strong>).
+
                 Selesaikan target saat ini sebelum mengatur target baru.
             </div>
         @endif
 
         <form action="{{ route('pengguna.targetDiet.simpan') }}" method="POST">
-
             @csrf
 
             <div class="form-row">
@@ -223,13 +159,18 @@
             <div class="tujuan-container"
                 style="{{ $targetDiet && !$targetTercapai ? 'pointer-events:none;opacity:0.5;' : '' }}">
 
-                <label class="tujuan-item {{ ($targetDiet && $targetDiet->tujuan=='turun') ? 'active' : '' }}">
+                {{-- TURUN --}}
+                <label class="tujuan-item {{ ($targetDiet && $targetDiet->tujuan=='turun') ? 'active' : '' }}"
+                    style="cursor:pointer;">
 
-                    <input type="radio"
+                    <input
+                        type="radio"
                         name="tujuan"
                         value="turun"
+                        required
                         {{ ($targetDiet && $targetDiet->tujuan=='turun') ? 'checked' : '' }}
-                        style="display:none;">
+                        style="display:none;"
+                    >
 
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/>
@@ -239,13 +180,17 @@
                     Menurunkan BB
                 </label>
 
-                <label class="tujuan-item {{ ($targetDiet && $targetDiet->tujuan=='jaga') ? 'active' : '' }}">
+                {{-- JAGA --}}
+                <label class="tujuan-item {{ ($targetDiet && $targetDiet->tujuan=='jaga') ? 'active' : '' }}"
+                    style="cursor:pointer;">
 
-                    <input type="radio"
+                    <input
+                        type="radio"
                         name="tujuan"
                         value="jaga"
                         {{ ($targetDiet && $targetDiet->tujuan=='jaga') ? 'checked' : '' }}
-                        style="display:none;">
+                        style="display:none;"
+                    >
 
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="5" y1="12" x2="19" y2="12"/>
@@ -254,13 +199,17 @@
                     Menjaga BB
                 </label>
 
-                <label class="tujuan-item {{ (!$targetDiet || $targetDiet->tujuan=='naik') ? 'active' : '' }}">
+                {{-- NAIK --}}
+                <label class="tujuan-item {{ ($targetDiet && $targetDiet->tujuan=='naik') ? 'active' : '' }}"
+                    style="cursor:pointer;">
 
-                    <input type="radio"
+                    <input
+                        type="radio"
                         name="tujuan"
                         value="naik"
-                        {{ (!$targetDiet || $targetDiet->tujuan=='naik') ? 'checked' : '' }}
-                        style="display:none;">
+                        {{ ($targetDiet && $targetDiet->tujuan=='naik') ? 'checked' : '' }}
+                        style="display:none;"
+                    >
 
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
@@ -292,7 +241,7 @@
 
             <button
                 type="submit"
-                class="btn-save-target"
+                class="btn-save-target {{ $targetDiet && !$targetTercapai ? 'btn-disabled' : '' }}"
                 {{ $targetDiet && !$targetTercapai ? 'disabled' : '' }}
             >
                 Simpan Target Diet
@@ -327,6 +276,17 @@
                 {{ ucfirst($targetDiet->tujuan) }} BB
             </div>
 
+            @if($targetTercapai)
+                <div style="background:#e8f8e8;color:#27ae60;padding:10px 12px;border-radius:8px;font-size:13px;margin-bottom:10px;">
+                    🎉 Target berhasil tercapai!
+                </div>
+            @endif
+
+            <div class="target-active-info">
+                Target {{ $targetDiet->berat_target }} kg ·
+                {{ $targetDiet->target_mingguan }} kg/minggu
+            </div>
+
         </div>
 
         @endif
@@ -336,7 +296,7 @@
 
             <div class="card-title-row">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2-2v-7"/>
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
                     <path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
                 </svg>
 
@@ -348,13 +308,14 @@
                 @if($bolehCheckin && !$targetTercapai)
 
                 <form action="{{ route('pengguna.targetDiet.checkin') }}" method="POST">
-
                     @csrf
 
                     <div class="checkin-form">
 
                         <div class="input-group" style="flex:0.4;">
-                            <label style="font-size:11px;">Berat saat ini (kg)</label>
+                            <label style="font-size:11px;">
+                                Berat saat ini (kg)
+                            </label>
 
                             <input
                                 type="number"
@@ -367,12 +328,14 @@
                         </div>
 
                         <div class="input-group">
-                            <label style="font-size:11px;">Catatan</label>
+                            <label style="font-size:11px;">
+                                Catatan
+                            </label>
 
                             <input
                                 type="text"
                                 name="catatan"
-                                placeholder="Konsisten Olahraga"
+                                placeholder="Konsisten olahraga"
                                 style="padding:5px;text-align:left;"
                             >
                         </div>
