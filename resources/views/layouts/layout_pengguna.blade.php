@@ -9,8 +9,12 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/layout/layout_pengguna.css') }}">
-
-
+    <style>
+        /* Fix: pastikan button tidak kena reset global */
+        button {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
 
 <body>
@@ -119,18 +123,19 @@
             </li>
         </ul>
 
-            <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button type="submit" class="nav-item" style="background: none; border: none; width: 100%; cursor: pointer; text-align: left;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
-                        <polyline points="16 17 21 12 16 7" />
-                        <line x1="21" y1="12" x2="9" y2="12" />
-                    </svg>
-                    <span>Log Out</span>
-                </button>
-            </form>
-        </div>
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            {{-- DIUBAH: pakai class logout-btn tersendiri, tidak pakai nav-item --}}
+            <button type="submit" class="logout-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                    <polyline points="16 17 21 12 16 7" />
+                    <line x1="21" y1="12" x2="9" y2="12" />
+                </svg>
+                <span>Log Out</span>
+            </button>
+        </form>
+
     </nav>
 
     <main class="main-content">
