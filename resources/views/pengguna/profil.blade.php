@@ -2,36 +2,35 @@
 @section('title', 'Profil')
 
 <style>
-/* ===== OUTER WRAPPER (SEIMBANG KIRI KANAN) ===== */
+/* ===== OUTER WRAPPER (LEBIH MODERN + LEBIH LEBAR) ===== */
 .profil-page {
     width: 100%;
     display: flex;
     justify-content: center;
 
-    /* 🔥 SEIMBANG: tidak terlalu lebar, tidak terlalu sempit */
-    padding: 30px 60px 30px;
+    /* 🔥 RESPONSIVE PADDING (LEBIH LEGA DI DESKTOP) */
+    padding: 40px clamp(20px, 5vw, 100px);
 
     box-sizing: border-box;
 }
 
-/* ===== WRAPPER DALAM ===== */
+/* ===== WRAPPER DALAM (DIPERLEBAR) ===== */
 .profil-wrapper {
     width: 100%;
-    max-width: 920px;
+
+    /* 🔥 SEBELUMNYA 920px → sekarang lebih lebar */
+    max-width: 1100px;
 }
 
-/* ===== HEADER (SEDIKIT “NAPAS” KIRI) ===== */
+/* ===== HEADER ===== */
 .header-title {
-    margin-bottom: 22px;
-
-    /* 🔥 biar tidak terlalu nempel kiri */
-    padding-left: 6px;
-
-    margin-top: -20px;
+    margin-bottom: 24px;
+    padding-left: 8px;
+    margin-top: -25px;
 }
 
 .header-title h2 {
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 800;
     margin-bottom: 4px;
     color: #1f2d3d;
@@ -46,8 +45,10 @@
 .profil-card {
     background: #fff;
     border-radius: 14px;
-    padding: 26px;
+    padding: 28px;
+
     margin-bottom: 22px;
+
     border: 1px solid #e8f0f5;
     box-shadow: 0 4px 14px rgba(0,0,0,0.05);
 }
@@ -64,7 +65,7 @@
 .form-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 18px;
 }
 
 /* ===== FORM GROUP ===== */
@@ -84,7 +85,7 @@
 /* ===== INPUT ===== */
 .form-group input,
 .form-group select {
-    padding: 11px 12px;
+    padding: 12px 14px;
     border: 1.5px solid #ddd;
     border-radius: 9px;
     font-size: 14px;
