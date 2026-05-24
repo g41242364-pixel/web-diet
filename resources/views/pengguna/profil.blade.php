@@ -2,32 +2,28 @@
 @section('title', 'Profil')
 
 <style>
-/* ===== OUTER WRAPPER (HAMPIR FULL WIDTH) ===== */
+/* ===== FULL WIDTH PAGE (TIDAK ADA KOSONG KANAN KIRI) ===== */
 .profil-page {
     width: 100%;
+    min-height: 100vh;
 
-    display: flex;
-    justify-content: center;
-
-    /* 🔥 hanya sedikit padding biar tidak nempel layar */
-    padding: 30px 20px;
+    /* 🔥 HANYA SEDIKIT PADDING */
+    padding: 30px 15px;
 
     box-sizing: border-box;
+    background: #f6f9fc;
 }
 
-/* ===== WRAPPER DALAM (JADI JAUH LEBIH LEBAR) ===== */
+/* ===== WRAPPER FULL WIDTH (HAPUS MAX WIDTH) ===== */
 .profil-wrapper {
     width: 100%;
-
-    /* 🔥 ini kuncinya: hampir full layar */
-    max-width: 1400px;
 }
 
 /* ===== HEADER ===== */
 .header-title {
-    margin-bottom: 24px;
-    padding-left: 6px;
-    margin-top: -25px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    margin-top: -20px;
 }
 
 .header-title h2 {
@@ -42,35 +38,29 @@
     font-size: 14px;
 }
 
-/* ===== CARD (FULL WIDTH FEEL) ===== */
+/* ===== CARD FULL WIDTH ===== */
 .profil-card {
+    width: 100%;
+
     background: #fff;
     border-radius: 14px;
 
-    /* 🔥 lebih besar supaya tidak “kecil di tengah” */
-    padding: 32px;
+    padding: 28px;
 
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 
     border: 1px solid #e8f0f5;
     box-shadow: 0 4px 14px rgba(0,0,0,0.05);
 }
 
-/* ===== TITLE CARD ===== */
-.profil-card h3 {
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 18px;
-    color: #2c3e50;
-}
-
-/* ===== FORM GRID (LEBIH RENGGANG & LUAS) ===== */
+/* ===== FORM GRID (FULL RESPONSIVE) ===== */
 .form-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
 
-    /* 🔥 jarak diperlebar biar isi layar */
-    gap: 24px;
+    /* 🔥 AUTO FIT BIAR FULL MENGISI LAYAR */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
 }
 
 /* ===== FORM GROUP ===== */
@@ -90,13 +80,13 @@
 /* ===== INPUT ===== */
 .form-group input,
 .form-group select {
-    padding: 13px 14px;
+    padding: 12px 14px;
     border: 1.5px solid #ddd;
     border-radius: 9px;
     font-size: 14px;
-    transition: 0.2s;
 }
 
+/* focus */
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
@@ -106,8 +96,8 @@
 
 /* ===== BUTTON ===== */
 .btn-save {
-    margin-top: 14px;
-    padding: 11px 24px;
+    margin-top: 12px;
+    padding: 11px 22px;
     background: #90D2ED;
     color: #fff;
     border: none;
@@ -144,12 +134,8 @@
         padding: 15px 10px;
     }
 
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .profil-card {
-        padding: 20px;
+    .header-title {
+        padding-left: 0;
     }
 }
 </style>
@@ -196,7 +182,7 @@
 
                     <div class="form-group">
                         <label>Umur</label>
-                        <input type="number" name="umur" value="{{ $user->umur }}" min="1" max="120">
+                        <input type="number" name="umur" value="{{ $user->umur }}">
                     </div>
 
                     <div class="form-group">
