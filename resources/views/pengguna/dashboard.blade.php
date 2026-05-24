@@ -22,7 +22,7 @@
             Memantau pola hidup, dan mendapatkan rekomendasi kesehatan secara digital
         </p>
 
-        <button class="btn-mulai" onclick="window.location.href='{{ route('skrining.langkah1') }}'">
+        <button type="btn-mulai" onclick="window.location.href='{{ route('skrining.langkah1') }}'">
             {{ $skriningTerakhir ? 'Skrining Ulang' : 'Mulai Sekarang' }}
         </button>
     </section>
