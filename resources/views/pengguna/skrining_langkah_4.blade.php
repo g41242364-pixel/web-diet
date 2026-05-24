@@ -48,6 +48,7 @@
                 </svg>
 
                 <div>
+
                     <h2>Skrining IMT</h2>
 
                     <div style="
@@ -59,6 +60,7 @@
                     "></div>
 
                     <p>Skrining Bertahap : Fase 1 → Fase 2 → IMT → Hasil.</p>
+
                 </div>
 
             </div>
@@ -361,7 +363,7 @@
             <div style="
                 margin-top:24px;
                 display:flex;
-                gap:12px;
+                gap:14px;
                 flex-wrap:wrap;
             ">
 
@@ -369,7 +371,22 @@
 
                     @csrf
 
-                    <button type="submit" class="btn-konsultasi">
+                    <button type="submit"
+                        style="
+                            background:#2563EB;
+                            color:#FFFFFF;
+                            border:none;
+                            padding:14px 28px;
+                            border-radius:14px;
+                            font-size:16px;
+                            font-weight:700;
+                            cursor:pointer;
+                            box-shadow:0 4px 12px rgba(37,99,235,0.25);
+                            transition:all .3s ease;
+                            display:flex;
+                            align-items:center;
+                            gap:8px;
+                        ">
 
                         💬 Lanjut Konsultasi
 
@@ -378,12 +395,20 @@
                 </form>
 
                 <a href="{{ route('pengguna.dashboard') }}"
-                   class="btn-konsultasi"
                    style="
                         background:#64748B;
-                        color:#fff;
+                        color:#FFFFFF;
                         text-decoration:none;
                         border:none;
+                        padding:14px 28px;
+                        border-radius:14px;
+                        font-size:16px;
+                        font-weight:700;
+                        display:flex;
+                        align-items:center;
+                        gap:8px;
+                        box-shadow:0 4px 12px rgba(0,0,0,0.12);
+                        transition:all .3s ease;
                    ">
 
                     ← Ke Dashboard
