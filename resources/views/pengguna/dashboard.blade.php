@@ -32,11 +32,11 @@
             <h4>Hasil IMT</h4>
 
             @if($skriningTerakhir)
-                <p style="font-size:20px;font-weight:700;color:#2c3e50;">
+                <p style="font-size:20px;font-weight:700;color:#000000;">
                     {{ $skriningTerakhir->status_imt }}
                 </p>
 
-                <small style="color:#000000;font-size:11px;">
+                <small style="color:#888;font-size:11px;">
                     {{ $skriningTerakhir->created_at->format('d M Y') }}
                 </small>
             @else
@@ -48,11 +48,11 @@
             <h4>IMT Saat Ini</h4>
 
             @if($skriningTerakhir)
-                <p style="font-size:20px;font-weight:700;color:#2c3e50;">
+                <p style="font-size:20px;font-weight:700;color:#000000;">
                     {{ $skriningTerakhir->imt }}
                 </p>
 
-                <small style="color:#000000;font-size:11px;">kg/m²</small>
+                <small style="color:#888;font-size:11px;">kg/m²</small>
             @else
                 <p style="color:#aaa;">Belum ada data</p>
             @endif
@@ -62,11 +62,11 @@
             <h4>Target Berat</h4>
 
             @if($targetDiet)
-                <p style="font-size:20px;font-weight:700;color:#2c3e50;">
+                <p style="font-size:20px;font-weight:700;color:#000000;">
                     {{ $targetDiet->berat_target }} kg
                 </p>
 
-                <small style="color:#000000;font-size:11px;">
+                <small style="color:#888;font-size:11px;">
                     {{ ucfirst($targetDiet->tujuan) }} berat
                 </small>
             @else
@@ -78,7 +78,7 @@
             <h4>Hasil Skrining</h4>
 
             @if($statusKebiasaan)
-                <p style="font-size:20px;font-weight:700;color:#2c3e50;">
+                <p style="font-size:20px;font-weight:700;color:#000000;">
                     {{ ucfirst($statusKebiasaan) }}
                 </p>
             @else
