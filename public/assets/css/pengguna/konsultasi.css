@@ -1,12 +1,22 @@
 :root {
-    --bg-chat-container: #CFE3EE;
-    --user-bubble: #E2F0D9;
-    --expert-bubble: #FFFFFF;
-    --text-grey: #666;
-    --input-blue: #5D99C6;
+    /* THEME UTAMA (SAMAKAN DENGAN SCRINING) */
+    --primary-blue: #2563EB;
+    --dark-blue: #1E3A5F;
+    --soft-blue: #EFF6FF;
+    --border-blue: #BFDBFE;
+    --text-grey: #475569;
+
     --white: #ffffff;
+
+    /* CHAT COLORS */
+    --bg-chat-container: #EFF6FF;
+    --user-bubble: #DBEAFE;
+    --expert-bubble: #FFFFFF;
+
+    --input-blue: #2563EB;
 }
 
+/* HEADER */
 .consul-header {
     margin-bottom: 25px;
 }
@@ -22,15 +32,17 @@
     font-weight: 800;
     margin-bottom: 0;
     line-height: 1;
+    color: var(--dark-blue);
 }
 
 .header-top p {
     font-size: 16px;
-    color: #000;
+    color: var(--text-grey);
     margin-top: 10px;
     max-width: 800px;
 }
 
+/* CHAT CONTAINER */
 .chat-container {
     background-color: var(--bg-chat-container);
     border-radius: 40px;
@@ -38,15 +50,17 @@
     min-height: 600px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border: 1.5px solid var(--border-blue);
 }
 
+/* CHAT HEADER */
 .chat-header {
     display: flex;
     align-items: center;
     gap: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid var(--border-blue);
     margin-bottom: 25px;
 }
 
@@ -58,7 +72,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #000;
+    border: 2px solid var(--border-blue);
 }
 
 .expert-avatar svg {
@@ -70,6 +84,7 @@
     font-size: 18px;
     font-weight: 800;
     margin-bottom: 0;
+    color: var(--dark-blue);
 }
 
 .expert-info span {
@@ -78,6 +93,7 @@
     color: var(--text-grey);
 }
 
+/* MESSAGE LIST */
 .message-list {
     flex-grow: 1;
     display: flex;
@@ -98,10 +114,30 @@
     padding: 15px 20px;
     border-radius: 15px;
     font-size: 14px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     position: relative;
 }
 
+/* USER MESSAGE */
+.user-msg {
+    align-self: flex-end;
+    flex-direction: row-reverse;
+}
+
+.user-msg .bubble {
+    background-color: var(--user-bubble);
+    border: 1.5px solid var(--border-blue);
+    color: var(--dark-blue);
+}
+
+/* EXPERT MESSAGE */
+.expert-msg .bubble {
+    background-color: var(--expert-bubble);
+    border: 1.5px solid var(--border-blue);
+    color: var(--dark-blue);
+}
+
+/* TIMESTAMP */
 .timestamp {
     font-size: 10px;
     color: var(--text-grey);
@@ -110,15 +146,7 @@
     display: block;
 }
 
-.user-msg {
-    align-self: flex-end;
-    flex-direction: row-reverse;
-}
-
-.user-msg .bubble {
-    background-color: var(--user-bubble);
-}
-
+/* USER AVATAR */
 .user-avatar {
     width: 45px;
     height: 45px;
@@ -133,20 +161,19 @@
     object-fit: cover;
 }
 
-.expert-msg .bubble {
-    background-color: var(--expert-bubble);
-}
-
+/* ATTACHMENT */
 .attachment-card {
-    background: #E8F0F5;
-    border: 1px solid #ccc;
+    background: var(--soft-blue);
+    border: 1.5px solid var(--border-blue);
     padding: 20px 40px;
     border-radius: 10px;
     text-align: center;
     font-size: 16px;
     margin-bottom: 5px;
+    color: var(--dark-blue);
 }
 
+/* CHAT FOOTER */
 .chat-footer {
     display: flex;
     gap: 15px;
@@ -154,8 +181,10 @@
     padding-top: 10px;
 }
 
-.btn-attach {
-    background: var(--input-blue);
+/* BUTTON ICON */
+.btn-attach,
+.btn-send {
+    background: var(--primary-blue);
     border: none;
     width: 60px;
     height: 45px;
@@ -165,8 +194,15 @@
     justify-content: center;
     cursor: pointer;
     color: white;
+    transition: 0.2s ease;
 }
 
+.btn-attach:hover,
+.btn-send:hover {
+    background: #1D4ED8;
+}
+
+/* INPUT */
 .input-wrapper {
     flex-grow: 1;
     position: relative;
@@ -174,32 +210,15 @@
 
 .input-wrapper input {
     width: 100%;
-    background: var(--input-blue);
+    background: var(--primary-blue);
     border: none;
     padding: 12px 25px;
     border-radius: 25px;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     font-style: italic;
 }
 
 .input-wrapper input::placeholder {
-    color: rgba(255,255,255,0.7);
-}
-
-.btn-send {
-    background: var(--input-blue);
-    border: none;
-    width: 60px;
-    height: 45px;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: white;
-}
-
-.btn-attach:hover, .btn-send:hover {
-    opacity: 0.9;
+    color: rgba(255,255,255,0.75);
 }
