@@ -2,37 +2,36 @@
 @section('title', 'Profil')
 
 <style>
-/* ===== OUTER WRAPPER (LEBIH LEGAAA KIRI KANAN) ===== */
+
+/* ===== FULL SCREEN WRAPPER ===== */
 .profil-page {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    min-height: 100vh;
 
-    /* 🔥 KUNCI PERBAIKAN: padding kiri-kanan diperbesar */
-    padding: 25px 80px 30px;
+    /* 🔥 TIPIS SAJA SUPAYA TIDAK NEMPEL */
+    padding: 25px 10px;
 
+    background: #f6f9fc;
     box-sizing: border-box;
 }
 
-/* ===== WRAPPER DALAM ===== */
+/* ===== FULL WIDTH WRAPPER (HAPUS LIMIT) ===== */
 .profil-wrapper {
     width: 100%;
-    max-width: 950px;
 }
 
-/* ===== HEADER (DINAIKKAN) ===== */
+/* ===== HEADER ===== */
 .header-title {
-    margin-bottom: 20px;
-
-    /* 🔥 BIKIN TULISAN NAik KE ATAS */
-    margin-top: -25px;
+    margin-bottom: 18px;
+    padding-left: 12px;
+    margin-top: -18px;
 }
 
 .header-title h2 {
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 800;
-    margin-bottom: 4px;
     color: #1f2d3d;
+    margin-bottom: 4px;
 }
 
 .header-title p {
@@ -40,36 +39,43 @@
     font-size: 14px;
 }
 
-/* ===== CARD ===== */
+/* ===== CARD FULL WIDTH ===== */
 .profil-card {
+    width: 100%;
+
     background: #fff;
     border-radius: 14px;
-    padding: 26px;
-    margin-bottom: 22px;
+
+    padding: 32px;
+
+    margin-bottom: 18px;
+
     border: 1px solid #e8f0f5;
     box-shadow: 0 4px 14px rgba(0,0,0,0.05);
 }
 
-/* ===== TITLE CARD ===== */
+/* ===== TITLE ===== */
 .profil-card h3 {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 700;
     margin-bottom: 18px;
     color: #2c3e50;
 }
 
-/* ===== FORM GRID ===== */
+/* ===== GRID 2 KOLOM (FULL WIDTH FEEL) ===== */
 .form-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+
+    gap: 22px;
 }
 
 /* ===== FORM GROUP ===== */
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 
 .form-group label {
@@ -82,13 +88,14 @@
 /* ===== INPUT ===== */
 .form-group input,
 .form-group select {
-    padding: 11px 12px;
+    padding: 13px 14px;
     border: 1.5px solid #ddd;
     border-radius: 9px;
     font-size: 14px;
-    transition: 0.2s;
+    width: 100%;
 }
 
+/* focus */
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
@@ -98,8 +105,8 @@
 
 /* ===== BUTTON ===== */
 .btn-save {
-    margin-top: 12px;
-    padding: 10px 22px;
+    margin-top: 14px;
+    padding: 11px 22px;
     background: #90D2ED;
     color: #fff;
     border: none;
@@ -132,18 +139,19 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    .profil-page {
-        padding: 20px 15px; /* mobile tetap aman */
-    }
-
     .form-grid {
         grid-template-columns: 1fr;
     }
 
     .header-title {
-        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .profil-card {
+        padding: 20px;
     }
 }
+
 </style>
 
 @section('content')
@@ -175,6 +183,7 @@
             <form action="{{ route('pengguna.profil.update') }}" method="POST">
                 @csrf
 
+                <!-- 2 ATAS + 2 BAWAH -->
                 <div class="form-grid">
                     <div class="form-group">
                         <label>Nama Lengkap</label>
@@ -188,7 +197,7 @@
 
                     <div class="form-group">
                         <label>Umur</label>
-                        <input type="number" name="umur" value="{{ $user->umur }}" min="1" max="120">
+                        <input type="number" name="umur" value="{{ $user->umur }}">
                     </div>
 
                     <div class="form-group">
@@ -237,4 +246,4 @@
     </div>
 </div>
 
-@endsection
+@endsection 

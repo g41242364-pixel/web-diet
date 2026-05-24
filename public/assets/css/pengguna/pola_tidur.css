@@ -2,9 +2,9 @@
    CONTAINER
 ======================================================= */
 .sleep-container{
-    width: calc(100% + 120px);
-    margin-left: -60px;
-    margin-right: -60px;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-right: -15px;
     padding: 0;
     box-sizing: border-box;
 }
@@ -211,28 +211,25 @@
 }
 
 /* =======================================================
-   STATUS TERBARU
+   STATUS
 ======================================================= */
 .status-pill{
+    background:#2563EB;
     color:white;
-    padding:7px 18px;
-    border-radius:0;
+    padding:6px 18px;
+    border-radius:4px;
     font-size:13px;
     font-weight:600;
     display:inline-block;
 }
-
-/* BAIK = HIJAU */
 .status-pill.baik{
     background:#22C55E;
 }
 
-/* KURANG = BIRU */
 .status-pill.kurang{
     background:#2563EB;
 }
 
-/* BERLEBIH = MERAH */
 .status-pill.berlebih{
     background:#EF4444;
 }
@@ -286,29 +283,31 @@
     font-size:15px;
 }
 
+.history-table td:last-child,
+.history-table th:last-child{
+    width:120px;
+}
+
 /* =======================================================
    STATUS TABLE
 ======================================================= */
 .status-badge{
     display:inline-block;
+    background:#2563EB;
     color:white;
-    padding:7px 18px;
-    border-radius:0;
+    padding:6px 18px;
+    border-radius:4px;
     font-size:13px;
     font-weight:600;
 }
-
-/* CUKUP = HIJAU */
 .status-badge.baik{
     background:#22C55E;
 }
 
-/* KURANG = BIRU */
 .status-badge.kurang{
     background:#2563EB;
 }
 
-/* BERLEBIH = MERAH */
 .status-badge.berlebih{
     background:#EF4444;
 }
