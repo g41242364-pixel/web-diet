@@ -223,6 +223,7 @@
             font-size: 22px;
             font-weight: 400;
             cursor: pointer;
+            width: auto;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background 0.3s;
         }
