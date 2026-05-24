@@ -1,228 +1,367 @@
+/* =========================================
+   HEADER
+========================================= */
 
-    .header-section {
-        margin-bottom: 25px;
-    }
+.header-section {
+    margin-bottom: 25px;
+}
 
-    .header-section h2 {
-        font-size: 32px;
-        font-weight: 800;
-        color: #000;
-        margin-bottom: 5px;
-    }
+.header-section h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 5px;
+}
 
-    .header-section p {
-        color: #333;
-        font-size: 16px;
-    }
+.header-section p {
+    color: #555;
+    font-size: 16px;
+}
 
-    .skrining-banner {
-        background-color: #E0E0E0;
-        border-radius: 15px;
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 30px;
-    }
+/* =========================================
+   BANNER
+========================================= */
 
-    .skrining-banner .icon-check {
-        background: white;
-        padding: 5px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid #999;
-    }
+.skrining-banner {
+    background: #EAF6FB;
+    border: 1px solid #B9DCEB;
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
 
-    .banner-content h4 {
-        font-size: 18px;
-        margin-bottom: 8px;
-    }
+.skrining-banner .icon-check {
+    background: white;
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #C8DCE7;
+    color: #2E86AB;
+}
 
-    .tags-container {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-    }
+.banner-content h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #1A5670;
+}
 
-    .pill-tag {
-        background: white;
-        border: 1px solid #999;
-        padding: 4px 15px;
-        border-radius: 20px;
-        font-size: 14px;
-    }
+.tags-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
-    .date-text {
-        font-size: 12px;
-        color: #666;
-    }
+.pill-tag {
+    background: white;
+    border: 1px solid #B9DCEB;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #2E86AB;
+    font-weight: 600;
+}
 
+.date-text {
+    font-size: 12px;
+    color: #666;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.diet-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.diet-card {
+    background: #F6FBFD;
+    border: 1px solid #D5EAF3;
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.card-title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 18px;
+    color: #164863;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    flex: 1;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #1A5670;
+    font-weight: 600;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #C7DCE7;
+    border-radius: 10px;
+    background: white;
+    font-size: 14px;
+    color: #333;
+    transition: 0.2s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #5DAED1;
+    box-shadow: 0 0 0 3px rgba(93,174,209,0.15);
+}
+
+/* =========================================
+   TUJUAN DIET
+========================================= */
+
+.tujuan-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.tujuan-item {
+    background: #F3FAFD;
+    border: 1.5px solid #CDE5EF;
+    border-radius: 14px;
+    padding: 14px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2E86AB;
+    transition: all 0.2s ease;
+}
+
+.tujuan-item:hover {
+    background: #EAF6FB;
+    border-color: #79B8D4;
+}
+
+.tujuan-item.active {
+    background: #D8EEF8;
+    border: 2px solid #2E86AB;
+    color: #164863;
+    transform: scale(1.02);
+}
+
+/* =========================================
+   BUTTON SIMPAN
+========================================= */
+
+.btn-save-target {
+    width: 100%;
+    background: #2E86AB;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 13px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.2s ease;
+}
+
+.btn-save-target:hover {
+    background: #246D8B;
+}
+
+.btn-save-target:active {
+    transform: scale(0.97);
+}
+
+.btn-save-target:disabled {
+    background: #B8C6CC;
+    cursor: not-allowed;
+}
+
+/* =========================================
+   RIGHT COLUMN
+========================================= */
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.progress-section {
+    margin-top: 10px;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #164863;
+}
+
+.progress-bar-bg {
+    background: #E2EEF3;
+    height: 12px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #2FA4D8, #67C1E8);
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* =========================================
+   CHECKIN
+========================================= */
+
+.checkin-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: flex-end;
+}
+
+.checkin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.checkin-table th {
+    padding: 12px;
+    background: #EAF6FB;
+    color: #164863;
+    font-weight: 700;
+    border-bottom: 2px solid #B9DCEB;
+}
+
+.checkin-table td {
+    padding: 12px;
+    border-bottom: 1px solid #DCEAF0;
+    background: white;
+}
+
+.btn-catat {
+    background: #2FA4D8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-catat:hover {
+    background: #2389B8;
+}
+
+.btn-catat:active {
+    transform: scale(0.95);
+}
+
+/* =========================================
+   ⚠ WARNING / INFO BAR (BARU)
+========================================= */
+
+/* ❌ Target belum tercapai (DANGER) */
+.warning-target {
+    background: #FFE8E8;
+    border: 1px solid #FFB3B3;
+    color: #B30000;
+    padding: 12px 15px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* ⏳ Check-in info (INFO) */
+.info-checkin {
+    background: #EAF4FF;
+    border: 1px solid #B7D6FF;
+    color: #1F5FA8;
+    padding: 12px 15px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
     .diet-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 25px;
-    }
-
-    .diet-card {
-        background-color: #D8EBF3;
-        border-radius: 25px;
-        padding: 25px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
-
-    .card-title-row {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 20px;
-        font-weight: 800;
-        font-size: 18px;
-    }
-
-    .form-row {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 15px;
-    }
-
-    .input-group {
-        flex: 1;
-    }
-
-    .input-group label {
-        display: block;
-        font-size: 14px;
-        margin-bottom: 5px;
-    }
-
-    .input-group input, .input-group textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #999;
-        border-radius: 8px;
-        background: #F0F7FA;
-        text-align: center;
-        font-style: italic;
+        grid-template-columns: 1fr;
     }
 
     .tujuan-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        margin-bottom: 15px;
+        grid-template-columns: 1fr;
     }
 
-    .tujuan-item {
-        background: #F0F7FA;
-        border: 1px solid #999;
-        border-radius: 10px;
-        padding: 10px;
-        text-align: center;
-        cursor: pointer;
-        display: flex;
+    .form-row {
         flex-direction: column;
-        align-items: center;
-        gap: 5px;
-        font-size: 13px;
-        font-weight: 600;
-    }
-
-    .tujuan-item.active {
-        background: #ffffff;
-        border-color: #000;
-    }
-
-    .btn-save-target {
-        width: 100%;
-        background-color: #2E86AB;
-        color: white;
-        border: none;
-        padding: 12px;
-        border-radius: 10px;
-        font-size: 18px;
-        font-weight: 600;
-        cursor: pointer;
-        margin-top: 10px;
-    }
-
-    .right-column {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .target-active-info {
-        font-size: 12px;
-        color: #666;
-        margin-bottom: 15px;
-        line-height: 1.4;
-    }
-
-    .progress-section {
-        margin-top: 10px;
-    }
-
-    .progress-header {
-        display: flex;
-        justify-content: space-between;
-        font-weight: 800;
-        margin-bottom: 5px;
-    }
-
-    .progress-bar-bg {
-        background: #eee;
-        height: 12px;
-        border-radius: 10px;
-        overflow: hidden;
-        border: 1px solid #999;
-    }
-
-    .progress-fill {
-        background: #2FA4D8;
-        height: 100%;
-        width: 40%;
     }
 
     .checkin-form {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 20px;
-        align-items: flex-end;
+        flex-direction: column;
+        align-items: stretch;
     }
-
-    .checkin-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 13px;
-        text-align: center;
-    }
-
-    .checkin-table th {
-        padding: 10px;
-        border-bottom: 2px solid #000;
-    }
-
-    .checkin-table td {
-        padding: 10px;
-        border-bottom: 1px solid #ccc;
-    }
-
-    .btn-catat {
-        background: #2FA4D8;
-        color: white;
-        border: none;
-        padding: 8px 15px;
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        cursor: pointer;
-        font-size: 14px;
-    }
-
-    @media (max-width: 1024px) {
-        .diet-grid { grid-template-columns: 1fr; }
-    }
-
+}
