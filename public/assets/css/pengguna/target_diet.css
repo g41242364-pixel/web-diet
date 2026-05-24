@@ -133,15 +133,11 @@
 .input-group textarea {
     width: 100%;
     padding: 11px;
-
     border: 1px solid #C7DCE7;
     border-radius: 10px;
-
     background: white;
-
     font-size: 14px;
     color: #333;
-
     transition: 0.2s;
 }
 
@@ -167,25 +163,17 @@
     background: #F3FAFD;
     border: 1.5px solid #CDE5EF;
     border-radius: 14px;
-
     padding: 14px;
-
     text-align: center;
-
     cursor: pointer;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     gap: 8px;
-
     font-size: 13px;
     font-weight: 600;
-
     color: #2E86AB;
-
     transition: all 0.2s ease;
 }
 
@@ -201,33 +189,21 @@
     transform: scale(1.02);
 }
 
-.tujuan-item svg {
-    width: 22px;
-    height: 22px;
-}
-
 /* =========================================
    BUTTON SIMPAN
 ========================================= */
 
 .btn-save-target {
     width: 100%;
-
     background: #2E86AB;
     color: white;
-
     border: none;
     border-radius: 12px;
-
     padding: 13px;
-
     font-size: 16px;
     font-weight: 700;
-
     cursor: pointer;
-
     margin-top: 10px;
-
     transition: all 0.2s ease;
 }
 
@@ -252,13 +228,6 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
-}
-
-.target-active-info {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 15px;
-    line-height: 1.5;
 }
 
 /* =========================================
@@ -301,10 +270,6 @@
     align-items: flex-end;
 }
 
-/* =========================================
-   TABLE
-========================================= */
-
 .checkin-table {
     width: 100%;
     border-collapse: collapse;
@@ -327,28 +292,18 @@
     background: white;
 }
 
-/* =========================================
-   BUTTON CATAT
-========================================= */
-
 .btn-catat {
     background: #2FA4D8;
     color: white;
-
     border: none;
     border-radius: 10px;
-
     padding: 10px 16px;
-
     display: flex;
     align-items: center;
     gap: 6px;
-
     cursor: pointer;
-
     font-size: 14px;
     font-weight: 600;
-
     transition: all 0.2s ease;
 }
 
@@ -361,11 +316,38 @@
 }
 
 /* =========================================
+   ⚠ WARNING / INFO BAR (BARU)
+========================================= */
+
+/* ❌ Target belum tercapai (DANGER) */
+.warning-target {
+    background: #FFE8E8;
+    border: 1px solid #FFB3B3;
+    color: #B30000;
+    padding: 12px 15px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* ⏳ Check-in info (INFO) */
+.info-checkin {
+    background: #EAF4FF;
+    border: 1px solid #B7D6FF;
+    color: #1F5FA8;
+    padding: 12px 15px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* =========================================
    RESPONSIVE
 ========================================= */
 
 @media (max-width: 1024px) {
-
     .diet-grid {
         grid-template-columns: 1fr;
     }

@@ -49,14 +49,16 @@
 }
 
 .btn-mulai {
-    background: var(--white);
-    color: var(--text-blue);
-    border: none;
-    padding: 10px 35px;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 14px;
+    background: var(--white) !important;
+    color: var(--text-blue) !important;
+    border: none !important;
+    padding: 10px 35px !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    display: inline-block !important;
+    width: auto !important;
     transition: opacity 0.2s;
 }
 
