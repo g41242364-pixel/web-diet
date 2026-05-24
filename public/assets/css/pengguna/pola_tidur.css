@@ -1,5 +1,6 @@
 .sleep-container {
-    width: calc(100% - 40px);
+    width: 95%;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -163,8 +164,10 @@
     font-size:15px;
 }
 
-.result-table td:last-child{
+/* KOLOM HASIL PALING KANAN */
+.result-table td:nth-child(3){
     text-align:right;
+    padding-right:0;
     font-weight:600;
 }
 
@@ -182,6 +185,7 @@
     font-size:13px;
     font-weight:600;
     display:inline-block;
+    margin-right:-5px;
 }
 
 /* ===== REKOMENDASI ===== */
