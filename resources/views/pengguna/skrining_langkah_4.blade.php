@@ -137,41 +137,45 @@
         </div>
 
         {{-- BUTTON NAV --}}
-<div class="footer-nav" style="display:flex;gap:14px;margin-top:25px;">
+        <div style="display:flex;gap:15px;align-items:center;margin-top:30px;flex-wrap:wrap;">
 
-    <form action="{{ route('skrining.lanjutKonsultasi', $screening->id) }}" method="POST">
-        @csrf
-        <button type="submit"
-            style="
-                background:#7C3AED;
-                color:white;
-                border:none;
-                padding:12px 24px;
-                border-radius:12px;
-                font-weight:600;
-                font-size:16px;
-                cursor:pointer;
-                transition:0.3s;
-            ">
-            💬 Lanjut Konsultasi
-        </button>
-    </form>
+            <form action="{{ route('skrining.lanjutKonsultasi', $screening->id) }}" method="POST">
+                @csrf
+                <button type="submit"
+                    style="
+                        background:#7C3AED;
+                        color:white;
+                        border:none;
+                        padding:12px 22px;
+                        border-radius:12px;
+                        font-size:15px;
+                        font-weight:600;
+                        cursor:pointer;
+                        box-shadow:0 4px 10px rgba(124,58,237,0.2);
+                    ">
+                    💬 Lanjut Konsultasi
+                </button>
+            </form>
 
-    <a href="{{ route('pengguna.dashboard') }}"
-        style="
-            background:#E2E8F0;
-            color:#1E293B;
-            padding:12px 24px;
-            border-radius:12px;
-            font-weight:600;
-            font-size:16px;
-            text-decoration:none;
-            display:inline-flex;
-            align-items:center;
-            justify-content:center;
-            transition:0.3s;
-        ">
-        ← Ke Dashboard
-    </a>
+            <a href="{{ route('pengguna.dashboard') }}"
+                style="
+                    background:#E2E8F0;
+                    color:#1E293B;
+                    padding:12px 22px;
+                    border-radius:12px;
+                    font-size:15px;
+                    font-weight:600;
+                    text-decoration:none;
+                    display:inline-flex;
+                    align-items:center;
+                    justify-content:center;
+                ">
+                ← Ke Dashboard
+            </a>
 
+        </div>
+
+    </div>
 </div>
+
+@endsection
