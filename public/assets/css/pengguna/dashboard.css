@@ -7,12 +7,14 @@
     --grey-card: #BDBDBD;
     --dark-grey: #5B4E4E;
 
-    /* tambahan biar sinkron dengan skrining */
+    /* tambahan sinkron */
     --main-blue: #2563EB;
     --dark-blue: #1E3A5F;
     --soft-blue: #EFF6FF;
     --border-blue: #BFDBFE;
 }
+
+/* ================= HEADER ================= */
 
 .header-title {
     margin-bottom: 25px;
@@ -29,6 +31,8 @@
     color: var(--text-blue);
     font-size: 16px;
 }
+
+/* ================= WELCOME CARD ================= */
 
 .welcome-card {
     background-color: var(--soft-blue);
@@ -56,28 +60,29 @@
     color: #475569;
 }
 
-/* tombol utama disesuaikan dengan skrining */
+/* ================= BUTTON ================= */
+
 .btn-mulai {
-    background: var(--main-blue);
+    background: #90D2ED;
     color: var(--white);
     border: none;
-    padding: 10px 35px;
-    border-radius: 999px;
+    padding: 12px 28px;
+    border-radius: 50px;
     font-weight: 600;
     cursor: pointer;
     font-size: 14px;
     display: inline-block;
-    width: auto;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(37,99,235,0.25);
+    box-shadow: 0 4px 10px rgba(144, 210, 237, 0.4);
 }
 
 .btn-mulai:hover {
-    background: #1D4ED8;
-    transform: translateY(-1px);
+    background: #74C4E5;
+    transform: translateY(-2px);
 }
 
-/* GRID STAT */
+/* ================= GRID STAT ================= */
+
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -106,50 +111,128 @@
     font-size: 12px;
 }
 
-/* BOTTOM GRID */
+/* ================= BOTTOM GRID ================= */
+
 .bottom-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
 }
 
-/* SUMMARY */
+/* ================= SUMMARY ================= */
+
 .summary-container {
     background: var(--soft-blue);
-    border-radius: 25px;
-    padding: 25px;
+    border-radius: 30px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    border: 1.5px solid var(--border-blue);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 2px solid var(--border-blue);
 }
 
 .summary-header {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     color: var(--dark-blue);
     font-weight: 800;
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .summary-content-white {
     background: var(--white);
-    border-radius: 20px;
-    padding: 30px 20px;
+    border-radius: 25px;
+    padding: 30px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-/* IMAGE */
+/* ================= KONSULTASI CARD ================= */
+
+.consultation-card {
+    width: 100%;
+}
+
+.consultation-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.doctor-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.doctor-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #90D2ED;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.doctor-info h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #111827;
+    font-weight: 700;
+}
+
+.doctor-info p {
+    margin: 4px 0 0;
+    color: #6B7280;
+    font-size: 14px;
+}
+
+/* ================= STATUS ================= */
+
+.status-active {
+    background: #E8F7E9;
+    color: #34A853;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ================= CHAT PREVIEW ================= */
+
+.chat-preview {
+    background: #F3F4F6;
+    padding: 18px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    color: #4B5563;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.chat-time {
+    font-size: 14px;
+    color: #9CA3AF;
+    margin-bottom: 20px;
+}
+
+/* ================= IMAGE ================= */
+
 .sleep-image {
     width: 200px;
     height: auto;
     margin-bottom: 20px;
 }
+
+/* ================= SLEEP STATS ================= */
 
 .sleep-stats {
     width: 100%;
@@ -180,7 +263,8 @@
     color: #333;
 }
 
-/* CONSULTATION */
+/* ================= CONSULTATION IMAGE ================= */
+
 .consultation-illustrations {
     display: flex;
     justify-content: space-between;
@@ -194,7 +278,8 @@
     width: 80px;
 }
 
-/* EMPTY STATE */
+/* ================= EMPTY STATE ================= */
+
 .empty-state-box {
     background: var(--soft-blue);
     padding: 20px;
@@ -221,9 +306,25 @@
     height: 20px;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 1024px) {
+
     .bottom-grid {
         grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .consultation-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .summary-header {
+        font-size: 18px;
     }
 }
