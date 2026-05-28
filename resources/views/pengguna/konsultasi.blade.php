@@ -7,12 +7,14 @@
 
 <div class="consul-container">
 
+    {{-- HEADER --}}
     <div class="consul-header">
+
         <div class="header-top">
 
-            <div style="flex-shrink:0;">
-                <svg width="60" height="60" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="1.5">
+            <div class="header-icon">
+                <svg width="60" height="60" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="1.5">
 
                     <rect x="2" y="2" width="20" height="20"
                           rx="4" ry="4" stroke="#FBBC05"/>
@@ -32,6 +34,7 @@
             </div>
 
         </div>
+
     </div>
 
     {{-- ALERT --}}
@@ -47,14 +50,13 @@
         </div>
     @endif
 
-    {{-- EMPTY --}}
+    {{-- JIKA BELUM ADA KONSULTASI --}}
     @if($consultations->count() == 0)
 
         <div class="empty-card">
 
-            <svg width="64" height="64" viewBox="0 0 24 24"
-                 fill="none" stroke="#90D2ED" stroke-width="1.5"
-                 style="margin-bottom:16px;">
+            <svg width="70" height="70" viewBox="0 0 24 24"
+                 fill="none" stroke="#90D2ED" stroke-width="1.5">
 
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5
                          a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -71,19 +73,21 @@
                class="btn-skrining">
 
                 Mulai Skrining
+
             </a>
 
         </div>
 
     @else
 
+        {{-- LIST --}}
         <div class="konsultasi-list">
 
             @foreach($consultations as $konsultasi)
 
             <div class="konsultasi-card">
 
-                {{-- HEADER --}}
+                {{-- HEADER CARD --}}
                 <div class="konsultasi-header">
 
                     <div class="avatar-ahli">
@@ -91,12 +95,16 @@
                     </div>
 
                     <div class="info-ahli">
-                        <h4>{{ $konsultasi->ahliGizi->name }}</h4>
+
+                        <h4>
+                            {{ $konsultasi->ahliGizi->name }}
+                        </h4>
 
                         <p>
                             Ahli Gizi ·
                             {{ $konsultasi->messages->count() }} pesan
                         </p>
+
                     </div>
 
                     <span class="status-konsultasi {{ $konsultasi->status }}">
