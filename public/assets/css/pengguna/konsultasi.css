@@ -1,37 +1,20 @@
-:root {
-    /* WARNA SENADA DENGAN HALAMAN SKRINING */
+:root{
+    --primary-blue:#2563EB;
+    --primary-hover:#1D4ED8;
 
-    --kurus-bg: #FFF9E6;
-    --kurus-border: #FFE082;
-    --kurus-accent: #FFB300;
-    --kurus-text: #5D4037;
+    --dark-blue:#1E3A5F;
 
-    --normal-bg: #E8F5E9;
-    --normal-border: #C8E6C9;
-    --normal-accent: #2ECC71;
-    --normal-text: #1B5E20;
+    --soft-blue:#EFF6FF;
+    --soft-blue-2:#DBEAFE;
 
-    --gemuk-bg: #FFF3E0;
-    --gemuk-border: #FFE0B2;
-    --gemuk-accent: #FF9800;
-    --gemuk-text: #E65100;
+    --border-blue:#BFDBFE;
 
-    --obesitas-bg: #FFEBEE;
-    --obesitas-border: #FFCDD2;
-    --obesitas-accent: #E74C3C;
-    --obesitas-text: #C62828;
+    --text-dark:#0F172A;
+    --text-grey:#475569;
 
-    --default-bg: #ffffff;
-    --default-border: #E1E8ED;
-    --default-accent: #7BB9D8;
-    --default-text: #262626;
+    --white:#FFFFFF;
 
-    --primary-blue: #90D2ED;
-    --dark-blue: #5BA4C4;
-    --bg-light: #F0F7FA;
-    --white: #ffffff;
-
-    --shadow-soft: 0 4px 14px rgba(0,0,0,0.05);
+    --shadow-soft:0 6px 18px rgba(0,0,0,0.08);
 }
 
 /* =========================================
@@ -49,17 +32,17 @@
 }
 
 .header-top h2{
-    font-size:38px;
+    font-size:36px;
     font-weight:800;
-    margin-bottom:4px;
+    margin-bottom:0;
+    color:#0F172A;
     line-height:1.1;
-    color:#000;
 }
 
 .header-top p{
-    margin:0;
+    margin-top:6px;
     font-size:14px;
-    color:#555;
+    color:#475569;
 }
 
 /* =========================================
@@ -67,24 +50,23 @@
 ========================================= */
 
 .empty-consultation{
-    background:var(--white);
-    border-radius:28px;
-    border:1.5px solid var(--default-border);
-    padding:50px 30px;
+    background:#FFFFFF;
+    border-radius:20px;
+    padding:40px 30px;
     text-align:center;
+    border:1.5px solid #BFDBFE;
     box-shadow:var(--shadow-soft);
 }
 
 .empty-consultation h3{
     margin-bottom:8px;
-    color:#000;
-    font-size:22px;
+    color:#0F172A;
 }
 
 .empty-consultation p{
-    color:#666;
+    color:#64748B;
     font-size:14px;
-    margin-bottom:22px;
+    margin-bottom:20px;
 }
 
 .btn-start{
@@ -92,25 +74,25 @@
     align-items:center;
     justify-content:center;
 
+    background:#2563EB;
+    color:#fff;
+
     padding:12px 28px;
 
-    border-radius:999px;
-
-    background-color:#7BB9D8;
-    color:#fff;
+    border-radius:24px;
 
     text-decoration:none;
     font-size:14px;
-    font-weight:700;
+    font-weight:600;
 
     transition:.3s ease;
 
-    box-shadow:0 4px 10px rgba(123,185,216,0.25);
+    box-shadow:0 4px 10px rgba(37,99,235,0.25);
 }
 
 .btn-start:hover{
-    background-color:#5BA4C4;
-    transform:translateY(-2px);
+    background:#1D4ED8;
+    transform:translateY(-1px);
 }
 
 /* =========================================
@@ -119,7 +101,7 @@
 
 .chat-list{
     display:grid;
-    gap:18px;
+    gap:16px;
 }
 
 /* =========================================
@@ -127,48 +109,49 @@
 ========================================= */
 
 .chat-card{
-    background:#fff;
+    background:#FFFFFF;
 
-    border:1.5px solid #E1E8ED;
-    border-radius:28px;
+    border-radius:20px;
 
-    padding:20px;
+    padding:18px;
 
-    box-shadow:0 4px 20px rgba(0,0,0,0.04);
+    border:1.5px solid #BFDBFE;
 
-    transition:.3s ease;
+    box-shadow:var(--shadow-soft);
+
+    transition:all .3s ease;
 }
 
 .chat-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 22px rgba(0,0,0,0.08);
+    transform:translateY(-2px);
 }
 
 .chat-card-top{
     display:flex;
     align-items:center;
-    gap:14px;
+    gap:12px;
 
-    margin-bottom:16px;
+    margin-bottom:14px;
 }
 
 .avatar-chat{
-    width:52px;
-    height:52px;
+    width:48px;
+    height:48px;
 
     border-radius:50%;
 
-    background:#D8EBF3;
-    border:2px solid #CFE5EF;
+    background:#DBEAFE;
+
+    border:2px solid #BFDBFE;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    font-size:18px;
+    font-size:17px;
     font-weight:800;
 
-    color:#5BA4C4;
+    color:#2563EB;
 
     flex-shrink:0;
 }
@@ -181,7 +164,7 @@
     margin:0;
     font-size:15px;
     font-weight:700;
-    color:#000;
+    color:#0F172A;
 }
 
 .chat-user-info p{
@@ -189,7 +172,7 @@
     margin-bottom:0;
 
     font-size:12px;
-    color:#777;
+    color:#64748B;
 }
 
 /* =========================================
@@ -198,20 +181,20 @@
 
 .status-chat{
     padding:5px 12px;
-    border-radius:999px;
+    border-radius:20px;
 
     font-size:11px;
     font-weight:700;
 }
 
 .status-chat.active{
-    background:#E8F5E9;
-    color:#1B5E20;
+    background:#DBEAFE;
+    color:#1E3A5F;
 }
 
 .status-chat.closed{
-    background:#F1F5F9;
-    color:#64748B;
+    background:#E2E8F0;
+    color:#475569;
 }
 
 /* =========================================
@@ -219,15 +202,15 @@
 ========================================= */
 
 .last-message{
-    background:#F0F7FA;
+    background:#EFF6FF;
 
-    border:1px solid #D8EBF3;
+    border:1px solid #BFDBFE;
 
-    border-radius:16px;
+    border-radius:14px;
 
-    padding:14px;
+    padding:12px;
 
-    margin-bottom:16px;
+    margin-bottom:14px;
 }
 
 .last-message p{
@@ -236,7 +219,7 @@
     font-size:13px;
     line-height:1.5;
 
-    color:#333;
+    color:#1E3A5F;
 }
 
 .last-message span{
@@ -259,26 +242,26 @@
     align-items:center;
     justify-content:center;
 
-    padding:10px 24px;
+    padding:11px 24px;
 
-    border-radius:999px;
+    border-radius:24px;
 
-    background-color:#7BB9D8;
-    color:#fff;
+    background:#2563EB;
+    color:#FFFFFF;
 
     text-decoration:none;
 
     font-size:13px;
     font-weight:700;
 
-    transition:.3s ease;
+    transition:all .3s ease;
 
-    box-shadow:0 4px 10px rgba(123,185,216,0.25);
+    box-shadow:0 4px 10px rgba(37,99,235,0.25);
 }
 
 .btn-chat:hover{
-    background-color:#5BA4C4;
-    transform:translateY(-2px);
+    background:#1D4ED8;
+    transform:translateY(-1px);
 }
 
 /* =========================================
@@ -286,13 +269,15 @@
 ========================================= */
 
 .chat-wrapper{
-    background:#D8EBF3;
+    background:#EFF6FF;
 
-    border-radius:32px;
+    border:1.5px solid #BFDBFE;
 
-    padding:28px;
+    border-radius:24px;
 
-    box-shadow:inset 0 2px 8px rgba(0,0,0,0.02);
+    padding:24px;
+
+    box-shadow:var(--shadow-soft);
 }
 
 /* =========================================
@@ -300,13 +285,13 @@
 ========================================= */
 
 .btn-back-chat{
-    width:44px;
-    height:44px;
+    width:42px;
+    height:42px;
 
     border-radius:50%;
 
-    background:#7BB9D8;
-    color:#fff;
+    background:#2563EB;
+    color:#FFFFFF;
 
     display:flex;
     align-items:center;
@@ -316,13 +301,13 @@
 
     margin-bottom:18px;
 
-    transition:.3s ease;
+    box-shadow:0 4px 10px rgba(37,99,235,0.25);
 
-    box-shadow:0 4px 10px rgba(123,185,216,0.25);
+    transition:.3s ease;
 }
 
 .btn-back-chat:hover{
-    background:#5BA4C4;
+    background:#1D4ED8;
 }
 
 /* =========================================
@@ -335,25 +320,26 @@
     gap:14px;
 
     padding-bottom:18px;
-    margin-bottom:22px;
+    margin-bottom:20px;
 
-    border-bottom:1px solid rgba(0,0,0,0.08);
+    border-bottom:1.5px solid #BFDBFE;
 }
 
 .chat-header-avatar{
-    width:60px;
-    height:60px;
+    width:56px;
+    height:56px;
 
     border-radius:50%;
 
-    background:#fff;
-    border:2px solid #CFE5EF;
+    background:#FFFFFF;
+
+    border:2px solid #BFDBFE;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    color:#5BA4C4;
+    color:#2563EB;
 
     font-size:20px;
     font-weight:800;
@@ -365,7 +351,7 @@
     font-size:18px;
     font-weight:800;
 
-    color:#000;
+    color:#0F172A;
 }
 
 .chat-header-info p{
@@ -374,7 +360,7 @@
 
     font-size:12px;
 
-    color:#666;
+    color:#64748B;
 }
 
 /* =========================================
@@ -413,13 +399,14 @@
 }
 
 .message-avatar{
-    width:40px;
-    height:40px;
+    width:38px;
+    height:38px;
 
     border-radius:50%;
 
-    background:#fff;
-    border:1.5px solid #CFE5EF;
+    background:#FFFFFF;
+
+    border:1.5px solid #BFDBFE;
 
     display:flex;
     align-items:center;
@@ -428,7 +415,7 @@
     font-size:12px;
     font-weight:700;
 
-    color:#5BA4C4;
+    color:#2563EB;
 
     flex-shrink:0;
 }
@@ -438,7 +425,7 @@
 ========================================= */
 
 .message-bubble{
-    padding:14px 18px;
+    padding:13px 16px;
 
     border-radius:18px;
 
@@ -446,17 +433,18 @@
 }
 
 .message-item.user .message-bubble{
-    background:#7BB9D8;
-    color:#fff;
+    background:#2563EB;
+    color:#FFFFFF;
 
     border-bottom-right-radius:6px;
 }
 
 .message-item.admin .message-bubble{
-    background:#fff;
-    color:#333;
+    background:#FFFFFF;
 
-    border:1px solid #D8EBF3;
+    color:#1E3A5F;
+
+    border:1.5px solid #BFDBFE;
 
     border-bottom-left-radius:6px;
 }
@@ -495,22 +483,22 @@
 
     padding:14px 18px;
 
-    border-radius:999px;
+    border-radius:24px;
 
-    border:1.5px solid #CFE5EF;
+    border:1.5px solid #BFDBFE;
 
-    background:#fff;
+    background:#FFFFFF;
 
     font-size:14px;
 
-    color:#333;
+    color:#0F172A;
 
     outline:none;
 }
 
 .chat-input-area input:focus{
-    border-color:#7BB9D8;
-    box-shadow:0 0 0 4px rgba(123,185,216,0.18);
+    border-color:#2563EB;
+    box-shadow:0 0 0 4px rgba(37,99,235,0.12);
 }
 
 .btn-send{
@@ -520,8 +508,8 @@
     border:none;
     border-radius:50%;
 
-    background:#7BB9D8;
-    color:#fff;
+    background:#2563EB;
+    color:#FFFFFF;
 
     display:flex;
     align-items:center;
@@ -530,10 +518,12 @@
     cursor:pointer;
 
     transition:.3s ease;
+
+    box-shadow:0 4px 10px rgba(37,99,235,0.25);
 }
 
 .btn-send:hover{
-    background:#5BA4C4;
+    background:#1D4ED8;
 }
 
 /* =========================================
@@ -543,11 +533,11 @@
 @media(max-width:768px){
 
     .header-top h2{
-        font-size:30px;
+        font-size:28px;
     }
 
     .chat-wrapper{
-        padding:20px;
+        padding:18px;
     }
 
     .message-item{
@@ -561,7 +551,8 @@
 
     .btn-send{
         width:100%;
-        border-radius:999px;
+        border-radius:24px;
         height:46px;
     }
+
 }
