@@ -44,7 +44,7 @@
 .welcome-card h3 {
     font-size: 28px;
     font-weight: 800;
-    margin-bottom: 999px;
+    margin-bottom: 15px;
     color: var(--dark-blue);
 }
 
@@ -58,16 +58,16 @@
 
 /* tombol utama disesuaikan dengan skrining */
 .btn-mulai {
-    background: var(--main-blue) !important;
-    color: var(--white) !important;
-    border: none !important;
-    padding: 10px 35px !important;
-    border-radius: 14px !important;
-    font-weight: 600 !important;
-    cursor: pointer !important;
-    font-size: 14px !important;
-    display: inline-block !important;
-    width: auto !important;
+    background: var(--main-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px 35px;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+    display: inline-block;
+    width: auto;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(37,99,235,0.25);
 }
