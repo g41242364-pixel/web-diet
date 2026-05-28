@@ -1,14 +1,14 @@
 :root{
-    --primary-blue:#2563EB;
-    --primary-hover:#1D4ED8;
-    --dark-blue:#1E3A5F;
+    --primary-blue:#7BB9D8;
+    --primary-hover:#5BA4C4;
+    --dark-blue:#4F9BBC;
 
-    --soft-blue:#EFF6FF;
-    --soft-blue-2:#DBEAFE;
+    --soft-blue:#F0F7FA;
+    --soft-blue-2:#D8EBF3;
 
-    --border-blue:#BFDBFE;
+    --border-blue:#CFE5EF;
 
-    --text-dark:#0F172A;
+    --text-dark:#1E3A5F;
     --text-grey:#64748B;
 
     --white:#FFFFFF;
@@ -35,7 +35,7 @@
     font-weight:800;
     margin-bottom:4px;
     line-height:1.1;
-    color:var(--dark-blue);
+    color:var(--text-dark);
 }
 
 .header-top p{
@@ -59,7 +59,7 @@
 
 .empty-consultation h3{
     margin-bottom:8px;
-    color:var(--dark-blue);
+    color:var(--text-dark);
 }
 
 .empty-consultation p{
@@ -145,7 +145,7 @@
     font-size:17px;
     font-weight:800;
 
-    color:var(--primary-blue);
+    color:var(--dark-blue);
 
     flex-shrink:0;
 }
@@ -158,7 +158,7 @@
     margin:0;
     font-size:15px;
     font-weight:700;
-    color:var(--dark-blue);
+    color:var(--text-dark);
 }
 
 .chat-user-info p{
@@ -213,7 +213,7 @@
     font-size:13px;
     line-height:1.5;
 
-    color:var(--dark-blue);
+    color:var(--text-dark);
 }
 
 .last-message span{
@@ -240,7 +240,7 @@
 
     border-radius:999px;
 
-    background:var(--dark-blue);
+    background:#7BB9D8;
     color:#fff;
 
     text-decoration:none;
@@ -250,11 +250,11 @@
 
     transition:.3s ease;
 
-    box-shadow:0 4px 10px rgba(30,58,95,0.18);
+    box-shadow:0 4px 10px rgba(123,185,216,0.25);
 }
 
 .btn-chat:hover{
-    background:#16324F;
+    background:#5BA4C4;
 }
 
 /* =========================================
@@ -283,7 +283,7 @@
 
     border-radius:50%;
 
-    background:var(--dark-blue);
+    background:#7BB9D8;
     color:#fff;
 
     display:flex;
@@ -295,10 +295,12 @@
     margin-bottom:18px;
 
     transition:.3s ease;
+
+    box-shadow:0 4px 10px rgba(123,185,216,0.25);
 }
 
 .btn-back-chat:hover{
-    background:#16324F;
+    background:#5BA4C4;
 }
 
 /* =========================================
@@ -329,7 +331,7 @@
     align-items:center;
     justify-content:center;
 
-    color:var(--primary-blue);
+    color:var(--dark-blue);
 
     font-size:20px;
     font-weight:800;
@@ -341,7 +343,7 @@
     font-size:18px;
     font-weight:800;
 
-    color:var(--dark-blue);
+    color:var(--text-dark);
 }
 
 .chat-header-info p{
@@ -404,7 +406,7 @@
     font-size:12px;
     font-weight:700;
 
-    color:var(--primary-blue);
+    color:var(--dark-blue);
 
     flex-shrink:0;
 }
@@ -422,7 +424,7 @@
 }
 
 .message-item.user .message-bubble{
-    background:var(--primary-blue);
+    background:#7BB9D8;
     color:#fff;
 
     border-bottom-right-radius:6px;
@@ -430,7 +432,7 @@
 
 .message-item.admin .message-bubble{
     background:#fff;
-    color:var(--dark-blue);
+    color:var(--text-dark);
 
     border:1.5px solid var(--border-blue);
 
@@ -479,14 +481,14 @@
 
     font-size:14px;
 
-    color:var(--dark-blue);
+    color:var(--text-dark);
 
     outline:none;
 }
 
 .chat-input-area input:focus{
-    border-color:var(--primary-blue);
-    box-shadow:0 0 0 4px rgba(37,99,235,0.12);
+    border-color:#7BB9D8;
+    box-shadow:0 0 0 4px rgba(123,185,216,0.18);
 }
 
 .btn-send{
@@ -496,7 +498,7 @@
     border:none;
     border-radius:50%;
 
-    background:var(--primary-blue);
+    background:#7BB9D8;
     color:#fff;
 
     display:flex;
@@ -509,7 +511,7 @@
 }
 
 .btn-send:hover{
-    background:var(--primary-hover);
+    background:#5BA4C4;
 }
 
 /* =========================================
