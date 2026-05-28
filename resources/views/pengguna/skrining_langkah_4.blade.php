@@ -311,7 +311,6 @@
             ">
                 {{ $status_kebiasaan }}
             </div>
-
         </div>
 
         {{-- BUTTON --}}
@@ -327,14 +326,13 @@
             <form action="{{ route('skrining.lanjutKonsultasi', $screening->id) }}" method="POST">
 
                 @csrf
-
                 <button type="submit"
                     style="
                         background:#7C3AED;
                         color:white;
                         border:none;
                         padding:12px 22px;
-                        border-radius:12px;
+                        border-radius:999px;
                         font-size:15px;
                         font-weight:600;
                         cursor:pointer;
@@ -344,13 +342,12 @@
                 </button>
 
             </form>
-
             <a href="{{ route('pengguna.dashboard') }}"
                 style="
                     background:#E2E8F0;
                     color:#1E293B;
                     padding:12px 22px;
-                    border-radius:12px;
+                    border-radius:999px;
                     font-size:15px;
                     font-weight:600;
                     text-decoration:none;
@@ -360,11 +357,7 @@
                 ">
                 ← Ke Dashboard
             </a>
-
         </div>
-
     </div>
-
 </div>
-
 @endsection
