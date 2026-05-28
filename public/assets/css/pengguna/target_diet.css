@@ -35,6 +35,94 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
+/* =========================================
+   STATUS WARNA IMT
+========================================= */
+
+/* UNDERWEIGHT */
+.skrining-banner.status-kurus {
+    background: #FFF9E6;
+    border-color: #FFE082;
+}
+
+.skrining-banner.status-kurus .icon-check {
+    border-color: #FFE082;
+    color: #FFB300;
+}
+
+.skrining-banner.status-kurus h4 {
+    color: #5D4037;
+}
+
+.skrining-banner.status-kurus .pill-tag {
+    background: #FFB300;
+    border-color: #FFB300;
+    color: white;
+}
+
+/* NORMAL */
+.skrining-banner.status-normal {
+    background: #E8F5E9;
+    border-color: #C8E6C9;
+}
+
+.skrining-banner.status-normal .icon-check {
+    border-color: #C8E6C9;
+    color: #2ECC71;
+}
+
+.skrining-banner.status-normal h4 {
+    color: #1B5E20;
+}
+
+.skrining-banner.status-normal .pill-tag {
+    background: #2ECC71;
+    border-color: #2ECC71;
+    color: white;
+}
+
+/* OVERWEIGHT */
+.skrining-banner.status-gemuk {
+    background: #FFF3E0;
+    border-color: #FFE0B2;
+}
+
+.skrining-banner.status-gemuk .icon-check {
+    border-color: #FFE0B2;
+    color: #FF9800;
+}
+
+.skrining-banner.status-gemuk h4 {
+    color: #E65100;
+}
+
+.skrining-banner.status-gemuk .pill-tag {
+    background: #FF9800;
+    border-color: #FF9800;
+    color: white;
+}
+
+/* OBESITAS */
+.skrining-banner.status-obesitas {
+    background: #FFEBEE;
+    border-color: #FFCDD2;
+}
+
+.skrining-banner.status-obesitas .icon-check {
+    border-color: #FFCDD2;
+    color: #E74C3C;
+}
+
+.skrining-banner.status-obesitas h4 {
+    color: #C62828;
+}
+
+.skrining-banner.status-obesitas .pill-tag {
+    background: #E74C3C;
+    border-color: #E74C3C;
+    color: white;
+}
+
 .skrining-banner .icon-check {
     background: #FFFFFF;
     padding: 10px;
