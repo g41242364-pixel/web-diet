@@ -199,11 +199,13 @@
                         <div class="checkin-form">
                             <div class="input-group" style="flex:0.4;">
                                 <label style="font-size:11px;">Berat saat ini (kg)</label>
-                                <input type="number" name="berat_sekarang" step="0.1" placeholder="55.8">
+                                <input type="number" name="berat_sekarang" step="0.1" placeholder="55.8"
+                                       <input type="number" name="berat_sekarang" step="0.1" placeholder="55.8" required>
                             </div>
                             <div class="input-group">
                                 <label style="font-size:11px;">Catatan</label>
-                                <input type="text" name="catatan" placeholder="Konsisten Olahraga">
+                                <input type="text" name="catatan" placeholder="Konsisten Olahraga"
+                                       <input type="text" name="catatan" placeholder="Konsisten Olahraga">
                             </div>
                             <button type="submit" class="btn-catat">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
