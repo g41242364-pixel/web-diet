@@ -526,6 +526,34 @@
     background:#1D4ED8;
 }
 
+.btn-back-chat{
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    background:#2563EB;
+    color:#FFFFFF !important;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-size:18px;
+    font-weight:700;
+
+    box-shadow:0 4px 10px rgba(37,99,235,0.25);
+
+    transition:.3s ease;
+}
+
+.btn-back-chat:hover{
+    background:#1D4ED8;
+    transform:translateY(-1px);
+}
+
 /* =========================================
    RESPONSIVE
 ========================================= */
