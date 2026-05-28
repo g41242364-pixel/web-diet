@@ -9,8 +9,6 @@
                 <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
             </svg>
             <h2>Target Diet</h2>
-        </div>
-        <p>Hitung Kategori, Tetapkan Target, dan Pantau Progres Mingguan.</p>
     </div>
 
     @if(session('success'))
@@ -201,13 +199,11 @@
                         <div class="checkin-form">
                             <div class="input-group" style="flex:0.4;">
                                 <label style="font-size:11px;">Berat saat ini (kg)</label>
-                                <input type="number" name="berat_sekarang" step="0.1" placeholder="55.8"
-                                       style="padding:5px;" required>
+                                <input type="number" name="berat_sekarang" step="0.1" placeholder="55.8">
                             </div>
                             <div class="input-group">
                                 <label style="font-size:11px;">Catatan</label>
-                                <input type="text" name="catatan" placeholder="Konsisten Olahraga"
-                                       style="padding:5px;text-align:left;">
+                                <input type="text" name="catatan" placeholder="Konsisten Olahraga">
                             </div>
                             <button type="submit" class="btn-catat">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
