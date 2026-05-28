@@ -222,7 +222,7 @@
     font-weight:600;
     display:inline-block;
 }
-.status-pill.cukup{
+.status-pill.baik{
     background:#22C55E;
 }
 
@@ -300,7 +300,7 @@
     font-size:13px;
     font-weight:600;
 }
-.status-badge.cukup{
+.status-badge.baik{
     background:#22C55E;
 }
 
@@ -344,4 +344,4 @@
     padding:20px;
 }
 
-}  
+}
