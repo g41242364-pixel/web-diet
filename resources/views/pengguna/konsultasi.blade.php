@@ -1,89 +1,150 @@
 @extends('layouts.layout_pengguna')
-@section('title', 'Chat Konsultasi')
+@section('title', 'Konsultasi')
 
-<link rel="stylesheet" href="{{ asset('assets/css/pengguna/chat-konsultasi.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/pengguna/konsultasi.css') }}">
 
 @section('content')
 
-<div class="chat-container">
+<div class="consul-container">
 
-    {{-- BUTTON KEMBALI --}}
-    <div class="back-area">
-        <a href="{{ route('pengguna.konsultasi') }}" class="btn-back-chat">
-            <span>←</span> Kembali
-        </a>
-    </div>
+    {{-- HEADER --}}
+    <div class="consul-header">
 
-    {{-- CHAT BOX --}}
-    <div class="chat-card">
+        <div class="header-top">
 
-        {{-- HEADER --}}
-        <div class="chat-header">
+            <div class="header-icon">
+                <svg width="60" height="60" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="1.5">
 
-            <div class="chat-user">
+                    <rect x="2" y="2" width="20" height="20"
+                          rx="4" ry="4" stroke="#FBBC05"/>
 
-                <div class="chat-avatar">
-                    {{ substr($consultation->ahliGizi->name,0,1) }}
-                </div>
-
-                <div class="chat-user-info">
-                    <h3>{{ $consultation->ahliGizi->name }}</h3>
-
-                    <p>
-                        Ahli Gizi
-                        <span class="dot-online"></span>
-                        Online
-                    </p>
-                </div>
-
+                    <circle cx="9" cy="9" r="2" fill="#E2F0D9"/>
+                    <circle cx="15" cy="15" r="2" fill="#F8CECC"/>
+                </svg>
             </div>
 
-            <div class="chat-status">
-                Aktif
+            <div>
+                <h2>Konsultasi</h2>
+
+                <p>
+                    Tanya langsung ke ahli gizi.
+                    Lampirkan hasil skrining untuk saran yang lebih personal.
+                </p>
             </div>
 
         </div>
 
-        {{-- BODY --}}
-        <div class="chat-body">
+    </div>
 
-            @foreach($consultation->messages as $message)
+    {{-- ALERT --}}
+    @if(session('success'))
+        <div class="alert-success">
+            ✓ {{ session('success') }}
+        </div>
+    @endif
 
-                @if($message->sender == 'pengguna')
+    @if(session('error'))
+        <div class="alert-error">
+            {{ session('error') }}
+        </div>
+    @endif
 
-                    <div class="message-wrapper user">
+    {{-- JIKA BELUM ADA KONSULTASI --}}
+    @if($consultations->count() == 0)
 
-                        <div class="message-bubble user-bubble">
-                            {!! nl2br(e($message->isi)) !!}
-                        </div>
+        <div class="empty-card">
 
-                        <span class="message-time">
-                            {{ $message->created_at->format('d M Y H:i') }}
-                        </span>
+            <svg width="70" height="70" viewBox="0 0 24 24"
+                 fill="none" stroke="#90D2ED" stroke-width="1.5">
+
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5
+                         a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+
+            <h3>Belum ada konsultasi</h3>
+
+            <p>
+                Lakukan skrining terlebih dahulu untuk memulai
+                konsultasi dengan ahli gizi.
+            </p>
+
+            <a href="{{ route('skrining.langkah1') }}"
+               class="btn-skrining">
+
+                Mulai Skrining
+
+            </a>
+
+        </div>
+
+    @else
+
+        {{-- LIST --}}
+        <div class="konsultasi-list">
+
+            @foreach($consultations as $konsultasi)
+
+            <div class="konsultasi-card">
+
+                {{-- HEADER CARD --}}
+                <div class="konsultasi-header">
+
+                    <div class="avatar-ahli">
+                        {{ substr($konsultasi->ahliGizi->name, 0, 1) }}
+                    </div>
+
+                    <div class="info-ahli">
+
+                        <h4>
+                            {{ $konsultasi->ahliGizi->name }}
+                        </h4>
+
+                        <p>
+                            Ahli Gizi ·
+                            {{ $konsultasi->messages->count() }} pesan
+                        </p>
 
                     </div>
 
-                @else
+                    <span class="status-konsultasi {{ $konsultasi->status }}">
+                        {{ ucfirst($konsultasi->status) }}
+                    </span>
 
-                    <div class="message-wrapper admin">
+                </div>
 
-                        <div class="message-bubble admin-bubble">
-                            {!! nl2br(e($message->isi)) !!}
-                        </div>
+                {{-- PESAN TERAKHIR --}}
+                @if($konsultasi->messages->last())
 
-                        <span class="message-time">
-                            {{ $message->created_at->format('d M Y H:i') }}
-                        </span>
+                <div class="last-message">
 
+                    <div class="message-text">
+                        {{ Str::limit($konsultasi->messages->last()->isi, 100) }}
                     </div>
+
+                    <div class="message-time">
+                        {{ $konsultasi->messages->last()->created_at->format('H:i') }}
+                    </div>
+
+                </div>
 
                 @endif
+
+                {{-- BUTTON --}}
+                <a href="{{ route('pengguna.konsultasi.chat', $konsultasi->id) }}"
+                   class="btn-chat">
+
+                    Buka Chat →
+
+                </a>
+
+            </div>
 
             @endforeach
 
         </div>
 
-    </div>
+    @endif
 
 </div>
 
