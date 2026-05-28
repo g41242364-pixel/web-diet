@@ -18,8 +18,8 @@
         </div>
     </div>
 
-    <div class="step-info">Langkah 4 dari 4</div>
-    <div class="progress-container"><div class="progress-fill" style="width:25%"></div></div>
+    <div class="step-info">Langkah 3 dari 4</div>
+    <div class="progress-container"><div class="progress-fill" style="width:50%"></div></div>
 
     <div class="nav-steps">
         <div class="nav-step-item active">Fase 1</div>
