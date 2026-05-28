@@ -73,7 +73,7 @@
 }
 
 .btn-mulai:hover {
-    background: #1D4ED8 !important;
+    background: #1D4ED8;
     transform: translateY(-1px);
 }
 
@@ -82,7 +82,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 999px;
 }
 
 .stat-card {
@@ -186,7 +186,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 999px;
+    margin-bottom: 30px;
 }
 
 .note-img,
