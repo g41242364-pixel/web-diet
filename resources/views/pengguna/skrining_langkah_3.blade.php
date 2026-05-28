@@ -5,11 +5,10 @@
 @section('content')
 <div class="skrining-container">
 
-    {{-- HEADER --}}
     <div class="skrining-header-top">
-        <div style="display:flex;align-items:flex-start;gap:18px;">
+        <div style="display:flex;align-items:flex-start;gap:15px;">
 
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0B132B" stroke-width="2.5">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5">
                 <line x1="3" y1="12" x2="21" y2="12"/>
                 <line x1="3" y1="6" x2="21" y2="6"/>
                 <line x1="3" y1="18" x2="21" y2="18"/>
@@ -19,22 +18,11 @@
             </svg>
 
             <div>
-                <h2 style="
-                    color:#0B132B;
-                    font-size:58px;
-                    font-weight:800;
-                    margin:0;
-                    line-height:1.1;
-                ">
+                <h2 style="color:black;">
                     Skrining IMT
                 </h2>
 
-                <p style="
-                    margin-top:10px;
-                    font-size:18px;
-                    color:#64748B;
-                    font-weight:500;
-                ">
+                <p>
                     Skrining Bertahap : Fase 1 → Fase 2 → Input IMT → Hasil.
                 </p>
             </div>
@@ -42,15 +30,12 @@
         </div>
     </div>
 
-    {{-- STEP --}}
     <div class="step-info">Langkah 3 dari 4</div>
 
-    {{-- PROGRESS --}}
     <div class="progress-container">
         <div class="progress-fill" style="width:50%"></div>
     </div>
 
-    {{-- NAVIGATION STEP --}}
     <div class="nav-steps">
         <div class="nav-step-item">Fase 1</div>
         <div class="nav-arrow">→</div>
@@ -64,25 +49,16 @@
         <div class="nav-step-item">Hasil</div>
     </div>
 
-    {{-- ERROR --}}
     @if($errors->any())
-        <div style="
-            background:#fde8e8;
-            color:#c0392b;
-            padding:12px 16px;
-            border-radius:8px;
-            margin-bottom:16px;
-        ">
+        <div style="background:#fde8e8;color:#c0392b;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
             {{ $errors->first() }}
         </div>
     @endif
 
-    {{-- CONTENT --}}
     <div class="skrining-box">
 
         <div class="imt-form-container">
 
-            {{-- TITLE --}}
             <div class="input-imt-header">
                 <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
@@ -92,7 +68,6 @@
                 <span>Input IMT — Berat & Tinggi Badan</span>
             </div>
 
-            {{-- FORM --}}
             <form action="{{ route('skrining.langkah3.simpan') }}" method="POST">
                 @csrf
 
@@ -122,7 +97,6 @@
                     >
                 </div>
 
-                {{-- BUTTON --}}
                 <div class="footer-nav">
                     <a href="{{ route('skrining.langkah2') }}" class="btn-nav">
                         ← Kembali
