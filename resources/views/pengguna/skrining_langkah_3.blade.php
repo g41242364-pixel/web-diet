@@ -38,7 +38,6 @@
                     font-size:16px !important;
                     margin-top:4px !important;
                 ">
-                    Skrining Bertahap : Fase 1 → Fase 2 → Input IMT → Hasil.
                 </p>
 
             </div>
@@ -137,7 +136,7 @@
                         type="number"
                         name="berat_badan"
                         step="0.1"
-                        placeholder="58"
+                        placeholder=""
                         value="{{ old('berat_badan') }}"
                         required
                     >
@@ -154,7 +153,7 @@
                         type="number"
                         name="tinggi_badan"
                         step="0.1"
-                        placeholder="158"
+                        placeholder=""
                         value="{{ old('tinggi_badan') }}"
                         required
                     >
