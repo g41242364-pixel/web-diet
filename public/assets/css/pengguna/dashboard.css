@@ -32,7 +32,7 @@
 
 .welcome-card {
     background-color: var(--soft-blue);
-    border-radius: 999px;
+    border-radius: 20px;
     padding: 30px;
     color: var(--dark-blue);
     margin-bottom: 30px;
@@ -44,7 +44,7 @@
 .welcome-card h3 {
     font-size: 28px;
     font-weight: 800;
-    margin-bottom: 15px;
+    margin-bottom: 999px;
     color: var(--dark-blue);
 }
 
