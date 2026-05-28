@@ -60,7 +60,7 @@
     background: white;
     border: 1px solid #B9DCEB;
     padding: 5px 15px;
-    border-radius: 20px;
+    border-radius: 999px;
     font-size: 13px;
     color: #2E86AB;
     font-weight: 600;
@@ -190,15 +190,15 @@
 }
 
 /* =========================================
-   BUTTON
+   BUTTON SAVE
 ========================================= */
 
 .btn-save-target {
     width: 100%;
-    background: #2E86AB;
+    background: #2563EB; /* biru tua */
     color: white;
     border: none;
-    border-radius: 12px;
+    border-radius: 999px; /* dibuat bulat */
     padding: 13px;
     font-size: 16px;
     font-weight: 700;
@@ -208,7 +208,7 @@
 }
 
 .btn-save-target:hover {
-    background: #246D8B;
+    background: #1D4ED8;
 }
 
 .btn-save-target:active {
@@ -254,7 +254,7 @@
 }
 
 .progress-fill {
-    background: linear-gradient(90deg, #2FA4D8, #67C1E8);
+    background: linear-gradient(90deg, #2563EB, #60A5FA);
     height: 100%;
     border-radius: 20px;
 }
@@ -291,23 +291,29 @@
     background: white;
 }
 
+/* =========================================
+   BUTTON CATAT / NOTE
+========================================= */
+
 .btn-catat {
-    background: #2FA4D8;
+    background: #2563EB; /* biru tua */
     color: white;
     border: none;
-    border-radius: 10px;
-    padding: 10px 16px;
+    border-radius: 999px; /* dibuat bulat */
+    padding: 12px 22px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
     cursor: pointer;
     font-size: 14px;
     font-weight: 600;
     transition: all 0.2s ease;
+    white-space: nowrap;
 }
 
 .btn-catat:hover {
-    background: #2389B8;
+    background: #1D4ED8;
 }
 
 .btn-catat:active {
@@ -315,10 +321,9 @@
 }
 
 /* =========================================
-   STATUS BAR (FIXED = SENADA BLUE THEME)
+   STATUS BAR
 ========================================= */
 
-/* ❌ TARGET BELUM TERCAPAI (TETAP BLUE THEME, BUKAN MERAH/ORANGE) */
 .warning-target {
     background: #EAF6FB;
     border: 1px solid #B9DCEB;
@@ -337,7 +342,6 @@
     gap: 8px;
 }
 
-/* ⏳ CHECK-IN INFO (SAMA FAMILY BLUE - LEBIH SOFT) */
 .info-checkin {
     background: #F6FBFD;
     border: 1px solid #D5EAF3;
@@ -361,6 +365,7 @@
 ========================================= */
 
 @media (max-width: 1024px) {
+
     .diet-grid {
         grid-template-columns: 1fr;
     }
