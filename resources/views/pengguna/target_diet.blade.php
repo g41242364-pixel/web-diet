@@ -28,7 +28,17 @@
     @endif
 
     @if($skriningTerakhir)
-    <div class="skrining-banner">
+    <div class="skrining-banner
+    @if(strtolower($skriningTerakhir->status_imt) == 'underweight')
+        status-kurus
+    @elseif(strtolower($skriningTerakhir->status_imt) == 'normal')
+        status-normal
+    @elseif(strtolower($skriningTerakhir->status_imt) == 'overweight')
+        status-gemuk
+    @elseif(strtolower($skriningTerakhir->status_imt) == 'obesitas 1' || strtolower($skriningTerakhir->status_imt) == 'obesitas 2')
+        status-obesitas
+    @endif
+    ">
         <div class="icon-check">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="20 6 9 17 4 12"/>
