@@ -32,7 +32,7 @@
 
 .welcome-card {
     background-color: var(--soft-blue);
-    border-radius: 20px;
+    border-radius: 999px;
     padding: 30px;
     color: var(--dark-blue);
     margin-bottom: 30px;
