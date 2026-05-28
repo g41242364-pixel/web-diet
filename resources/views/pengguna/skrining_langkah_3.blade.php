@@ -4,29 +4,17 @@
 
 @section('content')
 <div class="skrining-container">
-
     <div class="skrining-header-top">
-        <div style="display:flex;align-items:center;gap:15px;">
-
+        <div style="display:flex;align-items:flex-start;gap:15px;">
             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5">
-                <line x1="3" y1="12" x2="21" y2="12"/>
-                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/>
                 <line x1="3" y1="18" x2="21" y2="18"/>
-                <circle cx="4" cy="6" r="1"/>
-                <circle cx="4" cy="12" r="1"/>
-                <circle cx="4" cy="18" r="1"/>
+                <circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/>
             </svg>
-
             <div>
-                <h2 style="color:black;">
-                    Skrining IMT
-                </h2>
-
-                <p>
-                    Skrining Bertahap : Fase 1 → Fase 2 → Input IMT → Hasil.
-                </p>
+                <h2>Skrining Diet</h2>
+                <p>Skrining Bertahap : Fase 1 → Fase 2 → Input IMT → Hasil.</p>
             </div>
-
         </div>
     </div>
 
