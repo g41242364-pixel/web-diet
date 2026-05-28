@@ -116,7 +116,7 @@
 /* SUMMARY */
 .summary-container {
     background: var(--soft-blue);
-    border-radius: 999px;
+    border-radius: 25px;
     padding: 25px;
     display: flex;
     flex-direction: column;
