@@ -2,23 +2,31 @@
     margin-bottom: 20px;
 }
 
+.skrining-header-top > div{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
 .skrining-header-top h2 {
     font-size: 36px;
     font-weight: 800;
     margin-bottom: 0;
-    color: #FFFFFF;
+    color: #0F172A;
+    line-height: 1.1;
 }
 
 .skrining-header-top p {
     font-size: 16px;
-    color: #EFF6FF;
+    color: #64748B;
+    margin-top: 4px;
 }
 
 .step-info {
     display: flex;
     justify-content: flex-end;
     font-size: 14px;
-    color: #EFF6FF;
+    color: #475569;
     margin-bottom: 5px;
 }
 
@@ -47,7 +55,7 @@
 .nav-step-item {
     flex: 1;
     background: #EFF6FF;
-    padding: 5px;
+    padding: 12px;
     text-align: center;
     font-weight: 600;
     color: #1E3A5F;
@@ -63,8 +71,9 @@
 }
 
 .nav-arrow {
-    color: #FFFFFF;
+    color: #1E3A5F;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .skrining-box {
@@ -139,4 +148,21 @@
 
 .btn-konsultasi:hover {
     background: #1D4ED8;
+}
+
+@media(max-width:768px){
+
+    .skrining-header-top h2{
+        font-size:28px;
+    }
+
+    .nav-steps{
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .skrining-box{
+        padding:20px;
+    }
+
 }
