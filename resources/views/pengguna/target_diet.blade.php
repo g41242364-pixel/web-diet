@@ -9,7 +9,6 @@
                 <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
             </svg>
             <h2>Target Diet</h2>
-            <hr>
     </div>
 
     @if(session('success'))
