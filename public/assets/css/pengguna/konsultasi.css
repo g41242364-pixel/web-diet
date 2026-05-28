@@ -1,27 +1,19 @@
-:root {
-    --primary-blue: #2563EB;
-    --primary-blue-hover: #1D4ED8;
-    --dark-blue: #1E3A5F;
+:root{
+    --primary-blue:#2563EB;
+    --primary-hover:#1D4ED8;
+    --dark-blue:#1E3A5F;
 
-    --soft-blue: #EFF6FF;
-    --soft-blue-2: #DBEAFE;
+    --soft-blue:#EFF6FF;
+    --soft-blue-2:#DBEAFE;
 
-    --border-blue: #BFDBFE;
+    --border-blue:#BFDBFE;
 
-    --text-dark: #0F172A;
-    --text-grey: #64748B;
+    --text-dark:#0F172A;
+    --text-grey:#64748B;
 
-    --white: #FFFFFF;
+    --white:#FFFFFF;
 
-    --shadow-soft: 0 6px 18px rgba(0,0,0,0.06);
-}
-
-/* =========================================
-   CONTAINER
-========================================= */
-
-.consul-container{
-    width:100%;
+    --shadow-soft:0 4px 14px rgba(0,0,0,0.05);
 }
 
 /* =========================================
@@ -35,21 +27,21 @@
 .header-top{
     display:flex;
     align-items:center;
-    gap:16px;
+    gap:15px;
 }
 
 .header-top h2{
     font-size:34px;
     font-weight:800;
-    margin-bottom:5px;
-    color:var(--dark-blue);
+    margin-bottom:4px;
     line-height:1.1;
+    color:var(--dark-blue);
 }
 
 .header-top p{
-    font-size:15px;
-    color:var(--text-grey);
     margin:0;
+    font-size:14px;
+    color:var(--text-grey);
 }
 
 /* =========================================
@@ -58,8 +50,8 @@
 
 .empty-consultation{
     background:var(--white);
+    border-radius:22px;
     border:1.5px solid var(--border-blue);
-    border-radius:24px;
     padding:45px 30px;
     text-align:center;
     box-shadow:var(--shadow-soft);
@@ -67,43 +59,45 @@
 
 .empty-consultation h3{
     margin-bottom:8px;
-    font-size:22px;
     color:var(--dark-blue);
 }
 
 .empty-consultation p{
     color:var(--text-grey);
-    margin-bottom:22px;
     font-size:14px;
+    margin-bottom:22px;
 }
 
 .btn-start{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    padding:12px 28px;
+
+    padding:12px 26px;
+
     border-radius:999px;
+
     background:var(--primary-blue);
-    color:var(--white);
+    color:#fff;
+
     text-decoration:none;
-    font-weight:700;
     font-size:14px;
-    transition:all .3s ease;
-    box-shadow:0 4px 12px rgba(37,99,235,0.25);
+    font-weight:700;
+
+    transition:.3s ease;
 }
 
 .btn-start:hover{
-    background:var(--primary-blue-hover);
-    transform:translateY(-1px);
+    background:var(--primary-hover);
 }
 
 /* =========================================
-   LIST CHAT
+   CHAT LIST
 ========================================= */
 
 .chat-list{
     display:grid;
-    gap:18px;
+    gap:16px;
 }
 
 /* =========================================
@@ -111,30 +105,36 @@
 ========================================= */
 
 .chat-card{
-    background:var(--white);
+    background:#fff;
+
     border:1.5px solid var(--border-blue);
-    border-radius:24px;
-    padding:20px;
+    border-radius:22px;
+
+    padding:18px;
+
     box-shadow:var(--shadow-soft);
-    transition:all .3s ease;
+
+    transition:.3s ease;
 }
 
 .chat-card:hover{
     transform:translateY(-2px);
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
 
 .chat-card-top{
     display:flex;
     align-items:center;
-    gap:14px;
-    margin-bottom:16px;
+    gap:12px;
+
+    margin-bottom:14px;
 }
 
 .avatar-chat{
-    width:52px;
-    height:52px;
+    width:48px;
+    height:48px;
+
     border-radius:50%;
+
     background:var(--soft-blue-2);
     border:2px solid var(--border-blue);
 
@@ -142,9 +142,10 @@
     align-items:center;
     justify-content:center;
 
-    color:var(--primary-blue);
+    font-size:17px;
     font-weight:800;
-    font-size:18px;
+
+    color:var(--primary-blue);
 
     flex-shrink:0;
 }
@@ -163,6 +164,7 @@
 .chat-user-info p{
     margin-top:3px;
     margin-bottom:0;
+
     font-size:12px;
     color:var(--text-grey);
 }
@@ -172,9 +174,10 @@
 ========================================= */
 
 .status-chat{
-    padding:6px 14px;
+    padding:5px 12px;
     border-radius:999px;
-    font-size:12px;
+
+    font-size:11px;
     font-weight:700;
 }
 
@@ -194,58 +197,64 @@
 
 .last-message{
     background:var(--soft-blue);
+
     border:1px solid var(--border-blue);
-    border-radius:16px;
-    padding:12px 14px;
-    margin-bottom:16px;
-    position:relative;
+
+    border-radius:14px;
+
+    padding:12px;
+
+    margin-bottom:14px;
 }
 
 .last-message p{
     margin:0;
-    color:var(--dark-blue);
+
     font-size:13px;
     line-height:1.5;
-    padding-right:45px;
+
+    color:var(--dark-blue);
 }
 
 .last-message span{
-    position:absolute;
-    right:12px;
-    bottom:10px;
+    display:block;
+
+    margin-top:6px;
+
     font-size:10px;
-    color:var(--text-grey);
+    color:#94A3B8;
+
+    text-align:right;
 }
 
 /* =========================================
-   BUTTON OPEN CHAT
+   BUTTON CHAT
 ========================================= */
 
 .btn-chat{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    gap:8px;
 
-    background:var(--dark-blue);
-    color:var(--white);
-
-    padding:11px 24px;
+    padding:10px 22px;
 
     border-radius:999px;
 
+    background:var(--dark-blue);
+    color:#fff;
+
     text-decoration:none;
+
     font-size:13px;
     font-weight:700;
 
-    transition:all .3s ease;
+    transition:.3s ease;
 
-    box-shadow:0 4px 12px rgba(30,58,95,0.25);
+    box-shadow:0 4px 10px rgba(30,58,95,0.18);
 }
 
 .btn-chat:hover{
     background:#16324F;
-    transform:translateY(-1px);
 }
 
 /* =========================================
@@ -254,9 +263,13 @@
 
 .chat-wrapper{
     background:var(--soft-blue);
+
     border:1.5px solid var(--border-blue);
-    border-radius:32px;
-    padding:25px;
+
+    border-radius:28px;
+
+    padding:24px;
+
     box-shadow:var(--shadow-soft);
 }
 
@@ -265,12 +278,13 @@
 ========================================= */
 
 .btn-back-chat{
-    width:46px;
-    height:46px;
+    width:42px;
+    height:42px;
+
     border-radius:50%;
 
     background:var(--dark-blue);
-    color:var(--white);
+    color:#fff;
 
     display:flex;
     align-items:center;
@@ -278,16 +292,13 @@
 
     text-decoration:none;
 
-    margin-bottom:20px;
+    margin-bottom:18px;
 
-    transition:all .3s ease;
-
-    box-shadow:0 4px 12px rgba(30,58,95,0.25);
+    transition:.3s ease;
 }
 
 .btn-back-chat:hover{
     background:#16324F;
-    transform:translateY(-1px);
 }
 
 /* =========================================
@@ -299,41 +310,47 @@
     align-items:center;
     gap:14px;
 
-    padding-bottom:20px;
-    margin-bottom:22px;
+    padding-bottom:18px;
+    margin-bottom:20px;
 
     border-bottom:1.5px solid var(--border-blue);
 }
 
 .chat-header-avatar{
-    width:60px;
-    height:60px;
+    width:58px;
+    height:58px;
+
     border-radius:50%;
 
-    background:var(--white);
+    background:#fff;
     border:2px solid var(--border-blue);
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    font-weight:800;
     color:var(--primary-blue);
+
     font-size:20px;
+    font-weight:800;
 }
 
 .chat-header-info h3{
     margin:0;
+
     font-size:18px;
-    color:var(--dark-blue);
     font-weight:800;
+
+    color:var(--dark-blue);
 }
 
 .chat-header-info p{
     margin-top:4px;
     margin-bottom:0;
+
+    font-size:12px;
+
     color:var(--text-grey);
-    font-size:13px;
 }
 
 /* =========================================
@@ -343,12 +360,12 @@
 .message-area{
     display:flex;
     flex-direction:column;
-    gap:18px;
+    gap:16px;
 
     max-height:500px;
     overflow-y:auto;
 
-    padding-right:6px;
+    padding-right:5px;
 }
 
 /* =========================================
@@ -357,8 +374,8 @@
 
 .message-item{
     display:flex;
-    align-items:flex-end;
     gap:10px;
+
     max-width:80%;
 }
 
@@ -374,65 +391,76 @@
 .message-avatar{
     width:38px;
     height:38px;
+
     border-radius:50%;
 
-    background:var(--white);
+    background:#fff;
     border:1.5px solid var(--border-blue);
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    font-size:13px;
+    font-size:12px;
     font-weight:700;
+
     color:var(--primary-blue);
 
     flex-shrink:0;
 }
 
 /* =========================================
-   MESSAGE BUBBLE
+   BUBBLE
 ========================================= */
 
 .message-bubble{
-    padding:14px 16px;
+    padding:13px 16px;
+
     border-radius:18px;
-    position:relative;
-    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+
+    box-shadow:0 3px 10px rgba(0,0,0,0.04);
 }
 
 .message-item.user .message-bubble{
     background:var(--primary-blue);
-    color:var(--white);
+    color:#fff;
+
     border-bottom-right-radius:6px;
 }
 
 .message-item.admin .message-bubble{
-    background:var(--white);
+    background:#fff;
     color:var(--dark-blue);
+
     border:1.5px solid var(--border-blue);
+
     border-bottom-left-radius:6px;
 }
 
 .message-bubble p{
     margin:0;
+
     font-size:14px;
     line-height:1.6;
 }
 
 .message-time{
     display:block;
-    margin-top:8px;
+
+    margin-top:7px;
+
     font-size:10px;
+
     opacity:.7;
 }
 
 /* =========================================
-   CHAT INPUT
+   INPUT AREA
 ========================================= */
 
 .chat-input-area{
-    margin-top:24px;
+    margin-top:22px;
+
     display:flex;
     gap:12px;
     align-items:center;
@@ -440,14 +468,17 @@
 
 .chat-input-area input{
     flex:1;
-    border:none;
-    background:var(--white);
-    border:1.5px solid var(--border-blue);
 
     padding:14px 18px;
+
     border-radius:999px;
 
+    border:1.5px solid var(--border-blue);
+
+    background:#fff;
+
     font-size:14px;
+
     color:var(--dark-blue);
 
     outline:none;
@@ -459,13 +490,14 @@
 }
 
 .btn-send{
-    width:52px;
-    height:52px;
+    width:50px;
+    height:50px;
+
     border:none;
     border-radius:50%;
 
     background:var(--primary-blue);
-    color:var(--white);
+    color:#fff;
 
     display:flex;
     align-items:center;
@@ -473,14 +505,11 @@
 
     cursor:pointer;
 
-    transition:all .3s ease;
-
-    box-shadow:0 4px 12px rgba(37,99,235,0.25);
+    transition:.3s ease;
 }
 
 .btn-send:hover{
-    background:var(--primary-blue-hover);
-    transform:translateY(-1px);
+    background:var(--primary-hover);
 }
 
 /* =========================================
@@ -489,21 +518,12 @@
 
 @media(max-width:768px){
 
-    .header-top{
-        align-items:flex-start;
-    }
-
     .header-top h2{
         font-size:28px;
     }
 
-    .chat-card{
-        padding:16px;
-    }
-
     .chat-wrapper{
         padding:18px;
-        border-radius:24px;
     }
 
     .message-item{
@@ -518,6 +538,6 @@
     .btn-send{
         width:100%;
         border-radius:999px;
-        height:48px;
+        height:46px;
     }
 }
