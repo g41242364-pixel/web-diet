@@ -78,7 +78,7 @@
                         type="number"
                         name="berat_badan"
                         step="0.1"
-                        placeholder="58"
+                        placeholder=""
                         value="{{ old('berat_badan') }}"
                         required
                     >
@@ -91,7 +91,7 @@
                         type="number"
                         name="tinggi_badan"
                         step="0.1"
-                        placeholder="158"
+                        placeholder=""
                         value="{{ old('tinggi_badan') }}"
                         required
                     >
