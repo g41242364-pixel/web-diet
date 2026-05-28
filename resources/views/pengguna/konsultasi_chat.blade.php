@@ -15,7 +15,9 @@
 <div class="consul-container">
     <div class="consul-header" style="margin-bottom:14px;">
         <div class="header-top">
-            <a href="{{ route('pengguna.konsultasi') }}" style="color:#888;text-decoration:none;font-size:13px;">← Kembali</a>
+            <a href="{{ route('pengguna.konsultasi') }}" class="btn-back-chat">
+    ← Kembali
+</a>
         </div>
     </div>
 
