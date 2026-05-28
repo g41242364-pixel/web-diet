@@ -99,7 +99,7 @@
     padding:12px 24px;
     background:linear-gradient(135deg,#90D2ED,#5BA4C4);
     color:white;
-    border-radius:999px;
+    border-radius:14px;
     text-decoration:none;
     font-weight:700;
     font-size:14px;
@@ -244,7 +244,7 @@
     text-decoration:none;
 
     padding:10px 22px;
-    border-radius:14px;
+    border-radius:999px;
 
     font-size:13px;
     font-weight:700;
