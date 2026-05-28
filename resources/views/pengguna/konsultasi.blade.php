@@ -51,9 +51,7 @@
                 <span style="font-size:11px;color:#aaa;float:right;">{{ $konsultasi->messages->last()->created_at->format('H:i') }}</span>
             </div>
             @endif
-            <a href="{{ route('pengguna.konsultasi.chat', $konsultasi->id) }}" class="btn-buka-chat">
-    Buka Chat →
-</a>
+            <a href="{{ route('pengguna.konsultasi.chat', $konsultasi->id) }}" style="display:inline-block;padding:8px 16px;background:#90D2ED;color:#fff;border-radius:8px;text-decoration:none;font-size:13px;font-weight:500;">Buka Chat →</a>
         </div>
         @endforeach
     </div>
