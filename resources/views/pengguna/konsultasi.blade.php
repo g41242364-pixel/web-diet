@@ -6,6 +6,13 @@
 @section('content')
 
 <div class="consul-container">
+    
+    {{-- BUTTON KEMBALI --}}
+    <div class="back-wrapper">
+        <a href="{{ url()->previous() }}" class="btn-back">
+        ← Kembali
+        </a>
+    </div>
 
     {{-- HEADER --}}
     <div class="consul-header">
