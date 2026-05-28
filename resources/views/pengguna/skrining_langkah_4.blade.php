@@ -137,22 +137,41 @@
         </div>
 
         {{-- BUTTON NAV --}}
-        <div class="footer-nav">
+<div class="footer-nav" style="display:flex;gap:14px;margin-top:25px;">
 
-            <form action="{{ route('skrining.lanjutKonsultasi', $screening->id) }}" method="POST">
-                @csrf
-                <button type="submit" class="btn-nav btn-primary">
-                    💬 Lanjut Konsultasi
-                </button>
-            </form>
+    <form action="{{ route('skrining.lanjutKonsultasi', $screening->id) }}" method="POST">
+        @csrf
+        <button type="submit"
+            style="
+                background:#7C3AED;
+                color:white;
+                border:none;
+                padding:12px 24px;
+                border-radius:12px;
+                font-weight:600;
+                font-size:16px;
+                cursor:pointer;
+                transition:0.3s;
+            ">
+            💬 Lanjut Konsultasi
+        </button>
+    </form>
 
-            <a href="{{ route('pengguna.dashboard') }}" class="btn-nav btn-secondary">
-                ← Ke Dashboard
-            </a>
+    <a href="{{ route('pengguna.dashboard') }}"
+        style="
+            background:#E2E8F0;
+            color:#1E293B;
+            padding:12px 24px;
+            border-radius:12px;
+            font-weight:600;
+            font-size:16px;
+            text-decoration:none;
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            transition:0.3s;
+        ">
+        ← Ke Dashboard
+    </a>
 
-        </div>
-
-    </div>
 </div>
-
-@endsection
