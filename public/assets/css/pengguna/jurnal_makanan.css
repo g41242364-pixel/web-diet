@@ -15,7 +15,33 @@
 .main-wrapper{
     background: var(--bg-light);
     min-height: 100vh;
-    padding: 30px 40px 40px;
+    padding: 30px 40px;
+}
+
+/* =========================================
+   HEADER CARD
+========================================= */
+
+.nutrition-header-card{
+    background: var(--white);
+    border-radius: 30px;
+    padding: 30px 40px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.nutrition-header-card h1{
+    margin: 25px 0 10px;
+    font-size: 48px;
+    font-weight: 800;
+    color: #000;
+    line-height: 1.1;
+}
+
+.nutrition-header-card p{
+    margin: 0;
+    color: #64748B;
+    font-size: 18px;
 }
 
 /* =========================================
@@ -47,51 +73,13 @@
 }
 
 /* =========================================
-   HEADER CARD
-========================================= */
-
-.nutrition-header-card{
-    background: white;
-
-    border-radius: 30px;
-
-    padding: 35px 40px;
-
-    margin-top: 20px;
-    margin-bottom: 25px;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,.05);
-}
-
-.nutrition-header-card h1{
-    margin: 25px 0 10px;
-
-    font-size: 48px;
-    font-weight: 800;
-
-    color: #000;
-    line-height: 1.1;
-}
-
-.nutrition-header-card p{
-    margin: 0;
-
-    font-size: 18px;
-    color: #64748B;
-}
-
-/* =========================================
    CONTENT CONTAINER
 ========================================= */
 
 .content-container{
     background: var(--container-blue-bg);
-
     border-radius: 30px;
-
     padding: 35px;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,.04);
 }
 
 /* =========================================
@@ -110,12 +98,9 @@
 
 .food-card{
     background: white;
-
     border-radius: 25px;
     overflow: hidden;
-
     box-shadow: 0 6px 16px rgba(0,0,0,.05);
-
     transition: .3s;
 }
 
@@ -141,7 +126,6 @@
 
 .food-card-body{
     padding: 22px;
-
     display: flex;
     align-items: center;
     gap: 20px;
@@ -160,7 +144,6 @@
     height: 120px;
 
     object-fit: cover;
-
     border-radius: 18px;
 
     background: #F5F5F5;
@@ -196,7 +179,6 @@
 .nutrition-list li{
     display: flex;
     justify-content: space-between;
-
     margin-bottom: 10px;
 
     font-size: 14px;
@@ -217,16 +199,14 @@
 ========================================= */
 
 .empty-state{
-    grid-column: 1 / -1;
+    grid-column: 1/-1;
 
     background: white;
-
     border-radius: 20px;
 
     padding: 50px 20px;
 
     text-align: center;
-
     color: #64748B;
 }
 
@@ -236,7 +216,6 @@
 
 .pagination-wrapper{
     margin-top: 35px;
-
     display: flex;
     justify-content: center;
 }
@@ -258,13 +237,11 @@
     justify-content: center;
 
     background: white;
-
     border: 1px solid #DDE6ED;
 
     border-radius: 10px;
 
     text-decoration: none;
-
     color: var(--dark-blue);
     font-weight: 600;
 }
@@ -311,11 +288,6 @@
         padding: 20px;
     }
 
-    .food-image{
-        width: 100px;
-        height: 100px;
-    }
-
     .nutrition-header-card{
         padding: 25px;
     }
@@ -326,5 +298,10 @@
 
     .nutrition-header-card p{
         font-size: 15px;
+    }
+
+    .food-image{
+        width: 100px;
+        height: 100px;
     }
 }
