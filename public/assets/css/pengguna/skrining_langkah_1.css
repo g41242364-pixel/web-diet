@@ -21,10 +21,7 @@
 }
 
 .skrining-header-top p{
-    margin:8px 0 0;
-    color:#64748B;
-    font-size:15px;
-    display:block;
+    display:none;
 }
 
 .step-info {
