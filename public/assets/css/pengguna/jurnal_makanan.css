@@ -2,221 +2,218 @@
     --primary-blue: #90D2ED;
     --dark-blue: #5BA4C4;
     --bg-light: #F0F7FA;
-    --white: #ffffff;
+    --white: #FFFFFF;
     --text-dark: #333333;
     --border-color: #E1E8ED;
-    --card-header-blue: #5BA4C4;
     --container-blue-bg: #C6E6F6;
 }
 
 /* =========================================
-   WRAPPER
+   PAGE
 ========================================= */
 
-.main-wrapper {
-    background-color: var(--bg-light);
+.main-wrapper{
+    background: var(--bg-light);
     min-height: 100vh;
-    padding: 20px 40px 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 40px;
 }
 
 /* =========================================
    HEADER CARD
 ========================================= */
 
-.page-header-card {
-    background: #fff;
-    border-radius: 28px;
-    padding: 25px 35px;
-    margin-bottom: 30px;
+.page-header-card{
+    background: var(--white);
+    border-radius: 30px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+    padding: 30px 35px;
+    margin: 30px 40px 25px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.04);
 }
 
-.header-content {
-    width: 100%;
-}
-
-.header-text h1 {
+.page-header-card h1{
     margin: 0;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 48px;
+    font-weight: 800;
     color: #000;
+    line-height: 1.1;
 }
 
-.header-text p {
-    margin: 4px 0 0;
-    font-size: 13px;
+.page-header-card p{
+    margin-top: 10px;
     color: #64748B;
-    line-height: 1.5;
+    font-size: 16px;
 }
 
-.btn-back {
+.btn-back{
+    margin-top: 18px;
+
     display: inline-flex;
     align-items: center;
     gap: 8px;
 
-    background: #EAF5FB;
-    color: #5BA4C4;
+    padding: 10px 20px;
 
-    padding: 10px 18px;
-    border-radius: 999px;
+    background: #EAF4FA;
+    color: var(--dark-blue);
 
     text-decoration: none;
-    font-weight: 600;
+    border-radius: 999px;
+
     font-size: 14px;
+    font-weight: 600;
 
-    transition: all .3s ease;
+    transition: .3s;
 }
 
-.btn-back:hover {
-    background: #5BA4C4;
-    color: #fff;
+.btn-back:hover{
+    background: var(--dark-blue);
+    color: white;
 }
 
 /* =========================================
-   CONTAINER
+   CONTENT CONTAINER
 ========================================= */
 
-.content-container {
-    background: #CFE8F4;
-    border-radius: 32px;
+.content-container{
+    margin: 0 40px;
     padding: 35px;
+
+    background: var(--container-blue-bg);
+
+    border-radius: 30px;
 }
 
 /* =========================================
-   GRID
+   GRID MAKANAN
 ========================================= */
 
-.foods-grid {
+.foods-grid{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 /* =========================================
-   CARD
+   CARD MAKANAN
 ========================================= */
 
-.food-card {
-    background: #fff;
-    border-radius: 24px;
+.food-card{
+    background: white;
+    border-radius: 25px;
     overflow: hidden;
-    box-shadow: 0 4px 16px rgba(0,0,0,.05);
-    transition: all .3s ease;
+
+    box-shadow: 0 6px 16px rgba(0,0,0,.05);
+
+    transition: .3s;
 }
 
-.food-card:hover {
+.food-card:hover{
     transform: translateY(-4px);
-    box-shadow: 0 10px 22px rgba(0,0,0,.08);
 }
 
-/* =========================================
-   CARD HEADER
-========================================= */
-
-.food-card-header {
-    background: var(--card-header-blue);
+.food-card-header{
+    background: var(--dark-blue);
     color: white;
 
-    text-align: center;
     padding: 18px;
 
-    font-size: 18px;
+    text-align: center;
+
+    font-size: 16px;
     font-weight: 700;
 }
 
 /* =========================================
-   CARD BODY
+   BODY CARD
 ========================================= */
 
-.food-card-body {
+.food-card-body{
+    padding: 22px;
+
     display: flex;
     align-items: center;
-    gap: 30px;
-    padding: 24px 28px;
+    gap: 20px;
 }
 
-/* =========================================
-   IMAGE
-========================================= */
+/* TEMPAT GAMBAR */
 
-.image-wrapper {
-    width: 140px;
-    display: flex;
-    justify-content: center;
+.image-wrapper{
     flex-shrink: 0;
 }
 
-.food-image {
+.food-image{
     width: 120px;
     height: 120px;
 
-    border-radius: 50%;
     object-fit: cover;
+    border-radius: 18px;
 
-    border: 4px solid #EDF7FB;
-    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    background: #F5F5F5;
+    border: 3px solid #EAF4FA;
 }
 
 /* =========================================
    NUTRISI
 ========================================= */
 
-.food-nutrition-info {
+.food-nutrition-info{
     flex: 1;
 }
 
-.nutrition-title {
+.nutrition-title{
     margin: 0 0 12px;
-    padding-bottom: 8px;
 
     font-size: 16px;
     font-weight: 700;
-    color: #111827;
 
-    border-bottom: 2px solid #EAF2F6;
+    color: #000;
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid #E5E7EB;
 }
 
-.nutrition-list {
+.nutrition-list{
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.nutrition-list li {
+.nutrition-list li{
     display: flex;
     justify-content: space-between;
-    gap: 12px;
 
     margin-bottom: 10px;
+
     font-size: 14px;
+    color: #555;
 }
 
-.nutrition-list .label {
-    color: #475569;
+.nutrition-list .label{
+    font-weight: 500;
 }
 
-.nutrition-list .value {
+.nutrition-list .value{
     font-weight: 700;
-    color: #111827;
+    color: #000;
 }
 
 /* =========================================
    EMPTY STATE
 ========================================= */
 
-.empty-state {
-    grid-column: 1 / -1;
+.empty-state{
+    grid-column: 1/-1;
+
+    background: white;
+    border-radius: 20px;
+
+    padding: 50px 20px;
 
     text-align: center;
-    background: white;
-
-    padding: 50px;
-    border-radius: 20px;
 
     color: #64748B;
 }
@@ -225,87 +222,87 @@
    PAGINATION
 ========================================= */
 
-.pagination-wrapper {
+.pagination-wrapper{
     margin-top: 35px;
     display: flex;
     justify-content: center;
 }
 
-.pagination-wrapper .pagination {
+.pagination{
     display: flex;
-    gap: 8px;
+    gap: 6px;
     list-style: none;
     padding: 0;
 }
 
-.pagination-wrapper .page-link {
-    min-width: 40px;
+.pagination .page-link{
+    width: 40px;
     height: 40px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 10px;
-    border: 1px solid #D6E4EC;
-
     background: white;
-    color: #5BA4C4;
+    border: 1px solid #DDE6ED;
+
+    border-radius: 10px;
 
     text-decoration: none;
+    color: var(--dark-blue);
     font-weight: 600;
 }
 
-.pagination-wrapper .active .page-link {
-    background: #5BA4C4 !important;
-    border-color: #5BA4C4 !important;
-    color: white !important;
+.pagination .active .page-link{
+    background: var(--dark-blue);
+    color: white;
 }
 
 /* =========================================
    RESPONSIVE
 ========================================= */
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px){
 
-    .foods-grid {
+    .foods-grid{
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .food-card-body {
-        gap: 20px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px){
 
-    .main-wrapper {
-        padding: 15px;
-    }
-
-    .foods-grid {
+    .foods-grid{
         grid-template-columns: 1fr;
     }
 
-    .content-container {
-        padding: 20px;
-    }
-
-    .food-card-body {
+    .food-card-body{
         flex-direction: column;
         text-align: center;
     }
 
-    .nutrition-list li {
-        justify-content: center;
+    .page-header-card h1{
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .page-header-card,
+    .content-container{
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
-    .page-header-card {
+    .content-container{
         padding: 20px;
     }
 
-    .btn-back {
-        width: 100%;
-        justify-content: center;
+    .food-image{
+        width: 100px;
+        height: 100px;
+    }
+
+    .page-header-card h1{
+        font-size: 28px;
     }
 }
