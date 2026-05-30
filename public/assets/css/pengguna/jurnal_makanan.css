@@ -245,9 +245,10 @@
     background: #FFFFFF !important;
     color: #2563EB !important;
 
+    font-size: 13px; /* sebelumnya mengikuti default Bootstrap */
     font-weight: 600;
-    text-decoration: none;
 
+    text-decoration: none;
     transition: .3s;
 }
 
