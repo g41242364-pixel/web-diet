@@ -52,13 +52,10 @@
 .nav-step-item {
     flex: 1;
     background: #EFF6FF;
-    padding: 5px;
+    padding: 12px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     color: #1E3A5F;
-    border: 1px solid #2563EB;
-    font-size: 14px;
-    border-radius: 10px;
 }
 
 .nav-step-item.active {
