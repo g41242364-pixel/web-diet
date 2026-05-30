@@ -117,8 +117,10 @@
         }
 
         .banner-action {
-            flex-shrink: 0;
-        }
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 
         .result-banner.status-kurus {
             background-color: var(--kurus-bg);
@@ -180,26 +182,27 @@
             border-color: var(--obesitas-border);
         }
 
-        btn-others{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    background-color:#2563EB;
-    color:#fff !important;
-    padding:12px 30px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:600;
-    font-size:14px;
-    transition:all .3s ease;
-    box-shadow:0 4px 10px rgba(37,99,235,.25);
-}
+        .btn-others {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #7BB9D8;
+            color: #ffffff !important;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(123, 185, 216, 0.25);
+            border: none;
+        }
 
-.btn-others:hover{
-    background-color:#1D4ED8;
-    transform:translateY(-2px);
-    box-shadow:0 6px 15px rgba(37,99,235,.35);
-}
+        .btn-others:hover {
+            background-color: #5BA4C4;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(91, 164, 196, 0.35);
+        }
 
         .btn-others svg {
             transition: transform 0.2s ease;
@@ -432,20 +435,26 @@
                 gap: 15px;
             }
 
-            .btn-others {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #2563EB;
-    color: #ffffff !important;
-    padding: 12px 24px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(37,99,235,0.25);
-    border: none;
+            btn-others{
+    display:inline-flex;
+    align-items:center;
+    justify-content: center;
+    gap:8px;
+    background-color:#2563EB;
+    color:#fff !important;
+    padding:12px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+    transition:all .3s ease;
+    box-shadow:0 4px 10px rgba(37,99,235,.25);
+}
+
+.btn-others:hover{
+    background-color:#1D4ED8;
+    transform:translateY(-2px);
+    box-shadow:0 6px 15px rgba(37,99,235,.35);
 }
 
             .main-wrapper {
@@ -469,3 +478,4 @@
     margin-top:30px;
 }
         }
+
