@@ -15,47 +15,19 @@
 .main-wrapper{
     background: var(--bg-light);
     min-height: 100vh;
-    padding-bottom: 40px;
+    padding: 30px 40px 40px;
 }
 
 /* =========================================
-   HEADER CARD
+   BUTTON BACK
 ========================================= */
 
-.page-header-card{
-    background: var(--white);
-    border-radius: 30px;
-
-    padding: 30px 35px;
-    margin: 30px 40px 25px;
-
-    text-align: center;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,.04);
-}
-
-.page-header-card h1{
-    margin: 0;
-    font-size: 48px;
-    font-weight: 800;
-    color: #000;
-    line-height: 1.1;
-}
-
-.page-header-card p{
-    margin-top: 10px;
-    color: #64748B;
-    font-size: 16px;
-}
-
 .btn-back{
-    margin-top: 18px;
-
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 
-    padding: 10px 20px;
+    padding: 12px 24px;
 
     background: #EAF4FA;
     color: var(--dark-blue);
@@ -63,7 +35,7 @@
     text-decoration: none;
     border-radius: 999px;
 
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
 
     transition: .3s;
@@ -75,16 +47,51 @@
 }
 
 /* =========================================
+   HEADER CARD
+========================================= */
+
+.nutrition-header-card{
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 35px 40px;
+
+    margin-top: 20px;
+    margin-bottom: 25px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.nutrition-header-card h1{
+    margin: 25px 0 10px;
+
+    font-size: 48px;
+    font-weight: 800;
+
+    color: #000;
+    line-height: 1.1;
+}
+
+.nutrition-header-card p{
+    margin: 0;
+
+    font-size: 18px;
+    color: #64748B;
+}
+
+/* =========================================
    CONTENT CONTAINER
 ========================================= */
 
 .content-container{
-    margin: 0 40px;
-    padding: 35px;
-
     background: var(--container-blue-bg);
 
     border-radius: 30px;
+
+    padding: 35px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.04);
 }
 
 /* =========================================
@@ -103,6 +110,7 @@
 
 .food-card{
     background: white;
+
     border-radius: 25px;
     overflow: hidden;
 
@@ -139,7 +147,9 @@
     gap: 20px;
 }
 
-/* TEMPAT GAMBAR */
+/* =========================================
+   IMAGE
+========================================= */
 
 .image-wrapper{
     flex-shrink: 0;
@@ -150,6 +160,7 @@
     height: 120px;
 
     object-fit: cover;
+
     border-radius: 18px;
 
     background: #F5F5F5;
@@ -171,8 +182,8 @@
     font-weight: 700;
 
     color: #000;
-    padding-bottom: 8px;
 
+    padding-bottom: 8px;
     border-bottom: 1px solid #E5E7EB;
 }
 
@@ -206,9 +217,10 @@
 ========================================= */
 
 .empty-state{
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
 
     background: white;
+
     border-radius: 20px;
 
     padding: 50px 20px;
@@ -224,6 +236,7 @@
 
 .pagination-wrapper{
     margin-top: 35px;
+
     display: flex;
     justify-content: center;
 }
@@ -231,6 +244,7 @@
 .pagination{
     display: flex;
     gap: 6px;
+
     list-style: none;
     padding: 0;
 }
@@ -244,11 +258,13 @@
     justify-content: center;
 
     background: white;
+
     border: 1px solid #DDE6ED;
 
     border-radius: 10px;
 
     text-decoration: none;
+
     color: var(--dark-blue);
     font-weight: 600;
 }
@@ -280,17 +296,15 @@
         text-align: center;
     }
 
-    .page-header-card h1{
+    .nutrition-header-card h1{
         font-size: 34px;
     }
 }
 
 @media (max-width: 768px){
 
-    .page-header-card,
-    .content-container{
-        margin-left: 15px;
-        margin-right: 15px;
+    .main-wrapper{
+        padding: 15px;
     }
 
     .content-container{
@@ -302,7 +316,15 @@
         height: 100px;
     }
 
-    .page-header-card h1{
+    .nutrition-header-card{
+        padding: 25px;
+    }
+
+    .nutrition-header-card h1{
         font-size: 28px;
+    }
+
+    .nutrition-header-card p{
+        font-size: 15px;
     }
 }
