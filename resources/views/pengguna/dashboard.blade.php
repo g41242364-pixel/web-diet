@@ -234,7 +234,7 @@
 
                         <a
                             href="{{ route('pengguna.konsultasi.chat', $konsultasiTerakhir->id) }}"
-                            style="display:inline-block;margin-top:12px;padding:8px 16px;background:#90D2ED;color:#fff;border-radius:8px;font-size:13px;text-decoration:none;"
+                            class="dashboard-chat-btn"
                         >
                             Buka Chat →
                         </a>
