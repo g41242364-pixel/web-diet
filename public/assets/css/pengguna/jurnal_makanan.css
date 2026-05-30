@@ -6,14 +6,13 @@
     --white: #FFFFFF;
     --text-dark: #0F172A;
     --border-color: #BFDBFE;
-    --container-blue-bg: #DBEAFE;
 }
 
 /* =========================================
    PAGE
 ========================================= */
 
-.main-wrapper{
+.main-wrapper {
     width: 100%;
     padding: 0;
     background: var(--bg-light);
@@ -22,249 +21,219 @@
 }
 
 /* =========================================
-   HEADER CARD
+   HEADER CARD (SAMAKAN DENGAN JURNAL MAKANAN)
 ========================================= */
 
-.nutrition-header-card{
+.page-header {
     background: #FFFFFF;
     border-radius: 20px;
     padding: 25px 30px;
     margin-bottom: 25px;
-    border: 1px solid #BFDBFE;
+
+    border: 1px solid var(--border-color);
     box-shadow: 0 4px 15px rgba(0,0,0,.05);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.nutrition-header-card h1{
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-content img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.header-text h2 {
     margin: 0;
     font-size: 30px;
     font-weight: 800;
-    color: #0F172A;
-    line-height: 1.2;
+    color: var(--text-dark);
 }
 
-.nutrition-header-card p{
-    margin: 8px 0 0;
+.header-text p {
+    margin: 6px 0 0;
     font-size: 14px;
     color: #64748B;
 }
 
 /* =========================================
-   BUTTON BACK
+   BUTTON (SAMAKAN JURNAL MAKANAN STYLE)
 ========================================= */
 
-.btn-back{
+.btn-recommendation {
     display: inline-flex;
     align-items: center;
     gap: 8px;
 
-    margin-top: 18px;
-    margin-bottom: 20px;
-
     padding: 12px 24px;
 
-    background: #2563EB;
+    background: var(--dark-blue);
     color: #FFFFFF;
 
-    text-decoration: none;
     border-radius: 30px;
+    text-decoration: none;
 
     font-size: 14px;
     font-weight: 600;
 
     box-shadow: 0 4px 10px rgba(37,99,235,0.25);
-
     transition: all .3s ease;
 }
 
-.btn-back:hover{
-    background: #1D4ED8;
-    color: #FFFFFF;
+.btn-recommendation:hover {
+    background: var(--dark-blue-hover);
     transform: translateY(-1px);
 }
 
 /* =========================================
-   CONTENT CONTAINER
+   CONTAINER (SAMAKAN JURNAL MAKANAN)
 ========================================= */
 
-.content-container{
-    background: #DBEAFE;
+.activity-container {
+    background: var(--primary-blue);
     border-radius: 30px;
     padding: 35px;
-    height: auto;
-    min-height: unset;
 }
 
 /* =========================================
-   GRID MAKANAN
+   GRID (RAPIH SEPERTI FOOD GRID)
 ========================================= */
 
-.foods-grid{
+.activity-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 30px;
 }
 
 /* =========================================
-   CARD MAKANAN
+   CARD (TIDAK DIUBAH)
 ========================================= */
 
-.food-card{
-    background: #FFFFFF;
+.activity-card {
+    background: #ffffff;
     border-radius: 25px;
-    overflow: hidden;
-    box-shadow: 0 6px 16px rgba(0,0,0,.05);
-    transition: all .3s ease;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease;
 }
 
-.food-card:hover{
-    transform: translateY(-4px);
+.activity-card:hover {
+    transform: translateY(-5px);
 }
 
-.food-card-header{
-    background: #2563EB;
-    color: #FFFFFF;
-    padding: 18px;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-/* =========================================
-   BODY CARD
-========================================= */
-
-.food-card-body{
-    padding: 25px;
+.card-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--dark-blue);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
-    gap: 25px;
-    min-height: 220px;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
 }
 
-/* =========================================
-   IMAGE
-========================================= */
-
-.image-wrapper{
-    flex-shrink: 0;
+.activity-img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 
-.food-image{
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #DBEAFE;
-    box-shadow: 0 3px 8px rgba(0,0,0,.08);
+.activity-card h4 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 5px;
 }
 
-/* =========================================
-   NUTRISI
-========================================= */
-
-.food-nutrition-info{
-    flex: 1;
-}
-
-.nutrition-title{
-    margin: 0 0 12px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #1E3A5F;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #E5E7EB;
-}
-
-.nutrition-list{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nutrition-list li{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 14px;
-    color: #475569;
-}
-
-.nutrition-list .label{
-    font-weight: 500;
-}
-
-.nutrition-list .value{
-    font-weight: 700;
-    color: #0F172A;
+.activity-card .desc {
+    font-size: 12px;
+    color: #64748B;
+    line-height: 1.4;
+    margin-bottom: 15px;
 }
 
 /* =========================================
    EMPTY STATE
 ========================================= */
 
-.empty-state{
-    grid-column: 1/-1;
-    background: #FFFFFF;
+.empty-state {
+    grid-column: 1 / -1;
+    background: #fff;
     border-radius: 20px;
-    padding: 50px 20px;
+    padding: 40px;
     text-align: center;
     color: #64748B;
 }
 
 /* =========================================
-   PAGINATION
+   PAGINATION (FIX TOTAL BIAR SAMA FOOD PAGE)
 ========================================= */
 
-.pagination-wrapper{
+.pagination-wrapper {
     margin-top: 40px;
     display: flex;
     justify-content: center;
 }
 
-.pagination{
-    display: flex !important;
+.pagination {
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     flex-wrap: wrap;
 }
 
-.page-item{
+.page-item {
     list-style: none;
 }
 
-.page-link{
+.page-link {
     min-width: 45px;
     height: 45px;
 
-    display: flex !important;
+    display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 12px !important;
-    border: 1px solid #BFDBFE !important;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
 
-    background: #FFFFFF !important;
-    color: #2563EB !important;
+    background: #fff;
+    color: var(--dark-blue);
 
-    font-size: 13px; /* sebelumnya mengikuti default Bootstrap */
+    font-size: 13px;
     font-weight: 600;
 
     text-decoration: none;
-    transition: .3s;
 }
 
-.page-link:hover{
-    background: #DBEAFE !important;
+.page-link:hover {
+    background: var(--primary-blue);
 }
 
-.page-item.active .page-link{
-    background: #2563EB !important;
-    border-color: #2563EB !important;
-    color: #FFFFFF !important;
+.page-item.active .page-link {
+    background: var(--dark-blue);
+    border-color: var(--dark-blue);
+    color: #fff;
 }
 
-.page-item.disabled .page-link{
+.page-item.disabled .page-link {
     opacity: .5;
 }
 
@@ -272,49 +241,19 @@
    RESPONSIVE
 ========================================= */
 
-@media (max-width: 1400px){
+@media (max-width: 900px) {
 
-    .foods-grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 900px){
-
-    .foods-grid{
+    .activity-grid {
         grid-template-columns: 1fr;
     }
 
-    .food-card-body{
+    .page-header {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
+        gap: 15px;
     }
 
-    .nutrition-header-card h1{
+    .header-text h2 {
         font-size: 26px;
-    }
-}
-
-@media (max-width: 768px){
-
-    .main-wrapper{
-        padding: 15px;
-    }
-
-    .content-container{
-        padding: 20px;
-    }
-
-    .nutrition-header-card{
-        padding: 20px;
-    }
-
-    .nutrition-header-card h1{
-        font-size: 24px;
-    }
-
-    .food-image{
-        width: 100px;
-        height: 100px;
     }
 }
