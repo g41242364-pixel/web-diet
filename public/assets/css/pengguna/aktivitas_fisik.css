@@ -1,3 +1,29 @@
+:root {
+    --primary-blue: #DBEAFE;
+    --dark-blue: #2563EB;
+    --dark-blue-hover: #1D4ED8;
+    --bg-light: #F8FAFC;
+    --white: #FFFFFF;
+    --text-dark: #0F172A;
+    --border-color: #BFDBFE;
+}
+
+/* =========================================
+   PAGE WRAPPER
+========================================= */
+
+.main-wrapper {
+    width: 100%;
+    padding: 0;
+    background: var(--bg-light);
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -20,13 +46,19 @@
 .header-text h2 {
     font-size: 42px;
     font-weight: 800;
-    margin-bottom: 5px;
+    margin: 0 0 5px;
+    color: var(--text-dark);
 }
 
 .header-text p {
     font-size: 18px;
     color: #333;
+    margin: 0;
 }
+
+/* =========================================
+   BUTTON
+========================================= */
 
 .btn-recommendation {
     background: #B2F2BB;
@@ -46,11 +78,19 @@
     transform: scale(1.05);
 }
 
+/* =========================================
+   CONTAINER
+========================================= */
+
 .activity-container {
     background: #D8EBF3;
     border-radius: 25px;
     padding: 35px;
 }
+
+/* =========================================
+   GRID
+========================================= */
 
 .activity-grid {
     display: grid;
@@ -58,6 +98,10 @@
     gap: 25px;
     margin-bottom: 30px;
 }
+
+/* =========================================
+   CARD (TIDAK DIUBAH)
+========================================= */
 
 .activity-card {
     background: #ffffff;
@@ -156,6 +200,10 @@
     height: 12px;
 }
 
+/* =========================================
+   PAGINATION
+========================================= */
+
 .pagination-container {
     display: flex;
     justify-content: center;
@@ -214,12 +262,28 @@
     display: none;
 }
 
+/* =========================================
+   RESPONSIVE
+========================================= */
+
 @media (max-width: 1200px) {
-    .activity-grid { grid-template-columns: 1fr 1fr; }
+    .activity-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 768px) {
-    .activity-grid { grid-template-columns: 1fr; }
-    .header-text h2 { font-size: 32px; }
-    .page-header { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-text h2 {
+        font-size: 32px;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
 }
