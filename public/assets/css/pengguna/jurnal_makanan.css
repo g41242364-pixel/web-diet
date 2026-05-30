@@ -9,342 +9,303 @@
     --container-blue-bg: #C6E6F6;
 }
 
-/* ========================================
-   MAIN WRAPPER
-======================================== */
+/* =========================================
+   WRAPPER
+========================================= */
 
 .main-wrapper {
     background-color: var(--bg-light);
     min-height: 100vh;
+    padding: 20px 40px 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-bottom: 40px;
 }
 
-/* ========================================
+/* =========================================
    HEADER CARD
-======================================== */
+========================================= */
 
-.jurnal-header{
-    background:#FFFFFF;
-    border-radius:30px;
+.page-header-card {
+    background: #fff;
+    border-radius: 28px;
+    padding: 25px 35px;
+    margin-bottom: 30px;
 
-    padding:25px 35px;
-    margin:20px 40px 25px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    box-shadow:0 4px 12px rgba(0,0,0,.04);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
 }
 
-.header-left{
-    display:flex;
-    align-items:center;
-    gap:18px;
+.header-content {
+    width: 100%;
 }
 
-.header-icon{
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.header-text h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
 }
 
-.header-icon img,
-.header-icon svg{
-    width:70px;
-    height:70px;
-    object-fit:contain;
+.header-text p {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: #64748B;
+    line-height: 1.5;
 }
 
-.header-text h1{
-    margin:0;
-    font-size:42px;
-    font-weight:800;
-    color:#000;
-    line-height:1.1;
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background: #EAF5FB;
+    color: #5BA4C4;
+
+    padding: 10px 18px;
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+
+    transition: all .3s ease;
 }
 
-.header-text p{
-    margin-top:6px;
-    font-size:16px;
-    color:#64748B;
+.btn-back:hover {
+    background: #5BA4C4;
+    color: #fff;
 }
 
-.header-center{
-    display:flex;
-    align-items:center;
+/* =========================================
+   CONTAINER
+========================================= */
+
+.content-container {
+    background: #CFE8F4;
+    border-radius: 32px;
+    padding: 35px;
 }
 
-/* ========================================
-   BUTTON KEMBALI
-======================================== */
-
-.btn-back{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-
-    padding:12px 20px;
-
-    background:#EAF6FB;
-    color:var(--dark-blue);
-
-    text-decoration:none;
-    border-radius:30px;
-
-    font-size:14px;
-    font-weight:600;
-
-    transition:.3s;
-}
-
-.btn-back:hover{
-    background:var(--dark-blue);
-    color:#fff;
-    transform:translateY(-2px);
-}
-
-/* ========================================
-   CONTENT CONTAINER
-======================================== */
-
-.content-container{
-    margin:0 40px 30px;
-    padding:30px;
-
-    background-color:var(--container-blue-bg);
-    border-radius:24px;
-
-    box-shadow:inset 0 2px 8px rgba(0,0,0,.02);
-}
-
-/* ========================================
+/* =========================================
    GRID
-======================================== */
+========================================= */
 
-.foods-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+.foods-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
 }
 
-/* ========================================
+/* =========================================
    CARD
-======================================== */
+========================================= */
 
-.food-card{
-    background:var(--white);
-    border-radius:15px;
-    overflow:hidden;
-
-    box-shadow:0 6px 15px rgba(0,0,0,.05);
-
-    transition:.25s;
-
-    border:1px solid rgba(255,255,255,.5);
+.food-card {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,.05);
+    transition: all .3s ease;
 }
 
-.food-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 10px 22px rgba(0,0,0,.08);
+.food-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0,0,0,.08);
 }
 
-.food-card-header{
-    background-color:var(--card-header-blue);
-    color:var(--white);
+/* =========================================
+   CARD HEADER
+========================================= */
 
-    padding:14px 16px;
+.food-card-header {
+    background: var(--card-header-blue);
+    color: white;
 
-    text-align:center;
-    font-weight:700;
-    font-size:15px;
-    letter-spacing:.3px;
-    line-height:1.3;
+    text-align: center;
+    padding: 18px;
+
+    font-size: 18px;
+    font-weight: 700;
 }
 
-.food-card-body{
-    display:flex;
-    padding:20px;
-    gap:15px;
-    align-items:center;
+/* =========================================
+   CARD BODY
+========================================= */
+
+.food-card-body {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 24px 28px;
 }
 
-/* ========================================
+/* =========================================
    IMAGE
-======================================== */
+========================================= */
 
-.image-wrapper{
-    flex-shrink:0;
+.image-wrapper {
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.food-image{
-    width:95px;
-    height:95px;
-    border-radius:50%;
+.food-image {
+    width: 120px;
+    height: 120px;
 
-    object-fit:cover;
+    border-radius: 50%;
+    object-fit: cover;
 
-    border:4px solid var(--bg-light);
-
-    box-shadow:0 3px 8px rgba(0,0,0,.08);
+    border: 4px solid #EDF7FB;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
 }
 
-/* ========================================
+/* =========================================
    NUTRISI
-======================================== */
+========================================= */
 
-.food-nutrition-info{
-    flex-grow:1;
+.food-nutrition-info {
+    flex: 1;
 }
 
-.nutrition-title{
-    margin:0 0 8px;
+.nutrition-title {
+    margin: 0 0 12px;
+    padding-bottom: 8px;
 
-    font-size:13px;
-    font-weight:700;
+    font-size: 16px;
+    font-weight: 700;
+    color: #111827;
 
-    color:#111;
-
-    border-bottom:1.5px solid var(--bg-light);
-    padding-bottom:4px;
+    border-bottom: 2px solid #EAF2F6;
 }
 
-.nutrition-list{
-    list-style:none;
-    padding:0;
-    margin:0;
+.nutrition-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.nutrition-list li{
-    display:flex;
-    justify-content:space-between;
+.nutrition-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
 
-    font-size:12px;
-    margin-bottom:5px;
-
-    color:#555;
-    line-height:1.4;
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 
-.nutrition-list li .label{
-    font-weight:500;
+.nutrition-list .label {
+    color: #475569;
 }
 
-.nutrition-list li .value{
-    font-weight:600;
-    color:#111;
+.nutrition-list .value {
+    font-weight: 700;
+    color: #111827;
 }
 
-/* ========================================
+/* =========================================
    EMPTY STATE
-======================================== */
+========================================= */
 
-.empty-state{
-    grid-column:span 3;
+.empty-state {
+    grid-column: 1 / -1;
 
-    text-align:center;
-    padding:50px 20px;
+    text-align: center;
+    background: white;
 
-    background:#fff;
-    border-radius:12px;
+    padding: 50px;
+    border-radius: 20px;
 
-    color:#777;
-    font-size:15px;
+    color: #64748B;
 }
 
-/* ========================================
+/* =========================================
    PAGINATION
-======================================== */
+========================================= */
 
-.pagination-wrapper{
-    margin-top:30px;
-    display:flex;
-    justify-content:center;
+.pagination-wrapper {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
 }
 
-.pagination-wrapper .pagination{
-    display:flex;
-    list-style:none;
-    gap:6px;
-    padding-left:0;
-    margin:0;
+.pagination-wrapper .pagination {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
 }
 
-.pagination-wrapper .page-link{
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.pagination-wrapper .page-link {
+    min-width: 40px;
+    height: 40px;
 
-    min-width:38px;
-    height:38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    padding:0 12px;
+    border-radius: 10px;
+    border: 1px solid #D6E4EC;
 
-    background:#fff !important;
-    color:var(--dark-blue) !important;
+    background: white;
+    color: #5BA4C4;
 
-    border:1px solid var(--border-color) !important;
-    border-radius:8px !important;
-
-    text-decoration:none;
-    font-weight:600;
-    font-size:14px;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.pagination-wrapper .page-item.active .page-link{
-    background:var(--dark-blue) !important;
-    border-color:var(--dark-blue) !important;
-    color:#fff !important;
+.pagination-wrapper .active .page-link {
+    background: #5BA4C4 !important;
+    border-color: #5BA4C4 !important;
+    color: white !important;
 }
 
-.pagination-wrapper .page-link:hover:not(.active){
-    background:var(--primary-blue) !important;
-    border-color:var(--primary-blue) !important;
-    color:#000 !important;
-}
-
-/* ========================================
+/* =========================================
    RESPONSIVE
-======================================== */
+========================================= */
 
-@media (max-width:1024px){
+@media (max-width: 1200px) {
 
-    .foods-grid{
-        grid-template-columns:repeat(2,1fr);
+    .foods-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .food-card-body {
+        gap: 20px;
     }
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
-    .jurnal-header{
-        flex-direction:column;
-        gap:20px;
-        text-align:center;
-
-        margin:15px;
-        padding:20px;
+    .main-wrapper {
+        padding: 15px;
     }
 
-    .header-left{
-        flex-direction:column;
+    .foods-grid {
+        grid-template-columns: 1fr;
     }
 
-    .header-text h1{
-        font-size:32px;
+    .content-container {
+        padding: 20px;
     }
 
-    .foods-grid{
-        grid-template-columns:1fr;
+    .food-card-body {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .content-container{
-        margin:15px;
-        padding:15px;
+    .nutrition-list li {
+        justify-content: center;
     }
 
-    .btn-back{
-        width:100%;
-        justify-content:center;
+    .page-header-card {
+        padding: 20px;
+    }
+
+    .btn-back {
+        width: 100%;
+        justify-content: center;
     }
 }
