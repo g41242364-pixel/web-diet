@@ -20,6 +20,10 @@
                 <circle cx="4" cy="12" r="1"/>
                 <circle cx="4" cy="18" r="1"/>
             </svg>
+            <div>
+                <h2>Skrining Diet</h2>
+                <p>Lengkapi skrining untuk mengetahui kondisi dan pola hidup Anda.</p>
+            </div>
 
             <div style="display:flex;flex-direction:column;justify-content:center;">
 
