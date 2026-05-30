@@ -13,7 +13,7 @@
             </svg>
             <div>
                 <h2>Skrining Diet</h2>
-                <p>Skrining Bertahap : Fase 1 → Fase 2 → Input IMT → Hasil.</p>
+                <p>Lengkapi skrining untuk mengetahui kondisi dan pola hidup Anda.</p>
             </div>
         </div>
     </div>
