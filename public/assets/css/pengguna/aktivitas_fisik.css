@@ -9,7 +9,7 @@
 }
 
 /* =========================================
-   PAGE WRAPPER
+   PAGE
 ========================================= */
 
 .main-wrapper {
@@ -21,45 +21,21 @@
 }
 
 /* =========================================
-   TOP ACTION BAR (REKOMENDASI + KEMBALI)
-========================================= */
-
-.top-action-bar {
-    max-width: 1400px;
-    margin: 0 auto 15px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* tombol kamu (tidak ubah style inti, hanya rapikan posisi) */
-.btn-back,
-.btn-recommendation {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-}
-
-/* =========================================
-   HEADER CARD (JUDUL SEKARANG DI DALAM CARD)
+   HEADER CARD (SAMAKAN DENGAN JURNAL MAKANAN)
 ========================================= */
 
 .page-header {
-    max-width: 1400px;
-    margin: 0 auto 25px auto;
-
-    background: var(--white);
-    border: 1px solid var(--border-color);
+    background: #FFFFFF;
     border-radius: 20px;
-
     padding: 25px 30px;
+    margin-bottom: 25px;
 
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,.05);
 
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
 }
 
 .header-content {
@@ -75,58 +51,65 @@
 }
 
 .header-text h2 {
-    font-size: 40px;
-    font-weight: 800;
     margin: 0;
+    font-size: 30px;
+    font-weight: 800;
     color: var(--text-dark);
 }
 
 .header-text p {
-    font-size: 16px;
+    margin: 6px 0 0;
+    font-size: 14px;
     color: #64748B;
-    margin: 5px 0 0 0;
 }
 
 /* =========================================
-   BUTTON REKOMENDASI
+   BUTTON (SAMAKAN JURNAL MAKANAN STYLE)
 ========================================= */
 
 .btn-recommendation {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 24px;
+
     background: var(--dark-blue);
-    color: var(--white);
-    padding: 12px 28px;
+    color: #FFFFFF;
+
     border-radius: 30px;
+    text-decoration: none;
+
+    font-size: 14px;
     font-weight: 600;
+
     box-shadow: 0 4px 10px rgba(37,99,235,0.25);
-    transition: 0.3s;
+    transition: all .3s ease;
 }
 
 .btn-recommendation:hover {
     background: var(--dark-blue-hover);
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
 /* =========================================
-   CONTAINER (SEPERTI JURNAL MAKANAN)
+   CONTAINER (SAMAKAN JURNAL MAKANAN)
 ========================================= */
 
 .activity-container {
-    max-width: 1400px;
-    margin: 0 auto;
-
     background: var(--primary-blue);
     border-radius: 30px;
     padding: 35px;
 }
 
 /* =========================================
-   GRID
+   GRID (RAPIH SEPERTI FOOD GRID)
 ========================================= */
 
 .activity-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 30px;
 }
 
 /* =========================================
@@ -154,7 +137,7 @@
     top: 20px;
     left: 20px;
     background: var(--dark-blue);
-    color: var(--white);
+    color: #fff;
     width: 40px;
     height: 40px;
     border-radius: 12px;
@@ -176,7 +159,6 @@
     font-size: 18px;
     font-weight: 800;
     margin-bottom: 5px;
-    color: var(--text-dark);
 }
 
 .activity-card .desc {
@@ -187,88 +169,91 @@
 }
 
 /* =========================================
-   PAGINATION (FIX TOTAL BERANTAKAN)
+   EMPTY STATE
 ========================================= */
 
-.pagination-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 35px;
+.empty-state {
+    grid-column: 1 / -1;
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    color: #64748B;
 }
 
-.pagination-container nav {
+/* =========================================
+   PAGINATION (FIX TOTAL BIAR SAMA FOOD PAGE)
+========================================= */
+
+.pagination-wrapper {
+    margin-top: 40px;
     display: flex;
     justify-content: center;
 }
 
-.pagination-container .pagination,
-.pagination-container ul {
+.pagination {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
     flex-wrap: wrap;
-    gap: 10px;
+}
 
-    padding: 0;
-    margin: 0;
+.page-item {
     list-style: none;
 }
 
-.pagination-container .page-item .page-link,
-.pagination-container a,
-.pagination-container span {
+.page-link {
+    min-width: 45px;
+    height: 45px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-
-    padding: 10px 14px;
-
-    background: #ffffff;
-    color: var(--dark-blue);
 
     border-radius: 12px;
     border: 1px solid var(--border-color);
 
-    font-weight: 600;
+    background: #fff;
+    color: var(--dark-blue);
+
     font-size: 13px;
+    font-weight: 600;
 
     text-decoration: none;
-    transition: 0.3s;
 }
 
-.pagination-container .active span,
-.pagination-container .page-item.active .page-link {
-    background: var(--dark-blue);
-    color: var(--white);
-    border-color: var(--dark-blue);
-}
-
-.pagination-container a:hover {
+.page-link:hover {
     background: var(--primary-blue);
+}
+
+.page-item.active .page-link {
+    background: var(--dark-blue);
+    border-color: var(--dark-blue);
+    color: #fff;
+}
+
+.page-item.disabled .page-link {
+    opacity: .5;
 }
 
 /* =========================================
    RESPONSIVE
 ========================================= */
 
-@media (max-width: 1200px) {
-    .activity-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .page-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+@media (max-width: 900px) {
 
     .activity-grid {
         grid-template-columns: 1fr;
     }
 
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
     .header-text h2 {
-        font-size: 30px;
+        font-size: 26px;
     }
 }
