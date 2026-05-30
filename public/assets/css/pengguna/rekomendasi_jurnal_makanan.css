@@ -32,13 +32,12 @@
             --white: #ffffff;
         }
 
-        .main-wrapper {
+        .main-wrapper{
+            width: 100%;
             padding: 20px 40px 40px;
-            background-color: var(--bg-light);
+            box-sizing: border-box;
+            background: #F0F7FA;
             min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
         }
 
         /* ==========================================
