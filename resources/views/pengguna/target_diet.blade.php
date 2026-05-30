@@ -3,29 +3,42 @@
 <link rel="stylesheet" href="{{ asset('assets/css/pengguna/target_diet.css') }}">
 
 @section('content')
-    <div class="header-section">
-        <div style="display:flex;align-items:center;gap:15px;">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5">
-                <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
-            </svg>
-            <h2>Target Diet</h2>
+
+<!-- HEADER -->
+<div class="diet-header">
+
+    <div class="diet-header-icon">
+        <svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="6"/>
+            <circle cx="12" cy="12" r="2"/>
+        </svg>
     </div>
 
-    @if(session('success'))
-        <div style="background:#e8f8e8;color:#27ae60;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
-            ✓ {{ session('success') }}
-        </div>
-    @endif
-    @if(session('error'))
-        <div style="background:#fde8e8;color:#c0392b;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
-            ⚠ {{ session('error') }}
-        </div>
-    @endif
-    @if($errors->any())
-        <div style="background:#fde8e8;color:#c0392b;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
-            {{ $errors->first() }}
-        </div>
-    @endif
+    <div class="diet-header-content">
+        <h2>Target Diet</h2>
+        <p>Analisis target dan progres diet anda</p>
+    </div>
+
+</div>
+
+@if(session('success'))
+    <div style="background:#e8f8e8;color:#27ae60;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
+        ✓ {{ session('success') }}
+    </div>
+@endif
+
+@if(session('error'))
+    <div style="background:#fde8e8;color:#c0392b;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
+        ⚠ {{ session('error') }}
+    </div>
+@endif
+
+@if($errors->any())
+    <div style="background:#fde8e8;color:#c0392b;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
+        {{ $errors->first() }}
+    </div>
+@endif
 
     @if($skriningTerakhir)
     <div class="skrining-banner
