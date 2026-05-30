@@ -32,7 +32,7 @@
 
 .dashboard-header-content h2{
     margin:0;
-    color:#183B7A;
+    color:#0F172A;
     font-size:32px;
     font-weight:800;
     line-height:1.1;
@@ -47,7 +47,7 @@
 
 .dashboard-header h2{
     margin:0;
-    color:#183B7A;
+    color:#0F172A;
     font-size:32px;
     font-weight:800;
     line-height:1.1;
@@ -75,7 +75,7 @@
     font-size: 28px;
     font-weight: 800;
     margin-bottom: 15px;
-    color: var(--dark-blue);
+    color: #0F172A;
 }
 
 .welcome-card p {
