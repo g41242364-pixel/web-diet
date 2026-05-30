@@ -10,45 +10,25 @@
     {{-- HEADER --}}
     <div class="skrining-header-top">
 
-        <div style="display:flex;align-items:center;gap:15px;">
+    <div style="display:flex;align-items:center;gap:20px;">
 
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5">
-                <line x1="3" y1="12" x2="21" y2="12"/>
-                <line x1="3" y1="6" x2="21" y2="6"/>
-                <line x1="3" y1="18" x2="21" y2="18"/>
-                <circle cx="4" cy="6" r="1"/>
-                <circle cx="4" cy="12" r="1"/>
-                <circle cx="4" cy="18" r="1"/>
-            </svg>
-            <div>
-                <h2>Skrining Diet</h2>
-                <p>Lengkapi skrining untuk mengetahui kondisi dan pola hidup Anda.</p>
-            </div>
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+            <circle cx="4" cy="6" r="1"/>
+            <circle cx="4" cy="12" r="1"/>
+            <circle cx="4" cy="18" r="1"/>
+        </svg>
 
-            <div style="display:flex;flex-direction:column;justify-content:center;">
-
-                <h2 style="
-                    color:#0F172A !important;
-                    font-size:36px !important;
-                    font-weight:800 !important;
-                    margin:0 !important;
-                    line-height:1.1 !important;
-                ">
-                    Skrining IMT
-                </h2>
-
-                <p style="
-                    color:#64748B !important;
-                    font-size:16px !important;
-                    margin-top:4px !important;
-                ">
-                </p>
-
-            </div>
-
+        <div>
+            <h2>Skrining Diet</h2>
+            <p>Lengkapi skrining untuk mengetahui kondisi dan pola hidup Anda.</p>
         </div>
 
     </div>
+
+</div>
 
     {{-- STEP --}}
     <div class="step-info">
