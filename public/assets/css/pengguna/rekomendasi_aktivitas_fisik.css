@@ -1,52 +1,54 @@
 
         :root {
-            --kurus-bg: #FFF9E6;
-            --kurus-border: #FFE082;
-            --kurus-accent: #FFB300;
-            --kurus-text: #5D4037;
+    --kurus-bg: #FFF9E6;
+    --kurus-border: #FFE082;
+    --kurus-accent: #FFB300;
+    --kurus-text: #5D4037;
 
-            --normal-bg: #E8F5E9;
-            --normal-border: #C8E6C9;
-            --normal-accent: #2ECC71;
-            --normal-text: #1B5E20;
+    --normal-bg: #E8F5E9;
+    --normal-border: #C8E6C9;
+    --normal-accent: #2ECC71;
+    --normal-text: #1B5E20;
 
-            --gemuk-bg: #FFF3E0;
-            --gemuk-border: #FFE0B2;
-            --gemuk-accent: #FF9800;
-            --gemuk-text: #E65100;
+    --gemuk-bg: #FFF3E0;
+    --gemuk-border: #FFE0B2;
+    --gemuk-accent: #FF9800;
+    --gemuk-text: #E65100;
 
-            --obesitas-bg: #FFEBEE;
-            --obesitas-border: #FFCDD2;
-            --obesitas-accent: #E74C3C;
-            --obesitas-accent2: #e74d3c9a;
-            --obesitas-text: #C62828;
+    --obesitas-bg: #FFEBEE;
+    --obesitas-border: #FFCDD2;
+    --obesitas-accent: #E74C3C;
+    --obesitas-accent2: #e74d3c9a;
+    --obesitas-text: #C62828;
 
-            --default-bg: #ffffff;
-            --default-border: #E1E8ED;
-            --default-accent: #7BB9D8;
-            --default-text: #262626;
-        }
+    --default-bg: #ffffff;
+    --default-border: #BFDBFE;
+    --default-accent: #2563EB;
+    --default-text: #262626;
+}
 
         .main-wrapper {
-            padding: 0px;
-            background-color: #F0F7FA;
-            min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    padding: 0;
+    background-color: #F8FAFC;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        .page-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            padding: 10px 0;
-        }
+        .page-header{
+    background:#FFFFFF;
+    border-radius:30px;
+    padding:25px 35px;
+    margin-bottom:25px;
 
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    border:1.5px solid #DBEAFE;
+}
+
+        .header-content{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
 
         .header-content img {
             width: 70px;
@@ -54,19 +56,20 @@
             object-fit: contain;
         }
 
-        .header-text h2 {
-            font-size: 42px;
-            font-weight: 800;
-            margin: 0;
-            color: #000000;
-            letter-spacing: -0.5px;
-        }
+        .header-text h2{
+    margin:0;
+    font-size:32px;
+    font-weight:800;
+    color:#000000;
+    line-height:1.1;
+}
 
-        .header-text p {
-            font-size: 16px;
-            color: #555555;
-            margin: 6px 0 0;
-        }
+        .header-text p{
+    margin:6px 0 0;
+    font-size:15px;
+    color:#64748B;
+    font-weight:500;
+}
 
         .result-banner {
             display: flex;
@@ -211,11 +214,11 @@
         }
 
         .activity-container {
-            background: #D8EBF3;
-            border-radius: 32px;
-            padding: 40px;
-            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.02);
-        }
+    background: #EFF6FF;
+    border-radius: 32px;
+    padding: 40px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.02);
+}
 
         .activity-grid {
             display: grid;
@@ -225,17 +228,18 @@
         }
 
         .activity-card {
-            background: #ffffff;
-            border-radius: 28px;
-            padding: 25px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-sizing: border-box;
-        }
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1.5px solid #DBEAFE;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
 
         .activity-card:hover {
             transform: translateY(-8px);
@@ -243,21 +247,21 @@
         }
 
         .card-number {
-            position: absolute;
-            top: 25px;
-            left: 25px;
-            background: #90D2ED;
-            width: 38px;
-            height: 38px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 16px;
-            z-index: 2;
-            color: #ffffff;
-        }
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: #2563EB;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 16px;
+    z-index: 2;
+    color: #ffffff;
+}
 
         .activity-img {
             width: 100%;
@@ -312,16 +316,16 @@
         }
 
         .tag-pill {
-            background-color: #7BB9D8;
-            color: #ffffff;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
+    background-color: #2563EB;
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
 
         .tag-pill svg {
             flex-shrink: 0;
@@ -431,9 +435,20 @@
             }
 
             .btn-others {
-                width: 100%;
-                justify-content: center;
-            }
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #2563EB;
+    color: #ffffff !important;
+    padding: 12px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(37,99,235,0.25);
+    border: none;
+}
 
             .main-wrapper {
                 padding: 15px;
