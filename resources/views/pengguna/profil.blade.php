@@ -14,58 +14,65 @@
 
 /* ===== HEADER MIRIP DASHBOARD ===== */
 .header-title{
+    max-width:900px;
+    margin:0 auto 20px;
     background:#fff;
-    border-radius:30px;
-    padding:30px 45px;
-    margin-bottom:25px;
+    border-radius:24px;
+    padding:24px 35px;
     box-shadow:0 2px 10px rgba(0,0,0,0.03);
 }
 
 .header-title h2{
     margin:0;
-    font-size:28px;
+    font-size:26px;
     font-weight:800;
     color:#10213f;
 }
 
 .header-title p{
-    margin-top:8px;
+    margin-top:6px;
     color:#5d6b82;
-    font-size:15px;
+    font-size:14px;
 }
 
 /* ===== ALERT ===== */
+.alert-success,
+.alert-error{
+    max-width:900px;
+    margin:0 auto 18px;
+    padding:12px 16px;
+    border-radius:12px;
+    font-size:14px;
+}
+
 .alert-success{
     background:#e8f8e8;
     color:#27ae60;
-    padding:12px 16px;
-    border-radius:12px;
-    margin-bottom:18px;
-    font-size:14px;
 }
 
 .alert-error{
     background:#fde8e8;
     color:#c0392b;
-    padding:12px 16px;
-    border-radius:12px;
-    margin-bottom:18px;
-    font-size:14px;
 }
+
 
 /* ===== CARD ===== */
 .profil-card{
+    max-width:900px;
+    margin:0 auto 18px;
+
     background:#fff;
-    border-radius:20px;
-    padding:24px;
-    margin-bottom:20px;
+    border-radius:18px;
+
+    padding:20px;
+
     border:1px solid #e8eef5;
     box-shadow:0 3px 12px rgba(0,0,0,.04);
 }
 
 .profil-card h3{
-    margin:0 0 20px;
-    font-size:22px;
+    margin:0 0 16px;
+    font-size:18px;
     font-weight:700;
     color:#10213f;
 }
@@ -74,7 +81,7 @@
 .form-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:18px;
+    gap:16px;
 }
 
 /* ===== FORM ===== */
@@ -93,12 +100,13 @@
 .form-group input,
 .form-group select{
     width:100%;
-    padding:11px 14px;
+    padding:10px 14px;
     border:1.5px solid #d9e3ec;
     border-radius:10px;
     font-size:14px;
     background:#fff;
     transition:.2s;
+    box-sizing:border-box;
 }
 
 .form-group input:focus,
@@ -110,13 +118,13 @@
 
 /* ===== BUTTON ===== */
 .btn-save{
-    margin-top:15px;
+    margin-top:14px;
     background:#90D2ED;
     color:#fff;
     border:none;
     border-radius:10px;
-    padding:10px 20px;
-    font-size:14px;
+    padding:10px 18px;
+    font-size:13px;
     font-weight:600;
     cursor:pointer;
     transition:.2s;
@@ -138,12 +146,12 @@
     }
 
     .header-title{
-        padding:25px;
-        border-radius:20px;
+        padding:20px;
+        border-radius:18px;
     }
 
     .header-title h2{
-        font-size:24px;
+        font-size:22px;
     }
 
     .form-grid{
