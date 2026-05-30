@@ -2,21 +2,45 @@
    HEADER
 ========================================= */
 
-.header-section {
-    margin-bottom: 25px;
+.diet-header{
+    background: #FFFFFF;
+
+    border-radius: 28px;
+
+    padding: 35px 40px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
 }
 
-.header-section h2 {
-    font-size: 32px;
-    font-weight: 800;
-    color: #0F172A;
-    margin-bottom: 10px;
-    line-height: 1.2;
+.diet-header-icon{
+    flex-shrink: 0;
 }
 
-.header-section p {
-    color: #475569;
-    font-size: 16px;
+.diet-header-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.diet-header h2{
+    margin:0;
+    font-size:56px;
+    font-weight:800;
+    line-height:1.1;
+    color:#183B7A;
+}
+
+.diet-header p{
+    margin-top:10px;
+    margin-bottom:0;
+    font-size:16px;
+    color:#64748B;
 }
 
 /* =========================================
