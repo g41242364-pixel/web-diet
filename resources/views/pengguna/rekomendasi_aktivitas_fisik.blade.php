@@ -41,30 +41,20 @@
         @endphp
 
         <div class="result-banner {{ $statusClass }}">
-            <div class="banner-main-content">
-                <div class="check-icon">
-                    <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
-                        stroke="{{ $statusIconColor }}" stroke-width="3">
-                        <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                </div>
-                <div class="banner-text">
-                    <h3>Status Kebiasaan: {{ $skriningTerakhir->status_kebiasaan }}</h3>
-                    <p>Berikut rekomendasi aktivitas fisik berdasarkan status kebiasaan Anda.</p>
-                </div>
-            </div>
-
-            <div class="banner-action">
-                <a href="{{ route('aktivitas.all') }}" class="btn-others">
-                    <span>Aktivitas Lainnya</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </a>
-            </div>
+    <div class="banner-main-content">
+        <div class="check-icon">
+            <svg width="35" height="35" viewBox="0 0 24 24" fill="none"
+                stroke="{{ $statusIconColor }}" stroke-width="3">
+                <polyline points="20 6 9 17 4 12" />
+            </svg>
         </div>
+
+        <div class="banner-text">
+            <h3>Status Kebiasaan: {{ $skriningTerakhir->status_kebiasaan }}</h3>
+            <p>Berikut rekomendasi aktivitas fisik berdasarkan status kebiasaan Anda.</p>
+        </div>
+    </div>
+</div>
     @else
         <div style="background:#fff3cd;color:#856404;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
             Lakukan skrining untuk mendapat rekomendasi aktivitas yang personal.
@@ -158,6 +148,18 @@
         <div class="pagination-container">
             {{ $aktivitas->links() }}
         </div>
+
+        <div class="action-container">
+    <a href="{{ route('aktivitas.all') }}" class="btn-others">
+        <span>Aktivitas Lainnya</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+    </a>
+</div>
     </div>
 
 </div>
