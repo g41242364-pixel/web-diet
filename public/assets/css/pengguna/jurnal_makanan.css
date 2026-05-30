@@ -1,3 +1,13 @@
+:root {
+    --primary-blue: #90D2ED;
+    --dark-blue: #5BA4C4;
+    --bg-light: #F0F7FA;
+    --white: #FFFFFF;
+    --text-dark: #333333;
+    --border-color: #E1E8ED;
+    --container-blue-bg: #C6E6F6;
+}
+
 /* =========================================
    PAGE
 ========================================= */
@@ -9,6 +19,32 @@
 }
 
 /* =========================================
+   HEADER CARD
+========================================= */
+
+.nutrition-header-card{
+    background: var(--white);
+    border-radius: 30px;
+    padding: 30px 40px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
+}
+
+.nutrition-header-card h1{
+    margin: 25px 0 10px;
+    font-size: 48px;
+    font-weight: 800;
+    color: #000;
+    line-height: 1.1;
+}
+
+.nutrition-header-card p{
+    margin: 0;
+    color: #64748B;
+    font-size: 18px;
+}
+
+/* =========================================
    BUTTON BACK
 ========================================= */
 
@@ -17,15 +53,13 @@
     align-items: center;
     gap: 10px;
 
-    margin-bottom: 18px;
-
     padding: 12px 24px;
 
     background: #EAF4FA;
     color: var(--dark-blue);
 
-    border-radius: 999px;
     text-decoration: none;
+    border-radius: 999px;
 
     font-size: 15px;
     font-weight: 600;
@@ -39,46 +73,235 @@
 }
 
 /* =========================================
-   HEADER CARD
-========================================= */
-
-.nutrition-header-card{
-    background: #FFFFFF;
-
-    border-radius: 30px;
-
-    padding: 35px 45px;
-
-    margin-bottom: 25px;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,.05);
-}
-
-.nutrition-header-card h1{
-    margin: 0 0 10px;
-
-    font-size: 42px;
-    font-weight: 800;
-
-    color: #000;
-    line-height: 1.1;
-}
-
-.nutrition-header-card p{
-    margin: 0;
-
-    font-size: 17px;
-    color: #64748B;
-}
-
-/* =========================================
    CONTENT CONTAINER
 ========================================= */
 
 .content-container{
     background: var(--container-blue-bg);
-
     border-radius: 30px;
-
     padding: 35px;
+}
+
+/* =========================================
+   GRID MAKANAN
+========================================= */
+
+.foods-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* =========================================
+   CARD MAKANAN
+========================================= */
+
+.food-card{
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,.05);
+    transition: .3s;
+}
+
+.food-card:hover{
+    transform: translateY(-4px);
+}
+
+.food-card-header{
+    background: var(--dark-blue);
+    color: white;
+
+    padding: 18px;
+
+    text-align: center;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* =========================================
+   BODY CARD
+========================================= */
+
+.food-card-body{
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.image-wrapper{
+    flex-shrink: 0;
+}
+
+.food-image{
+    width: 120px;
+    height: 120px;
+
+    object-fit: cover;
+    border-radius: 18px;
+
+    background: #F5F5F5;
+    border: 3px solid #EAF4FA;
+}
+
+/* =========================================
+   NUTRISI
+========================================= */
+
+.food-nutrition-info{
+    flex: 1;
+}
+
+.nutrition-title{
+    margin: 0 0 12px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #000;
+
+    padding-bottom: 8px;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.nutrition-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nutrition-list li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    color: #555;
+}
+
+.nutrition-list .label{
+    font-weight: 500;
+}
+
+.nutrition-list .value{
+    font-weight: 700;
+    color: #000;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state{
+    grid-column: 1/-1;
+
+    background: white;
+    border-radius: 20px;
+
+    padding: 50px 20px;
+
+    text-align: center;
+    color: #64748B;
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.pagination-wrapper{
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination{
+    display: flex;
+    gap: 6px;
+
+    list-style: none;
+    padding: 0;
+}
+
+.pagination .page-link{
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    border: 1px solid #DDE6ED;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+.pagination .active .page-link{
+    background: var(--dark-blue);
+    color: white;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1400px){
+
+    .foods-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px){
+
+    .foods-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .food-card-body{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nutrition-header-card h1{
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .main-wrapper{
+        padding: 15px;
+    }
+
+    .content-container{
+        padding: 20px;
+    }
+
+    .nutrition-header-card{
+        padding: 25px;
+    }
+
+    .nutrition-header-card h1{
+        font-size: 28px;
+    }
+
+    .nutrition-header-card p{
+        font-size: 15px;
+    }
+
+    .food-image{
+        width: 100px;
+        height: 100px;
+    }
 }
