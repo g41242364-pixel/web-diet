@@ -41,40 +41,42 @@
             flex-direction: column;
         }
 
-        .page-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            padding: 10px 0;
+        /* ==========================================
+        HEADER CARD
+        ========================================== */
+        .page-header{
+            background:#ffffff;
+            border-radius:20px;
+            padding:25px 30px;
+            margin-bottom:25px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.05);
+            border:1px solid #E2E8F0;
         }
 
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 24px;
+        .header-content{
+            display:flex;
+            align-items:center;
+            gap:20px;
         }
 
-        .header-content img {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
+        .header-content img{
+            width:65px;
+            height:65px;
+            object-fit:contain;
         }
 
-        .header-text h2 {
-            font-size: 42px;
-            font-weight: 800;
-            margin: 0;
-            color: #000000;
-            letter-spacing: -0.5px;
+        .header-text h2{
+            margin:0;
+            font-size:28px;
+            font-weight:800;
+            color:#10213F;
         }
 
-        .header-text p {
-            font-size: 16px;
-            color: #555555;
-            margin: 6px 0 0;
+        .header-text p{
+            margin-top:6px;
+            font-size:14px;
+            color:#5D6B82;
         }
-
         .status-banner {
             display: flex;
             justify-content: space-between;
