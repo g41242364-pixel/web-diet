@@ -9,7 +9,7 @@
 }
 
 /* =========================================
-   PAGE WRAPPER (SAMAKAN DENGAN JURNAL MAKANAN)
+   PAGE WRAPPER
 ========================================= */
 
 .main-wrapper {
@@ -20,29 +20,46 @@
     box-sizing: border-box;
 }
 
-/* kasih container seperti jurnal makanan */
-.activity-container {
-    background: var(--primary-blue);
-    border-radius: 30px;
-    padding: 35px;
-    max-width: 1400px;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
 /* =========================================
-   HEADER (DIRAPIHKAN ALIGNMENT)
+   TOP ACTION BAR (REKOMENDASI + KEMBALI)
 ========================================= */
 
-.page-header {
+.top-action-bar {
+    max-width: 1400px;
+    margin: 0 auto 15px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+}
+
+/* tombol kamu (tidak ubah style inti, hanya rapikan posisi) */
+.btn-back,
+.btn-recommendation {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+/* =========================================
+   HEADER CARD (JUDUL SEKARANG DI DALAM CARD)
+========================================= */
+
+.page-header {
     max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 5px;
+    margin: 0 auto 25px auto;
+
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+
+    padding: 25px 30px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .header-content {
@@ -58,34 +75,30 @@
 }
 
 .header-text h2 {
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 800;
-    margin: 0 0 5px;
+    margin: 0;
     color: var(--text-dark);
 }
 
 .header-text p {
-    font-size: 18px;
+    font-size: 16px;
     color: #64748B;
-    margin: 0;
+    margin: 5px 0 0 0;
 }
 
 /* =========================================
-   BUTTON
+   BUTTON REKOMENDASI
 ========================================= */
 
 .btn-recommendation {
     background: var(--dark-blue);
     color: var(--white);
-    padding: 12px 35px;
+    padding: 12px 28px;
     border-radius: 30px;
-    text-decoration: none;
     font-weight: 600;
     box-shadow: 0 4px 10px rgba(37,99,235,0.25);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .btn-recommendation:hover {
@@ -94,20 +107,30 @@
 }
 
 /* =========================================
-   GRID (FIX BIAR TIDAK BERSANTAKAN)
+   CONTAINER (SEPERTI JURNAL MAKANAN)
+========================================= */
+
+.activity-container {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    background: var(--primary-blue);
+    border-radius: 30px;
+    padding: 35px;
+}
+
+/* =========================================
+   GRID
 ========================================= */
 
 .activity-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-
-    /* INI YANG BIKIN RAPIH */
-    align-items: stretch;
 }
 
 /* =========================================
-   CARD (TETAP TIDAK DIUBAH)
+   CARD (TIDAK DIUBAH)
 ========================================= */
 
 .activity-card {
@@ -140,7 +163,6 @@
     justify-content: center;
     font-weight: 800;
     font-size: 18px;
-    z-index: 2;
 }
 
 .activity-img {
@@ -164,75 +186,32 @@
     margin-bottom: 15px;
 }
 
-.benefit-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.benefit-row svg {
-    width: 18px;
-    height: 18px;
-    color: var(--dark-blue);
-    flex-shrink: 0;
-}
-
-.benefit-row p {
-    font-size: 11px;
-    color: #334155;
-    font-weight: 500;
-}
-
-.tag-row {
-    display: flex;
-    gap: 8px;
-    margin-top: auto;
-}
-
-.tag {
-    flex: 1;
-    background: var(--dark-blue);
-    color: var(--white);
-    padding: 6px 4px;
-    border-radius: 15px;
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    font-weight: 600;
-}
-
 /* =========================================
-   PAGINATION (FIX BIAR TIDAK BERANTAKAN)
+   PAGINATION (FIX TOTAL BERANTAKAN)
 ========================================= */
 
 .pagination-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-
     margin-top: 35px;
-    padding-bottom: 10px;
 }
 
 .pagination-container nav {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .pagination-container .pagination,
 .pagination-container ul {
     display: flex;
-    list-style: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
     padding: 0;
     margin: 0;
-
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap; /* INI BIAR TIDAK BERSANTAKAN */
+    list-style: none;
 }
 
 .pagination-container .page-item .page-link,
@@ -242,22 +221,21 @@
     align-items: center;
     justify-content: center;
 
-    padding: 10px 16px;
+    padding: 10px 14px;
 
-    background: var(--white);
+    background: #ffffff;
     color: var(--dark-blue);
 
     border-radius: 12px;
-    text-decoration: none;
+    border: 1px solid var(--border-color);
 
     font-weight: 600;
     font-size: 13px;
 
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-/* ACTIVE */
 .pagination-container .active span,
 .pagination-container .page-item.active .page-link {
     background: var(--dark-blue);
@@ -265,7 +243,6 @@
     border-color: var(--dark-blue);
 }
 
-/* HOVER */
 .pagination-container a:hover {
     background: var(--primary-blue);
 }
@@ -281,17 +258,17 @@
 }
 
 @media (max-width: 768px) {
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .activity-grid {
         grid-template-columns: 1fr;
     }
 
     .header-text h2 {
-        font-size: 32px;
-    }
-
-    .page-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+        font-size: 30px;
     }
 }
