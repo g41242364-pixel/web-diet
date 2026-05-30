@@ -52,30 +52,31 @@
 
 .header-text p {
     font-size: 18px;
-    color: #333;
+    color: #64748B;
     margin: 0;
 }
 
 /* =========================================
-   BUTTON
+   BUTTON (disamakan jurnal makanan)
 ========================================= */
 
 .btn-recommendation {
-    background: #B2F2BB;
-    color: #000;
+    background: var(--dark-blue);
+    color: var(--white);
     padding: 12px 35px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(37,99,235,0.25);
     display: flex;
     align-items: center;
     gap: 10px;
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
 }
 
 .btn-recommendation:hover {
-    transform: scale(1.05);
+    background: var(--dark-blue-hover);
+    transform: translateY(-2px);
 }
 
 /* =========================================
@@ -83,8 +84,8 @@
 ========================================= */
 
 .activity-container {
-    background: #D8EBF3;
-    border-radius: 25px;
+    background: var(--primary-blue);
+    border-radius: 30px;
     padding: 35px;
 }
 
@@ -100,7 +101,7 @@
 }
 
 /* =========================================
-   CARD (TIDAK DIUBAH)
+   CARD (TIDAK DIUBAH SAMA SEKALI)
 ========================================= */
 
 .activity-card {
@@ -123,7 +124,8 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    background: #90D2ED;
+    background: var(--dark-blue);
+    color: var(--white);
     width: 40px;
     height: 40px;
     border-radius: 12px;
@@ -146,11 +148,12 @@
     font-size: 18px;
     font-weight: 800;
     margin-bottom: 5px;
+    color: var(--text-dark);
 }
 
 .activity-card .desc {
     font-size: 12px;
-    color: #666;
+    color: #64748B;
     line-height: 1.4;
     margin-bottom: 15px;
 }
@@ -165,13 +168,13 @@
 .benefit-row svg {
     width: 18px;
     height: 18px;
-    color: #FF5C5C;
+    color: var(--dark-blue);
     flex-shrink: 0;
 }
 
 .benefit-row p {
     font-size: 11px;
-    color: #333;
+    color: #334155;
     font-weight: 500;
 }
 
@@ -183,8 +186,8 @@
 
 .tag {
     flex: 1;
-    background: #7BB9D8;
-    color: white;
+    background: var(--dark-blue);
+    color: var(--white);
     padding: 6px 4px;
     border-radius: 15px;
     font-size: 10px;
@@ -201,19 +204,13 @@
 }
 
 /* =========================================
-   PAGINATION
+   PAGINATION (disamakan jurnal makanan)
 ========================================= */
 
 .pagination-container {
     display: flex;
     justify-content: center;
     padding-top: 20px;
-}
-
-.pagination-container nav {
-    display: flex;
-    align-items: center;
-    gap: 5px;
 }
 
 .pagination-container .pagination,
@@ -232,25 +229,25 @@
     align-items: center;
     justify-content: center;
     padding: 8px 16px;
-    background: white;
-    color: #7BB9D8;
-    border-radius: 10px;
+    background: var(--white);
+    color: var(--dark-blue);
+    border-radius: 12px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
+    font-weight: 600;
+    font-size: 13px;
     transition: all 0.3s ease;
-    border: none;
+    border: 1px solid var(--border-color);
 }
 
 .pagination-container .active span,
 .pagination-container .page-item.active .page-link {
-    background: #7BB9D8 !important;
-    color: white !important;
+    background: var(--dark-blue);
+    color: var(--white);
+    border-color: var(--dark-blue);
 }
 
 .pagination-container a:hover {
-    background: #90D2ED;
-    color: white;
+    background: var(--primary-blue);
 }
 
 .pagination-container svg {
