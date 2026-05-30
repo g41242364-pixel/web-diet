@@ -54,28 +54,32 @@
     align-items: center;
     gap: 8px;
 
-    margin-top: 20px;
-    margin-bottom: 20px; /* tambah ini */
+    margin-top: 18px;
 
-    padding: 12px 22px;
+    padding: 12px 24px;
 
-    background: #EAF4FA;
-    color: var(--dark-blue);
+    background-color: #7BB9D8;
+    color: #FFFFFF;
 
-    text-decoration: none;
     border-radius: 30px;
+    text-decoration: none;
 
     font-size: 14px;
     font-weight: 600;
 
-    transition: .3s;
+    box-shadow: 0 4px 10px rgba(123, 185, 216, 0.25);
+
+    transition: all 0.3s ease;
 }
 
 .btn-back:hover{
-    background: var(--dark-blue);
-    color: white;
-}
+    background-color: #5BA4C4;
+    color: #FFFFFF;
 
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 15px rgba(91, 164, 196, 0.35);
+}
 /* =========================================
    CONTENT CONTAINER
 ========================================= */
