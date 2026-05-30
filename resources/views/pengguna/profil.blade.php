@@ -3,177 +3,155 @@
 
 <style>
 
-/* =========================
-   HEADER
-========================= */
+/* ===== PAGE ===== */
+.profil-page{
+    width:100%;
+    padding:20px;
+    min-height:100vh;
+    background:#f6f9fc;
+    box-sizing:border-box;
+}
 
+/* ===== HEADER MIRIP DASHBOARD ===== */
 .header-title{
-    background:#FFFFFF;
+    background:#fff;
     border-radius:30px;
-    padding:35px 50px;
+    padding:30px 45px;
     margin-bottom:25px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.03);
 }
 
 .header-title h2{
     margin:0;
-    font-size:52px;
+    font-size:28px;
     font-weight:800;
-    color:#1E293B;
-    line-height:1.1;
+    color:#10213f;
 }
 
 .header-title p{
-    margin-top:10px;
-    font-size:16px;
-    color:#64748B;
+    margin-top:8px;
+    color:#5d6b82;
+    font-size:15px;
 }
 
-/* =========================
-   ALERT
-========================= */
-
+/* ===== ALERT ===== */
 .alert-success{
-    background:#E8F8E8;
-    color:#27AE60;
+    background:#e8f8e8;
+    color:#27ae60;
     padding:12px 16px;
     border-radius:12px;
-    margin-bottom:16px;
+    margin-bottom:18px;
     font-size:14px;
 }
 
 .alert-error{
-    background:#FDE8E8;
-    color:#C0392B;
+    background:#fde8e8;
+    color:#c0392b;
     padding:12px 16px;
     border-radius:12px;
-    margin-bottom:16px;
+    margin-bottom:18px;
     font-size:14px;
 }
 
-/* =========================
-   CARD
-========================= */
-
+/* ===== CARD ===== */
 .profil-card{
-    background:#FFFFFF;
-    border:1.5px solid #DBEAFE;
-    border-radius:24px;
-    padding:30px;
-    margin-bottom:25px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    background:#fff;
+    border-radius:20px;
+    padding:24px;
+    margin-bottom:20px;
+    border:1px solid #e8eef5;
+    box-shadow:0 3px 12px rgba(0,0,0,.04);
 }
 
 .profil-card h3{
-    margin:0 0 22px;
-    font-size:20px;
-    font-weight:800;
-    color:#000000;
+    margin:0 0 20px;
+    font-size:22px;
+    font-weight:700;
+    color:#10213f;
 }
 
-/* =========================
-   GRID
-========================= */
-
+/* ===== GRID ===== */
 .form-grid{
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
     gap:18px;
 }
 
-/* =========================
-   FORM
-========================= */
-
+/* ===== FORM ===== */
 .form-group{
     display:flex;
     flex-direction:column;
-    margin-bottom:16px;
 }
 
 .form-group label{
-    display:block;
-    font-size:14px;
-    margin-bottom:7px;
-    color:#1E3A5F;
+    margin-bottom:6px;
+    font-size:13px;
     font-weight:600;
+    color:#4b5563;
 }
 
 .form-group input,
 .form-group select{
     width:100%;
-    padding:12px;
-    border:1.5px solid #BFDBFE;
-    border-radius:12px;
-    background:#FFFFFF;
+    padding:11px 14px;
+    border:1.5px solid #d9e3ec;
+    border-radius:10px;
     font-size:14px;
-    color:#0F172A;
-    transition:all .3s ease;
+    background:#fff;
+    transition:.2s;
 }
 
 .form-group input:focus,
 .form-group select:focus{
     outline:none;
-    border-color:#2563EB;
-    box-shadow:0 0 0 4px rgba(37,99,235,0.12);
+    border-color:#90D2ED;
+    box-shadow:0 0 0 3px rgba(144,210,237,.15);
 }
 
-/* =========================
-   BUTTON
-========================= */
-
+/* ===== BUTTON ===== */
 .btn-save{
-    background:#2563EB;
-    color:#FFFFFF;
+    margin-top:15px;
+    background:#90D2ED;
+    color:#fff;
     border:none;
-    border-radius:999px;
-    padding:13px 24px;
-    font-size:15px;
-    font-weight:700;
+    border-radius:10px;
+    padding:10px 20px;
+    font-size:14px;
+    font-weight:600;
     cursor:pointer;
-    transition:all .3s ease;
-    box-shadow:0 4px 10px rgba(37,99,235,0.25);
+    transition:.2s;
 }
 
 .btn-save:hover{
-    background:#1D4ED8;
+    transform:translateY(-1px);
 }
 
 .btn-danger{
-    background:#E74C3C !important;
-    box-shadow:0 4px 10px rgba(231,76,60,0.25);
+    background:#e74c3c;
 }
 
-.btn-danger:hover{
-    background:#C0392B !important;
-}
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
 
-/* =========================
-   RESPONSIVE
-========================= */
+    .profil-page{
+        padding:15px;
+    }
 
-@media (max-width:1024px){
+    .header-title{
+        padding:25px;
+        border-radius:20px;
+    }
 
     .header-title h2{
-        font-size:42px;
+        font-size:24px;
     }
 
     .form-grid{
         grid-template-columns:1fr;
     }
-}
-
-@media (max-width:768px){
-
-    .header-title{
-        padding:25px;
-    }
-
-    .header-title h2{
-        font-size:34px;
-    }
 
     .profil-card{
-        padding:20px;
+        padding:18px;
     }
 }
 
@@ -181,102 +159,137 @@
 
 @section('content')
 
-<div class="header-title">
-    <h2>Profil Saya</h2>
-    <p>Kelola informasi akun Anda</p>
-</div>
+<div class="profil-page">
 
-@if(session('success'))
-    <div class="alert-success">
-        ✓ {{ session('success') }}
+    <!-- HEADER -->
+    <div class="header-title">
+        <h2>Profil Saya</h2>
+        <p>Kelola informasi akun Anda</p>
     </div>
-@endif
 
-@if($errors->any())
-    <div class="alert-error">
-        {{ $errors->first() }}
+    @if(session('success'))
+        <div class="alert-success">
+            ✓ {{ session('success') }}
+        </div>
+    @endif
+
+    @if($errors->any())
+        <div class="alert-error">
+            {{ $errors->first() }}
+        </div>
+    @endif
+
+    <!-- INFORMASI AKUN -->
+    <div class="profil-card">
+
+        <h3>Informasi Akun</h3>
+
+        <form action="{{ route('pengguna.profil.update') }}" method="POST">
+            @csrf
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input
+                        type="text"
+                        name="name"
+                        value="{{ $user->name }}"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        name="email"
+                        value="{{ $user->email }}"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Umur</label>
+                    <input
+                        type="number"
+                        name="umur"
+                        value="{{ $user->umur }}"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Jenis Kelamin</label>
+
+                    <select name="jenis_kelamin">
+                        <option value="L"
+                            {{ $user->jenis_kelamin == 'L' ? 'selected' : '' }}>
+                            Laki-laki
+                        </option>
+
+                        <option value="P"
+                            {{ $user->jenis_kelamin == 'P' ? 'selected' : '' }}>
+                            Perempuan
+                        </option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn-save">
+                Simpan Perubahan
+            </button>
+
+        </form>
+
     </div>
-@endif
 
-<!-- INFORMASI AKUN -->
-<div class="profil-card">
+    <!-- PASSWORD -->
+    <div class="profil-card">
 
-    <h3>Informasi Akun</h3>
+        <h3>Ubah Password</h3>
 
-    <form action="{{ route('pengguna.profil.update') }}" method="POST">
-        @csrf
-
-        <div class="form-grid">
+        <form action="{{ route('pengguna.profil.ubahPassword') }}" method="POST">
+            @csrf
 
             <div class="form-group">
-                <label>Nama Lengkap</label>
-                <input type="text" name="name" value="{{ $user->name }}" required>
+                <label>Password Lama</label>
+                <input
+                    type="password"
+                    name="password_lama"
+                    required
+                >
             </div>
 
-            <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" value="{{ $user->email }}" required>
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Password Baru</label>
+                    <input
+                        type="password"
+                        name="password"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Konfirmasi Password Baru</label>
+                    <input
+                        type="password"
+                        name="password_confirmation"
+                        required
+                    >
+                </div>
+
             </div>
 
-            <div class="form-group">
-                <label>Umur</label>
-                <input type="number" name="umur" value="{{ $user->umur }}">
-            </div>
+            <button type="submit" class="btn-save btn-danger">
+                Ubah Password
+            </button>
 
-            <div class="form-group">
-                <label>Jenis Kelamin</label>
-                <select name="jenis_kelamin">
-                    <option value="L" {{ $user->jenis_kelamin == 'L' ? 'selected' : '' }}>
-                        Laki-laki
-                    </option>
-                    <option value="P" {{ $user->jenis_kelamin == 'P' ? 'selected' : '' }}>
-                        Perempuan
-                    </option>
-                </select>
-            </div>
+        </form>
 
-        </div>
-
-        <button type="submit" class="btn-save">
-            Simpan Perubahan
-        </button>
-
-    </form>
-
-</div>
-
-<!-- PASSWORD -->
-<div class="profil-card">
-
-    <h3>Ubah Password</h3>
-
-    <form action="{{ route('pengguna.profil.ubahPassword') }}" method="POST">
-        @csrf
-
-        <div class="form-group">
-            <label>Password Lama</label>
-            <input type="password" name="password_lama" required>
-        </div>
-
-        <div class="form-grid">
-
-            <div class="form-group">
-                <label>Password Baru</label>
-                <input type="password" name="password" required>
-            </div>
-
-            <div class="form-group">
-                <label>Konfirmasi Password Baru</label>
-                <input type="password" name="password_confirmation" required>
-            </div>
-
-        </div>
-
-        <button type="submit" class="btn-save btn-danger">
-            Ubah Password
-        </button>
-
-    </form>
+    </div>
 
 </div>
 
