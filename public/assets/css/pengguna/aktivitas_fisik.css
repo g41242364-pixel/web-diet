@@ -9,7 +9,7 @@
 }
 
 /* =========================================
-   PAGE WRAPPER
+   PAGE WRAPPER (SAMAKAN DENGAN JURNAL MAKANAN)
 ========================================= */
 
 .main-wrapper {
@@ -20,8 +20,18 @@
     box-sizing: border-box;
 }
 
+/* kasih container seperti jurnal makanan */
+.activity-container {
+    background: var(--primary-blue);
+    border-radius: 30px;
+    padding: 35px;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
 /* =========================================
-   HEADER
+   HEADER (DIRAPIHKAN ALIGNMENT)
 ========================================= */
 
 .page-header {
@@ -29,6 +39,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 5px;
 }
 
 .header-content {
@@ -57,7 +71,7 @@
 }
 
 /* =========================================
-   BUTTON (disamakan jurnal makanan)
+   BUTTON
 ========================================= */
 
 .btn-recommendation {
@@ -80,28 +94,20 @@
 }
 
 /* =========================================
-   CONTAINER
-========================================= */
-
-.activity-container {
-    background: var(--primary-blue);
-    border-radius: 30px;
-    padding: 35px;
-}
-
-/* =========================================
-   GRID
+   GRID (FIX BIAR TIDAK BERSANTAKAN)
 ========================================= */
 
 .activity-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    margin-bottom: 30px;
+
+    /* INI YANG BIKIN RAPIH */
+    align-items: stretch;
 }
 
 /* =========================================
-   CARD (TIDAK DIUBAH SAMA SEKALI)
+   CARD (TETAP TIDAK DIUBAH)
 ========================================= */
 
 .activity-card {
@@ -198,19 +204,23 @@
     font-weight: 600;
 }
 
-.tag svg {
-    width: 12px;
-    height: 12px;
-}
-
 /* =========================================
-   PAGINATION (disamakan jurnal makanan)
+   PAGINATION (FIX BIAR TIDAK BERANTAKAN)
 ========================================= */
 
 .pagination-container {
     display: flex;
     justify-content: center;
-    padding-top: 20px;
+    align-items: center;
+
+    margin-top: 35px;
+    padding-bottom: 10px;
+}
+
+.pagination-container nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pagination-container .pagination,
@@ -219,7 +229,10 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    gap: 8px;
+
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap; /* INI BIAR TIDAK BERSANTAKAN */
 }
 
 .pagination-container .page-item .page-link,
@@ -228,17 +241,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 16px;
+
+    padding: 10px 16px;
+
     background: var(--white);
     color: var(--dark-blue);
+
     border-radius: 12px;
     text-decoration: none;
+
     font-weight: 600;
     font-size: 13px;
-    transition: all 0.3s ease;
+
     border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
 }
 
+/* ACTIVE */
 .pagination-container .active span,
 .pagination-container .page-item.active .page-link {
     background: var(--dark-blue);
@@ -246,17 +265,9 @@
     border-color: var(--dark-blue);
 }
 
+/* HOVER */
 .pagination-container a:hover {
     background: var(--primary-blue);
-}
-
-.pagination-container svg {
-    width: 20px !important;
-    height: 20px !important;
-}
-
-.pagination-container nav div:first-child {
-    display: none;
 }
 
 /* =========================================
