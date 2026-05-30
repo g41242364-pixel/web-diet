@@ -4,10 +4,22 @@
 <link rel="stylesheet" href="{{ asset('assets/css/pengguna/dashboard.css') }}">
 
 @section('content')
-    <div class="header-title">
-        <h2>DASHBOARD SISD</h2>
+    <!-- HEADER -->
+<div class="dashboard-header">
+
+    <img
+        src="{{ asset('assets/images/dashboard.png') }}"
+        alt="Dashboard"
+        class="dashboard-header-icon"
+        onerror="this.src='https://cdn-icons-png.flaticon.com/512/1828/1828919.png'"
+    >
+
+    <div class="dashboard-header-content">
+        <h2>Dashboard SISD</h2>
         <p>Selamat datang, {{ auth()->user()->name }}</p>
     </div>
+
+</div>
 
     @if(session('success'))
         <div style="background:#e8f8e8;color:#27ae60;padding:12px 16px;border-radius:8px;margin-bottom:16px;font-size:14px;">
