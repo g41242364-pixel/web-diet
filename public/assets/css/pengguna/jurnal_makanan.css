@@ -1,308 +1,264 @@
-:root {
-    --primary-blue: #90D2ED;
-    --dark-blue: #5BA4C4;
-    --bg-light: #F0F7FA;
-    --white: #FFFFFF;
-    --text-dark: #333333;
-    --border-color: #E1E8ED;
-    --container-blue-bg: #C6E6F6;
+:root{
+    --primary-blue:#90D2ED;
+    --dark-blue:#5BA4C4;
+    --bg-light:#F0F7FA;
+    --white:#FFFFFF;
+    --container-blue:#C6E6F6;
 }
 
-/* =========================================
+/* =====================================
    PAGE
-========================================= */
+===================================== */
 
 .main-wrapper{
-    background: var(--bg-light);
-    min-height: 100vh;
-    padding-bottom: 40px;
+    background:var(--bg-light);
+    min-height:100vh;
+    padding-bottom:40px;
 }
 
-/* =========================================
+/* =====================================
    HEADER CARD
-========================================= */
+===================================== */
 
 .page-header-card{
-    background: var(--white);
-    border-radius: 30px;
-
-    padding: 30px 35px;
-    margin: 30px 40px 25px;
-
-    text-align: center;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,.04);
+    background:#FFFFFF;
+    border-radius:30px;
+    padding:30px;
+    margin:30px 40px 25px;
+    text-align:center;
 }
 
 .page-header-card h1{
-    margin: 0;
-    font-size: 48px;
-    font-weight: 800;
-    color: #000;
-    line-height: 1.1;
+    margin:0;
+    font-size:42px;
+    font-weight:800;
+    color:#000;
 }
 
 .page-header-card p{
-    margin-top: 10px;
-    color: #64748B;
-    font-size: 16px;
+    margin-top:10px;
+    color:#64748B;
+    font-size:16px;
 }
 
 .btn-back{
-    margin-top: 18px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
 
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    margin-top:18px;
 
-    padding: 10px 20px;
+    padding:10px 18px;
 
-    background: #EAF4FA;
-    color: var(--dark-blue);
+    background:#EAF4FA;
+    color:#5BA4C4;
 
-    text-decoration: none;
-    border-radius: 999px;
+    border-radius:999px;
+    text-decoration:none;
 
-    font-size: 14px;
-    font-weight: 600;
+    font-size:14px;
+    font-weight:600;
 
-    transition: .3s;
+    transition:.3s;
 }
 
 .btn-back:hover{
-    background: var(--dark-blue);
-    color: white;
+    background:#5BA4C4;
+    color:#fff;
 }
 
-/* =========================================
-   CONTENT CONTAINER
-========================================= */
+/* =====================================
+   CONTAINER
+===================================== */
 
 .content-container{
-    margin: 0 40px;
-    padding: 35px;
+    margin:0 40px;
+    padding:35px;
 
-    background: var(--container-blue-bg);
+    background:var(--container-blue);
 
-    border-radius: 30px;
+    border-radius:35px;
 }
 
-/* =========================================
-   GRID MAKANAN
-========================================= */
+/* =====================================
+   GRID
+===================================== */
 
 .foods-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
 }
 
-/* =========================================
-   CARD MAKANAN
-========================================= */
+/* =====================================
+   CARD
+===================================== */
 
 .food-card{
-    background: white;
-    border-radius: 25px;
-    overflow: hidden;
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
 
-    box-shadow: 0 6px 16px rgba(0,0,0,.05);
+    box-shadow:0 4px 15px rgba(0,0,0,.06);
 
-    transition: .3s;
+    transition:.3s;
 }
 
 .food-card:hover{
-    transform: translateY(-4px);
+    transform:translateY(-4px);
 }
 
 .food-card-header{
-    background: var(--dark-blue);
-    color: white;
+    background:#5BA4C4;
+    color:#fff;
 
-    padding: 18px;
+    text-align:center;
 
-    text-align: center;
+    padding:18px;
 
-    font-size: 16px;
-    font-weight: 700;
+    font-size:16px;
+    font-weight:700;
 }
 
-/* =========================================
-   BODY CARD
-========================================= */
+/* =====================================
+   CARD BODY
+===================================== */
 
 .food-card-body{
-    padding: 22px;
+    display:flex;
+    align-items:center;
+    gap:25px;
 
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    padding:25px;
 }
 
-/* TEMPAT GAMBAR */
+/* =====================================
+   IMAGE
+===================================== */
 
 .image-wrapper{
-    flex-shrink: 0;
+    width:120px;
+    flex-shrink:0;
 }
 
 .food-image{
-    width: 120px;
-    height: 120px;
+    width:120px;
+    height:120px;
 
-    object-fit: cover;
-    border-radius: 18px;
+    border-radius:20px;
+    object-fit:cover;
 
-    background: #F5F5F5;
-    border: 3px solid #EAF4FA;
+    background:#F5F5F5;
+    border:3px solid #EAF4FA;
 }
 
-/* =========================================
-   NUTRISI
-========================================= */
+/* =====================================
+   NUTRITION
+===================================== */
 
 .food-nutrition-info{
-    flex: 1;
+    flex:1;
 }
 
 .nutrition-title{
-    margin: 0 0 12px;
+    margin:0 0 15px;
 
-    font-size: 16px;
-    font-weight: 700;
+    font-size:16px;
+    font-weight:700;
 
-    color: #000;
-    padding-bottom: 8px;
+    color:#000;
 
-    border-bottom: 1px solid #E5E7EB;
+    padding-bottom:10px;
+    border-bottom:1px solid #E5E7EB;
 }
 
 .nutrition-list{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style:none;
+    padding:0;
+    margin:0;
 }
 
 .nutrition-list li{
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    justify-content:space-between;
 
-    margin-bottom: 10px;
+    margin-bottom:10px;
 
-    font-size: 14px;
-    color: #555;
+    font-size:15px;
 }
 
 .nutrition-list .label{
-    font-weight: 500;
+    color:#555;
 }
 
 .nutrition-list .value{
-    font-weight: 700;
-    color: #000;
+    font-weight:700;
+    color:#000;
 }
 
-/* =========================================
-   EMPTY STATE
-========================================= */
-
-.empty-state{
-    grid-column: 1/-1;
-
-    background: white;
-    border-radius: 20px;
-
-    padding: 50px 20px;
-
-    text-align: center;
-
-    color: #64748B;
-}
-
-/* =========================================
+/* =====================================
    PAGINATION
-========================================= */
+===================================== */
 
 .pagination-wrapper{
-    margin-top: 35px;
-    display: flex;
-    justify-content: center;
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
 }
 
 .pagination{
-    display: flex;
-    gap: 6px;
-    list-style: none;
-    padding: 0;
+    display:flex;
+    gap:8px;
 }
 
 .pagination .page-link{
-    width: 40px;
-    height: 40px;
+    width:40px;
+    height:40px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-    background: white;
-    border: 1px solid #DDE6ED;
+    background:#fff;
+    border-radius:10px;
 
-    border-radius: 10px;
-
-    text-decoration: none;
-    color: var(--dark-blue);
-    font-weight: 600;
+    color:#5BA4C4;
+    text-decoration:none;
+    font-weight:600;
 }
 
 .pagination .active .page-link{
-    background: var(--dark-blue);
-    color: white;
+    background:#5BA4C4;
+    color:#fff;
 }
 
-/* =========================================
+/* =====================================
    RESPONSIVE
-========================================= */
+===================================== */
 
-@media (max-width: 1400px){
-
-    .foods-grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 900px){
+@media(max-width:1200px){
 
     .foods-grid{
-        grid-template-columns: 1fr;
+        grid-template-columns:1fr;
     }
 
-    .food-card-body{
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .page-header-card h1{
-        font-size: 34px;
-    }
 }
 
-@media (max-width: 768px){
+@media(max-width:768px){
 
     .page-header-card,
     .content-container{
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left:15px;
+        margin-right:15px;
     }
 
-    .content-container{
-        padding: 20px;
-    }
-
-    .food-image{
-        width: 100px;
-        height: 100px;
+    .food-card-body{
+        flex-direction:column;
+        text-align:center;
     }
 
     .page-header-card h1{
-        font-size: 28px;
+        font-size:30px;
     }
+
 }
