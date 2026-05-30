@@ -22,8 +22,8 @@
     </div>
 
     <div class="chat-container" style="border-radius:12px;overflow:hidden;border:1.5px solid #e8f0f5;">
-        <div class="chat-header" style="background:#90D2ED;padding:14px 16px;display:flex;align-items:center;gap:12px;">
-            <div style="width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;color:#90D2ED;font-size:16px;">
+        <div class="chat-header" style="background:#2563EB;padding:14px 16px;display:flex;align-items:center;gap:12px;">
+            <div style="width:40px;height:40px;border-radius:50%;background:#DBEAFE;display:flex;align-items:center;justify-content:center;font-weight:700;color:#2563EB;font-size:16px;">
                 {{ substr($consultation->ahliGizi->name, 0, 1) }}
             </div>
             <div>
