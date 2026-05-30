@@ -116,9 +116,10 @@
     box-shadow:0 0 0 3px rgba(144,210,237,.15);
 }
 
+/* ===== BUTTON ===== */
 .btn-save{
     margin-top:14px;
-    background:#10213F;
+    background:#5D99C6;
     color:#fff;
     border:none;
     border-radius:10px;
@@ -130,7 +131,7 @@
 }
 
 .btn-save:hover{
-    background:#1A325C;
+    background:#4A86B3;
     transform:translateY(-1px);
 }
 
