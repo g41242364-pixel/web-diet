@@ -6,19 +6,10 @@
 @section('content')
     <!-- HEADER -->
 <div class="dashboard-header">
-
-    <img
-        src="{{ asset('assets/images/dashboard.png') }}"
-        alt="Dashboard"
-        class="dashboard-header-icon"
-        onerror="this.src='https://cdn-icons-png.flaticon.com/512/1828/1828919.png'"
-    >
-
     <div class="dashboard-header-content">
         <h2>Dashboard SISD</h2>
         <p>Selamat datang, {{ auth()->user()->name }}</p>
     </div>
-
 </div>
 
     @if(session('success'))
