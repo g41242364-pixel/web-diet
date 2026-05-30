@@ -463,5 +463,32 @@
     padding: 40px;
     box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.02);
 }
+
+.action-container{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
+}
+
+.btn-others{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background-color:#2563EB;
+    color:#fff !important;
+    padding:12px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+    transition:all .3s ease;
+    box-shadow:0 4px 10px rgba(37,99,235,.25);
+}
+
+.btn-others:hover{
+    background-color:#1D4ED8;
+    transform:translateY(-2px);
+    box-shadow:0 6px 15px rgba(37,99,235,.35);
+}
         }
 
