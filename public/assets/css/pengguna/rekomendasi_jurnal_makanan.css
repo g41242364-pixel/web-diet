@@ -1,36 +1,37 @@
 
         :root {
-            --kurus-bg: #FFF9E6;
-            --kurus-border: #FFE082;
-            --kurus-accent: #FFB300;
-            --kurus-text: #5D4037;
+    --kurus-bg: #FFF9E6;
+    --kurus-border: #FFE082;
+    --kurus-accent: #FFB300;
+    --kurus-text: #5D4037;
 
-            --normal-bg: #E8F5E9;
-            --normal-border: #C8E6C9;
-            --normal-accent: #2ECC71;
-            --normal-text: #1B5E20;
+    --normal-bg: #E8F5E9;
+    --normal-border: #C8E6C9;
+    --normal-accent: #2ECC71;
+    --normal-text: #1B5E20;
 
-            --gemuk-bg: #FFF3E0;
-            --gemuk-border: #FFE0B2;
-            --gemuk-accent: #FF9800;
-            --gemuk-text: #E65100;
+    --gemuk-bg: #FFF3E0;
+    --gemuk-border: #FFE0B2;
+    --gemuk-accent: #FF9800;
+    --gemuk-text: #E65100;
 
-            --obesitas-bg: #FFEBEE;
-            --obesitas-border: #FFCDD2;
-            --obesitas-accent: #E74C3C;
-            --obesitas-accent2: #e74d3c9a;
-            --obesitas-text: #C62828;
+    --obesitas-bg: #FFEBEE;
+    --obesitas-border: #FFCDD2;
+    --obesitas-accent: #E74C3C;
+    --obesitas-text: #C62828;
 
-            --default-bg: #ffffff;
-            --default-border: #E1E8ED;
-            --default-accent: #7BB9D8;
-            --default-text: #262626;
+    --default-bg: #FFFFFF;
+    --default-border: #BFDBFE;
+    --default-accent: #2563EB;
+    --default-text: #0F172A;
 
-            --primary-blue: #90D2ED;
-            --dark-blue: #5BA4C4;
-            --bg-light: #F0F7FA;
-            --white: #ffffff;
-        }
+    /* SAMA DENGAN TARGET DIET */
+    --primary-blue: #DBEAFE;
+    --dark-blue: #2563EB;
+    --dark-blue-hover: #1D4ED8;
+    --bg-light: #F8FAFC;
+    --white: #FFFFFF;
+}
 
         .main-wrapper{
             width: 100%;
@@ -44,13 +45,9 @@
         HEADER CARD
         ========================================== */
         .page-header{
-            background:#ffffff;
-            border-radius:20px;
-            padding:25px 30px;
-            margin-bottom:25px;
-            box-shadow:0 4px 15px rgba(0,0,0,0.05);
-            border:1px solid #E2E8F0;
-        }
+    background:#FFFFFF;
+    border:1.5px solid #DBEAFE;
+}
 
         .header-content{
             display:flex;
@@ -65,31 +62,19 @@
         }
 
         .header-text h2{
-            margin:0;
-            font-size:28px;
-            font-weight:800;
-            color:#10213F;
-        }
+    color:#000000;
+}
+
 
         .header-text p{
-            margin-top:6px;
-            font-size:14px;
-            color:#5D6B82;
-        }
-        .status-banner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 30px;
-            border-radius: 16px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-            gap: 20px;
-            border: 1px solid var(--default-border);
-            border-left: 5px solid var(--default-accent);
-            background-color: var(--default-bg);
-            transition: all 0.3s ease;
-        }
+    color:#64748B;
+}
+
+        .status-banner{
+    border:1.5px solid #BFDBFE;
+    border-left:5px solid #2563EB;
+    background:#EFF6FF;
+}
 
         .banner-info {
             display: flex;
@@ -97,20 +82,11 @@
             gap: 15px;
         }
 
-        .warning-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            font-weight: bold;
-            flex-shrink: 0;
-            background: #ffffff;
-            border: 1px solid var(--default-border);
-            transition: all 0.3s ease;
-        }
+        .warning-icon{
+    background:#FFFFFF;
+    border:1px solid #BFDBFE;
+    color:#2563EB;
+}
 
         .banner-text h3 {
             margin: 0;
@@ -212,12 +188,10 @@
             background-color: var(--obesitas-accent);
         }
 
-        .meals-container {
-            background: #D8EBF3;
-            border-radius: 32px;
-            padding: 40px;
-            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.02);
-        }
+        .meals-container{
+    background:#EFF6FF;
+    border:1.5px solid #DBEAFE;
+}
 
         .meals-grid {
             display: grid;
@@ -226,31 +200,17 @@
             margin-bottom: 10px;
         }
 
-        .meal-card {
-            background: var(--white);
-            border-radius: 28px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
+        .meal-card{
+    border:1.5px solid #DBEAFE;
+}
 
-        .meal-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
-        }
+.meal-card:hover{
+    border-color:#2563EB;
+}
 
-        .meal-card-header {
-            background-color: var(--dark-blue);
-            color: white;
-            padding: 14px;
-            text-align: center;
-            font-weight: 700;
-            font-size: 18px;
-        }
+        .meal-card-header{
+    background:#2563EB;
+}
 
         .meal-card-body {
             display: flex;
@@ -268,13 +228,9 @@
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
         }
 
-        .meal-info h4 {
-            margin: 0;
-            font-size: 18px;
-            font-weight: 800;
-            color: #000;
-            line-height: 1.4;
-        }
+        .meal-info h4{
+    color:#1E3A5F;
+}
 
         .meal-info p {
             margin: 10px 0 0;
@@ -289,27 +245,14 @@
             margin-top: 30px;
         }
 
-        .btn-lihat-lainnya {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background-color: #7BB9D8;
-            color: #ffffff !important;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(123, 185, 216, 0.25);
-            border: none;
-        }
+        .btn-lihat-lainnya{
+    background:#2563EB;
+    box-shadow:0 4px 10px rgba(37,99,235,.25);
+}
 
-        .btn-lihat-lainnya:hover {
-            background-color: #5BA4C4;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(91, 164, 196, 0.35);
-        }
+.btn-lihat-lainnya:hover{
+    background:#1D4ED8;
+}
 
         @media (max-width: 992px) {
             .meals-grid {
