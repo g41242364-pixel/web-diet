@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <div class="chat-container" style="border-radius:12px;overflow:hidden;border:1.5px solid #e8f0f5;">
+    <div class="chat-container" style="border-radius:20px;overflow:hidden;border:1.5px solid #BFDBFE;background:#EFF6FF;">
         <div class="chat-header" style="background:#2563EB;padding:14px 16px;display:flex;align-items:center;gap:12px;">
             <div style="width:40px;height:40px;border-radius:50%;background:#DBEAFE;display:flex;align-items:center;justify-content:center;font-weight:700;color:#2563EB;font-size:16px;">
                 {{ substr($consultation->ahliGizi->name, 0, 1) }}
@@ -61,8 +61,18 @@
         <div class="chat-input-area">
             <form action="{{ route('pengguna.konsultasi.kirimPesan', $consultation->id) }}" method="POST" style="display:flex;gap:10px;width:100%;">
                 @csrf
-                <input type="text" name="isi" placeholder="Tulis pesan..." autocomplete="off" required style="flex:1;background-color:#90D2ED;:10px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;">
-                <button type="submit" style="padding:10px 18px;background:#90D2ED;color:#fff;border:none;border-radius:8px;cursor:pointer;">
+                <input type="text"
+       name="isi"
+       placeholder="Tulis pesan..."
+       autocomplete="off"
+       required
+       style="flex:1;
+              padding:12px 16px;
+              background:#FFFFFF;
+              border:1.5px solid #BFDBFE;
+              border-radius:24px;
+              font-size:14px;">
+                <button type="submit" style="padding:10px 18px;background:#2563EB;color:#fff;border:none;border-radius:24px;cursor:pointer;">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
                 </button>
             </form>
