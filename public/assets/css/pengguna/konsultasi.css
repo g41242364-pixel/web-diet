@@ -22,27 +22,31 @@
 ========================================= */
 
 .consul-header{
-    margin-bottom:25px;
+    background:#FFFFFF;
+    border-radius:30px;
+    padding:25px 35px;
+    margin-bottom:30px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.04);
 }
 
 .header-top{
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:20px;
 }
 
 .header-top h2{
-    font-size:36px;
-    font-weight:800;
-    margin-bottom:0;
+    margin:0;
     color:#0F172A;
+    font-size:32px;
+    font-weight:800;
     line-height:1.1;
 }
 
 .header-top p{
-    margin-top:6px;
-    font-size:14px;
-    color:#475569;
+    margin:8px 0 0;
+    font-size:15px;
+    color:#64748B;
 }
 
 /* =========================================
