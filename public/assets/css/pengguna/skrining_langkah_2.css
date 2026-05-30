@@ -2,16 +2,20 @@
     margin-bottom: 20px;
 }
 
-.skrining-header-top h2 {
-    font-size: 36px;
-    font-weight: 800;
-    margin-bottom: 0;
-    color: #FFFFFF;
+.skrining-header-top h2{
+    margin:0;
+    color:#0F172A !important;
+    font-size:36px;
+    font-weight:800;
+    line-height:1.1;
 }
 
-.skrining-header-top p {
-    font-size: 16px;
-    color: #EFF6FF;
+.skrining-header-top{
+    background:#FFFFFF;
+    border-radius:30px;
+    padding:25px 35px;
+    margin-bottom:30px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.04);
 }
 
 .step-info {
