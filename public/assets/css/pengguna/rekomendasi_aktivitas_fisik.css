@@ -482,6 +482,7 @@
     font-weight:600;
     font-size:14px;
     transition:all .3s ease;
+    justify-content: center; 
     box-shadow:0 4px 10px rgba(37,99,235,.25);
 }
 
