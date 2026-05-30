@@ -56,29 +56,23 @@
 
     margin-top: 18px;
 
-    padding: 12px 24px;
+    padding: 12px 22px;
 
-    background-color: #7BB9D8;
-    color: #FFFFFF;
+    background: var(--dark-blue);
+    color: white;
 
-    border-radius: 30px;
     text-decoration: none;
+    border-radius: 30px;
 
     font-size: 14px;
     font-weight: 600;
 
-    box-shadow: 0 4px 10px rgba(123, 185, 216, 0.25);
-
-    transition: all 0.3s ease;
+    transition: .3s;
 }
 
 .btn-back:hover{
-    background-color: #5BA4C4;
-    color: #FFFFFF;
-
-    transform: translateY(-2px);
-
-    box-shadow: 0 6px 15px rgba(91, 164, 196, 0.35);
+    background: #4A93B3;
+    color: white;
 }
 /* =========================================
    CONTENT CONTAINER
