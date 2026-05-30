@@ -57,7 +57,7 @@ class JurnalMakananController extends Controller
 
     public function lainnya()
     {
-        $foods = Food::paginate(9);
+        $foods = Food::paginate(6);
         return view('pengguna.jurnal_makanan', compact('foods'));
     }
 }
