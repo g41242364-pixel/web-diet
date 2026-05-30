@@ -7,28 +7,28 @@
 
 <div class="main-wrapper">
 
+    <!-- BUTTON KEMBALI -->
+    <a href="{{ route('pengguna.jurnalMakanan') }}" class="btn-back">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+        <span>Kembali ke Rekomendasi</span>
+    </a>
+
+    <!-- HEADER -->
     <div class="nutrition-header-card">
-
-        <a href="{{ route('pengguna.jurnalMakanan') }}" class="btn-back">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2.5"
-                stroke-linecap="round" stroke-linejoin="round">
-                <line x1="19" y1="12" x2="5" y2="12"></line>
-                <polyline points="12 19 5 12 12 5"></polyline>
-            </svg>
-            <span>Kembali ke Rekomendasi</span>
-        </a>
-
-        <div class="header-text">
-            <h1>Daftar Nutrisi Makanan Sehat</h1>
-            <p>Pilihan alternatif makanan bergizi penunjang diet seimbangmu</p>
-        </div>
-
+        <h1>Daftar Nutrisi Makanan Sehat</h1>
+        <p>Pilihan alternatif makanan bergizi penunjang diet seimbangmu</p>
     </div>
 
+    <!-- CONTENT -->
     <div class="content-container">
 
         <div class="foods-grid">
+
             @forelse ($foods as $food)
 
                 <div class="food-card">
@@ -52,7 +52,6 @@
                             </h5>
 
                             <ul class="nutrition-list">
-
                                 <li>
                                     <span class="label">Energi / Kalori</span>
                                     <span class="value">{{ $food->kalori ?? 0 }} kkal</span>
@@ -72,7 +71,6 @@
                                     <span class="label">Lemak</span>
                                     <span class="value">{{ $food->lemak ?? 0 }} g</span>
                                 </li>
-
                             </ul>
 
                         </div>
@@ -88,6 +86,7 @@
                 </div>
 
             @endforelse
+
         </div>
 
         @if ($foods->hasPages())
