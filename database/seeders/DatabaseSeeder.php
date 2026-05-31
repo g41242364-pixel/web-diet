@@ -194,7 +194,6 @@ class DatabaseSeeder extends Seeder
             ['nama' => 'Roti Gandum',         'kalori' => 120, 'protein' => 5,  'karbohidrat' => 22, 'lemak' => 2],
             ['nama' => 'Susu Full Cream',     'kalori' => 149, 'protein' => 8,  'karbohidrat' => 12, 'lemak' => 8],
             ['nama' => 'Pisang',              'kalori' => 89,  'protein' => 1,  'karbohidrat' => 23, 'lemak' => 0.3],
-            ['nama' => 'Ikan Salmon Kukus',   'kalori' => 180, 'protein' => 25, 'karbohidrat' => 0,  'lemak' => 8],
         ];
 
         foreach ($foods as $f) {
