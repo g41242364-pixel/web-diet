@@ -267,6 +267,84 @@ BANNER STATUS IMT
 }
 
 /* ==========================================
+CARD JUDUL ARTIKEL
+========================================== */
+
+.article-title-card{
+    background:#ffffff;
+
+    border:1px solid #DBEAFE;
+    border-radius:28px;
+
+    padding:35px 45px;
+    margin-bottom:30px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.05);
+}
+
+.article-title-content{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.article-title-content img{
+    width:90px;
+    height:90px;
+    object-fit:contain;
+    flex-shrink:0;
+}
+
+.article-title-text{
+    flex:1;
+}
+
+.article-title-text h2{
+    margin:0;
+
+    font-size:42px;
+    font-weight:800;
+    line-height:1.2;
+
+    color:#0F172A;
+}
+
+.article-title-text p{
+    margin:10px 0 0;
+
+    font-size:16px;
+    line-height:1.7;
+
+    color:#64748B;
+}
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+    .article-title-card{
+        padding:25px;
+    }
+
+    .article-title-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .article-title-content img{
+        width:70px;
+        height:70px;
+    }
+
+    .article-title-text h2{
+        font-size:30px;
+    }
+
+}
+
+/* ==========================================
 CONTAINER
 ========================================== */
 
