@@ -66,37 +66,35 @@
                 {{-- TAGS --}}
                 <div class="tags-container">
 
-                    <div class="tag-pill">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
-                        {{ $act->durasi ?? '20-30 Menit' }}
-                    </div>
+    <div class="tag-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        {{ $act->durasi ?? '20-30 Menit' }}
+    </div>
 
-                    <div class="tag-pill">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 20V10M12 20V4M6 20v-6"/>
-                        </svg>
-                        {{ $act->intensitas ?? 'Sedang' }}
-                    </div>
+    <div class="tag-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 20V10M12 20V4M6 20v-6"/>
+        </svg>
+        {{ $act->intensitas ?? 'Sedang' }}
+    </div>
 
-                    <div class="tag-pill">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                        </svg>
-                        {{ $act->lokasi ?? 'Fleksibel' }}
-                    </div>
+    <div class="tag-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        </svg>
+        {{ $act->lokasi ?? 'Fleksibel' }}
+    </div>
 
-                </div>
+</div>
 
-                {{-- STATUS --}}
-                <div class="category-tag-wrapper">
-                    <span class="category-tag">
-                        Status: {{ $act->kategori_imt }}
-                    </span>
-                </div>
-
+<div class="category-tag-wrapper">
+    <span class="category-tag">
+        Status: {{ $act->kategori_imt }}
+    </span>
+</div>
             </div>
         </a>
 
