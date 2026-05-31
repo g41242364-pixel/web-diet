@@ -38,8 +38,7 @@
         <div class="header-content">
 
             <div class="header-icon-wrapper">
-                {{-- ICON DIGANTI BUKU --}}
-                <img src="{{ asset('assets/images/book.png') }}" 
+                <img src="{{ asset('assets/images/book.png') }}"
                      alt="Article Icon"
                      onerror="this.src='https://cdn-icons-png.flaticon.com/512/29/29302.png'">
             </div>
@@ -50,10 +49,6 @@
             </div>
 
         </div>
-
-        <a href="{{ route('pengguna.artikel.all') }}" class="btn-others">
-            Artikel Lainnya
-        </a>
 
     </div>
 
@@ -121,7 +116,7 @@
 
         </div>
 
-        {{-- BUTTON PALING BAWAH (SEPERTI JURNAL MAKANAN) --}}
+        {{-- BUTTON ONLY BOTTOM (SESUAI PERMINTAAN) --}}
         <div class="action-container">
             <a href="{{ route('pengguna.artikel.all') }}" class="btn-others">
                 Artikel Lainnya →
