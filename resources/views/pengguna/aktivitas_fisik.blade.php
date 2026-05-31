@@ -17,7 +17,7 @@
     </div>
 
     <a href="{{ route('pengguna.aktivitasFisik') }}" class="btn-recommendation">
-        ✨ Rekomendasi
+        ← Kembali
     </a>
 </div>
 
