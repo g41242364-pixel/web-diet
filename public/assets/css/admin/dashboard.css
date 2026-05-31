@@ -8,10 +8,6 @@
     --shadow:0 10px 25px rgba(0,0,0,.06);
 }
 
-/* ===============================
-   HEADER
-================================= */
-
 .admin-header{
     background:#fff;
     border-radius:24px;
@@ -31,39 +27,39 @@
     color:var(--muted);
 }
 
-/* ===============================
-   BANNER
-================================= */
-
 .admin-welcome-banner{
-    background:linear-gradient(135deg,#2563EB,#60A5FA);
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #60A5FA
+    );
+
     border-radius:24px;
     padding:30px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     margin-bottom:25px;
     box-shadow:var(--shadow);
 }
 
 .banner-info h3{
-    color:#fff;
-    font-size:28px;
+    color:white;
+    font-size:30px;
     font-weight:800;
 }
 
 .banner-info p{
-    color:rgba(255,255,255,.9);
+    color:white;
+    opacity:.95;
     margin-top:8px;
 }
 
 .admin-logo-wrapper img{
     width:150px;
 }
-
-/* ===============================
-   STATS
-================================= */
 
 .admin-stats-grid{
     display:grid;
@@ -73,17 +69,20 @@
 }
 
 .stat-box{
-    background:#fff;
-    border-radius:22px;
-    padding:22px;
+    background:white;
+    border-radius:24px;
+    padding:24px;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     box-shadow:var(--shadow);
+    transition:.3s;
 }
 
 .stat-box:hover{
-    transform:translateY(-3px);
+    transform:translateY(-4px);
 }
 
 .label{
@@ -95,49 +94,49 @@
 .number{
     display:block;
     margin-top:8px;
-    font-size:32px;
-    font-weight:800;
+
     color:#2563EB;
+    font-size:34px;
+    font-weight:800;
 }
 
 .stat-icon{
-    width:60px;
-    height:60px;
-    border-radius:18px;
-    background:#EFF6FF;
+    width:70px;
+    height:70px;
+
+    border-radius:20px;
+
+    background:#DBEAFE;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    color:#2563EB;
+
+    font-size:30px;
 }
 
-/* ===============================
-   CHART
-================================= */
-
 .chart-card{
-    background:#fff;
+    background:white;
     border-radius:24px;
-    padding:30px;
+    padding:35px;
     box-shadow:var(--shadow);
 }
 
 .chart-card h4{
-    font-size:22px;
-    font-weight:700;
+    font-size:24px;
     margin-bottom:10px;
 }
 
 .chart-subtitle{
     color:#64748B;
-    margin-bottom:25px;
+    margin-bottom:30px;
 }
 
 .chart-wrapper{
     display:flex;
-    align-items:center;
     justify-content:center;
-    gap:60px;
+    align-items:center;
+    gap:80px;
 }
 
 .chart-left{
@@ -152,31 +151,30 @@
 }
 
 .chart-right{
-    min-width:280px;
+    min-width:260px;
 }
 
 .chart-right h5{
-    font-size:22px;
-    margin-bottom:20px;
-    color:#0F172A;
+    font-size:24px;
+    margin-bottom:25px;
 }
 
 .legend-item{
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:14px;
+
     margin-bottom:18px;
+
     font-size:17px;
     font-weight:600;
 }
 
 .legend-color{
-    width:22px;
-    height:22px;
+    width:24px;
+    height:24px;
     border-radius:50%;
 }
-
-/* WARNA BERBEDA */
 
 .kurus{
     background:#FBBF24;
@@ -208,4 +206,5 @@
         width:320px;
         height:320px;
     }
+
 }
