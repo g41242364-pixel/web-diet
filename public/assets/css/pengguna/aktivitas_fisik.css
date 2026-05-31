@@ -205,19 +205,26 @@
     font-weight:600;
 }
 
-.pagination-container {
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
+.pagination-container{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
 }
 
-.pagination-container nav {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.pagination-container nav{
+    display:flex;
+    justify-content:center;
 }
 
-.pagination-container .pagination,
+.pagination-container .pagination{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
 .pagination-container ul {
     display: flex;
     list-style: none;
@@ -226,7 +233,31 @@
     gap: 8px;
 }
 
-.pagination-container .page-item .page-link,
+.pagination-container .page-item{
+    margin:0;
+}
+
+.pagination-container .page-link{
+    min-width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:12px !important;
+    border:1px solid #DBEAFE !important;
+
+    background:#fff !important;
+    color:#2563EB !important;
+
+    font-size:14px;
+    font-weight:600;
+
+    text-decoration:none;
+    transition:.25s;
+}
+
 .pagination-container a,
 .pagination-container span {
     display: flex;
@@ -244,19 +275,32 @@
 }
 
 .pagination-container .active span,
-.pagination-container .page-item.active .page-link {
-    background: #7BB9D8 !important;
-    color: white !important;
+.pagination-container .page-link:hover{
+    background:#2563EB !important;
+    color:#fff !important;
+    border-color:#2563EB !important;
+}
+
+.pagination-container .page-item.active .page-link{
+    background:#2563EB !important;
+    color:#fff !important;
+    border-color:#2563EB !important;
+}
+
+.pagination-container .page-item.disabled .page-link{
+    background:#F8FAFC !important;
+    color:#94A3B8 !important;
+    border-color:#E2E8F0 !important;
+}
+
+.pagination-container svg{
+    width:16px !important;
+    height:16px !important;
 }
 
 .pagination-container a:hover {
     background: #90D2ED;
     color: white;
-}
-
-.pagination-container svg {
-    width: 20px !important;
-    height: 20px !important;
 }
 
 .pagination-container nav div:first-child {
