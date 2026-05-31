@@ -1,140 +1,150 @@
-:root {
-    --sidebar-bg: #90D2ED;
-    --main-bg: #F0F7FA;
-    --text-blue: #2FA4D8;
-    --card-welcome: #7BB9D8;
-    --white: #ffffff;
-    --gray-text: #666;
+/* ==================================================
+   THEME SISD MODERN
+================================================== */
+
+:root{
+    --primary:#2563EB;
+    --primary-dark:#1E40AF;
+    --white:#ffffff;
+    --bg:#F8FAFC;
+    --text:#0F172A;
+    --muted:#64748B;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+body{
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    margin:0;
+    color:var(--text);
 }
 
-/* ✅ Fix: pastikan button tidak kehilangan tampilan aslinya */
-button {
-    font-family: 'Poppins', sans-serif;
-    display: inline-block;
-    width: auto;
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
+/* ==================================================
+   SIDEBAR
+================================================== */
+
+.sidebar{
+    width:260px;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+
+    background:linear-gradient(
+        180deg,
+        #1E40AF,
+        #2563EB
+    );
+
+    display:flex;
+    flex-direction:column;
+
+    box-shadow:
+        4px 0 25px rgba(0,0,0,.08);
 }
 
-body {
-    display: flex;
-    min-height: 100vh;
-    background-color: var(--main-bg);
+.sidebar-header{
+    padding:30px 20px;
 }
 
-.sidebar {
-    width: 280px;
-    background-color: var(--sidebar-bg);
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0;
-    position: fixed;
-    height: 100vh;
-    overflow-y: auto;
-    z-index: 100;
+.brand-section h1{
+    color:white;
+    font-size:28px;
+    font-weight:800;
+    margin:0;
 }
 
-.sidebar-header {
-    padding: 0 20px 20px 20px;
+.sidebar-user-info{
+    margin-top:15px;
+    color:rgba(255,255,255,.85);
+    font-size:13px;
 }
 
-.brand-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 5px;
+/* ==================================================
+   MENU
+================================================== */
+
+.nav-menu{
+    list-style:none;
+    padding:0;
+    margin:0;
+    flex:1;
 }
 
-.brand-section h1 {
-    font-size: 36px;
-    font-weight: 800;
-    letter-spacing: 2px;
+.nav-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    margin:8px 14px;
+    padding:13px 16px;
+
+    border-radius:14px;
+
+    color:rgba(255,255,255,.85);
+    text-decoration:none;
+
+    transition:.25s;
 }
 
-.sidebar-user-info {
-    font-size: 14px;
-    margin-bottom: 20px;
-    opacity: 0.9;
+.nav-item svg{
+    width:20px;
+    height:20px;
 }
 
-.search-bar {
-    width: 90%;
-    margin: 0 auto 30px auto;
-    background: var(--white);
-    height: 35px;
-    border-radius: 20px;
+.nav-item:hover{
+    background:rgba(255,255,255,.12);
+    transform:translateX(4px);
 }
 
-.nav-menu {
-    list-style: none;
-    flex-grow: 1;
+.nav-item.active{
+    background:white;
+    color:#1E40AF;
+    font-weight:600;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.08);
 }
 
-.nav-item {
-    padding: 12px 25px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    cursor: pointer;
-    transition: background 0.3s;
-    text-decoration: none;
-    color: var(--white);
+/* ==================================================
+   LOGOUT
+================================================== */
+
+.logout-btn{
+    width:calc(100% - 30px);
+
+    margin:15px;
+
+    border:none;
+
+    background:#EF4444;
+    color:white;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    cursor:pointer;
+
+    transition:.25s;
 }
 
-.nav-item:hover,
-.nav-item.active {
-    background-color: rgba(255, 255, 255, 0.2);
+.logout-btn:hover{
+    background:#DC2626;
+    transform:translateY(-2px);
 }
 
-.nav-item svg {
-    width: 24px;
-    height: 24px;
-}
+/* ==================================================
+   CONTENT
+================================================== */
 
-/* ✅ Logout button styling tersendiri */
-.logout-btn {
-    margin-top: auto;
-    padding: 20px 25px;
-    color: #FF5C5C;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-weight: 600;
-    font-size: 14px;
-    width: 100%;
-    text-align: left;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-}
-
-.logout-btn:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.logout-btn svg {
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-}
-
-.main-content {
-    margin-left: 280px;
-    flex-grow: 1;
-    padding: 30px;
-    width: calc(100% - 280px);
+.main-content{
+    margin-left:260px;
+    padding:30px;
 }
 
 @media (max-width: 1024px) {
@@ -152,4 +162,40 @@ body {
         margin-left: 80px;
         width: calc(100% - 80px);
     }
+
+    /* ==================================================
+   CARD
+================================================== */
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:24px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.06);
+}
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.btn-primary{
+    background:#2563EB;
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.btn-primary:hover{
+    background:#1E40AF;
+}
 }
