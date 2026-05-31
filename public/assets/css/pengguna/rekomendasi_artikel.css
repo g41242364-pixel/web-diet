@@ -32,21 +32,45 @@
 }
 
 /* ==========================================
-HEADER CARD
+HEADER CARD (SAMA PERSIS DENGAN REKOMENDASI)
 ========================================== */
 
-.article-header{
+.page-header{
     background:#ffffff;
     border-radius:20px;
     padding:25px 30px;
     margin-bottom:25px;
-
-    border:1px solid #DBEAFE;
     box-shadow:0 4px 15px rgba(0,0,0,.05);
+    border:1px solid #DBEAFE;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
+}
+
+.header-content{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.header-content img{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+}
+
+.header-text h2{
+    margin:0;
+    font-size:28px;
+    font-weight:800;
+    color:#0F172A;
+}
+
+.header-text p{
+    margin-top:6px;
+    font-size:14px;
+    color:#64748B;
 }
 
 .btn-back{
