@@ -1,13 +1,9 @@
 :root{
-    --primary:#2563EB;
-    --primary-dark:#1D4ED8;
-    --primary-light:#EFF6FF;
-    --border:#BFDBFE;
-
+    --primary:#2FA4D8;
+    --primary-dark:#1D8BBC;
+    --bg:#F0F7FA;
     --white:#FFFFFF;
-    --bg:#F8FAFC;
-
-    --text:#0F172A;
+    --text:#1E293B;
     --muted:#64748B;
 
     --shadow:
@@ -20,48 +16,45 @@
 
 .admin-header{
     background:#FFFFFF;
+    padding:28px 32px;
     border-radius:24px;
-    padding:24px 30px;
-    margin-bottom:25px;
+    margin-bottom:24px;
     box-shadow:var(--shadow);
 }
 
 .admin-header h2{
-    color:var(--text);
-    font-size:30px;
+    font-size:32px;
     font-weight:800;
+    color:var(--primary);
     margin-bottom:6px;
 }
 
 .admin-header p{
     color:var(--muted);
+    font-size:15px;
 }
 
 /* =========================================
-   WELCOME BANNER
+   BANNER
 ========================================= */
 
 .admin-welcome-banner{
+    background:linear-gradient(
+        135deg,
+        #90D2ED,
+        #2FA4D8
+    );
 
-    background:
-        linear-gradient(
-            135deg,
-            #2563EB,
-            #60A5FA
-        );
-
-    border-radius:24px;
-
-    padding:30px;
+    border-radius:28px;
+    padding:30px 35px;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    margin-bottom:25px;
+    margin-bottom:28px;
 
-    box-shadow:
-        0 10px 25px rgba(37,99,235,.18);
+    box-shadow:var(--shadow);
 }
 
 .banner-info h3{
@@ -73,41 +66,32 @@
 
 .banner-info p{
     color:rgba(255,255,255,.95);
+    font-size:15px;
 }
 
 .admin-logo-wrapper img{
-    width:130px;
+    width:140px;
 }
 
 /* =========================================
-   STATISTIK
+   STATISTIC CARD
 ========================================= */
 
 .admin-stats-grid{
-
     display:grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
+    grid-template-columns:repeat(2,1fr);
     gap:20px;
-
-    margin-bottom:25px;
+    margin-bottom:28px;
 }
 
 .stat-box{
-
-    background:white;
-
-    border:1.5px solid var(--border);
-
-    border-radius:24px;
-
+    background:#FFFFFF;
+    border-radius:22px;
     padding:24px;
 
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
 
     box-shadow:var(--shadow);
 
@@ -115,52 +99,51 @@
 }
 
 .stat-box:hover{
-
     transform:translateY(-4px);
-
-    border-color:#2563EB;
-
-    box-shadow:
-        0 12px 28px rgba(37,99,235,.12);
 }
 
 .label{
     display:block;
-    font-size:14px;
     color:var(--muted);
-    font-weight:600;
+    font-size:14px;
+    margin-bottom:10px;
 }
 
 .number{
-    display:block;
-
-    margin-top:10px;
-
     font-size:34px;
     font-weight:800;
-
-    color:#2563EB;
+    color:var(--primary);
 }
 
 .stat-icon{
-
-    width:68px;
-    height:68px;
+    width:65px;
+    height:65px;
 
     border-radius:18px;
-
-    background:#EFF6FF;
-
-    color:#2563EB;
 
     display:flex;
     align-items:center;
     justify-content:center;
+
+    color:white;
 }
 
-.stat-icon svg{
-    width:30px;
-    height:30px;
+/* beda warna tiap card */
+
+.stat-box:nth-child(1) .stat-icon{
+    background:#2FA4D8;
+}
+
+.stat-box:nth-child(2) .stat-icon{
+    background:#27AE60;
+}
+
+.stat-box:nth-child(3) .stat-icon{
+    background:#F39C12;
+}
+
+.stat-box:nth-child(4) .stat-icon{
+    background:#9B59B6;
 }
 
 /* =========================================
@@ -168,63 +151,49 @@
 ========================================= */
 
 .chart-card{
-
     background:#FFFFFF;
-
-    border:1.5px solid #DBEAFE;
-
-    border-radius:24px;
-
-    padding:30px;
+    border-radius:28px;
+    padding:35px;
 
     box-shadow:var(--shadow);
 }
 
 .chart-card h4{
-
-    font-size:22px;
+    font-size:24px;
     font-weight:800;
-
-    color:#0F172A;
-
-    margin-bottom:6px;
+    color:var(--primary);
+    margin-bottom:8px;
 }
 
 .chart-subtitle{
-
-    color:#64748B;
-
+    color:var(--muted);
     margin-bottom:30px;
 }
 
+/* =========================================
+   CHART LAYOUT
+========================================= */
+
 .chart-wrapper{
-
     display:flex;
-
     align-items:center;
     justify-content:center;
-
-    gap:80px;
+    gap:70px;
 }
 
 .chart-left{
-
-    width:420px;
-    height:420px;
+    width:430px;
+    height:430px;
 }
 
 .chart-right{
-
     min-width:280px;
 }
 
 .chart-right h5{
-
-    color:#2563EB;
-
-    font-size:22px;
-    font-weight:800;
-
+    color:var(--primary);
+    font-size:24px;
+    font-weight:700;
     margin-bottom:25px;
 }
 
@@ -233,93 +202,79 @@
 ========================================= */
 
 .legend-item{
-
     display:flex;
     align-items:center;
-
     gap:14px;
 
-    margin-bottom:16px;
+    margin-bottom:18px;
 
-    padding:14px 18px;
-
-    border-radius:16px;
-
-    font-size:15px;
+    font-size:17px;
     font-weight:600;
-
-    border:1px solid transparent;
-}
-
-/* KURUS */
-
-.legend-item.kurus-box{
-
-    background:#FFF9E6;
-    border-color:#FFE082;
-    color:#5D4037;
-}
-
-.legend-color.kurus{
-
-    background:#FFB300;
-}
-
-/* NORMAL */
-
-.legend-item.normal-box{
-
-    background:#E8F5E9;
-    border-color:#C8E6C9;
-    color:#1B5E20;
-}
-
-.legend-color.normal{
-
-    background:#2ECC71;
-}
-
-/* GEMUK */
-
-.legend-item.gemuk-box{
-
-    background:#FFF3E0;
-    border-color:#FFE0B2;
-    color:#E65100;
-}
-
-.legend-color.gemuk{
-
-    background:#FF9800;
-}
-
-/* OBESITAS */
-
-.legend-item.obesitas-box{
-
-    background:#FFEBEE;
-    border-color:#FFCDD2;
-    color:#C62828;
-}
-
-.legend-color.obesitas{
-
-    background:#E74C3C;
 }
 
 .legend-color{
-
-    width:20px;
-    height:20px;
-
+    width:22px;
+    height:22px;
     border-radius:50%;
-
     flex-shrink:0;
+}
+
+/* Kurus */
+
+.kurus{
+    background:#F7C948;
+}
+
+.legend-item:nth-child(2){
+    color:#B7791F;
+}
+
+/* Normal */
+
+.normal{
+    background:#2ECC71;
+}
+
+.legend-item:nth-child(3){
+    color:#1E8449;
+}
+
+/* Gemuk */
+
+.gemuk{
+    background:#F39C12;
+}
+
+.legend-item:nth-child(4){
+    color:#D68910;
+}
+
+/* Obesitas */
+
+.obesitas{
+    background:#E74C3C;
+}
+
+.legend-item:nth-child(5){
+    color:#C0392B;
 }
 
 /* =========================================
    RESPONSIVE
 ========================================= */
+
+@media(max-width:1200px){
+
+    .chart-wrapper{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .chart-left{
+        width:350px;
+        height:350px;
+    }
+}
 
 @media(max-width:992px){
 
@@ -327,13 +282,38 @@
         grid-template-columns:1fr;
     }
 
-    .chart-wrapper{
+    .admin-welcome-banner{
         flex-direction:column;
-        gap:30px;
+        text-align:center;
+        gap:20px;
     }
 
     .chart-left{
-        width:320px;
-        height:320px;
+        width:300px;
+        height:300px;
+    }
+
+    .chart-right{
+        width:100%;
+    }
+}
+
+@media(max-width:768px){
+
+    .admin-header h2{
+        font-size:26px;
+    }
+
+    .banner-info h3{
+        font-size:24px;
+    }
+
+    .chart-card{
+        padding:25px;
+    }
+
+    .chart-left{
+        width:260px;
+        height:260px;
     }
 }
