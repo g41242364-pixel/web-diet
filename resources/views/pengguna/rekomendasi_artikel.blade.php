@@ -10,27 +10,21 @@
     if (str_contains($statusLower, 'underweight')) {
         $statusClass = 'status-kurus';
         $statusIcon = 'i';
-        $statusIconColor = 'var(--kurus-accent)';
     } elseif (str_contains($statusLower, 'normal')) {
         $statusClass = 'status-normal';
         $statusIcon = '✓';
-        $statusIconColor = 'var(--normal-accent)';
     } elseif (str_contains($statusLower, 'overweight')) {
         $statusClass = 'status-gemuk';
         $statusIcon = '!';
-        $statusIconColor = 'var(--gemuk-accent)';
     } elseif (str_contains($statusLower, 'obesitas 1')) {
         $statusClass = 'status-obesitas';
         $statusIcon = '⚠';
-        $statusIconColor = 'var(--obesitas-accent)';
     } elseif (str_contains($statusLower, 'obesitas 2')) {
         $statusClass = 'status-obesitas';
         $statusIcon = '⚠';
-        $statusIconColor = 'var(--obesitas-accent2)';
     } else {
         $statusClass = 'status-default';
         $statusIcon = '!';
-        $statusIconColor = 'var(--default-accent)';
     }
 @endphp
 
@@ -42,8 +36,7 @@
     <div class="page-header">
 
         <div class="header-content">
-            <img src="{{ asset('assets/images/sendok.png') }}" alt="Artikel">
-
+            <img src="{{ asset('assets/images/sendok.png') }}" alt="icon">
             <div class="header-text">
                 <h2>Artikel Edukasi</h2>
                 <p>Bacaan ringkas seputar nutrisi & gaya hidup sehat</p>
@@ -68,7 +61,7 @@
 
                 <div class="banner-text">
                     <h3>Hasil Skrining : {{ $statusImt }}</h3>
-                    <p>Artikel berikut direkomendasikan berdasarkan status IMT Anda.</p>
+                    <p>Artikel direkomendasikan berdasarkan status IMT Anda.</p>
                 </div>
 
             </div>
@@ -80,7 +73,7 @@
         </div>
     @endif
 
-    {{-- ARTIKEL --}}
+    {{-- ARTIKEL GRID --}}
     <div class="article-container-box">
 
         <div class="article-grid">
@@ -91,8 +84,7 @@
                     <div class="card-banner">
                         <img src="{{ $artikel->gambar
                             ? asset('assets/images/artikel/'.$artikel->gambar)
-                            : asset('assets/images/mangkok.png') }}"
-                            alt="{{ $artikel->judul }}">
+                            : asset('assets/images/mangkok.png') }}">
                     </div>
 
                     <div class="card-content">
@@ -103,20 +95,16 @@
 
                         <h4>{{ $artikel->judul }}</h4>
 
-                        <p>
-                            {{ Str::limit(strip_tags($artikel->isi), 100) }}
-                        </p>
+                        <p>{{ Str::limit(strip_tags($artikel->isi), 100) }}</p>
 
-                        <div class="read-more">
-                            Baca selengkapnya →
-                        </div>
+                        <div class="read-more">Baca selengkapnya →</div>
 
                     </div>
 
                 </a>
             @empty
-                <div style="grid-column:1/-1; text-align:center; padding:40px; color:#999;">
-                    Belum ada artikel tersedia
+                <div style="grid-column:1/-1;text-align:center;padding:40px;color:#999;">
+                    Belum ada artikel
                 </div>
             @endforelse
 
