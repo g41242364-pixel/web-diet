@@ -200,7 +200,7 @@
 }
 
 /* ==========================
-   PAGINATION (SUDAH DIRAPIKAN)
+   PAGINATION
 ========================== */
 
 .pagination-container{
@@ -210,95 +210,66 @@
 }
 
 .pagination-container nav{
-    background:#fff;
-    padding:10px 16px;
-    border-radius:18px;
-    box-shadow:0 4px 15px rgba(0,0,0,.05);
-    width:auto !important;
+    display:flex;
+    justify-content:center;
 }
 
-.pagination-container .pagination{
-    display:flex;
+.pagination{
+    display:flex !important;
     align-items:center;
-    gap:8px;
+    gap:10px;
     list-style:none;
     margin:0;
     padding:0;
 }
 
-.pagination-container .page-item{
-    margin:0;
+.page-item{
+    margin:0 !important;
 }
 
-.pagination-container .page-link{
-    width:40px;
-    height:40px;
+.page-link{
+    width:44px !important;
+    height:44px !important;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
 
     padding:0 !important;
+    margin:0 !important;
 
-    border:none !important;
-    border-radius:10px !important;
+    border-radius:12px !important;
+    border:1px solid #DBEAFE !important;
 
-    background:transparent !important;
-    color:#7BB9D8 !important;
-
-    font-size:14px;
-    font-weight:700;
-
-    text-decoration:none;
-    transition:.25s;
-}
-
-.pagination-container .page-link:hover{
-    background:#EAF4FF !important;
+    background:#FFFFFF !important;
     color:#2563EB !important;
+
+    font-size:14px !important;
+    font-weight:700 !important;
+
+    text-decoration:none !important;
+    box-sizing:border-box;
+
+    transition:.25s ease;
 }
 
-.pagination-container .page-item.active .page-link{
+.page-link:hover{
     background:#2563EB !important;
-    color:#fff !important;
+    color:#FFFFFF !important;
+    border-color:#2563EB !important;
 }
 
-.pagination-container .page-item.disabled .page-link{
+.page-item.active .page-link{
+    background:#2563EB !important;
+    color:#FFFFFF !important;
+    border-color:#2563EB !important;
+}
+
+.page-item.disabled .page-link{
     opacity:.45;
 }
 
-.pagination-container svg{
+.page-link svg{
     width:16px !important;
     height:16px !important;
-}
-
-/* ==========================
-   RESPONSIVE
-========================== */
-
-@media (max-width:1200px){
-    .activity-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media (max-width:768px){
-
-    .activity-grid{
-        grid-template-columns:1fr;
-    }
-
-    .header-text h2{
-        font-size:32px;
-    }
-
-    .page-header{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:20px;
-    }
-
-    .activity-container{
-        padding:25px;
-    }
 }
