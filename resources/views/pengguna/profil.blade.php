@@ -14,7 +14,7 @@
 
 /* ===== HEADER MIRIP DASHBOARD ===== */
 .header-title{
-    max-width:900px;
+    max-width:1100px;
     margin:0 auto 20px;
     background:#fff;
     border-radius:24px;
@@ -38,7 +38,7 @@
 /* ===== ALERT ===== */
 .alert-success,
 .alert-error{
-    max-width:900px;
+    max-width:1100px;
     margin:0 auto 18px;
     padding:12px 16px;
     border-radius:12px;
@@ -58,7 +58,7 @@
 
 /* ===== CARD ===== */
 .profil-card{
-    max-width:900px;
+    max-width:1100px;
     margin:0 auto 18px;
 
     background:#fff;
