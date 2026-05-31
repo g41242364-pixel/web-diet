@@ -40,8 +40,9 @@ HEADER CARD (SAMA PERSIS DENGAN REKOMENDASI)
     border-radius:20px;
     padding:25px 30px;
     margin-bottom:25px;
-    box-shadow:0 4px 15px rgba(0,0,0,.05);
+
     border:1px solid #DBEAFE;
+    box-shadow:0 4px 15px rgba(0,0,0,.05);
 
     display:flex;
     justify-content:space-between;
