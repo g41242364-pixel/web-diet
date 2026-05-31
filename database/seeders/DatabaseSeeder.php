@@ -57,10 +57,10 @@ class DatabaseSeeder extends Seeder
                 'urutan'     => 1,
                 'pertanyaan' => 'Seberapa sering Anda melakukan olahraga atau aktivitas fisik?',
                 'opts'       => [
-                    ['jawaban' => 'Setiap Hari',       'skor' => 1],
-                    ['jawaban' => '3-5 kali/Minggu',   'skor' => 2],
-                    ['jawaban' => '1-2 kali/Minggu',   'skor' => 3],
-                    ['jawaban' => 'Tidak Pernah',       'skor' => 4],
+                    ['jawaban' => 'Setiap Hari',       'skor' => 4],
+                    ['jawaban' => '3-5 kali/Minggu',   'skor' => 3],
+                    ['jawaban' => '1-2 kali/Minggu',   'skor' => 2],
+                    ['jawaban' => 'Tidak Pernah',       'skor' => 1],
                 ],
             ],
             [
@@ -68,10 +68,10 @@ class DatabaseSeeder extends Seeder
                 'urutan'     => 2,
                 'pertanyaan' => 'Berapa lama waktu duduk atau rebahan Anda dalam sehari (di luar waktu tidur)?',
                 'opts'       => [
-                    ['jawaban' => '< 2 Jam', 'skor' => 1],
-                    ['jawaban' => '2-4 Jam', 'skor' => 2],
-                    ['jawaban' => '5-7 Jam', 'skor' => 3],
-                    ['jawaban' => '> 7 Jam', 'skor' => 4],
+                    ['jawaban' => '< 2 Jam', 'skor' => 4],
+                    ['jawaban' => '2-4 Jam', 'skor' => 3],
+                    ['jawaban' => '5-7 Jam', 'skor' => 2],
+                    ['jawaban' => '> 7 Jam', 'skor' => 1],
                 ],
             ],
             [
@@ -79,10 +79,10 @@ class DatabaseSeeder extends Seeder
                 'urutan'     => 3,
                 'pertanyaan' => 'Seberapa sering Anda tidur larut malam (di atas pukul 23.00 WIB)?',
                 'opts'       => [
-                    ['jawaban' => 'Tidak Pernah',       'skor' => 1],
-                    ['jawaban' => 'Jarang',              'skor' => 2],
-                    ['jawaban' => 'Sering',              'skor' => 3],
-                    ['jawaban' => 'Hampir Setiap Hari',  'skor' => 4],
+                    ['jawaban' => 'Tidak Pernah',       'skor' => 4],
+                    ['jawaban' => 'Jarang',              'skor' => 3],
+                    ['jawaban' => 'Sering',              'skor' => 2],
+                    ['jawaban' => 'Hampir Setiap Hari',  'skor' => 1],
                 ],
             ],
             [
@@ -90,10 +90,10 @@ class DatabaseSeeder extends Seeder
                 'urutan'     => 4,
                 'pertanyaan' => 'Seberapa sering Anda mengonsumsi makanan cepat saji atau gorengan?',
                 'opts'       => [
-                    ['jawaban' => 'Tidak Pernah',       'skor' => 1],
-                    ['jawaban' => '1-2 kali/Minggu',    'skor' => 2],
-                    ['jawaban' => '3-4 kali/Minggu',    'skor' => 3],
-                    ['jawaban' => 'Hampir Setiap Hari', 'skor' => 4],
+                    ['jawaban' => 'Tidak Pernah',       'skor' => 4],
+                    ['jawaban' => '1-2 kali/Minggu',    'skor' => 3],
+                    ['jawaban' => '3-4 kali/Minggu',    'skor' => 2],
+                    ['jawaban' => 'Hampir Setiap Hari', 'skor' => 1],
                 ],
             ],
             [
@@ -101,10 +101,10 @@ class DatabaseSeeder extends Seeder
                 'urutan'     => 5,
                 'pertanyaan' => 'Seberapa sering Anda mengonsumsi buah dan sayur?',
                 'opts'       => [
-                    ['jawaban' => 'Setiap Hari',        'skor' => 1],
-                    ['jawaban' => '3-5 kali/Minggu',    'skor' => 2],
-                    ['jawaban' => '1-2 kali/Minggu',    'skor' => 3],
-                    ['jawaban' => 'Tidak Pernah',        'skor' => 4],
+                    ['jawaban' => 'Setiap Hari',        'skor' => 4],
+                    ['jawaban' => '3-5 kali/Minggu',    'skor' => 3],
+                    ['jawaban' => '1-2 kali/Minggu',    'skor' => 2],
+                    ['jawaban' => 'Tidak Pernah',        'skor' => 1],
                 ],
             ],
 
@@ -114,10 +114,10 @@ class DatabaseSeeder extends Seeder
                 'urutan'     => 6,
                 'pertanyaan' => 'Berapa kali Anda makan dalam sehari?',
                 'opts'       => [
-                    ['jawaban' => '3 Kali Teratur',          'skor' => 1],
-                    ['jawaban' => '2 Kali Sehari',            'skor' => 2],
-                    ['jawaban' => 'Tidak Teratur',            'skor' => 3],
-                    ['jawaban' => 'Sering Makan Berlebihan',  'skor' => 4],
+                    ['jawaban' => '3 Kali Teratur',          'skor' => 4],
+                    ['jawaban' => '2 Kali Sehari',            'skor' => 3],
+                    ['jawaban' => 'Tidak Teratur',            'skor' => 2],
+                    ['jawaban' => 'Sering Makan Berlebihan',  'skor' => 1],
                 ],
             ],
             [
@@ -125,10 +125,10 @@ class DatabaseSeeder extends Seeder
                 'urutan'     => 7,
                 'pertanyaan' => 'Seberapa sering Anda mengonsumsi minuman manis?',
                 'opts'       => [
-                    ['jawaban' => 'Tidak Pernah',           'skor' => 1],
-                    ['jawaban' => '1 kali/Hari',             'skor' => 2],
-                    ['jawaban' => '2-3 kali/Hari',           'skor' => 3],
-                    ['jawaban' => 'Lebih Dari 3 kali/Hari',  'skor' => 4],
+                    ['jawaban' => 'Tidak Pernah',           'skor' => 4],
+                    ['jawaban' => '1 kali/Hari',             'skor' => 3],
+                    ['jawaban' => '2-3 kali/Hari',           'skor' => 2],
+                    ['jawaban' => 'Lebih Dari 3 kali/Hari',  'skor' => 1],
                 ],
             ],
             [
@@ -136,10 +136,10 @@ class DatabaseSeeder extends Seeder
                 'urutan'     => 8,
                 'pertanyaan' => 'Seberapa sering Anda tidur kurang dari 7 jam sehari?',
                 'opts'       => [
-                    ['jawaban' => 'Tidak Pernah',       'skor' => 1],
-                    ['jawaban' => 'Jarang',              'skor' => 2],
-                    ['jawaban' => 'Sering',              'skor' => 3],
-                    ['jawaban' => 'Hampir Setiap Hari',  'skor' => 4],
+                    ['jawaban' => 'Tidak Pernah',       'skor' => 4],
+                    ['jawaban' => 'Jarang',              'skor' => 3],
+                    ['jawaban' => 'Sering',              'skor' => 2],
+                    ['jawaban' => 'Hampir Setiap Hari',  'skor' => 1],
                 ],
             ],
             [
@@ -147,10 +147,10 @@ class DatabaseSeeder extends Seeder
                 'urutan'     => 9,
                 'pertanyaan' => 'Seberapa sering Anda menggunakan gadget sambil makan?',
                 'opts'       => [
-                    ['jawaban' => 'Tidak Pernah',       'skor' => 1],
-                    ['jawaban' => 'Jarang',              'skor' => 2],
-                    ['jawaban' => 'Sering',              'skor' => 3],
-                    ['jawaban' => 'Hampir Setiap Hari',  'skor' => 4],
+                    ['jawaban' => 'Tidak Pernah',       'skor' => 4],
+                    ['jawaban' => 'Jarang',              'skor' => 3],
+                    ['jawaban' => 'Sering',              'skor' => 2],
+                    ['jawaban' => 'Hampir Setiap Hari',  'skor' => 1],
                 ],
             ],
             [
@@ -159,10 +159,10 @@ class DatabaseSeeder extends Seeder
                 'pertanyaan' => 'Seberapa sering Anda minum air putih minimal 8 gelas per hari?',
                 'opts'       => [
 
-                    ['jawaban' => 'Hampir Setiap Hari', 'skor' => 1],
-                    ['jawaban' => 'Sering',              'skor' => 2],
-                    ['jawaban' => 'Jarang',              'skor' => 3],
-                    ['jawaban' => 'Tidak Pernah',        'skor' => 4],
+                    ['jawaban' => 'Hampir Setiap Hari', 'skor' => 4],
+                    ['jawaban' => 'Sering',              'skor' => 3],
+                    ['jawaban' => 'Jarang',              'skor' => 2],
+                    ['jawaban' => 'Tidak Pernah',        'skor' => 1],
                 ],
             ],
         ];
@@ -194,7 +194,6 @@ class DatabaseSeeder extends Seeder
             ['nama' => 'Roti Gandum',         'kalori' => 120, 'protein' => 5,  'karbohidrat' => 22, 'lemak' => 2],
             ['nama' => 'Susu Full Cream',     'kalori' => 149, 'protein' => 8,  'karbohidrat' => 12, 'lemak' => 8],
             ['nama' => 'Pisang',              'kalori' => 89,  'protein' => 1,  'karbohidrat' => 23, 'lemak' => 0.3],
-            ['nama' => 'Ikan Salmon Kukus',   'kalori' => 180, 'protein' => 25, 'karbohidrat' => 0,  'lemak' => 8],
         ];
 
         foreach ($foods as $f) {

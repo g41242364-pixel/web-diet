@@ -19,7 +19,7 @@
                 <p>Bacaan ringkas seputar nutrisi & gaya hidup sehat</p>
             </div>
         </div>
-        <a href="{{ url('/rekomendasi-artikel') }}" class="btn-recommendation">✨ Rekomendasi</a>
+        <a href="{{ url('/rekomendasi-artikel') }}" class="btn-recommendation">← Kembali</a>
     </div>
 
     <div class="article-container-box">
