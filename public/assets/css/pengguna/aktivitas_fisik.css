@@ -2,7 +2,15 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:30px;
+
+    background:#ffffff;
+    border-radius:20px;
+
+    padding:25px 30px;
+    margin-bottom:25px;
+
+    border:1px solid #DBEAFE;
+    box-shadow:0 4px 15px rgba(0,0,0,.05);
 }
 
 .header-content{
@@ -12,20 +20,22 @@
 }
 
 .header-content img{
-    width:80px;
-    height:80px;
+    width:65px;
+    height:65px;
     object-fit:contain;
 }
 
 .header-text h2{
-    font-size:42px;
+    margin:0;
+    font-size:28px;
     font-weight:800;
-    margin-bottom:5px;
+    color:#0F172A;
 }
 
 .header-text p{
-    font-size:18px;
-    color:#333;
+    margin-top:6px;
+    font-size:14px;
+    color:#64748B;
 }
 
 .btn-recommendation{
