@@ -33,11 +33,7 @@
         </div>
 
         <div class="stat-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                <circle cx="9" cy="7" r="4"/>
-            </svg>
+            👤
         </div>
     </div>
 
@@ -48,10 +44,7 @@
         </div>
 
         <div class="stat-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4.5 12.5c0 0 1 0 2 2s3 6 3 6 4-13 10-13"/>
-            </svg>
+            🩺
         </div>
     </div>
 
@@ -62,10 +55,7 @@
         </div>
 
         <div class="stat-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="4" width="18" height="18" rx="2"/>
-            </svg>
+            📋
         </div>
     </div>
 
@@ -76,61 +66,54 @@
         </div>
 
         <div class="stat-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            </svg>
+            💬
         </div>
     </div>
 
 </div>
 
-<div class="chart-grid">
+<div class="chart-card">
 
-    <div class="chart-card">
+    <h4>📊 Distribusi Pengguna Berdasarkan IMT</h4>
 
-        <h4>📊 Distribusi Pengguna Berdasarkan IMT</h4>
+    <p class="chart-subtitle">
+        Persentase kategori indeks massa tubuh pengguna SISD
+    </p>
 
-        <p class="chart-subtitle">
-            Persentase kategori indeks massa tubuh pengguna SISD
-        </p>
+    <div class="chart-wrapper">
 
-        <div class="chart-wrapper">
+        <div class="chart-left">
+            <canvas id="bmiChart"></canvas>
+        </div>
 
-            <div class="chart-left">
-                <canvas id="bmiChart"></canvas>
-            </div>
+        <div class="chart-right">
 
-            <div class="chart-right">
+            <h5>Kategori IMT</h5>
 
-                <h5>Kategori IMT</h5>
+            @foreach($distribusiImt as $kategori => $jumlah)
 
-                @foreach($distribusiImt as $kategori => $jumlah)
+                @php
 
-                    @php
-                        $class = '';
+                    $class = 'obesitas';
 
-                        if(stripos($kategori,'kurus') !== false)
-                            $class = 'kurus';
+                    if(stripos($kategori,'kurus') !== false){
+                        $class = 'kurus';
+                    }
+                    elseif(stripos($kategori,'normal') !== false){
+                        $class = 'normal';
+                    }
+                    elseif(stripos($kategori,'gemuk') !== false){
+                        $class = 'gemuk';
+                    }
 
-                        elseif(stripos($kategori,'normal') !== false)
-                            $class = 'normal';
+                @endphp
 
-                        elseif(stripos($kategori,'gemuk') !== false)
-                            $class = 'gemuk';
+                <div class="legend-item">
+                    <span class="legend-color {{ $class }}"></span>
+                    <span>{{ $kategori }} ({{ $jumlah }})</span>
+                </div>
 
-                        else
-                            $class = 'obesitas';
-                    @endphp
-
-                    <div class="legend-item">
-                        <span class="legend-color {{ $class }}"></span>
-                        <span>{{ $kategori }} ({{ $jumlah }})</span>
-                    </div>
-
-                @endforeach
-
-            </div>
+            @endforeach
 
         </div>
 
@@ -143,55 +126,53 @@
 @push('scripts')
 <script>
 
-const ctx = document.getElementById('bmiChart').getContext('2d');
+document.addEventListener('DOMContentLoaded', function(){
 
-new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-        labels: {!! json_encode($distribusiImt->keys()) !!},
-        datasets: [{
-            data: {!! json_encode($distribusiImt->values()) !!},
+    const canvas = document.getElementById('bmiChart');
 
-            backgroundColor: [
-                '#F7C948', // Kurus
-                '#2ECC71', // Normal
-                '#F39C12', // Gemuk
-                '#E74C3C'  // Obesitas
-            ],
+    if(!canvas) return;
 
-            borderColor: '#FFFFFF',
-            borderWidth: 5,
-            hoverOffset: 15
-        }]
-    },
+    new Chart(canvas, {
 
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
+        type: 'doughnut',
 
-        plugins: {
-            legend: {
-                display: false
-            }
+        data: {
+
+            labels: {!! json_encode($distribusiImt->keys()) !!},
+
+            datasets: [{
+
+                data: {!! json_encode($distribusiImt->values()) !!},
+
+                backgroundColor: [
+                    '#FBBF24',
+                    '#22C55E',
+                    '#F97316',
+                    '#EF4444'
+                ],
+
+                borderWidth: 4,
+                borderColor: '#FFFFFF'
+
+            }]
         },
 
-        cutout: '60%'
-    }
-});
+        options: {
 
-    options:{
+            responsive: true,
+            maintainAspectRatio: false,
 
-        responsive:true,
-        maintainAspectRatio:false,
-        cutout:'60%',
+            cutout: '65%',
 
-        plugins:{
-            legend:{
-                display:false
+            plugins: {
+                legend: {
+                    display: false
+                }
             }
+
         }
 
-    }
+    });
 
 });
 
