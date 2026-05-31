@@ -1,131 +1,285 @@
+/* ==================================================
+   SISD HEALTH THEME
+================================================== */
 
-        :root {
-            --sidebar-bg: #90D2ED;
-            --main-bg: #F0F7FA;
-            --text-blue: #2FA4D8;
-            --card-welcome: #7BB9D8;
-            --white: #ffffff;
-            --gray-text: #666;
-        }
+:root{
+    --sidebar-bg:#90D2ED;
+    --sidebar-dark:#72C4E6;
+    --main-bg:#F0F7FA;
+    --card-bg:#FFFFFF;
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-        }
+    --text-blue:#2FA4D8;
+    --text-dark:#334155;
+    --text-muted:#64748B;
 
-        body {
-            display: flex;
-            min-height: 100vh;
-            background-color: var(--main-bg);
-        }
+    --danger:#FF6B6B;
+}
 
-        .sidebar {
-            width: 280px;
-            background-color: var(--sidebar-bg);
-            color: var(--white);
-            display: flex;
-            flex-direction: column;
-            padding: 20px 0;
-            position: fixed;
-            height: 100vh;
-            overflow-y: auto;
-            z-index: 100;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-        .sidebar-header {
-            padding: 0 20px 20px 20px;
-        }
+body{
+    background:var(--main-bg);
+    color:var(--text-dark);
+}
 
-        .brand-section {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 5px;
-        }
+/* ==================================================
+   SIDEBAR
+================================================== */
 
-        .brand-section h1 {
-            font-size: 36px;
-            font-weight: 800;
-            letter-spacing: 2px;
-        }
+.sidebar{
+    width:280px;
+    height:100vh;
 
-        .sidebar-user-info {
-            font-size: 14px;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
+    position:fixed;
+    top:0;
+    left:0;
 
-        .search-bar {
-            width: 90%;
-            margin: 0 auto 30px auto;
-            background: var(--white);
-            height: 35px;
-            border-radius: 20px;
-        }
+    overflow-y:auto;
+    overflow-x:hidden;
 
-        .nav-menu {
-            list-style: none;
-            flex-grow: 1;
-        }
+    background:linear-gradient(
+        180deg,
+        var(--sidebar-bg),
+        var(--sidebar-dark)
+    );
 
-        .nav-item {
-            padding: 12px 25px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            cursor: pointer;
-            transition: background 0.3s;
-            text-decoration: none;
-            color: var(--white);
-        }
+    display:flex;
+    flex-direction:column;
 
-        .nav-item:hover,
-        .nav-item.active {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.08);
+}
 
-        .nav-item svg {
-            width: 24px;
-            height: 24px;
-        }
+/* ==================================================
+   HEADER SIDEBAR
+================================================== */
 
+.sidebar-header{
+    padding:25px;
+}
 
-        .logout-btn {
-            margin-top: auto;
-            padding: 20px 25px;
-            color: #FF5C5C;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-weight: 600;
-        }
+.brand-section{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
 
-        .main-content {
-            margin-left: 280px;
-            flex-grow: 1;
-            padding: 30px;
-            width: calc(100% - 280px);
-        }
+.brand-section h1{
+    color:white;
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:1px;
+}
 
+.sidebar-user-info{
+    margin-top:12px;
 
+    color:white;
+    opacity:.9;
 
-        @media (max-width: 1024px) {
-            .sidebar {
-                width: 80px;
-            }
+    font-size:13px;
+}
 
-            .sidebar-user-info,
-            .sidebar-header h1,
-            .nav-item span {
-                display: none;
-            }
+/* ==================================================
+   MENU
+================================================== */
 
-            .main-content {
-                margin-left: 80px;
-                width: calc(100% - 80px);
-            }
-        }
+.nav-menu{
+    list-style:none;
+    padding:0;
+    margin:0;
 
+    flex:1;
+}
+
+.nav-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    margin:8px 14px;
+    padding:14px 18px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.25s;
+}
+
+.nav-item svg{
+    width:22px;
+    height:22px;
+}
+
+.nav-item:hover{
+    background:rgba(255,255,255,.18);
+}
+
+.nav-item.active{
+    background:white;
+
+    color:var(--text-blue);
+
+    font-weight:600;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.08);
+}
+
+/* ==================================================
+   LOGOUT
+================================================== */
+
+.logout-btn{
+    width:calc(100% - 30px);
+
+    margin:15px;
+
+    border:none;
+
+    background:white;
+
+    color:var(--danger);
+
+    font-weight:600;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.logout-btn:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.08);
+}
+
+/* ==================================================
+   MAIN CONTENT
+================================================== */
+
+.main-content{
+    margin-left:280px;
+
+    padding:30px;
+
+    min-height:100vh;
+}
+
+/* ==================================================
+   PAGE HEADER
+================================================== */
+
+.page-header{
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.05);
+}
+
+.page-header h2{
+    color:var(--text-blue);
+
+    margin-bottom:6px;
+}
+
+.page-header p{
+    color:var(--text-muted);
+}
+
+/* ==================================================
+   CARD
+================================================== */
+
+.card{
+    background:white;
+
+    border-radius:20px;
+
+    padding:24px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.05);
+}
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.btn-primary{
+    border:none;
+
+    background:var(--text-blue);
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.btn-primary:hover{
+    background:#1F8BC0;
+}
+
+/* ==================================================
+   SCROLLBAR
+================================================== */
+
+.sidebar::-webkit-scrollbar{
+    width:6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+    background:rgba(255,255,255,.4);
+    border-radius:20px;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width:1024px){
+
+    .sidebar{
+        width:80px;
+    }
+
+    .sidebar-user-info,
+    .brand-section h1,
+    .nav-item span{
+        display:none;
+    }
+
+    .main-content{
+        margin-left:80px;
+    }
+}
