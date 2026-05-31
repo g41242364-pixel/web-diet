@@ -37,15 +37,12 @@
 
         <div class="header-content">
             <img src="{{ asset('assets/images/sendok.png') }}" alt="icon">
+
             <div class="header-text">
                 <h2>Artikel Edukasi</h2>
                 <p>Bacaan ringkas seputar nutrisi & gaya hidup sehat</p>
             </div>
         </div>
-
-        <a href="{{ route('pengguna.artikel.all') }}" class="btn-others">
-            Artikel Lainnya
-        </a>
 
     </div>
 
@@ -73,7 +70,7 @@
         </div>
     @endif
 
-    {{-- ARTIKEL GRID --}}
+    {{-- ARTIKEL --}}
     <div class="article-container-box">
 
         <div class="article-grid">
@@ -97,7 +94,9 @@
 
                         <p>{{ Str::limit(strip_tags($artikel->isi), 100) }}</p>
 
-                        <div class="read-more">Baca selengkapnya →</div>
+                        <div class="read-more">
+                            Baca selengkapnya →
+                        </div>
 
                     </div>
 
@@ -108,6 +107,18 @@
                 </div>
             @endforelse
 
+        </div>
+
+        {{-- BUTTON PINDAH KE BAWAH (SEPERTI JURNAL MAKANAN) --}}
+        <div class="action-container">
+            <a href="{{ route('pengguna.artikel.all') }}" class="btn-others">
+                <span>Artikel Lainnya</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
         </div>
 
     </div>
