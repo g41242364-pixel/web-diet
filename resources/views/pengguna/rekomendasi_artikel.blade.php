@@ -9,22 +9,22 @@
 
     if (str_contains($statusLower, 'underweight')) {
         $statusClass = 'status-kurus';
-        $statusIcon = 'i';
+        $statusIconColor = 'var(--kurus-accent)';
     } elseif (str_contains($statusLower, 'normal')) {
         $statusClass = 'status-normal';
-        $statusIcon = '✓';
+        $statusIconColor = 'var(--normal-accent)';
     } elseif (str_contains($statusLower, 'overweight')) {
         $statusClass = 'status-gemuk';
-        $statusIcon = '!';
+        $statusIconColor = 'var(--gemuk-accent)';
     } elseif (str_contains($statusLower, 'obesitas 1')) {
         $statusClass = 'status-obesitas';
-        $statusIcon = '⚠';
+        $statusIconColor = 'var(--obesitas-accent)';
     } elseif (str_contains($statusLower, 'obesitas 2')) {
         $statusClass = 'status-obesitas';
-        $statusIcon = '⚠';
+        $statusIconColor = 'var(--obesitas-accent2)';
     } else {
         $statusClass = 'status-default';
-        $statusIcon = '!';
+        $statusIconColor = 'var(--default-accent)';
     }
 @endphp
 
@@ -36,35 +36,44 @@
     <div class="page-header">
 
         <div class="header-content">
-            <img src="{{ asset('assets/images/sendok.png') }}" alt="icon">
+
+            <div class="header-icon-wrapper">
+                {{-- ICON DIGANTI BUKU --}}
+                <img src="{{ asset('assets/images/book.png') }}" 
+                     alt="Article Icon"
+                     onerror="this.src='https://cdn-icons-png.flaticon.com/512/29/29302.png'">
+            </div>
 
             <div class="header-text">
                 <h2>Artikel Edukasi</h2>
                 <p>Bacaan ringkas seputar nutrisi & gaya hidup sehat</p>
             </div>
+
         </div>
+
+        <a href="{{ route('pengguna.artikel.all') }}" class="btn-others">
+            Artikel Lainnya
+        </a>
 
     </div>
 
-    {{-- STATUS BANNER --}}
+    {{-- STATUS --}}
     @if ($statusImt)
         <div class="status-banner {{ $statusClass }}">
 
             <div class="banner-info">
 
                 <div class="warning-icon">
-                    {{ $statusIcon }}
+                    <svg width="18" height="18" fill="none" stroke="{{ $statusIconColor }}" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
                 </div>
 
                 <div class="banner-text">
-                    <h3>Hasil Skrining : {{ $statusImt }}</h3>
+                    <h3>HASIL SKRINING : {{ strtoupper($statusImt) }}</h3>
                     <p>Artikel direkomendasikan berdasarkan status IMT Anda.</p>
                 </div>
 
-            </div>
-
-            <div class="status-badge">
-                {{ $statusImt }}
             </div>
 
         </div>
@@ -76,12 +85,14 @@
         <div class="article-grid">
 
             @forelse ($artikels as $artikel)
+
                 <a href="{{ route('pengguna.artikel.detail', $artikel->id) }}" class="article-card">
 
                     <div class="card-banner">
-                        <img src="{{ $artikel->gambar
+                        <img src="{{ $artikel->gambar 
                             ? asset('assets/images/artikel/'.$artikel->gambar)
-                            : asset('assets/images/mangkok.png') }}">
+                            : asset('assets/images/mangkok.png') }}"
+                            alt="{{ $artikel->judul }}">
                     </div>
 
                     <div class="card-content">
@@ -101,23 +112,19 @@
                     </div>
 
                 </a>
+
             @empty
-                <div style="grid-column:1/-1;text-align:center;padding:40px;color:#999;">
+                <div style="grid-column:1/-1;text-align:center;padding:40px;color:#aaa;">
                     Belum ada artikel
                 </div>
             @endforelse
 
         </div>
 
-        {{-- BUTTON PINDAH KE BAWAH (SEPERTI JURNAL MAKANAN) --}}
+        {{-- BUTTON PALING BAWAH (SEPERTI JURNAL MAKANAN) --}}
         <div class="action-container">
             <a href="{{ route('pengguna.artikel.all') }}" class="btn-others">
-                <span>Artikel Lainnya</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
+                Artikel Lainnya →
             </a>
         </div>
 
