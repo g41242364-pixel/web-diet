@@ -3,34 +3,55 @@
 <link rel="stylesheet" href="{{ asset('assets/css/pengguna/target_diet.css') }}">
 
 @section('content')
-    <div class="header-section">
-        <div style="display:flex;align-items:center;gap:15px;">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5">
-                <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
-            </svg>
-            <h2>Target Diet</h2>
-        </div>
-        <p>Hitung Kategori, Tetapkan Target, dan Pantau Progres Mingguan.</p>
+
+<!-- HEADER -->
+<div class="diet-header">
+
+    <div class="diet-header-icon">
+        <svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="6"/>
+            <circle cx="12" cy="12" r="2"/>
+        </svg>
     </div>
 
-    @if(session('success'))
-        <div style="background:#e8f8e8;color:#27ae60;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
-            ✓ {{ session('success') }}
-        </div>
-    @endif
-    @if(session('error'))
-        <div style="background:#fde8e8;color:#c0392b;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
-            ⚠ {{ session('error') }}
-        </div>
-    @endif
-    @if($errors->any())
-        <div style="background:#fde8e8;color:#c0392b;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
-            {{ $errors->first() }}
-        </div>
-    @endif
+    <div class="diet-header-content">
+        <h2>Target Diet</h2>
+        <p>Analisis target dan progres diet anda</p>
+    </div>
+
+</div>
+
+@if(session('success'))
+    <div style="background:#e8f8e8;color:#27ae60;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
+        ✓ {{ session('success') }}
+    </div>
+@endif
+
+@if(session('error'))
+    <div style="background:#fde8e8;color:#c0392b;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
+        ⚠ {{ session('error') }}
+    </div>
+@endif
+
+@if($errors->any())
+    <div style="background:#fde8e8;color:#c0392b;padding:12px 16px;border-radius:8px;margin-bottom:16px;">
+        {{ $errors->first() }}
+    </div>
+@endif
 
     @if($skriningTerakhir)
-    <div class="skrining-banner">
+    <div class="skrining-banner
+    @if(strtolower($skriningTerakhir->status_imt) == 'underweight')
+        status-kurus
+    @elseif(strtolower($skriningTerakhir->status_imt) == 'normal')
+        status-normal
+    @elseif(strtolower($skriningTerakhir->status_imt) == 'overweight')
+        status-gemuk
+    @elseif(strtolower($skriningTerakhir->status_imt) == 'obesitas 1' || strtolower($skriningTerakhir->status_imt) == 'obesitas 2')
+        status-obesitas
+    @endif
+    ">
         <div class="icon-check">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="20 6 9 17 4 12"/>
@@ -202,12 +223,12 @@
                             <div class="input-group" style="flex:0.4;">
                                 <label style="font-size:11px;">Berat saat ini (kg)</label>
                                 <input type="number" name="berat_sekarang" step="0.1" placeholder="55.8"
-                                       style="padding:5px;" required>
+                                       <input type="number" name="berat_sekarang" step="0.1" placeholder="55.8" required>
                             </div>
                             <div class="input-group">
                                 <label style="font-size:11px;">Catatan</label>
                                 <input type="text" name="catatan" placeholder="Konsisten Olahraga"
-                                       style="padding:5px;text-align:left;">
+                                       <input type="text" name="catatan" placeholder="Konsisten Olahraga">
                             </div>
                             <button type="submit" class="btn-catat">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">

@@ -2,20 +2,41 @@
    HEADER
 ========================================= */
 
-.header-section {
-    margin-bottom: 25px;
+.diet-header{
+    background:#FFFFFF;
+    border-radius:30px;
+
+    padding:25px 35px;
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    margin-bottom:25px;
 }
 
-.header-section h2 {
-    font-size: 32px;
-    font-weight: 800;
-    color: #000;
-    margin-bottom: 5px;
+.diet-header-icon{
+    flex-shrink:0;
 }
 
-.header-section p {
-    color: #555;
-    font-size: 16px;
+.diet-header-icon svg{
+    width:70px;
+    height:70px;
+}
+
+.diet-header h2{
+    margin:0;
+    font-size:32px;
+    font-weight:800;
+    color:#000000;
+    line-height:1.1;
+}
+
+.diet-header p{
+    margin:6px 0 0;
+    font-size:15px;
+    color:#64748B;
+    font-weight:500;
 }
 
 /* =========================================
@@ -23,52 +44,145 @@
 ========================================= */
 
 .skrining-banner {
-    background: #EAF6FB;
-    border: 1px solid #B9DCEB;
-    border-radius: 18px;
-    padding: 20px;
+    background: #EFF6FF;
+    border: 1.5px solid #BFDBFE;
+    border-radius: 20px;
+    padding: 22px;
     display: flex;
     align-items: center;
     gap: 15px;
     margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+/* =========================================
+   STATUS WARNA IMT
+========================================= */
+
+/* UNDERWEIGHT */
+.skrining-banner.status-kurus {
+    background: #FFF9E6;
+    border-color: #FFE082;
+}
+
+.skrining-banner.status-kurus .icon-check {
+    border-color: #FFE082;
+    color: #FFB300;
+}
+
+.skrining-banner.status-kurus h4 {
+    color: #5D4037;
+}
+
+.skrining-banner.status-kurus .pill-tag {
+    background: #FFB300;
+    border-color: #FFB300;
+    color: white;
+}
+
+/* NORMAL */
+.skrining-banner.status-normal {
+    background: #E8F5E9;
+    border-color: #C8E6C9;
+}
+
+.skrining-banner.status-normal .icon-check {
+    border-color: #C8E6C9;
+    color: #2ECC71;
+}
+
+.skrining-banner.status-normal h4 {
+    color: #1B5E20;
+}
+
+.skrining-banner.status-normal .pill-tag {
+    background: #2ECC71;
+    border-color: #2ECC71;
+    color: white;
+}
+
+/* OVERWEIGHT */
+.skrining-banner.status-gemuk {
+    background: #FFF3E0;
+    border-color: #FFE0B2;
+}
+
+.skrining-banner.status-gemuk .icon-check {
+    border-color: #FFE0B2;
+    color: #FF9800;
+}
+
+.skrining-banner.status-gemuk h4 {
+    color: #E65100;
+}
+
+.skrining-banner.status-gemuk .pill-tag {
+    background: #FF9800;
+    border-color: #FF9800;
+    color: white;
+}
+
+/* OBESITAS */
+.skrining-banner.status-obesitas {
+    background: #FFEBEE;
+    border-color: #FFCDD2;
+}
+
+.skrining-banner.status-obesitas .icon-check {
+    border-color: #FFCDD2;
+    color: #E74C3C;
+}
+
+.skrining-banner.status-obesitas h4 {
+    color: #C62828;
+}
+
+.skrining-banner.status-obesitas .pill-tag {
+    background: #E74C3C;
+    border-color: #E74C3C;
+    color: white;
 }
 
 .skrining-banner .icon-check {
-    background: white;
-    padding: 8px;
-    border-radius: 10px;
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #C8DCE7;
-    color: #2E86AB;
+    border: 1px solid #BFDBFE;
+    color: #2563EB;
 }
 
 .banner-content h4 {
     font-size: 18px;
     margin-bottom: 8px;
-    color: #1A5670;
+    color: #1E3A5F;
+    font-weight: 700;
 }
 
 .tags-container {
     display: flex;
     gap: 10px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .pill-tag {
-    background: white;
-    border: 1px solid #B9DCEB;
-    padding: 5px 15px;
-    border-radius: 20px;
+    background: #FFFFFF;
+    border: 1.5px solid #BFDBFE;
+    padding: 7px 16px;
+    border-radius: 14px; 
     font-size: 13px;
-    color: #2E86AB;
+    color: #2563EB;
     font-weight: 600;
+    display: inline-flex;
+    align-items: center;
 }
 
 .date-text {
     font-size: 12px;
-    color: #666;
+    color: #64748B;
 }
 
 /* =========================================
@@ -86,11 +200,11 @@
 ========================================= */
 
 .diet-card {
-    background: #F6FBFD;
-    border: 1px solid #D5EAF3;
+    background: #FFFFFF;
+    border: 1.5px solid #DBEAFE;
     border-radius: 24px;
     padding: 25px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
 /* =========================================
@@ -101,10 +215,10 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     font-weight: 800;
     font-size: 18px;
-    color: #164863;
+    color: #000000;
 }
 
 /* =========================================
@@ -124,28 +238,33 @@
 .input-group label {
     display: block;
     font-size: 14px;
-    margin-bottom: 6px;
-    color: #1A5670;
+    margin-bottom: 7px;
+    color: #1E3A5F;
     font-weight: 600;
 }
 
 .input-group input,
 .input-group textarea {
     width: 100%;
-    padding: 11px;
-    border: 1px solid #C7DCE7;
-    border-radius: 10px;
-    background: white;
+    padding: 12px;
+    border: 1.5px solid #BFDBFE;
+    border-radius: 12px;
+    background: #FFFFFF;
     font-size: 14px;
-    color: #333;
-    transition: 0.2s;
+    color: #0F172A;
+    transition: all 0.3s ease;
+}
+
+.input-group textarea {
+    min-height: 90px;
+    resize: vertical;
 }
 
 .input-group input:focus,
 .input-group textarea:focus {
     outline: none;
-    border-color: #5DAED1;
-    box-shadow: 0 0 0 3px rgba(93,174,209,0.15);
+    border-color: #2563EB;
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.12);
 }
 
 /* =========================================
@@ -160,55 +279,69 @@
 }
 
 .tujuan-item {
-    background: #F3FAFD;
-    border: 1.5px solid #CDE5EF;
-    border-radius: 14px;
-    padding: 14px;
+    background: #EFF6FF;
+    border: 1.5px solid #BFDBFE;
+    border-radius: 16px;
+    padding: 15px;
     text-align: center;
     cursor: pointer;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 8px;
+
     font-size: 13px;
     font-weight: 600;
-    color: #2E86AB;
-    transition: all 0.2s ease;
+    color: #1E3A5F;
+
+    transition: all 0.3s ease;
 }
 
 .tujuan-item:hover {
-    background: #EAF6FB;
-    border-color: #79B8D4;
+    background: #DBEAFE;
+    border-color: #2563EB;
+    transform: translateY(-2px);
 }
 
 .tujuan-item.active {
-    background: #D8EEF8;
-    border: 2px solid #2E86AB;
-    color: #164863;
+    background: #DBEAFE;
+    border: 2px solid #2563EB;
+    color: #1E3A5F;
     transform: scale(1.02);
 }
 
 /* =========================================
-   BUTTON
+   BUTTON SAVE TARGET
 ========================================= */
 
 .btn-save-target {
     width: 100%;
-    background: #2E86AB;
-    color: white;
+
+    background: #2563EB;
+    color: #FFFFFF;
+
     border: none;
-    border-radius: 12px;
-    padding: 13px;
+    border-radius: 999px;
+
+    padding: 13px 20px;
+
     font-size: 16px;
     font-weight: 700;
+
     cursor: pointer;
+
     margin-top: 10px;
-    transition: all 0.2s ease;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 4px 10px rgba(37,99,235,0.25);
 }
 
 .btn-save-target:hover {
-    background: #246D8B;
+    background: #1D4ED8;
+    transform: translateY(-1px);
 }
 
 .btn-save-target:active {
@@ -216,8 +349,10 @@
 }
 
 .btn-save-target:disabled {
-    background: #B8C6CC;
+    background: #2563EB;
+    opacity: 0.55;
     cursor: not-allowed;
+    box-shadow: 0 4px 10px rgba(37,99,235,0.25);
 }
 
 /* =========================================
@@ -242,21 +377,21 @@
     display: flex;
     justify-content: space-between;
     font-weight: 700;
-    margin-bottom: 6px;
-    color: #164863;
+    margin-bottom: 8px;
+    color: #1E3A5F;
 }
 
 .progress-bar-bg {
-    background: #E2EEF3;
+    background: #DBEAFE;
     height: 12px;
-    border-radius: 20px;
+    border-radius: 999px;
     overflow: hidden;
 }
 
 .progress-fill {
-    background: linear-gradient(90deg, #2FA4D8, #67C1E8);
+    background: linear-gradient(90deg, #2563EB, #60A5FA);
     height: 100%;
-    border-radius: 20px;
+    border-radius: 999px;
 }
 
 /* =========================================
@@ -265,49 +400,54 @@
 
 .checkin-form {
     display: flex;
-    gap: 10px;
+    gap: 14px;
     margin-bottom: 20px;
     align-items: flex-end;
 }
 
-.checkin-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
-    text-align: center;
-}
-
-.checkin-table th {
-    padding: 12px;
-    background: #EAF6FB;
-    color: #164863;
-    font-weight: 700;
-    border-bottom: 2px solid #B9DCEB;
-}
-
-.checkin-table td {
-    padding: 12px;
-    border-bottom: 1px solid #DCEAF0;
-    background: white;
-}
+/* =========================================
+   BUTTON CATAT / NOTE
+========================================= */
 
 .btn-catat {
-    background: #2FA4D8;
-    color: white;
+    background: #2563EB;
+    color: #FFFFFF;
+
     border: none;
-    border-radius: 10px;
-    padding: 10px 16px;
+    border-radius: 999px;
+
+    padding: 0 24px;
+    height: 48px;
+
     display: flex;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    gap: 7px;
+
     cursor: pointer;
+
     font-size: 14px;
     font-weight: 600;
-    transition: all 0.2s ease;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 4px 10px rgba(37,99,235,0.25);
 }
 
 .btn-catat:hover {
-    background: #2389B8;
+    background: #1D4ED8;
+    transform: translateY(-1px);
+}
+
+.btn-catat:active {
+    transform: scale(0.95);
+}
+
+.btn-catat:hover {
+    background: #1D4ED8;
+    transform: translateY(-1px);
 }
 
 .btn-catat:active {
@@ -315,41 +455,67 @@
 }
 
 /* =========================================
-   STATUS BAR (FIXED = SENADA BLUE THEME)
+   TABLE
 ========================================= */
 
-/* ❌ TARGET BELUM TERCAPAI (TETAP BLUE THEME, BUKAN MERAH/ORANGE) */
-.warning-target {
-    background: #EAF6FB;
-    border: 1px solid #B9DCEB;
-    color: #164863;
+.checkin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 16px;
+}
 
-    padding: 12px 15px;
-    border-radius: 12px;
+.checkin-table th {
+    padding: 13px;
+    background: #EFF6FF;
+    color: #1E3A5F;
+    font-weight: 700;
+    border-bottom: 2px solid #BFDBFE;
+}
+
+.checkin-table td {
+    padding: 13px;
+    border-bottom: 1px solid #E2E8F0;
+    background: #FFFFFF;
+    color: #334155;
+}
+
+/* =========================================
+   STATUS BAR
+========================================= */
+
+.warning-target {
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    color: #1E3A5F;
+
+    padding: 13px 16px;
+    border-radius: 14px;
 
     font-size: 14px;
     font-weight: 600;
 
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 
     display: flex;
     align-items: flex-start;
     gap: 8px;
 }
 
-/* ⏳ CHECK-IN INFO (SAMA FAMILY BLUE - LEBIH SOFT) */
 .info-checkin {
-    background: #F6FBFD;
-    border: 1px solid #D5EAF3;
-    color: #2E86AB;
+    background: #F8FAFC;
+    border: 1px solid #DBEAFE;
+    color: #2563EB;
 
-    padding: 12px 15px;
-    border-radius: 12px;
+    padding: 13px 16px;
+    border-radius: 14px;
 
     font-size: 14px;
     font-weight: 500;
 
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 
     display: flex;
     align-items: flex-start;
@@ -361,6 +527,7 @@
 ========================================= */
 
 @media (max-width: 1024px) {
+
     .diet-grid {
         grid-template-columns: 1fr;
     }
@@ -376,5 +543,21 @@
     .checkin-form {
         flex-direction: column;
         align-items: stretch;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header-section h2 {
+        font-size: 28px;
+    }
+
+    .diet-card {
+        padding: 20px;
+    }
+
+    .skrining-banner {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

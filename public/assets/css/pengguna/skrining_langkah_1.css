@@ -1,23 +1,30 @@
-.skrining-header-top {
-    margin-bottom: 20px;
+.skrining-header-top{
+    background:#FFFFFF;
+    border-radius:30px;
+    padding:25px 35px;
+    margin-bottom:30px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.04);
 }
 
 .skrining-header-top > div{
     display:flex;
-    align-items:center !important;
-    gap:15px;
+    align-items:center;
+    gap:20px;
 }
 
-.skrining-header-top h2 {
-    font-size: 36px;
-    font-weight: 800;
-    margin-bottom: 0;
-    color: #0F172A;
-    line-height: 1.1;
+.skrining-header-top h2{
+    margin:0;
+    color:#0F172A;
+    font-size:32px;
+    font-weight:800;
+    line-height:1.1;
 }
 
-.skrining-header-top p {
-    display: none;
+.skrining-header-top p{
+    margin:8px 0 0;
+    color:#64748B;
+    font-size:15px;
+    display:block;
 }
 
 .step-info {

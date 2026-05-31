@@ -14,26 +14,21 @@ class JurnalMakananController extends Controller
     {
         $user = Auth::user();
 
-        // Ambil skrining terakhir user
         $skriningTerakhir = Screening::where('user_id', $user->id)
             ->latest()
             ->first();
 
-        // Ambil status IMT
         $statusImt = $skriningTerakhir
             ? $skriningTerakhir->status_imt
             : null;
 
-        // Ambil konsultasi aktif
         $konsultasiAktif = Consultation::where('user_id', $user->id)
             ->where('status', 'aktif')
             ->latest()
             ->first();
 
-        // Default mealPlans kosong
         $mealPlans = collect();
 
-        // Jika ada konsultasi aktif dan status IMT
         if ($konsultasiAktif && $statusImt) {
 
             $ahliGiziId = $konsultasiAktif->ahli_gizi_id;
@@ -46,38 +41,23 @@ class JurnalMakananController extends Controller
                 ->groupBy('kategori');
         }
 
-        // TAMBAHAN INI
-        $foods = Food::paginate(9);
-
-        // Kirim semua data ke blade
         return view('pengguna.rekomendasi_jurnal_makanan', compact(
             'statusImt',
             'mealPlans',
             'skriningTerakhir',
-            'konsultasiAktif',
-            'foods'
+            'konsultasiAktif'
         ));
     }
 
-    // DETAIL MAKANAN
     public function detail($id)
     {
         $plan = MealPlan::with('items.food')->findOrFail($id);
-
-        return view(
-            'pengguna.detail_makanan',
-            compact('plan')
-        );
+        return view('pengguna.detail_makanan', compact('plan'));
     }
 
-    // HALAMAN MAKANAN LAINNYA
     public function lainnya()
     {
-        $foods = Food::paginate(9);
-
-        return view(
-            'pengguna.jurnal_makanan',
-            compact('foods')
-        );
+        $foods = Food::paginate(6);
+        return view('pengguna.jurnal_makanan', compact('foods'));
     }
 }

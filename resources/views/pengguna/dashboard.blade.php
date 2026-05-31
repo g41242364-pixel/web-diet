@@ -4,10 +4,13 @@
 <link rel="stylesheet" href="{{ asset('assets/css/pengguna/dashboard.css') }}">
 
 @section('content')
-    <div class="header-title">
-        <h2>DASHBOARD SISD</h2>
+    <!-- HEADER -->
+<div class="dashboard-header">
+    <div class="dashboard-header-content">
+        <h2>Dashboard SISD</h2>
         <p>Selamat datang, {{ auth()->user()->name }}</p>
     </div>
+</div>
 
     @if(session('success'))
         <div style="background:#e8f8e8;color:#27ae60;padding:12px 16px;border-radius:8px;margin-bottom:16px;font-size:14px;">
@@ -231,7 +234,7 @@
 
                         <a
                             href="{{ route('pengguna.konsultasi.chat', $konsultasiTerakhir->id) }}"
-                            style="display:inline-block;margin-top:12px;padding:8px 16px;background:#90D2ED;color:#fff;border-radius:8px;font-size:13px;text-decoration:none;"
+                            class="dashboard-chat-btn"
                         >
                             Buka Chat →
                         </a>

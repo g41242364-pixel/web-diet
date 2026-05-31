@@ -12,8 +12,8 @@
                 <circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/>
             </svg>
             <div>
-                <h2>Skrining IMT</h2>
-                <p>Skrining Bertahap : Fase 1 → Fase 2 → Input IMT → Hasil.</p>
+                <h2>Skrining Diet</h2>
+                <p>Lengkapi skrining untuk mengetahui kondisi dan pola hidup Anda.</p>
             </div>
         </div>
     </div>

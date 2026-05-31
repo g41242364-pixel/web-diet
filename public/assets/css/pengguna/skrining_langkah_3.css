@@ -1,24 +1,37 @@
-.skrining-header-top {
-    margin-bottom: 20px;
+.skrining-header-top{
+    background:#FFFFFF;
+    border-radius:30px;
+    padding:25px 35px;
+    margin-bottom:30px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.04);
 }
 
-.skrining-header-top h2 {
-    font-size: 36px;
-    font-weight: 800;
-    margin-bottom: 0;
-    color: #FFFFFF;
+.skrining-header-top > div{
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
 
-.skrining-header-top p {
-    font-size: 16px;
-    color: #EFF6FF;
+.skrining-header-top h2{
+    margin:0;
+    color:#0F172A;
+    font-size:32px;
+    font-weight:800;
+    line-height:1.1;
+}
+
+.skrining-header-top p{
+    margin-top:6px;
+    color:#64748B;
+    font-size:15px;
+    display:block;
 }
 
 .step-info {
     display: flex;
     justify-content: flex-end;
     font-size: 14px;
-    color: #EFF6FF;
+    color: #475569;
     margin-bottom: 5px;
 }
 
@@ -27,33 +40,35 @@
     height: 10px;
     background: #1E3A5F;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     overflow: hidden;
 }
 
 .progress-fill {
     height: 100%;
     background: #2563EB;
-    width: 100%;
+    width: 50%;
+    transition: width 0.3s ease;
 }
 
 .nav-steps {
     display: flex;
     gap: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     align-items: center;
 }
 
 .nav-step-item {
     flex: 1;
     background: #EFF6FF;
-    padding: 5px;
+    padding: 12px;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     color: #1E3A5F;
-    border: 1px solid #2563EB;
-    font-size: 14px;
-    border-radius: 10px;
+    border: 2px solid #BFDBFE;
+    font-size: 15px;
+    border-radius: 14px;
+    transition: all 0.3s ease;
 }
 
 .nav-step-item.active {
@@ -63,80 +78,116 @@
 }
 
 .nav-arrow {
-    color: #FFFFFF;
-    font-weight: bold;
+    color: #1E3A5F;
+    font-weight: 700;
+    font-size: 24px;
 }
 
 .skrining-box {
     background-color: #FFFFFF;
-    border-radius: 18px;
-    padding: 40px;
+    border-radius: 20px;
+    padding: 35px;
     min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
-.result-section {
-    border-bottom: 2px solid #BFDBFE;
-    padding-bottom: 25px;
-    text-align: center;
+.fase-title {
+    display: none;
 }
 
-.result-section:last-child {
-    border-bottom: none;
+.question-item {
+    margin-bottom: 24px;
 }
 
-.section-header {
+.question-text {
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: block;
+    color: #0F172A;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.option-item {
+    background: #EFF6FF;
+    border: 1.5px solid #BFDBFE;
+    padding: 14px 18px;
+    border-radius: 14px;
     display: flex;
     align-items: center;
-    gap: 15px;
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-align: left;
-    color: #1E3A5F;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #0F172A;
+    transition: all 0.3s ease;
 }
 
-.label-text {
-    font-size: 22px;
-    color: #1E3A5F;
-    margin-bottom: 15px;
-    display: block;
+.option-item:hover {
+    background: #DBEAFE;
+    border-color: #2563EB;
+    transform: translateY(-2px);
 }
 
-.status-pill {
-    background: #EFF6FF;
-    border: 1px solid #2563EB;
-    border-radius: 30px;
-    padding: 10px 60px;
-    font-size: 24px;
-    display: inline-block;
-    color: #1E3A5F;
-    margin-bottom: 15px;
+.option-item input[type="radio"] {
+    accent-color: #2563EB;
+    width: 16px;
+    height: 16px;
 }
 
-.advice-text {
-    font-size: 16px;
-    color: #475569;
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
 }
 
-.btn-konsultasi {
+.btn-nav {
     background: #2563EB;
     border: none;
-    border-radius: 15px;
-    padding: 12px 30px;
-    font-weight: 600;
-    font-size: 18px;
+    padding: 12px 28px;
+    border-radius: 24px;
     cursor: pointer;
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: #FFFFFF;
-    transition: background 0.3s;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(37,99,235,0.25);
 }
 
-.btn-konsultasi:hover {
+.btn-nav:hover {
     background: #1D4ED8;
+    transform: translateY(-1px);
+}
+
+@media(max-width:768px){
+
+    .options-grid{
+        grid-template-columns:1fr;
+    }
+
+    .nav-steps{
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .question-text{
+        font-size:16px;
+    }
+
+    .skrining-header-top h2{
+        font-size:28px;
+    }
+
+    .skrining-box{
+        padding:20px;
+    }
+
 }

@@ -1,276 +1,322 @@
+:root {
+    --primary-blue: #DBEAFE;
+    --dark-blue: #2563EB;
+    --dark-blue-hover: #1D4ED8;
+    --bg-light: #F8FAFC;
+    --white: #FFFFFF;
+    --text-dark: #0F172A;
+    --border-color: #BFDBFE;
+    --container-blue-bg: #DBEAFE;
+}
 
+/* =========================================
+   PAGE
+========================================= */
 
-        :root {
-            --primary-blue: #90D2ED;
-            --dark-blue: #5BA4C4;
-            --bg-light: #F0F7FA;
-            --white: #ffffff;
-            --text-dark: #333333;
-            --border-color: #E1E8ED;
-            --card-header-blue: #5BA4C4;
-            --container-blue-bg: #C6E6F6;
-        }
+.main-wrapper{
+    width: 100%;
+    padding: 0;
+    background: var(--bg-light);
+    min-height: 100vh;
+    box-sizing: border-box;
+}
 
-        .main-wrapper {
-            background-color: var(--bg-light);
-            min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding-bottom: 40px;
-        }
+/* =========================================
+   HEADER CARD
+========================================= */
 
-        .jurnal-header {
-            background-color: var(--white);
-            padding: 15px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid var(--border-color);
-        }
+.nutrition-header-card{
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border: 1px solid #BFDBFE;
+    box-shadow: 0 4px 15px rgba(0,0,0,.05);
+}
 
-        .header-left {
-            flex: 1;
-        }
+.nutrition-header-card h1{
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+    color: #0F172A;
+    line-height: 1.2;
+}
 
-        .header-center {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            justify-content: flex-end;
-        }
+.nutrition-header-card p{
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: #64748B;
+}
 
-        .btn-back {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 18px;
-            background-color: #e6f3f8;
-            color: var(--dark-blue);
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
+/* =========================================
+   BUTTON BACK
+========================================= */
 
-        .btn-back:hover {
-            background-color: var(--dark-blue);
-            color: var(--white);
-            transform: translateX(-3px);
-            box-shadow: 0 4px 10px rgba(91, 164, 196, 0.2);
-        }
+.btn-back{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 
-        .header-icon {
-            display: flex;
-            align-items: center;
-        }
+    margin-top: 18px;
+    margin-bottom: 20px;
 
-        .header-text h1 {
-            margin: 0;
-            font-size: 24px;
-            color: #000;
-            font-weight: 700;
-        }
+    padding: 12px 24px;
 
-        .header-text p {
-            margin: 3px 0 0;
-            color: #666;
-            font-size: 13px;
-        }
+    background: #2563EB;
+    color: #FFFFFF;
 
-        .content-container {
-            margin: 30px 40px;
-            padding: 30px;
-            background-color: var(--container-blue-bg);
-            border-radius: 18px;
-            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.02);
-        }
+    text-decoration: none;
+    border-radius: 30px;
 
-        .foods-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+    font-size: 14px;
+    font-weight: 600;
 
-        .food-card {
-            background: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-        }
+    box-shadow: 0 4px 10px rgba(37,99,235,0.25);
 
-        .food-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
-        }
+    transition: all .3s ease;
+}
 
-        .food-card-header {
-            background-color: var(--card-header-blue);
-            color: var(--white);
-            padding: 14px 16px;
-            text-align: center;
-            font-weight: 700;
-            font-size: 15px;
-            letter-spacing: 0.3px;
-            line-height: 1.3;
-        }
+.btn-back:hover{
+    background: #1D4ED8;
+    color: #FFFFFF;
+    transform: translateY(-1px);
+}
 
-        .food-card-body {
-            display: flex;
-            padding: 20px;
-            gap: 15px;
-            align-items: center;
-        }
+/* =========================================
+   CONTENT CONTAINER
+========================================= */
 
-        .image-wrapper {
-            flex-shrink: 0;
-        }
+.content-container{
+    background: #DBEAFE;
+    border-radius: 30px;
+    padding: 35px;
+}
 
-        .food-image {
-            width: 95px;
-            height: 95px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--bg-light);
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-        }
+/* =========================================
+   GRID MAKANAN
+========================================= */
 
-        .food-nutrition-info {
-            flex-grow: 1;
-        }
+.foods-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 30px;
+}
 
-        .nutrition-title {
-            margin: 0 0 8px;
-            font-size: 13px;
-            font-weight: 700;
-            color: #111;
-            border-bottom: 1.5px solid var(--bg-light);
-            padding-bottom: 4px;
-        }
+/* =========================================
+   CARD MAKANAN
+========================================= */
 
-        .nutrition-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+.food-card{
+    background: #FFFFFF;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,.05);
+    transition: all .3s ease;
+}
 
-        .nutrition-list li {
-            display: flex;
-            justify-content: space-between;
-            font-size: 12px;
-            margin-bottom: 5px;
-            color: #555;
-            line-height: 1.4;
-        }
+.food-card:hover{
+    transform: translateY(-4px);
+}
 
-        .nutrition-list li .label {
-            font-weight: 500;
-        }
+.food-card-header{
+    background: #2563EB;
+    color: #FFFFFF;
+    padding: 18px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
 
-        .nutrition-list li .value {
-            font-weight: 600;
-            color: #111;
-        }
+/* =========================================
+   BODY CARD
+========================================= */
 
-        .empty-state {
-            grid-column: span 3;
-            text-align: center;
-            padding: 50px 20px;
-            background: var(--white);
-            border-radius: 12px;
-            color: #777;
-            font-size: 15px;
-        }
+.food-card-body{
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    min-height: 220px;
+}
 
-        .pagination-wrapper {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-        }
+/* =========================================
+   IMAGE
+========================================= */
 
-        .pagination-wrapper .pagination {
-            display: flex;
-            list-style: none;
-            padding-left: 0;
-            gap: 6px;
-            margin: 0;
-        }
+.image-wrapper{
+    flex-shrink: 0;
+}
 
-        .pagination-wrapper .page-item {
-            margin: 0;
-        }
+.food-image{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #DBEAFE;
+    box-shadow: 0 3px 8px rgba(0,0,0,.08);
+}
 
-        .pagination-wrapper .page-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 38px;
-            height: 38px;
-            padding: 0 12px;
-            color: var(--dark-blue) !important;
-            text-decoration: none;
-            background-color: var(--white) !important;
-            border: 1px solid var(--border-color) !important;
-            border-radius: 8px !important;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.2s ease;
-        }
+/* =========================================
+   NUTRISI
+========================================= */
 
-        .pagination-wrapper .page-item.active .page-link,
-        .pagination-wrapper .page-link.active {
-            background-color: var(--dark-blue) !important;
-            border-color: var(--dark-blue) !important;
-            color: var(--white) !important;
-        }
+.food-nutrition-info{
+    flex: 1;
+}
 
-        .pagination-wrapper .page-item.disabled .page-link {
-            color: #b0bfc6 !important;
-            pointer-events: none;
-            background-color: #f5f8fa !important;
-            border-color: var(--border-color) !important;
-            opacity: 0.7;
-        }
+.nutrition-title{
+    margin: 0 0 12px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1E3A5F;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #E5E7EB;
+}
 
-        .pagination-wrapper .page-link:hover:not(.active) {
-            background-color: var(--primary-blue) !important;
-            border-color: var(--primary-blue) !important;
-            color: #000 !important;
-        }
+.nutrition-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        @media (max-width: 1024px) {
-            .foods-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+.nutrition-list li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #475569;
+}
 
-        @media (max-width: 768px) {
-            .jurnal-header {
-                flex-direction: column-reverse;
-                align-items: stretch;
-                gap: 15px;
-                text-align: center;
-            }
+.nutrition-list .label{
+    font-weight: 500;
+}
 
-            .header-center {
-                flex-direction: column;
-                justify-content: center;
-            }
+.nutrition-list .value{
+    font-weight: 700;
+    color: #0F172A;
+}
 
-            .foods-grid {
-                grid-template-columns: 1fr;
-            }
+/* =========================================
+   EMPTY STATE
+========================================= */
 
-            .content-container {
-                margin: 15px;
-                padding: 15px;
-            }
+.empty-state{
+    grid-column: 1/-1;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 50px 20px;
+    text-align: center;
+    color: #64748B;
+}
 
-            .btn-back {
-                width: 100%;
-                justify-content: center;
-            }
-        }
+/* =========================================
+   PAGINATION
+========================================= */
 
+.pagination-wrapper{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.page-item{
+    list-style: none;
+}
+
+.page-link{
+    min-width: 45px;
+    height: 45px;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px !important;
+    border: 1px solid #BFDBFE !important;
+
+    background: #FFFFFF !important;
+    color: #2563EB !important;
+
+    font-size: 13px; /* sebelumnya mengikuti default Bootstrap */
+    font-weight: 600;
+
+    text-decoration: none;
+    transition: .3s;
+}
+
+.page-link:hover{
+    background: #DBEAFE !important;
+}
+
+.page-item.active .page-link{
+    background: #2563EB !important;
+    border-color: #2563EB !important;
+    color: #FFFFFF !important;
+}
+
+.page-item.disabled .page-link{
+    opacity: .5;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1400px){
+
+    .foods-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px){
+
+    .foods-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .food-card-body{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nutrition-header-card h1{
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 768px){
+
+    .main-wrapper{
+        padding: 15px;
+    }
+
+    .content-container{
+    background: #DBEAFE;
+    border-radius: 30px;
+    padding: 35px;
+    height: auto;
+    min-height: unset;
+}
+
+    .nutrition-header-card{
+        padding: 20px;
+    }
+
+    .nutrition-header-card h1{
+        font-size: 24px;
+    }
+
+    .food-image{
+        width: 100px;
+        height: 100px;
+    }
+}
