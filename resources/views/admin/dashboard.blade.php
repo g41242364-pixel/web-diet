@@ -146,26 +146,38 @@
 const ctx = document.getElementById('bmiChart').getContext('2d');
 
 new Chart(ctx, {
-
     type: 'doughnut',
-
     data: {
-
         labels: {!! json_encode($distribusiImt->keys()) !!},
-
         datasets: [{
             data: {!! json_encode($distribusiImt->values()) !!},
 
             backgroundColor: [
-                '#90D2ED',
-                '#2FA4D8',
-                '#72C4E6',
-                '#B7E4F7'
+                '#F7C948', // Kurus
+                '#2ECC71', // Normal
+                '#F39C12', // Gemuk
+                '#E74C3C'  // Obesitas
             ],
 
-            borderWidth:0
+            borderColor: '#FFFFFF',
+            borderWidth: 5,
+            hoverOffset: 15
         }]
     },
+
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+
+        cutout: '60%'
+    }
+});
 
     options:{
 
