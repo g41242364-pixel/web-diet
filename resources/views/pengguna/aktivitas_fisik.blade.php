@@ -111,7 +111,6 @@
     </div>
 
     <div class="pagination-container">
-        {{ $aktivitas->links() }}
-    </div>
+    {{ $aktivitas->onEachSide(1)->links('pagination::bootstrap-5') }}
 </div>
 @endsection
