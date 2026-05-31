@@ -9,7 +9,7 @@
     $statusIconColor = 'var(--default-accent)';
 
     if ($statusImt) {
-        $statusLower = strtolower($statusImt ?? '');
+        $statusLower = strtolower($statusImt);
 
         if (str_contains($statusLower, 'underweight')) {
             $statusClass = 'status-kurus';
@@ -32,145 +32,149 @@
 
 <style>
     :root {
-        --kurus-bg: #FFF9E6;
-        --kurus-border: #FFE082;
-        --kurus-accent: #FFB300;
-        --kurus-text: #5D4037;
+        --kurus-bg:#FFF9E6;
+        --kurus-border:#FFE082;
+        --kurus-accent:#FFB300;
+        --kurus-text:#5D4037;
 
-        --normal-bg: #E8F5E9;
-        --normal-border: #C8E6C9;
-        --normal-accent: #2ECC71;
-        --normal-text: #1B5E20;
+        --normal-bg:#E8F5E9;
+        --normal-border:#C8E6C9;
+        --normal-accent:#2ECC71;
+        --normal-text:#1B5E20;
 
-        --gemuk-bg: #FFF3E0;
-        --gemuk-border: #FFE0B2;
-        --gemuk-accent: #FF9800;
-        --gemuk-text: #E65100;
+        --gemuk-bg:#FFF3E0;
+        --gemuk-border:#FFE0B2;
+        --gemuk-accent:#FF9800;
+        --gemuk-text:#E65100;
 
-        --obesitas-bg: #FFEBEE;
-        --obesitas-border: #FFCDD2;
-        --obesitas-accent: #E74C3C;
-        --obesitas-accent2: #e74d3c9a;
-        --obesitas-text: #C62828;
+        --obesitas-bg:#FFEBEE;
+        --obesitas-border:#FFCDD2;
+        --obesitas-accent:#E74C3C;
+        --obesitas-accent2:#e74d3c9a;
+        --obesitas-text:#C62828;
 
-        --default-bg: #ffffff;
-        --default-border: #E1E8ED;
-        --default-accent: #7BB9D8;
-        --default-text: #262626;
+        --default-bg:#ffffff;
+        --default-border:#E1E8ED;
+        --default-accent:#7BB9D8;
+        --default-text:#262626;
 
-        --bg-light: #F0F7FA;
-        --white: #ffffff;
+        --bg-light:#F0F7FA;
+        --white:#fff;
     }
 
-    .main-wrapper {
-        padding: 20px 40px 40px;
-        background-color: var(--bg-light);
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
+    .main-wrapper{
+        padding:20px 40px 40px;
+        background:var(--bg-light);
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
     }
 
-    .page-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 30px;
+    .page-header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin-bottom:30px;
     }
 
-    .header-content {
-        display: flex;
-        align-items: center;
-        gap: 24px;
+    .header-content{
+        display:flex;
+        align-items:center;
+        gap:24px;
     }
 
-    .header-icon-wrapper {
-        background: #E8F0F5;
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .header-icon-wrapper{
+        width:70px;
+        height:70px;
+        border-radius:50%;
+        background:#E8F0F5;
+        display:flex;
+        align-items:center;
+        justify-content:center;
     }
 
-    .header-text h2 {
-        font-size: 42px;
-        font-weight: 800;
-        margin: 0;
+    .header-text h2{
+        font-size:42px;
+        font-weight:800;
+        margin:0;
     }
 
-    .btn-others {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background-color: #7BB9D8;
-        color: #fff;
-        padding: 12px 24px;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: 600;
+    .btn-others{
+        display:inline-flex;
+        align-items:center;
+        gap:8px;
+        background:#7BB9D8;
+        color:#fff;
+        padding:12px 24px;
+        border-radius:30px;
+        text-decoration:none;
+        font-weight:600;
     }
 
-    .screening-banner {
-        display: flex;
-        align-items: center;
-        padding: 20px 30px;
-        border-radius: 16px;
-        margin-bottom: 30px;
-        border: 1px solid var(--default-border);
-        border-left: 5px solid var(--default-accent);
-        background: var(--default-bg);
+    .screening-banner{
+        display:flex;
+        align-items:center;
+        gap:20px;
+        padding:20px 30px;
+        border-radius:16px;
+        margin-bottom:30px;
+        border:1px solid var(--default-border);
+        border-left:5px solid var(--default-accent);
+        background:var(--default-bg);
     }
 
-    .article-container-box {
-        background: #D8EBF3;
-        border-radius: 32px;
-        padding: 40px;
+    .article-container-box{
+        background:#D8EBF3;
+        border-radius:32px;
+        padding:40px;
     }
 
-    .article-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
+    .article-grid{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:30px;
     }
 
-    .article-card {
-        background: #fff;
-        border-radius: 28px;
-        overflow: hidden;
-        text-decoration: none;
-        color: inherit;
+    .article-card{
+        background:#fff;
+        border-radius:28px;
+        overflow:hidden;
+        text-decoration:none;
+        color:#000;
+        display:flex;
+        flex-direction:column;
     }
 
-    .card-banner {
-        height: 160px;
-        overflow: hidden;
+    .card-banner{
+        height:160px;
     }
 
-    .card-banner img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .card-banner img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
     }
 
-    .card-content {
-        padding: 25px;
+    .card-content{
+        padding:25px;
     }
 
-    .category-tag {
-        background: #5D99C6;
-        color: #fff;
-        padding: 5px 14px;
-        border-radius: 12px;
-        font-size: 11px;
-        display: inline-block;
-        margin-bottom: 12px;
+    .category-tag{
+        background:#5D99C6;
+        color:#fff;
+        padding:5px 14px;
+        border-radius:12px;
+        font-size:11px;
+        display:inline-block;
+        margin-bottom:12px;
     }
 </style>
 
 <div class="main-wrapper">
 
+    <!-- HEADER -->
     <div class="page-header">
+
         <div class="header-content">
             <div class="header-icon-wrapper">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="#5BA4C4">
@@ -187,15 +191,15 @@
         <a href="{{ route('pengguna.artikel.all') }}" class="btn-others">
             Artikel Lainnya
         </a>
+
     </div>
 
+    <!-- STATUS -->
     @if ($statusImt)
         <div class="screening-banner {{ $statusClass }}">
-            <div>
-                <svg width="30" height="30" stroke="{{ $statusIconColor }}">
-                    <polyline points="20 6 9 17 4 12" />
-                </svg>
-            </div>
+            <svg width="30" height="30" stroke="{{ $statusIconColor }}">
+                <polyline points="20 6 9 17 4 12"/>
+            </svg>
 
             <div>
                 <h3>HASIL SKRINING : {{ strtoupper($statusImt) }}</h3>
@@ -204,6 +208,7 @@
         </div>
     @endif
 
+    <!-- GRID ARTIKEL -->
     <div class="article-container-box">
 
         <div class="article-grid">
@@ -212,12 +217,9 @@
                 <a href="{{ route('pengguna.artikel.detail', $artikel->id) }}" class="article-card">
 
                     <div class="card-banner">
-                        @if ($artikel->gambar)
-                            <img src="{{ asset('assets/images/artikel/' . $artikel->gambar) }}"
-                                alt="{{ $artikel->judul }}">
-                        @else
-                            <img src="{{ asset('assets/images/mangkok.png') }}" alt="Artikel">
-                        @endif
+                        <img src="{{ $artikel->gambar 
+                            ? asset('assets/images/artikel/'.$artikel->gambar)
+                            : asset('assets/images/mangkok.png') }}">
                     </div>
 
                     <div class="card-content">
@@ -229,7 +231,7 @@
 
                 </a>
             @empty
-                <div style="grid-column:1/-1; text-align:center; padding:40px; color:#aaa;">
+                <div style="grid-column:1/-1;text-align:center;padding:40px;color:#aaa;">
                     Belum ada artikel
                 </div>
             @endforelse
