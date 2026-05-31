@@ -61,54 +61,60 @@
 
 .activity-card {
     background: #ffffff;
-    border-radius: 25px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 28px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    border: 1.5px solid #DBEAFE;
     position: relative;
     display: flex;
     flex-direction: column;
     height: 100%;
-    transition: transform 0.3s ease;
+    transition: transform .3s ease, box-shadow .3s ease;
+    box-sizing: border-box;
 }
 
 .activity-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
 }
 
 .card-number {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    background: #90D2ED;
-    width: 40px;
-    height: 40px;
+    top: 25px;
+    left: 25px;
+    background: #2563EB;
+    color: #fff;
+    width: 38px;
+    height: 38px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: 18px;
+    font-size: 16px;
     z-index: 2;
 }
 
 .activity-img {
     width: 100%;
-    height: 150px;
+    height: 160px;
     object-fit: contain;
-    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .activity-card h4 {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 800;
-    margin-bottom: 5px;
+    margin: 0 0 10px;
+    color: #000;
 }
 
 .activity-card .desc {
-    font-size: 12px;
-    color: #666;
-    line-height: 1.4;
-    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin: 0 0 15px;
 }
 
 .benefit-row {
@@ -116,44 +122,59 @@
     align-items: flex-start;
     gap: 10px;
     margin-bottom: 20px;
-}
-
-.benefit-row svg {
-    width: 18px;
-    height: 18px;
-    color: #FF5C5C;
-    flex-shrink: 0;
+    padding-top: 10px;
+    border-top: 1px solid #F0F2F5;
 }
 
 .benefit-row p {
-    font-size: 11px;
-    color: #333;
+    font-size: 12px;
+    color: #444;
+    margin: 0;
+    line-height: 1.4;
     font-weight: 500;
 }
 
-.tag-row {
+.tags-container {
     display: flex;
-    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
     margin-top: auto;
+    margin-bottom: 15px;
 }
 
-.tag {
-    flex: 1;
-    background: #7BB9D8;
-    color: white;
-    padding: 6px 4px;
-    border-radius: 15px;
-    font-size: 10px;
+.tag-pill {
+    background-color: #2563EB;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+}
+
+.tag-pill svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.category-tag-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 4px;
-    font-weight: 600;
 }
 
-.tag svg {
-    width: 12px;
-    height: 12px;
+.category-tag {
+    font-size: 11px;
+    font-weight: 600;
+    color: #888;
+    background-color: #F1F3F5;
+    padding: 5px 14px;
+    border-radius: 12px;
+    display: inline-block;
 }
 
 .pagination-container {
