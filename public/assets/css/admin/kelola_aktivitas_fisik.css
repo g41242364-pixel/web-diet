@@ -99,8 +99,19 @@
     border-color:var(--primary);
 }
 
-select.form-control-input{
-    padding-right:50px;
+select.form-control-input,
+select.modal-input-custom{
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+
+    background-image:none !important;
+
+    padding-right:20px;
+}
+
+select::-ms-expand{
+    display:none;
 }
 
 /* textarea */
@@ -140,6 +151,17 @@ textarea.form-control-input{
     padding:8px 14px;
     font-weight:600;
     cursor:pointer;
+}
+
+.action-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+}
+
+.action-buttons form{
+    margin:0;
 }
 
 .btn-delete{
@@ -472,14 +494,5 @@ textarea.form-control-input{
 
     .action-buttons{
         flex-direction:column;
-    }
-
-    .form-control-input,
-    .modal-input-custom,
-    select{
-        appearance:none;
-        -webkit-appearance:none;
-        -moz-appearance:none;
-        background-image:none !important;
     }
 }
