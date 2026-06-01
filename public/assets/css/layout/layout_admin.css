@@ -1,18 +1,14 @@
 /* ==================================================
-   SISD HEALTH THEME
+   THEME SISD MODERN
 ================================================== */
 
 :root{
-    --sidebar-bg:#90D2ED;
-    --sidebar-dark:#72C4E6;
-    --main-bg:#F0F7FA;
-    --card-bg:#FFFFFF;
-
-    --text-blue:#2FA4D8;
-    --text-dark:#334155;
-    --text-muted:#64748B;
-
-    --danger:#FF6B6B;
+    --primary:#2563EB;
+    --primary-dark:#1E40AF;
+    --white:#FFFFFF;
+    --bg:#F8FAFC;
+    --text:#0F172A;
+    --muted:#64748B;
 }
 
 *{
@@ -23,8 +19,8 @@
 }
 
 body{
-    background:var(--main-bg);
-    color:var(--text-dark);
+    background:var(--bg);
+    color:var(--text);
 }
 
 /* ==================================================
@@ -32,56 +28,41 @@ body{
 ================================================== */
 
 .sidebar{
-    width:280px;
+    width:260px;
     height:100vh;
-
     position:fixed;
-    top:0;
     left:0;
+    top:0;
 
     overflow-y:auto;
     overflow-x:hidden;
 
     background:linear-gradient(
         180deg,
-        var(--sidebar-bg),
-        var(--sidebar-dark)
+        #1E40AF,
+        #2563EB
     );
 
     display:flex;
     flex-direction:column;
 
-    box-shadow:
-        0 8px 30px rgba(0,0,0,.08);
+    box-shadow:4px 0 25px rgba(0,0,0,.08);
 }
-
-/* ==================================================
-   HEADER SIDEBAR
-================================================== */
 
 .sidebar-header{
-    padding:25px;
-}
-
-.brand-section{
-    display:flex;
-    align-items:center;
-    gap:10px;
+    padding:30px 20px;
 }
 
 .brand-section h1{
     color:white;
-    font-size:32px;
+    font-size:28px;
     font-weight:800;
-    letter-spacing:1px;
+    margin:0;
 }
 
 .sidebar-user-info{
-    margin-top:12px;
-
-    color:white;
-    opacity:.9;
-
+    margin-top:15px;
+    color:rgba(255,255,255,.85);
     font-size:13px;
 }
 
@@ -93,41 +74,38 @@ body{
     list-style:none;
     padding:0;
     margin:0;
-
     flex:1;
 }
 
 .nav-item{
     display:flex;
     align-items:center;
-    gap:14px;
+    gap:12px;
 
     margin:8px 14px;
-    padding:14px 18px;
+    padding:13px 16px;
 
     border-radius:14px;
 
+    color:rgba(255,255,255,.85);
     text-decoration:none;
-
-    color:white;
 
     transition:.25s;
 }
 
 .nav-item svg{
-    width:22px;
-    height:22px;
+    width:20px;
+    height:20px;
 }
 
 .nav-item:hover{
-    background:rgba(255,255,255,.18);
+    background:rgba(255,255,255,.12);
+    transform:translateX(4px);
 }
 
 .nav-item.active{
     background:white;
-
-    color:var(--text-blue);
-
+    color:#1E40AF;
     font-weight:600;
 
     box-shadow:
@@ -145,11 +123,8 @@ body{
 
     border:none;
 
-    background:white;
-
-    color:var(--danger);
-
-    font-weight:600;
+    background:#EF4444;
+    color:white;
 
     padding:14px;
 
@@ -166,49 +141,18 @@ body{
 }
 
 .logout-btn:hover{
+    background:#DC2626;
     transform:translateY(-2px);
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,.08);
 }
 
 /* ==================================================
-   MAIN CONTENT
+   CONTENT
 ================================================== */
 
 .main-content{
-    margin-left:280px;
-
+    margin-left:260px;
     padding:30px;
-
     min-height:100vh;
-}
-
-/* ==================================================
-   PAGE HEADER
-================================================== */
-
-.page-header{
-    background:white;
-
-    padding:25px;
-
-    border-radius:20px;
-
-    margin-bottom:20px;
-
-    box-shadow:
-        0 8px 20px rgba(0,0,0,.05);
-}
-
-.page-header h2{
-    color:var(--text-blue);
-
-    margin-bottom:6px;
-}
-
-.page-header p{
-    color:var(--text-muted);
 }
 
 /* ==================================================
@@ -217,13 +161,11 @@ body{
 
 .card{
     background:white;
-
     border-radius:20px;
-
     padding:24px;
 
     box-shadow:
-        0 10px 25px rgba(0,0,0,.05);
+        0 10px 25px rgba(0,0,0,.06);
 }
 
 /* ==================================================
@@ -231,11 +173,10 @@ body{
 ================================================== */
 
 .btn-primary{
-    border:none;
-
-    background:var(--text-blue);
-
+    background:#2563EB;
     color:white;
+
+    border:none;
 
     padding:12px 20px;
 
@@ -247,20 +188,7 @@ body{
 }
 
 .btn-primary:hover{
-    background:#1F8BC0;
-}
-
-/* ==================================================
-   SCROLLBAR
-================================================== */
-
-.sidebar::-webkit-scrollbar{
-    width:6px;
-}
-
-.sidebar::-webkit-scrollbar-thumb{
-    background:rgba(255,255,255,.4);
-    border-radius:20px;
+    background:#1E40AF;
 }
 
 /* ==================================================
@@ -274,12 +202,13 @@ body{
     }
 
     .sidebar-user-info,
-    .brand-section h1,
+    .sidebar-header h1,
     .nav-item span{
         display:none;
     }
 
     .main-content{
         margin-left:80px;
+        width:calc(100% - 80px);
     }
 }

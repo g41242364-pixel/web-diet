@@ -62,7 +62,7 @@
                             <option value="Fleksibel">Fleksibel</option>
                         </select>
                     </div>
-                    <<div class="form-group">
+                    <div class="form-group">
                         <label>Link YouTube</label>
                         <input type="url" name="link_youtube" placeholder="https://www.youtube.com/watch?v=..." class="form-control-input">
                     </div>
@@ -109,21 +109,30 @@
                                 </span>
                             </td>
                             <td style="text-align:center;">
-                                <button
-                                    onclick="document.getElementById('editModal{{ $act->id }}').style.display='flex'"
-                                    style="padding:6px 14px;background:#f39c12;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:13px;font-weight:700;margin-right:4px;">
-                                    Edit
-                                </button>
+    <div class="action-buttons">
 
-                                <form action="{{ route('admin.aktivitas.hapus', $act->id) }}" method="POST"
-                                    style="display:inline;" onsubmit="return confirm('Hapus aktivitas ini?')">
-                                    @csrf
-                                    <button type="submit"
-                                        style="padding:6px 14px;background:#e74c3c;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:13px;font-weight:700;">
-                                        Hapus
-                                    </button>
-                                </form>
-                            </td>
+        <button
+            type="button"
+            class="btn-edit"
+            onclick="document.getElementById('editModal{{ $act->id }}').style.display='flex'">
+            Edit
+        </button>
+
+        <form
+            action="{{ route('admin.aktivitas.hapus', $act->id) }}"
+            method="POST"
+            onsubmit="return confirm('Hapus aktivitas ini?')">
+
+            @csrf
+
+            <button type="submit" class="btn-delete">
+                Hapus
+            </button>
+
+        </form>
+
+    </div>
+</td>
                         </tr>
                     @empty
                         <tr>

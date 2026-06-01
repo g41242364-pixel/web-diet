@@ -24,12 +24,23 @@
     font-size:30px;
     font-weight:800;
     color:#000;
-    margin-bottom:6px;
+    margin:0 0 6px;
 }
 
 .page-title-section p{
-    color:var(--muted);
     margin:0;
+    color:var(--muted);
+}
+
+/* =========================================
+   INFO
+========================================= */
+
+.table-top{
+    margin-bottom:20px;
+    color:var(--muted);
+    font-size:14px;
+    font-weight:500;
 }
 
 /* =========================================
@@ -43,7 +54,7 @@
 }
 
 /* =========================================
-   CARD TARGET
+   CARD
 ========================================= */
 
 .user-target-card{
@@ -66,100 +77,79 @@
     );
 
     padding:22px 25px;
-    color:#FFFFFF;
 }
 
 .card-header-user h4{
+    color:#FFFFFF;
     font-size:20px;
     font-weight:800;
-    margin-bottom:4px;
+    margin:0 0 4px;
 }
 
 .card-header-user span{
+    color:#FFFFFF;
+    opacity:.9;
     font-size:13px;
-    opacity:.95;
 }
 
 .card-content-inner{
-    background:#FFFFFF;
     padding:25px;
-    position:relative;
-}
-
-/* =========================================
-   CONTENT
-========================================= */
-
-.content-title-row{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:15px;
-}
-
-.content-title-row h5{
-    font-size:18px;
-    font-weight:800;
-    color:var(--text);
-}
-
-.btn-delete-target{
-    position:absolute;
-    top:20px;
-    right:20px;
-
-    width:40px;
-    height:40px;
-
-    border:none;
-    border-radius:12px;
-
-    background:#FEE2E2;
-    color:#DC2626;
-
-    cursor:pointer;
-    transition:.3s;
-}
-
-.btn-delete-target:hover{
-    transform:scale(1.05);
 }
 
 .goal-tag{
-    display:inline-block;
+    display:inline-flex;
+    align-items:center;
 
     background:#DBEAFE;
     color:#2563EB;
 
-    padding:6px 18px;
-
+    padding:7px 16px;
     border-radius:999px;
 
     font-size:13px;
     font-weight:700;
 
-    margin-bottom:15px;
-}
-
-.target-details-text{
-    font-size:13px;
-    color:var(--muted);
-    line-height:1.6;
     margin-bottom:20px;
 }
 
 /* =========================================
-   PROGRESS BAR
+   STATS
 ========================================= */
 
-.progress-container{
-    margin-top:10px;
+.target-stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-bottom:20px;
 }
+
+.stat-item{
+    background:#F8FAFC;
+    border-radius:16px;
+    padding:15px;
+}
+
+.stat-item .label{
+    display:block;
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:6px;
+}
+
+.stat-item .value{
+    display:block;
+    color:var(--text);
+    font-size:18px;
+    font-weight:800;
+}
+
+/* =========================================
+   PROGRESS
+========================================= */
 
 .progress-info{
     display:flex;
     justify-content:space-between;
-    align-items:center;
 
     margin-bottom:8px;
 
@@ -186,168 +176,45 @@
         #2563EB,
         #60A5FA
     );
-
-    border-radius:999px;
 }
 
 .current-bb-text{
-    margin-top:8px;
+    margin-top:10px;
 
     font-size:12px;
     color:var(--muted);
 }
 
 /* =========================================
-   PAGINATION
+   EMPTY
 ========================================= */
 
-.pagination-section{
+.empty-card{
+    grid-column:1/-1;
+
     background:#FFFFFF;
     border-radius:24px;
-    padding:20px 25px;
+    padding:40px;
 
-    margin-top:25px;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    text-align:center;
+    color:#94A3B8;
 
     box-shadow:var(--shadow);
 }
 
-.page-numbers{
-    display:flex;
-    gap:10px;
-}
-
-.page-btn{
-    width:42px;
-    height:42px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:12px;
-
-    background:#F1F5F9;
-    color:#334155;
-
-    font-weight:700;
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-.page-btn:hover{
-    background:#E2E8F0;
-}
-
-.page-btn.active{
-    background:#2563EB;
-    color:#FFFFFF;
-}
-
 /* =========================================
-   MODAL
+   PAGINATION
 ========================================= */
 
-.modal-overlay{
-    position:fixed;
-    top:0;
-    left:0;
-
-    width:100%;
-    height:100%;
-
-    background:rgba(0,0,0,.35);
-
-    display:none;
-    justify-content:center;
-    align-items:center;
-
-    z-index:1000;
-    backdrop-filter:blur(3px);
-}
-
-.modal-confirm-box{
-    background:#FFFFFF;
-
-    width:90%;
-    max-width:450px;
-
-    border-radius:24px;
-    padding:35px;
-
-    text-align:center;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.15);
-}
-
-.modal-icon-warning{
-    width:90px;
-    height:90px;
-
-    margin:0 auto 20px;
-
-    border-radius:20px;
-
-    background:#FEE2E2;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.modal-icon-warning svg{
-    width:45px;
-    height:45px;
-    color:#DC2626;
-}
-
-.modal-confirm-box h3{
-    font-size:22px;
-    font-weight:800;
-
-    color:var(--text);
-
-    margin-bottom:25px;
-    line-height:1.5;
-}
-
-.modal-btn-group{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-}
-
-.btn-modal{
-    border:none;
-    border-radius:12px;
-
-    padding:12px 30px;
-
-    font-size:15px;
-    font-weight:700;
-
-    cursor:pointer;
-}
-
-.btn-ya{
-    background:#2563EB;
-    color:#FFFFFF;
-}
-
-.btn-tidak{
-    background:#E2E8F0;
-    color:#334155;
+.pagination-wrapper{
+    margin-top:25px;
 }
 
 /* =========================================
    RESPONSIVE
 ========================================= */
 
-@media(max-width:1024px){
+@media(max-width:992px){
 
     .target-grid{
         grid-template-columns:1fr;
@@ -364,8 +231,7 @@
         font-size:24px;
     }
 
-    .pagination-section{
-        flex-direction:column;
-        gap:15px;
+    .target-stats{
+        grid-template-columns:1fr;
     }
 }
