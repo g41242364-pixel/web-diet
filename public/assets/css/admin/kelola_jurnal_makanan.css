@@ -125,6 +125,26 @@
     transition:.25s;
 }
 
+.form-group input[type="file"]{
+    padding:8px 12px;
+    display:flex;
+    align-items:center;
+    height:46px;
+    line-height:46px;
+}
+
+.form-group input[type="file"]::file-selector-button{
+    height:30px;
+    margin-right:10px;
+    border:none;
+    border-radius:8px;
+    padding:0 12px;
+    background:#2563EB;
+    color:#fff;
+    cursor:pointer;
+    font-weight:600;
+}
+
 .form-group input:focus{
     border-color:var(--primary);
     box-shadow:0 0 0 3px rgba(37,99,235,.12);
