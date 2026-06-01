@@ -236,7 +236,7 @@
         }
 
         .umur-group {
-            flex: 0 0 110px;
+            flex: 1;
         }
 
         .umur-group label,
