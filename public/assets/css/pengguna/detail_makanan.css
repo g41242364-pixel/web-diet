@@ -219,17 +219,24 @@
 ================================= */
 
 .total-box{
-    background: var(--dark-blue);
-    color: var(--white);
+    background: var(--white);
+    color: var(--text-dark);
+
+    border: 2px solid var(--dark-blue);
 }
 
 .total-box h5{
-    color: var(--white);
-    border-bottom-color: rgba(255,255,255,.2);
+    color: var(--dark-blue);
+    border-bottom: 1px solid #E5E7EB;
 }
 
 .total-box .nut-list li{
-    color: var(--white);
+    color: #475569;
+}
+
+.total-box strong{
+    color: var(--dark-blue);
+    font-weight: 700;
 }
 
 /* ===============================
