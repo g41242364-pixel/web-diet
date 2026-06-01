@@ -76,8 +76,8 @@
 
                 <button type="submit"
                         style="
-                        background:#DBEAFE;
-                        color:#2563EB;
+                        background:#2563EB;
+                        color:#FFFFFF;
                         border:none;
                         border-radius:999px;
                         padding:12px 28px;
