@@ -102,8 +102,10 @@
                     elseif(stripos($kategori,'normal') !== false){
                         $class = 'normal';
                     }
-                    elseif(stripos($kategori,'overweight') !== false){
-                        $class = 'overweight';
+                    elseif(stripos($kategori,'gemuk') !== false ||
+                        stripos($kategori,'overweight') !== false
+                    ){
+                        $class = 'gemuk';
                     }
 
                 @endphp
