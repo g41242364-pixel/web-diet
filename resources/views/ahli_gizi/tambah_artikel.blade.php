@@ -5,17 +5,7 @@
 <div style="max-width:760px;">
     <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
         <a href="{{ route('ahligizi.artikel') }}" style="color:#888;text-decoration:none;font-size:13px;">← Kembali</a>
-        <h2 style="
-                padding:12px 28px;
-                background:#2563EB;
-                color:#FFFFFF;
-                border:none;
-                border-radius:999px;
-                font-size:15px;
-                font-weight:700;
-                cursor:pointer;
-                transition:.2s;">
-                >Tambah Artikel Baru</h2>
+        <h2 style="font-size:24px;font-weight:800;">Tambah Artikel Baru</h2>
     </div>
 
     @if($errors->any())
