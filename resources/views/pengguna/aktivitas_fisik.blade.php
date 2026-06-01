@@ -32,11 +32,6 @@
         <a href="{{ route('aktivitas.detail', $act->id) }}" class="activity-card-link">
             <div class="activity-card">
 
-                {{-- NOMOR URUT --}}
-                <div class="card-number">
-                    {{ str_pad($aktivitas->firstItem() + $i, 2, '0', STR_PAD_LEFT) }}
-                </div>
-
                 {{-- THUMBNAIL / YOUTUBE --}}
                 @if ($act->link_youtube)
                     @php

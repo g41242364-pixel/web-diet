@@ -69,10 +69,6 @@
                     style="text-decoration: none; color: inherit;">
                     <div class="activity-card">
 
-                        <div class="card-number">
-                            {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}
-                        </div>
-
                         @if ($act->link_youtube)
                             @php
                                 preg_match('/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/', $act->link_youtube, $matches);
