@@ -1,123 +1,61 @@
-@extends('layouts.layout_admin')
-@section('title', 'Target Diet - Admin')
+@extends('layouts.layout_ahli_gizi')
 
-<link rel="stylesheet" href="{{ asset('assets/css/admin/daftar_target_diet.css') }}">
+@section('title', 'Target Diet Pasien')
 
 @section('content')
+    <link rel="stylesheet" href="{{ asset('assets/css/ahli_gizi/daftar_target_diet.css') }}">
 
-<div class="page-title-section">
-    <h2>Target Diet Pengguna</h2>
-    <p>Pantau target diet seluruh pengguna yang terdaftar</p>
-</div>
+    <div class="target-page-wrapper">
 
-<div class="table-top">
-    Total: {{ $targets->total() }} data target diet
-</div>
-
-<div class="target-grid">
-
-    @forelse($targets as $target)
-
-    @php
-        $checkinTerbaru = $target->checkins->first();
-
-        $progress = 0;
-
-        if($target->berat_awal && $checkinTerbaru){
-            $diff = abs($target->berat_awal - $target->berat_target);
-            $actual = abs($target->berat_awal - $checkinTerbaru->berat_sekarang);
-
-            $progress = $diff > 0
-                ? min(100, round(($actual / $diff) * 100))
-                : 0;
-        }
-    @endphp
-
-    <div class="user-target-card">
-
-        <div class="card-header-user">
-            <h4>{{ $target->user->name }}</h4>
-            <span>{{ $target->user->email }}</span>
+        <div class="header-section">
+            <div class="logo-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="12" cy="12" r="6" />
+                    <circle cx="12" cy="12" r="2" />
+                </svg>
+            </div>
+            <h1>Target Diet</h1>
         </div>
 
-        <div class="card-content-inner">
+        <div class="main-blue-container">
 
-            <div class="goal-tag">
-                {{ ucfirst($target->tujuan) }} Berat Badan
+            <div class="search-wrapper">
+                <div class="search-input-group">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                    <input type="text" id="liveSearch" placeholder="Cari Pengguna..." autocomplete="off">
+                </div>
             </div>
 
-            <div class="target-stats">
-
-                <div class="stat-item">
-                    <span class="label">BB Awal</span>
-                    <span class="value">
-                        {{ $target->berat_awal ?? '-' }} kg
-                    </span>
-                </div>
-
-                <div class="stat-item">
-                    <span class="label">Target</span>
-                    <span class="value">
-                        {{ $target->berat_target }} kg
-                    </span>
-                </div>
-
-                <div class="stat-item">
-                    <span class="label">Per Minggu</span>
-                    <span class="value">
-                        {{ $target->target_mingguan }} kg
-                    </span>
-                </div>
-
-                <div class="stat-item">
-                    <span class="label">BB Sekarang</span>
-                    <span class="value">
-                        {{ $checkinTerbaru ? $checkinTerbaru->berat_sekarang.' kg' : '-' }}
-                    </span>
-                </div>
-
-            </div>
-
-            <div class="progress-container">
-
-                <div class="progress-info">
-                    <span>Progress Target</span>
-                    <span>{{ $progress }}%</span>
-                </div>
-
-                <div class="progress-bar-rail">
-                    <div
-                        class="progress-bar-fill"
-                        style="width: {{ $progress }}%;">
-                    </div>
-                </div>
-
-                <div class="current-bb-text">
-                    Dibuat:
-                    {{ $target->created_at->format('d M Y') }}
-                    •
-                    Check-in:
-                    {{ $target->checkins->count() }}x
-                </div>
-
+            <div class="target-grid" id="cards-container">
+                @include('ahli_gizi.partials._target_diet_cards', ['targets' => $targets])
             </div>
 
         </div>
-
     </div>
 
-    @empty
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <div class="empty-card">
-        Belum ada data target diet.
-    </div>
+    <script>
+        $(document).ready(function() {
+            $('#liveSearch').on('keyup', function() {
+                let query = $(this).val();
 
-    @endforelse
-
-</div>
-
-<div class="pagination-wrapper">
-    {{ $targets->links() }}
-</div>
+                $.ajax({
+                    url: "{{ route('ahligizi.targetDiet') }}",
+                    type: "GET",
+                    data: {
+                        search: query
+                    },
+                    success: function(data) {
+                        $('#cards-container').html(data);
+                    }
+                });
+            });
+        });
+    </script>
 
 @endsection
