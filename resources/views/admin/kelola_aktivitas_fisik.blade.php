@@ -75,8 +75,16 @@
                 </div>
 
                 <button type="submit"
-                    style="padding:10px 24px;background:#90D2ED;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;box-shadow: 0 4px 10px rgba(144, 210, 237, 0.35);">
-                    + Tambah Aktivitas
+                        style="
+                        background:#DBEAFE;
+                        color:#2563EB;
+                        border:none;
+                        border-radius:999px;
+                        padding:12px 28px;
+                        font-size:15px;
+                        font-weight:700;
+                        cursor:pointer;">
+                        + Tambah Aktivitas
                 </button>
             </form>
         </div>
