@@ -28,15 +28,6 @@
                 <p>Panduan aktivitas fisik untuk mendukung gaya hidup sehat Anda.</p>
             </div>
         </div>
-        <a href="{{ route('pengguna.aktivitasFisik') }}" class="btn-back">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="19" y1="12" x2="5" y2="12"></line>
-                <polyline points="12 19 5 12 12 5"></polyline>
-            </svg>
-            Kembali Ke Daftar
-        </a>
-    </div>
 
     <div class="detail-container">
         <div class="detail-card">
