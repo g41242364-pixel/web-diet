@@ -13,7 +13,7 @@
 <div class="table-container">
 
     <div class="table-top">
-        <span>Total: {{ $screenings->total() }} data skrining</span>
+        Total: {{ $screenings->total() }} data skrining
     </div>
 
     <div class="table-responsive">
