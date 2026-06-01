@@ -185,16 +185,20 @@ class DatabaseSeeder extends Seeder
 
         // ── Makanan
         $foods = [
-            ['nama' => 'Nasi Putih',         'kalori' => 175, 'protein' => 4,  'karbohidrat' => 38, 'lemak' => 0.5],
-            ['nama' => 'Ayam Bakar',          'kalori' => 220, 'protein' => 30, 'karbohidrat' => 0,  'lemak' => 10],
-            ['nama' => 'Salad Buah Segar',    'kalori' => 150, 'protein' => 2,  'karbohidrat' => 25, 'lemak' => 5],
-            ['nama' => 'Tempe Goreng',        'kalori' => 200, 'protein' => 14, 'karbohidrat' => 12, 'lemak' => 10],
-            ['nama' => 'Sayur Bayam',         'kalori' => 40,  'protein' => 3,  'karbohidrat' => 5,  'lemak' => 0.5],
-            ['nama' => 'Telur Rebus',         'kalori' => 77,  'protein' => 6,  'karbohidrat' => 1,  'lemak' => 5],
-            ['nama' => 'Roti Gandum',         'kalori' => 120, 'protein' => 5,  'karbohidrat' => 22, 'lemak' => 2],
-            ['nama' => 'Susu Full Cream',     'kalori' => 149, 'protein' => 8,  'karbohidrat' => 12, 'lemak' => 8],
-            ['nama' => 'Pisang',              'kalori' => 89,  'protein' => 1,  'karbohidrat' => 23, 'lemak' => 0.3],
-        ];
+             ['nama' => 'Nasi Putih',         'kalori' => 175, 'protein' => 4,  'karbohidrat' => 38, 'lemak' => 0.5],
+             ['nama' => 'Ayam Bakar',         'kalori' => 220, 'protein' => 30, 'karbohidrat' => 0,  'lemak' => 10],
+             ['nama' => 'Salad Buah Segar',   'kalori' => 150, 'protein' => 2,  'karbohidrat' => 25, 'lemak' => 5],
+             ['nama' => 'Tempe Goreng',       'kalori' => 200, 'protein' => 14, 'karbohidrat' => 12, 'lemak' => 10],
+             ['nama' => 'Sayur Bayam',        'kalori' => 40,  'protein' => 3,  'karbohidrat' => 5,  'lemak' => 0.5],
+             ['nama' => 'Telur Rebus',        'kalori' => 77,  'protein' => 6,  'karbohidrat' => 1,  'lemak' => 5],
+             ['nama' => 'Roti Gandum',        'kalori' => 120, 'protein' => 5,  'karbohidrat' => 22, 'lemak' => 2],
+             ['nama' => 'Susu Full Cream',    'kalori' => 149, 'protein' => 8,  'karbohidrat' => 12, 'lemak' => 8],
+             ['nama' => 'Pisang',             'kalori' => 89,  'protein' => 1,  'karbohidrat' => 23, 'lemak' => 0.3],
+             ['nama' => 'Oatmeal',            'kalori' => 150, 'protein' => 5,  'karbohidrat' => 27, 'lemak' => 3],
+             ['nama' => 'Nasi Merah',         'kalori' => 180, 'protein' => 4,  'karbohidrat' => 38, 'lemak' => 1],
+             ['nama' => 'Ikan Salmon Kukus',  'kalori' => 208, 'protein' => 22, 'karbohidrat' => 0,  'lemak' => 13],
+             ['nama' => 'Yogurt',             'kalori' => 100, 'protein' => 5,  'karbohidrat' => 12, 'lemak' => 3],
+            ];
 
         foreach ($foods as $f) {
             Food::create($f);
