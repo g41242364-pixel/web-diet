@@ -473,4 +473,13 @@ textarea.form-control-input{
     .action-buttons{
         flex-direction:column;
     }
+
+    .form-control-input,
+    .modal-input-custom,
+    select{
+        appearance:none;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        background-image:none !important;
+    }
 }
