@@ -46,6 +46,7 @@
             justify-content: center;
             align-items: center;
             padding: 40px;
+            background-color: #F0F9FD;
         }
 
         .branding-panel {
@@ -132,10 +133,15 @@
             padding: 12px 12px 12px 45px;
             background-color: var(--input-bg);
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
             color: #555;
             font-size: 16px;
+        }
+
+        .input-wrapper input:focus {
+            outline: none;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 0 0 2px #90D2ED;
         }
 
         .input-wrapper svg {
@@ -157,19 +163,38 @@
             width: 100px;
         }
 
+        .umur-group label {
+            display: block;
+            color: var(--text-color);
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
         .umur-input {
             width: 100%;
-            padding: 2px;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            background: white;
+            padding: 10px;
+            border: 2px solid #B5E2F4;
+            border-radius: 8px;
+            background: #B5E2F4;
             text-align: center;
             font-size: 14px;
-            color: #999;
+            color: #555;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .umur-input:focus {
+            outline: none;
+            border-color: #90D2ED;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 0 0 2px #90D2ED;
         }
 
         .gender-group label {
+            display: block;
+            color: var(--text-color);
+            font-size: 18px;
             margin-bottom: 10px;
+            font-weight: 600;
         }
 
         .gender-options {
@@ -184,6 +209,7 @@
             cursor: pointer;
             font-size: 18px;
             font-weight: 600;
+            color: var(--text-color);
         }
 
         .gender-option input {
@@ -225,42 +251,12 @@
             cursor: pointer;
             width: auto;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
         }
 
         .btn-signup:hover {
             background-color: #79c5e4;
-        }
-
-        .divider {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .divider::before,
-        .divider::after {
-            content: '';
-            flex: 1;
-            border-bottom: 1px solid #333;
-        }
-
-        .divider span {
-            padding: 0 10px;
-            font-weight: bold;
-        }
-
-        .social-login {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        .social-icon {
-            width: 35px;
-            height: 35px;
-            cursor: pointer;
+            transform: scale(1.03);
         }
 
         @media (max-width: 768px) {
@@ -297,7 +293,7 @@
 
                     @if ($errors->any())
                         <div
-                            style="background:#fde8e8;color:#c0392b;padding:10px 14px;border-radius:8px;margin-bottom:16px;font-size:13px;">
+                            style="background:#dff0fa;color:#2980b9;padding:10px 14px;border-radius:8px;margin-bottom:16px;font-size:13px;border-left:4px solid #90D2ED;">
                             {{ $errors->first() }}
                         </div>
                     @endif
@@ -349,12 +345,12 @@
 
                     <div class="flex-row">
                         <div class="umur-group">
-                            <label style="color: var(--text-color);">Umur</label>
+                            <label>Umur</label>
                             <input type="number" name="umur" class="umur-input" placeholder="Contoh: 20"
                                 value="{{ old('umur') }}" required>
                         </div>
                         <div class="gender-group">
-                            <label style="color: var(--text-color);">Jenis Kelamin</label>
+                            <label>Jenis Kelamin</label>
                             <div class="gender-options">
                                 <label class="gender-option">
                                     <input type="radio" name="jenis_kelamin" value="L"
@@ -369,7 +365,6 @@
                     </div>
 
                     <div class="btn-signup-container">
-                        {{-- SIGN UP sudah pakai <button>, hanya CSS diseragamkan --}}
                         <button type="submit" class="btn-signup">SIGN UP</button>
                     </div>
                 </form>
@@ -379,7 +374,6 @@
         <div class="branding-panel">
             <h1>SISD</h1>
             <p>Sistem Informasi Skrining Diet</p>
-            {{-- DIUBAH: dari <a> jadi <button> --}}
             <button type="button" onclick="window.location='/'" class="btn-signin-link">SIGN IN</button>
         </div>
     </div>
