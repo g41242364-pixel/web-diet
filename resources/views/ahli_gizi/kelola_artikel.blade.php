@@ -4,41 +4,68 @@
 .art-wrap { max-width: 900px; }
 </style>
 
+.artikel-action{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:20px;
+}
+
+.btn-tambah-artikel{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:12px 24px;
+
+    background:#2563EB;
+    color:#fff;
+
+    border-radius:999px;
+
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+
+    transition:.25s;
+}
+
+.btn-tambah-artikel:hover{
+    background:#1D4ED8;
+    transform:translateY(-2px);
+}
+
 @section('content')
 <div class="page-header">
 
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:20px;">
+    <div class="page-header-content">
 
-        <div class="page-header-content">
+        <div class="page-header-icon">
+            <svg width="28" height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2">
 
-            <div class="page-header-icon">
-                <svg width="28" height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5V4.5z"></path>
 
-                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                    <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5V4.5z"></path>
-
-                </svg>
-            </div>
-
-            <div>
-                <h2>Kelola Artikel</h2>
-                <p>Tulis dan kelola artikel edukasi untuk pengguna.</p>
-            </div>
-
+            </svg>
         </div>
 
-        <a href="{{ route('ahligizi.artikel.tambah') }}"
-            class="btn-primary"
-            style="text-decoration:none;">
-            + Tambah Artikel
-        </a>
+        <div>
+            <h2>Kelola Artikel</h2>
+            <p>Tulis dan kelola artikel edukasi untuk pengguna.</p>
+        </div>
 
     </div>
 
+</div>
+
+<div class="artikel-action">
+    <a href="{{ route('ahligizi.artikel.tambah') }}"
+        class="btn-tambah-artikel">
+        + Tambah Artikel
+    </a>
 </div>
 
     @if(session('success'))
@@ -80,29 +107,5 @@
         </div>
     @endif
 </div>
-
-.btn-tambah-artikel{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:12px 24px;
-
-    background:#2563EB;
-    color:#fff;
-
-    border-radius:999px;
-
-    text-decoration:none;
-    font-size:14px;
-    font-weight:600;
-
-    transition:.25s;
-}
-
-.btn-tambah-artikel:hover{
-    background:#1D4ED8;
-    transform:translateY(-2px);
-}
 
 @endsection
