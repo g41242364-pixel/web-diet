@@ -416,7 +416,7 @@
                     <div class="umur-group">
                         <label>Umur</label>
                         <input type="number" name="umur" class="umur-input"
-                            value="{{ old('umur') }}" min="1" max="120" required>
+                            value="{{ old('umur') }}" placeholder="20" min="1" max="120" required>
                     </div>
                     <div class="gender-group">
                         <label>Jenis Kelamin</label>
