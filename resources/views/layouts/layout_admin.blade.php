@@ -17,7 +17,12 @@
 
     <nav class="sidebar">
         <div class="sidebar-header">
-            <div class="brand-section">
+            .brand-section{
+                display:flex;
+                align-items:center;
+                justify-content:center; /* ← ini yang ditambah */
+                gap:12px;
+            }
                 <h1>SISD</h1>
             </div>
             <div class="sidebar-user-info">
@@ -52,7 +57,7 @@
                         <line x1="8" y1="14" x2="16" y2="14" />
                         <line x1="8" y1="18" x2="16" y2="18" />
                     </svg>
-                    <span>Skrining IMT</span>
+                    <span>Skrining Diet</span>
                 </a>
             </li>
             <li>

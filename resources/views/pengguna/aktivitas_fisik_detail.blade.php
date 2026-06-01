@@ -28,7 +28,6 @@
         <div class="detail-card">
             <div class="detail-content">
                 <h1 class="activity-title">{{ $act->nama }}</h1>
-                <p class="activity-short-desc">{{ $act->deskripsi }}</p>
 
                 <div class="activity-illustration">
                     @if ($act->link_youtube)
@@ -38,8 +37,7 @@
                         @endphp
                         @if ($videoId)
                             <iframe src="https://www.youtube.com/embed/{{ $videoId }}"
-                                frameborder="0" allowfullscreen
-                                style="width:100%; height:350px; border-radius:12px;">
+                                frameborder="0" allowfullscreen>
                             </iframe>
                         @endif
                     @else
@@ -47,6 +45,8 @@
                             alt="Default Illustration">
                     @endif
                 </div>
+
+                <p class="activity-short-desc">{{ $act->deskripsi }}</p>
 
                 <div class="info-bar">
                     <h4 class="info-label">Informasi Aktifitas</h4>

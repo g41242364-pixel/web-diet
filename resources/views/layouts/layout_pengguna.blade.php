@@ -54,7 +54,7 @@
                         <line x1="8" y1="14" x2="16" y2="14" />
                         <line x1="8" y1="18" x2="16" y2="18" />
                     </svg>
-                    <span>Skrining IMT</span>
+                    <span>Skrining Diet</span>
                 </a>
             </li>
             <li>
