@@ -10,20 +10,19 @@
         rel="stylesheet">
     <style>
         :root {
-            /* Senada dengan layout pengguna — biru teal yang lebih dalam */
-            --sidebar-dark:   #1A3C4E;
-            --sidebar-mid:    #2A5F7A;
-            --accent-teal:    #3A8CA8;
-            --accent-light:   #5BB8D4;
-            --highlight:      #7DD3EC;
-            --input-bg:       #EAF6FB;
-            --input-border:   #A8DCF0;
-            --text-label:     #1E4D64;
-            --text-muted:     #5A8EA3;
+            --sidebar-dark:   #0D2B5E;
+            --sidebar-mid:    #1A4F9C;
+            --accent-blue:    #2B7FD4;
+            --accent-light:   #5BA8E8;
+            --highlight:      #90C8F5;
+            --input-bg:       #D6EAFA;
+            --input-border:   #90C8F5;
+            --text-label:     #0D2B5E;
+            --text-muted:     #4A7BAF;
             --white:          #ffffff;
-            --bg-page:        #F0F8FC;
-            --error-bg:       #D6EEF8;
-            --error-border:   #5BB8D4;
+            --bg-page:        #EAF4FD;
+            --error-bg:       #D0E8F8;
+            --error-border:   #5BA8E8;
         }
 
         * {
@@ -43,7 +42,7 @@
         .branding-panel {
             width: 380px;
             flex-shrink: 0;
-            background: linear-gradient(160deg, var(--sidebar-dark) 0%, var(--sidebar-mid) 50%, var(--accent-teal) 100%);
+            background: linear-gradient(160deg, var(--sidebar-dark) 0%, var(--sidebar-mid) 55%, var(--accent-blue) 100%);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -55,7 +54,6 @@
             overflow: hidden;
         }
 
-        /* Dekoratif lingkaran di background */
         .branding-panel::before {
             content: '';
             position: absolute;
@@ -209,14 +207,14 @@
         }
 
         .input-wrapper input::placeholder {
-            color: #9BCAD9;
+            color: #7BAFD4;
             font-weight: 300;
         }
 
         .input-wrapper input:focus {
             outline: none;
-            border-color: var(--accent-teal);
-            box-shadow: 0 0 0 3px rgba(58, 140, 168, 0.15);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(43, 127, 212, 0.15);
             background: var(--white);
         }
 
@@ -232,7 +230,7 @@
         /* ===================== FLEX ROW (Umur + Gender) ===================== */
         .flex-row {
             display: flex;
-            gap: 20px;
+            gap: 16px;
             align-items: flex-start;
             margin-bottom: 20px;
         }
@@ -263,66 +261,45 @@
         }
 
         .umur-input::placeholder {
-            color: #9BCAD9;
+            color: #7BAFD4;
             font-weight: 300;
         }
 
         .umur-input:focus {
             outline: none;
-            border-color: var(--accent-teal);
-            box-shadow: 0 0 0 3px rgba(58, 140, 168, 0.15);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(43, 127, 212, 0.15);
             background: var(--white);
         }
 
-        /* ===================== GENDER ===================== */
+        /* ===================== GENDER as SELECT ===================== */
         .gender-group {
             flex: 1;
         }
 
-        .gender-options {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-            padding-top: 2px;
-        }
-
-        .gender-option {
-            display: flex;
-            align-items: center;
-            gap: 7px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--text-label);
-        }
-
-        .gender-option input {
-            appearance: none;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--accent-light);
-            border-radius: 50%;
-            position: relative;
-            cursor: pointer;
-            flex-shrink: 0;
+        .gender-select {
+            width: 100%;
+            padding: 11px 14px;
+            border: 1.5px solid var(--input-border);
+            border-radius: 10px;
             background: var(--input-bg);
-            transition: border-color 0.2s;
+            font-size: 14px;
+            color: var(--text-label);
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235BA8E8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            transition: border-color 0.25s, box-shadow 0.25s;
         }
 
-        .gender-option input:checked {
-            border-color: var(--accent-teal);
-        }
-
-        .gender-option input:checked::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 10px;
-            height: 10px;
-            background: var(--accent-teal);
-            border-radius: 50%;
+        .gender-select:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(43, 127, 212, 0.15);
+            background-color: var(--white);
         }
 
         /* ===================== SUBMIT BUTTON ===================== */
@@ -332,7 +309,7 @@
         }
 
         .btn-signup {
-            background: linear-gradient(135deg, var(--sidebar-mid) 0%, var(--accent-teal) 100%);
+            background: linear-gradient(135deg, var(--sidebar-mid) 0%, var(--accent-blue) 100%);
             color: var(--white);
             border: none;
             padding: 13px 64px;
@@ -341,13 +318,13 @@
             font-weight: 600;
             letter-spacing: 2px;
             cursor: pointer;
-            box-shadow: 0 4px 16px rgba(42, 95, 122, 0.35);
+            box-shadow: 0 4px 16px rgba(26, 79, 156, 0.35);
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .btn-signup:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(42, 95, 122, 0.45);
+            box-shadow: 0 8px 24px rgba(26, 79, 156, 0.45);
         }
 
         /* ===================== RESPONSIVE ===================== */
@@ -438,23 +415,15 @@
                 <div class="flex-row">
                     <div class="umur-group">
                         <label>Umur</label>
-                        <input type="number" name="umur" class="umur-input" placeholder="Contoh: 20"
-                            value="{{ old('umur') }}" required>
+                        <input type="number" name="umur" class="umur-input"
+                            value="{{ old('umur') }}" min="1" max="120" required>
                     </div>
                     <div class="gender-group">
                         <label>Jenis Kelamin</label>
-                        <div class="gender-options">
-                            <label class="gender-option">
-                                <input type="radio" name="jenis_kelamin" value="L"
-                                    {{ old('jenis_kelamin', 'L') == 'L' ? 'checked' : '' }}>
-                                Laki-laki
-                            </label>
-                            <label class="gender-option">
-                                <input type="radio" name="jenis_kelamin" value="P"
-                                    {{ old('jenis_kelamin') == 'P' ? 'checked' : '' }}>
-                                Perempuan
-                            </label>
-                        </div>
+                        <select name="jenis_kelamin" class="gender-select" required>
+                            <option value="L" {{ old('jenis_kelamin', 'L') == 'L' ? 'selected' : '' }}>Laki-laki</option>
+                            <option value="P" {{ old('jenis_kelamin') == 'P' ? 'selected' : '' }}>Perempuan</option>
+                        </select>
                     </div>
                 </div>
 
@@ -474,4 +443,5 @@
     </div>
 
 </body>
+
 </html>
