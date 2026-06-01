@@ -5,7 +5,7 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset('assets/css/pengguna/detail_aktivitas.css') }}">
 
-      {{-- BUTTON KEMBALI --}}
+    {{-- BUTTON KEMBALI --}}
     <div class="back-nav">
         <a href="{{ route('pengguna.aktivitasFisik') }}" class="btn-back">
             <svg width="16" height="16" viewBox="0 0 24 24"
@@ -19,15 +19,19 @@
         </a>
     </div>
 
+    {{-- HEADER --}}
     <div class="page-header">
         <div class="header-content">
-            <img src="{{ asset('assets/images/fisik.png') }}" alt="Fisik Icon"
+            <img src="{{ asset('assets/images/fisik.png') }}"
+                alt="Fisik Icon"
                 onerror="this.src='https://cdn-icons-png.flaticon.com/512/3048/3048398.png'">
+
             <div class="header-text">
                 <h2>Aktivitas Fisik</h2>
                 <p>Panduan aktivitas fisik untuk mendukung gaya hidup sehat Anda.</p>
             </div>
         </div>
+    </div>
 
     <div class="detail-container">
         <div class="detail-card">
