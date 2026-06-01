@@ -77,7 +77,7 @@
     <h4>📊 Distribusi Pengguna Berdasarkan IMT</h4>
 
     <p class="chart-subtitle">
-        Persentase kategori indeks massa tubuh pengguna SISD
+        Jumlah kategori indeks massa tubuh pengguna SISD
     </p>
 
     <div class="chart-wrapper">
