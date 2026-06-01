@@ -1,83 +1,108 @@
 @extends('layouts.layout_pengguna')
 
-@section('title', $artikel->judul)
+@section('title', 'Detail Aktivitas Fisik')
 
 @section('content')
-    <link rel="stylesheet" href="{{ asset('assets/css/pengguna/detail_artikel.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/pengguna/detail_aktivitas.css') }}">
 
-    <a href="{{ route('pengguna.artikel') }}" class="btn-back">
-        ← Kembali ke Artikel
-    </a>
-
-    <div class="article-header">
-        <div class="header-info">
-            <div class="header-icon">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="#4285F4">
-                    <path
-                        d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c0-1.1.9-2 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z" />
-                </svg>
-            </div>
+    <div class="page-header">
+        <div class="header-content">
+            <img src="{{ asset('assets/images/fisik.png') }}" alt="Fisik Icon"
+                onerror="this.src='https://cdn-icons-png.flaticon.com/512/3048/3048398.png'">
             <div class="header-text">
-    <h2>TEST ARTIKEL EDUKASI</h2>
-    <p>Bacaan ringkas seputar nutrisi & gaya hidup sehat</p>
-</div>
+                <h2>Aktivitas Fisik</h2>
+                <p>Panduan aktivitas fisik untuk mendukung gaya hidup sehat Anda.</p>
+            </div>
         </div>
     </div>
 
-    <div class="detail-wrapper">
-        <div class="main-content2">
-            <div class="article-card">
-                <div class="card-header-meta">
-                    <span class="category-pill">{{ $artikel->rekomendasi_imt }}</span>
-                </div>
+    <div class="detail-container">
+        <div class="detail-card">
+            <div class="back-nav">
+                <a href="{{ route('pengguna.aktivitasFisik') }}" class="btn-back">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Kembali Ke Daftar
+                </a>
+            </div>
 
-                <h1 class="article-title">{{ $artikel->judul }}</h1>
+            <div class="detail-content">
+                <h1 class="activity-title">{{ $act->nama }}</h1>
+                <p class="activity-short-desc">
+                    {{ $act->deskripsi }}
+                </p>
 
-                <div class="article-meta">
-                    Oleh {{ $artikel->penulis->name ?? 'Admin' }} · {{ $artikel->created_at->format('d M Y') }}
-                </div>
-
-                <div class="main-image-container">
-                    @if ($artikel->gambar)
-                        <img src="{{ asset('assets/images/artikel/' . $artikel->gambar) }}" class="main-image"
-                            alt="{{ $artikel->judul }}">
+                <div class="activity-illustration">
+                    @if ($act->link_youtube)
+                        @php
+                            preg_match('/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/', $act->link_youtube, $matches);
+                            $videoId = $matches[1] ?? null;
+                        @endphp
+                        @if ($videoId)
+                            <iframe
+                                src="https://www.youtube.com/embed/{{ $videoId }}"
+                                frameborder="0"
+                                allowfullscreen
+                                style="width:100%; height:350px; border-radius:12px;">
+                            </iframe>
+                        @endif
                     @else
-                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=1000"
-                            class="main-image" alt="Default Image">
+                        <img src="https://img.freepik.com/free-vector/fast-walking-concept-illustration_114360-1567.jpg"
+                            alt="Default Illustration">
                     @endif
                 </div>
 
-                <div class="article-text">
-                    {!! nl2br(e($artikel->isi)) !!}
-                </div>
-            </div>
-        </div>
-
-        <div class="sidebar-content">
-            <div class="related-articles-card">
-                <h3>Artikel Terkait</h3>
-                <div class="related-list">
-                    @forelse($artikelTerkait as $terkait)
-                        <a href="{{ route('pengguna.artikel.detail', $terkait->id) }}" class="related-item">
-                            <div class="related-thumb">
-                                @if ($terkait->gambar)
-                                    <img src="{{ asset('assets/images/artikel/' . $terkait->gambar) }}"
-                                        alt="{{ $terkait->judul }}">
-                                @else
-                                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=200"
-                                        alt="Thumb">
-                                @endif
+                <div class="info-bar">
+                    <h4 class="info-label">Informasi Aktifitas</h4>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-icon duration">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52C41A"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
                             </div>
-                            <div class="related-info">
-                                <span>{{ $terkait->judul }}</span>
+                            <div class="info-text">
+                                <span class="label">Durasi</span>
+                                <span class="value">{{ $act->durasi ?? '30-45 Menit' }}</span>
                             </div>
-                        </a>
-                    @empty
-                        <div class="empty-related">
-                            <p>Tidak ada artikel terkait lainnya.</p>
                         </div>
-                    @endforelse
+
+                        <div class="info-item">
+                            <div class="info-icon intensity">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52C41A"
+                                    stroke-width="2">
+                                    <path d="M18 20V10"></path>
+                                    <path d="M12 20V4"></path>
+                                    <path d="M6 20v-6"></path>
+                                </svg>
+                            </div>
+                            <div class="info-text">
+                                <span class="label">Intensitas</span>
+                                <span class="value">{{ $act->intensitas ?? 'Sedang' }}</span>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon location">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52C41A"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="info-text">
+                                <span class="label">Lokasi</span>
+                                <span class="value">{{ $act->lokasi ?? 'Luar Ruangan' }}</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
