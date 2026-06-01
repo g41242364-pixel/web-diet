@@ -35,7 +35,9 @@
 /* =========================================
    SEARCH
 ========================================= */
-
+.search-wrapper {
+    margin-bottom: 15px;
+}
 .search-card{
     background:#FFFFFF;
     border-radius:24px;
