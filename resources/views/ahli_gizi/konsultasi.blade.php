@@ -292,6 +292,32 @@
 
 @section('content')
 
+    <!-- HEADER -->
+    <div style="
+        background:white;
+        padding:40px;
+        border-radius:20px;
+        margin-bottom:24px;
+        box-shadow:0 10px 30px rgba(15,23,42,.08);
+        border:1px solid #E2E8F0;
+    ">
+        <h1 style="
+            font-size:38px;
+            font-weight:700;
+            color:#0F172A;
+            margin-bottom:10px;
+        ">
+            Konsultasi
+        </h1>
+
+        <p style="
+            color:#64748B;
+            font-size:20px;
+        ">
+            Kelola konsultasi dan komunikasi dengan pengguna.
+        </p>
+    </div>
+
     <div class="consul-layout">
 
         <div class="consul-sidebar">
