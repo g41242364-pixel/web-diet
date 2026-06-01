@@ -54,13 +54,6 @@
             </svg>
         </div>
 
-        <div class="artikel-action">
-    <a href="{{ route('ahligizi.artikel.tambah') }}"
-       class="btn-tambah-artikel">
-        + Tambah Artikel
-    </a>
-</div>
-
         <div>
             <h2>Kelola Artikel</h2>
             <p>Tulis dan kelola artikel edukasi untuk pengguna.</p>
