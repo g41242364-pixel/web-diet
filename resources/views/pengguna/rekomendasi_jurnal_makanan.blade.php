@@ -5,34 +5,36 @@
 @section('content')
 
     @php
-        $statusLower = strtolower($statusImt ?? '');
+    $statusLower = strtolower(trim($statusImt ?? ''));
 
-        if (str_contains($statusLower, 'Underweight')) {
-            $statusClass = 'status-kurus';
-            $statusIcon = 'i';
-            $statusIconColor = 'var(--kurus-accent)';
-        } elseif (str_contains($statusLower, 'normal')) {
-            $statusClass = 'status-normal';
-            $statusIcon = '✓';
-            $statusIconColor = 'var(--normal-accent)';
-        } elseif (str_contains($statusLower, 'Overweight')) {
-            $statusClass = 'status-gemuk';
-            $statusIcon = '!';
-            $statusIconColor = 'var(--gemuk-accent)';
-        } elseif (str_contains($statusLower, 'obesitas 1')) {
-            $statusClass = 'status-obesitas';
-            $statusIcon = '⚠';
-            $statusIconColor = 'var(--obesitas-accent)';
-        } elseif (str_contains($statusLower, 'obesitas 2')) {
-            $statusClass = 'status-obesitas';
-            $statusIcon = '⚠';
-            $statusIconColor = 'var(--obesitas-accent2)';
-        } else {
-            $statusClass = 'status-default';
-            $statusIcon = '!';
-            $statusIconColor = 'var(--default-accent)';
-        }
-    @endphp
+    if (str_contains($statusLower, 'underweight')) {
+
+        $statusClass = 'status-kurus';
+        $statusIcon = '!';
+
+    } elseif (str_contains($statusLower, 'normal')) {
+
+        $statusClass = 'status-normal';
+        $statusIcon = '✓';
+
+    } elseif (str_contains($statusLower, 'overweight')) {
+
+        $statusClass = 'status-gemuk';
+        $statusIcon = '!';
+
+    } elseif (
+        str_contains($statusLower, 'obesitas')
+    ) {
+
+        $statusClass = 'status-obesitas';
+        $statusIcon = '⚠';
+
+    } else {
+
+        $statusClass = 'status-default';
+        $statusIcon = '!';
+    }
+@endphp
 
     <link rel="stylesheet" href="{{ asset('assets/css/pengguna/rekomendasi_jurnal_makanan.css') }}">
 
