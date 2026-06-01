@@ -91,7 +91,28 @@
 
         @if ($foods->hasPages())
             <div class="pagination-wrapper">
-                {{ $foods->links('pagination::bootstrap-5') }}
+                <ul class="pagination">
+                    {{-- Prev --}}
+                    @if ($foods->onFirstPage())
+                        <li class="page-item disabled"><span class="page-link">‹</span></li>
+                    @else
+                        <li class="page-item"><a class="page-link" href="{{ $foods->previousPageUrl() }}">‹</a></li>
+                    @endif
+
+                    {{-- Nomor halaman --}}
+                    @foreach ($foods->getUrlRange(1, $foods->lastPage()) as $page => $url)
+                        <li class="page-item {{ $page == $foods->currentPage() ? 'active' : '' }}">
+                            <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                        </li>
+                    @endforeach
+
+                    {{-- Next --}}
+                    @if ($foods->hasMorePages())
+                        <li class="page-item"><a class="page-link" href="{{ $foods->nextPageUrl() }}">›</a></li>
+                    @else
+                        <li class="page-item disabled"><span class="page-link">›</span></li>
+                    @endif
+                </ul>
             </div>
         @endif
 
