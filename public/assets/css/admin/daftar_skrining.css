@@ -34,7 +34,7 @@
     color: var(--text);
 }
 
-/* ================= TABLE ================= */
+/* ================= TABLE CONTAINER ================= */
 .table-container {
     background-color: var(--white);
     border-radius: 24px;
@@ -42,7 +42,7 @@
     box-shadow: var(--shadow);
 }
 
-/* SEARCH */
+/* ================= SEARCH ================= */
 .search-filter {
     background: var(--white);
     width: 320px;
@@ -62,7 +62,7 @@
     color: var(--muted);
 }
 
-/* TABLE STYLE */
+/* ================= TABLE ================= */
 .skrining-table {
     width: 100%;
     border-collapse: collapse;
@@ -122,34 +122,44 @@
     color: #D97706;
 }
 
-/* ================= SWIPER / ARROW FIX ================= */
-/* INI BAGIAN YANG MEMPERBAIKI PANAH BESAR */
-
+/* ================= ARROW SLIDER FIX (IMPORTANT) ================= */
 .swiper-button-prev,
 .swiper-button-next {
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50%;
-    background: var(--white);
-    box-shadow: var(--shadow);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary) !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 50% !important;
+    background: #FFFFFF !important;
+    box-shadow: 0 6px 14px rgba(0,0,0,.10) !important;
+
+    transform: scale(1) !important;
 }
 
-/* ICON PANAH */
+/* ICON PANAH KECIL */
 .swiper-button-prev::after,
 .swiper-button-next::after {
-    font-size: 16px !important;
-    font-weight: 800;
+    font-size: 12px !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
 }
 
-/* HOVER */
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-    background: var(--primary);
-    color: var(--white) !important;
+/* ANTI INHERIT FONT BESAR */
+.swiper-button-prev,
+.swiper-button-next {
+    font-size: 0 !important;
+}
+
+/* OPTIONAL SVG FIX */
+.swiper-button-prev svg,
+.swiper-button-next svg {
+    width: 14px !important;
+    height: 14px !important;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -170,12 +180,12 @@
 
     .swiper-button-prev,
     .swiper-button-next {
-        width: 34px !important;
-        height: 34px !important;
+        width: 28px !important;
+        height: 28px !important;
     }
 
     .swiper-button-prev::after,
     .swiper-button-next::after {
-        font-size: 14px !important;
+        font-size: 10px !important;
     }
 }
