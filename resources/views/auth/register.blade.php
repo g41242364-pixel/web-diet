@@ -250,7 +250,7 @@
 
         .umur-input {
             width: 100%;
-            padding: 11px 10px;
+            padding: 11px 14px;
             border: 1.5px solid var(--input-border);
             border-radius: 10px;
             background: var(--input-bg);
