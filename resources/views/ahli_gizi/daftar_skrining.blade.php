@@ -6,7 +6,7 @@
 @section('content')
 
 <div class="skrining-header">
-    <h2>Skrining IMT</h2>
+    <h2>Skrining Diet</h2>
     <p>Data hasil skrining indeks massa tubuh seluruh pengguna.</p>
 </div>
 
