@@ -184,20 +184,20 @@
         }
 
         .btn-submit {
-            background: #2B82B2;
-            color: #fff;
-            border: none;
-            padding: 14px 40px;
-            border-radius: 12px;
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: transform 0.2s, background 0.3s;
+        background: #2563EB;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 999px;
+        padding: 12px 28px;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: .2s;
         }
 
         .btn-submit:hover {
-            background: #1a628a;
-            transform: translateY(-2px);
+        background: #1D4ED8;
+        transform: translateY(-2px);
         }
 
         .history-item {
