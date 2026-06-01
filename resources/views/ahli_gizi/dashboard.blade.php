@@ -5,9 +5,9 @@
 
 @section('content')
     <div class="header-section">
-        <h2>Dashboard SISD</h2>
-        <p>Sistem Informasi Skrining Diet</p>
-    </div>
+    <h2>Dashboard Ahli Gizi</h2>
+    <p>Pantau pasien, skrining, konsultasi, dan progres diet dalam satu halaman.</p>
+</div>
 
     <section class="welcome-banner-gizi">
         <div class="banner-text-content">
@@ -16,14 +16,34 @@
             <form action="{{ route('ahligizi.toggleStatus') }}" method="POST" style="display:inline;">
                 @csrf
                 <button type="submit" style="
-                    margin-top:12px;padding:8px 20px;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;
-                    background:{{ auth()->user()->is_online ? '#e74c3c' : '#27ae60' }};color:#fff;">
+    margin-top:15px;
+    padding:12px 22px;
+    border:none;
+    border-radius:12px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+    background:{{ auth()->user()->is_online ? '#DC2626' : '#16A34A' }};
+    color:#FFFFFF;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+">
                     {{ auth()->user()->is_online ? '🔴 Set Offline' : '🟢 Set Online' }}
                 </button>
             </form>
-            <div style="margin-top:8px;font-size:13px;color:{{ auth()->user()->is_online ? '#27ae60' : '#e74c3c' }};">
-                Status: {{ auth()->user()->is_online ? 'Online — tersedia untuk konsultasi' : 'Offline — tidak muncul di konsultasi' }}
-            </div>
+            <div style="
+    margin-top:12px;
+    display:inline-block;
+    padding:8px 16px;
+    border-radius:12px;
+    font-size:13px;
+    font-weight:600;
+    background:{{ auth()->user()->is_online ? '#DCFCE7' : '#FEE2E2' }};
+    color:{{ auth()->user()->is_online ? '#166534' : '#991B1B' }};
+">
+    {{ auth()->user()->is_online
+        ? '🟢 Online - Tersedia untuk konsultasi'
+        : '🔴 Offline - Tidak tersedia untuk konsultasi' }}
+</div>
         </div>
         <div class="doctor-img-wrapper">
             <img src="{{ asset('assets/images/dokter.png') }}" alt="Dokter Ahli Gizi"
@@ -66,17 +86,17 @@
         </div>
     </div>
 
-    <div class="panels-grid">
-        <div class="panel-card">
-            <h4>Kategori BMI Pasien</h4>
-            <div class="chart-container-bmi">
-                <canvas id="bmiGiziChart"></canvas>
-            </div>
-        </div>
+    <div class="panel-card">
+    <h4>📊 Progres Berat Badan Pasien</h4>
+    <p class="panel-subtitle">
+        Persentase kategori indeks massa tubuh pasien yang ditangani.
+    </p>
 
         <div class="panel-card">
-            <h4>Progres Target Diet Pasien</h4>
-            <div class="progress-list">
+    <h4>🎯 Progres Target Diet Pasien</h4>
+    <p class="panel-subtitle">
+        Monitoring perkembangan pencapaian target berat badan pasien.
+    </p>
                 @forelse($progressDiet as $target)
                 @php
                     $checkinTerbaru = $target->checkins->first();

@@ -7,25 +7,25 @@
 
     <div class="manage-account-container">
 
-        <div class="header-area">
-            <div class="header-title-row">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                    <circle cx="8.5" cy="7" r="4" />
-                </svg>
-                <div class="header-text">
-                    <h2>Kelola Akun Ahli Gizi</h2>
-                    <p>Manajemen data akun seluruh ahli gizi aplikasi</p>
-                </div>
-            </div>
+        <div class="page-header">
+    <div class="header-title-row">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="8.5" cy="7" r="4" />
+        </svg>
+
+        <div class="header-text">
+            <h2>Kelola Akun Ahli Gizi</h2>
+            <p>Manajemen data akun seluruh ahli gizi aplikasi</p>
         </div>
+    </div>
+</div>
 
         @if (session('success'))
-            <div
-                style="background:#e8f8e8;color:#27ae60;padding:12px 16px;border-radius:8px;margin-bottom:16px;font-weight:600;">
-                ✓ {{ session('success') }}
-            </div>
-        @endif
+    <div class="success-alert">
+        ✓ {{ session('success') }}
+    </div>
+@endif
 
         <div class="add-account-form-container">
             <h4>Tambah Ahli Gizi Baru</h4>
