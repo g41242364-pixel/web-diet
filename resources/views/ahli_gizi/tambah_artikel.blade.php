@@ -48,7 +48,19 @@
             </div>
 
             <div style="display:flex;gap:10px;">
-                <button type="submit" style="padding:11px 28px;background:#90D2ED;color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;">Simpan Artikel</button>
+                <button type="submit"
+                style="
+                padding:12px 28px;
+                background:#2563EB;
+                color:#FFFFFF;
+                border:none;
+                border-radius:999px;
+                font-size:15px;
+                font-weight:700;
+                cursor:pointer;
+                transition:.2s;">
+                Simpan Artikel
+                </button>
                 <a href="{{ route('ahligizi.artikel') }}" style="padding:11px 20px;background:#f0f0f0;color:#555;border-radius:8px;text-decoration:none;font-size:14px;">Batal</a>
             </div>
         </form>
