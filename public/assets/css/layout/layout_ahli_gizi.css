@@ -332,4 +332,21 @@ body{
     .page-header h2{
         font-size:22px;
     }
+
+    /* FORCE LOGOUT MERAH */
+.logout-btn,
+.logout-btn:link,
+.logout-btn:visited {
+    background: #EF4444 !important;
+    color: #FFFFFF !important;
+}
+
+.logout-btn:hover {
+    background: #DC2626 !important;
+    color: #FFFFFF !important;
+}
+
+.logout-btn svg {
+    color: #FFFFFF !important;
+}
 }
