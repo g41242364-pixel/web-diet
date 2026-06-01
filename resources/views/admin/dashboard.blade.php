@@ -96,13 +96,15 @@
 
                     $class = 'obesitas';
 
-                    if(stripos($kategori,'kurus') !== false){
-                        $class = 'kurus';
+                    if(stripos($kategori,'underweight') !== false){
+                        $class = 'underweight';
                     }
                     elseif(stripos($kategori,'normal') !== false){
                         $class = 'normal';
                     }
-                    elseif(stripos($kategori,'gemuk') !== false){
+                    elseif(stripos($kategori,'gemuk') !== false ||
+                        stripos($kategori,'overweight') !== false
+                    ){
                         $class = 'gemuk';
                     }
 
