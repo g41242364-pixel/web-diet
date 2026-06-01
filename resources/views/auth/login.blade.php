@@ -95,6 +95,7 @@
             justify-content: center;
             align-items: center;
             padding: 40px;
+            background-color: #F0F9FD;
         }
 
         .login-box {
@@ -132,10 +133,15 @@
             padding: 15px 15px 15px 50px;
             background-color: var(--input-bg);
             border: none;
-            border-radius: 4px;
+            border-radius: 8px;
             box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
             color: #555;
             font-size: 16px;
+        }
+
+        .input-wrapper input:focus {
+            outline: none;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1), 0 0 0 2px #90D2ED;
         }
 
         .input-wrapper svg {
@@ -174,6 +180,10 @@
             text-decoration: none;
         }
 
+        .reset-link:hover {
+            text-decoration: underline;
+        }
+
         .btn-signin-container {
             text-align: center;
             margin-bottom: 30px;
@@ -189,11 +199,12 @@
             font-weight: 400;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s;
         }
 
         .btn-signin:hover {
             background-color: #79c5e4;
+            transform: scale(1.03);
         }
 
         @media (max-width: 768px) {
@@ -233,7 +244,6 @@
         <div class="left-panel">
             <h1>SISD</h1>
             <p>Sistem Informasi Skrining Diet</p>
-            {{-- DIUBAH: dari <a> jadi <button> --}}
             <button type="button" onclick="window.location='/register'" class="btn-signup">SIGN UP</button>
         </div>
 
@@ -246,7 +256,7 @@
 
                     @if ($errors->any())
                         <div
-                            style="background:#fde8e8;color:#c0392b;padding:10px 14px;border-radius:8px;margin-bottom:16px;font-size:13px;">
+                            style="background:#dff0fa;color:#2980b9;padding:10px 14px;border-radius:8px;margin-bottom:16px;font-size:13px;border-left:4px solid #90D2ED;">
                             {{ $errors->first() }}
                         </div>
                     @endif
