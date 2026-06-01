@@ -88,7 +88,7 @@
     text-decoration: none;
     color: inherit;
     display: flex;
-    height: auto;
+    height: 100%;
 }
 
 /* ── CARD ── */
