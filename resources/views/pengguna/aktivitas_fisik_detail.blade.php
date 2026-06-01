@@ -14,26 +14,21 @@
                 <p>Panduan aktivitas fisik untuk mendukung gaya hidup sehat Anda.</p>
             </div>
         </div>
+        <a href="{{ route('pengguna.aktivitasFisik') }}" class="btn-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Kembali Ke Daftar
+        </a>
     </div>
 
     <div class="detail-container">
         <div class="detail-card">
-            <div class="back-nav">
-                <a href="{{ route('pengguna.aktivitasFisik') }}" class="btn-back">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                        <polyline points="12 19 5 12 12 5"></polyline>
-                    </svg>
-                    Kembali Ke Daftar
-                </a>
-            </div>
-
             <div class="detail-content">
                 <h1 class="activity-title">{{ $act->nama }}</h1>
-                <p class="activity-short-desc">
-                    {{ $act->deskripsi }}
-                </p>
+                <p class="activity-short-desc">{{ $act->deskripsi }}</p>
 
                 <div class="activity-illustration">
                     @if ($act->link_youtube)
@@ -42,10 +37,8 @@
                             $videoId = $matches[1] ?? null;
                         @endphp
                         @if ($videoId)
-                            <iframe
-                                src="https://www.youtube.com/embed/{{ $videoId }}"
-                                frameborder="0"
-                                allowfullscreen
+                            <iframe src="https://www.youtube.com/embed/{{ $videoId }}"
+                                frameborder="0" allowfullscreen
                                 style="width:100%; height:350px; border-radius:12px;">
                             </iframe>
                         @endif
@@ -60,8 +53,7 @@
                     <div class="info-grid">
                         <div class="info-item">
                             <div class="info-icon duration">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52C41A"
-                                    stroke-width="2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52C41A" stroke-width="2">
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <polyline points="12 6 12 12 16 14"></polyline>
                                 </svg>
@@ -71,11 +63,9 @@
                                 <span class="value">{{ $act->durasi ?? '30-45 Menit' }}</span>
                             </div>
                         </div>
-
                         <div class="info-item">
                             <div class="info-icon intensity">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52C41A"
-                                    stroke-width="2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52C41A" stroke-width="2">
                                     <path d="M18 20V10"></path>
                                     <path d="M12 20V4"></path>
                                     <path d="M6 20v-6"></path>
@@ -86,11 +76,9 @@
                                 <span class="value">{{ $act->intensitas ?? 'Sedang' }}</span>
                             </div>
                         </div>
-
                         <div class="info-item">
                             <div class="info-icon location">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52C41A"
-                                    stroke-width="2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52C41A" stroke-width="2">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
@@ -102,7 +90,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
