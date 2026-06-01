@@ -1,5 +1,5 @@
-@extends('layouts.layout_admin')
-@section('title', 'Skrining Admin')
+@extends('layouts.layout_ahli_gizi')
+@section('title', 'Skrining Ahli Gizi')
 
 <link rel="stylesheet" href="{{ asset('assets/css/admin/daftar_skrining.css') }}">
 
