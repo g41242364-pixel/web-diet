@@ -122,6 +122,12 @@
     justify-content: center;
 }
 
+.action-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
         .result-banner.status-kurus {
             background-color: var(--kurus-bg);
             border-color: var(--kurus-border);
