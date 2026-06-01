@@ -1,221 +1,319 @@
-@extends('layouts.layout_pengguna')
-
-@section('title', 'Detail Aktivitas Fisik')
-
-@section('content')
-
-<link rel="stylesheet" href="{{ asset('assets/css/pengguna/detail_aktivitas.css') }}">
-
-<div class="detail-container">
-
-    {{-- HEADER --}}
-    <div class="page-header">
-
-        <div class="header-content">
-
-            <img src="{{ asset('assets/images/fisik.png') }}"
-                alt="Fisik Icon"
-                onerror="this.src='https://cdn-icons-png.flaticon.com/512/3048/3048398.png'">
-
-            <div class="header-text">
-                <h2>Aktivitas Fisik</h2>
-                <p>
-                    Panduan aktivitas fisik untuk mendukung gaya hidup sehat Anda.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-    {{-- BUTTON KEMBALI --}}
-    <div class="back-nav">
-
-        <a href="{{ route('pengguna.aktivitasFisik') }}" class="btn-back">
-
-            <svg width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round">
-
-                <line x1="19" y1="12" x2="5" y2="12"></line>
-                <polyline points="12 19 5 12 12 5"></polyline>
-
-            </svg>
-
-            <span>Kembali ke Daftar</span>
-
-        </a>
-
-    </div>
-
-    {{-- DETAIL CARD --}}
-    <div class="detail-card">
-
-        <div class="detail-content">
-
-            <h1 class="activity-title">
-                {{ $act->nama }}
-            </h1>
-
-            <div class="activity-illustration">
-
-                @if ($act->link_youtube)
-
-                    @php
-                        preg_match(
-                            '/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/',
-                            $act->link_youtube,
-                            $matches,
-                        );
-
-                        $videoId = $matches[1] ?? null;
-                    @endphp
-
-                    @if ($videoId)
-
-                        <iframe
-                            src="https://www.youtube.com/embed/{{ $videoId }}"
-                            frameborder="0"
-                            allowfullscreen>
-                        </iframe>
-
-                    @endif
-
-                @else
-
-                    <img
-                        src="https://img.freepik.com/free-vector/fast-walking-concept-illustration_114360-1567.jpg"
-                        alt="Default Illustration">
-
-                @endif
-
-            </div>
-
-            <p class="activity-short-desc">
-                {{ $act->deskripsi }}
-            </p>
-
-            <div class="info-bar">
-
-                <h4 class="info-label">
-                    Informasi Aktivitas
-                </h4>
-
-                <div class="info-grid">
-
-                    {{-- DURASI --}}
-                    <div class="info-item">
-
-                        <div class="info-icon duration">
-
-                            <svg width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="#52C41A"
-                                stroke-width="2">
-
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-
-                            </svg>
-
-                        </div>
-
-                        <div class="info-text">
-
-                            <span class="label">
-                                Durasi
-                            </span>
-
-                            <span class="value">
-                                {{ $act->durasi ?? '30-45 Menit' }}
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                    {{-- INTENSITAS --}}
-                    <div class="info-item">
-
-                        <div class="info-icon intensity">
-
-                            <svg width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="#52C41A"
-                                stroke-width="2">
-
-                                <path d="M18 20V10"></path>
-                                <path d="M12 20V4"></path>
-                                <path d="M6 20v-6"></path>
-
-                            </svg>
-
-                        </div>
-
-                        <div class="info-text">
-
-                            <span class="label">
-                                Intensitas
-                            </span>
-
-                            <span class="value">
-                                {{ $act->intensitas ?? 'Sedang' }}
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                    {{-- LOKASI --}}
-                    <div class="info-item">
-
-                        <div class="info-icon location">
-
-                            <svg width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="#52C41A"
-                                stroke-width="2">
-
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-
-                            </svg>
-
-                        </div>
-
-                        <div class="info-text">
-
-                            <span class="label">
-                                Lokasi
-                            </span>
-
-                            <span class="value">
-                                {{ $act->lokasi ?? 'Luar Ruangan' }}
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-@endsection
+.article-header {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #DBEAFE;
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-icon {
+    background: #E8F0F5;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.header-text h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.header-text p {
+    color: #666;
+    margin: 5px 0 0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    background: #2563EB;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    transition: all 0.2s ease;
+}
+
+
+.btn-back:hover {
+    transform: translateY(-2px);
+    background: #2563EB;
+}
+
+.detail-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 100px;
+}
+
+.main-content2 {
+    min-width: 0;
+}
+
+.sidebar-content {
+    width: 100%;
+    position: sticky;
+    top: 20px;
+}
+
+.article-card {
+    background: white;
+    border-radius: 25px;
+    padding: 45px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 100%;
+}
+
+.category-pill {
+    background: #D8EBF3;
+    padding: 6px 18px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.article-title {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: left;
+    margin: 0 0 18px;
+    line-height: 1.3;
+    color: #000;
+    width: 100%;
+
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.article-meta {
+    text-align: left;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 30px;
+    font-weight: 500;
+    width: 100%;
+}
+
+.main-image-container {
+    width: 100%;
+    margin: 25px 0 35px;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    max-height: 550px;
+    display: block;
+}
+
+.article-text {
+    line-height: 1.9;
+    color: #333;
+    font-size: 16px;
+    text-align: justify;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+    overflow: visible;
+}
+
+.related-articles-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.related-articles-card h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.related-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.related-item {
+    display: flex;
+    gap: 14px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    align-items: center;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.related-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.related-item:hover {
+    transform: translateX(4px);
+}
+
+.related-thumb {
+    width: 90px;
+    height: 70px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.related-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.related-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.related-info span {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #333;
+}
+
+.empty-related {
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    border: 1px dashed #eee;
+}
+
+@media (max-width: 992px) {
+    .detail-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-content {
+        position: static;
+    }
+
+    .article-title {
+        font-size: 30px;
+    }
+
+    .article-card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .article-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-text h2 {
+        font-size: 26px;
+    }
+
+    .article-title {
+        font-size: 26px;
+    }
+
+    .article-card {
+        padding: 24px;
+        border-radius: 20px;
+    }
+
+    .main-image {
+        max-height: 320px;
+    }
+
+    .article-text {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .related-thumb {
+        width: 80px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-info {
+        align-items: flex-start;
+    }
+
+    .header-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .header-text h2 {
+        font-size: 22px;
+    }
+
+    .header-text p {
+        font-size: 14px;
+    }
+
+    .btn-back {
+        width: 100%;
+        text-align: center;
+    }
+
+    .article-title {
+        font-size: 22px;
+    }
+
+    .article-card {
+        padding: 20px;
+    }
+
+    .article-meta {
+        font-size: 13px;
+    }
+}
