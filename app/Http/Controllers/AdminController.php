@@ -206,29 +206,8 @@ class AdminController extends Controller
             'durasi' => 'required|string|max:255',
             'intensitas' => 'required|string|max:255',
             'lokasi' => 'required|string|max:255',
-            'gambar' => 'nullable|image|max:2048',
+            'link_youtube' => 'nullable|string',
         ]);
-
-        $namaFile = null;
-
-        if ($request->hasFile('gambar')) {
-
-            $file = $request->file('gambar');
-
-            // nama unik file
-            $namaFile = time() . '_' . $file->getClientOriginalName();
-
-            // folder tujuan
-            $tujuan = public_path('assets/images/aktivitas');
-
-            // buat folder jika belum ada
-            if (!File::exists($tujuan)) {
-                File::makeDirectory($tujuan, 0755, true);
-            }
-
-            // pindahkan file
-            $file->move($tujuan, $namaFile);
-        }
 
         PhysicalActivity::create([
             'nama' => $request->nama,
@@ -237,7 +216,7 @@ class AdminController extends Controller
             'durasi' => $request->durasi,
             'intensitas' => $request->intensitas,
             'lokasi' => $request->lokasi,
-            'gambar' => $namaFile,
+            'link_youtube' => $request->link_youtube,
         ]);
 
         return back()->with('success', 'Aktivitas berhasil ditambahkan.');
@@ -249,40 +228,13 @@ class AdminController extends Controller
 
         $request->validate([
             'nama' => 'required|string|max:255',
-            'deskripsi' => 'nullable|string|',
+            'deskripsi' => 'nullable|string',
             'status_kebiasaan' => 'required|string|max:255',
             'durasi' => 'required|string|max:255',
             'intensitas' => 'required|string|max:255',
             'lokasi' => 'required|string|max:255',
-            'gambar' => 'nullable|image|max:2048',
+            'link_youtube' => 'nullable|string',
         ]);
-
-        $namaFile = $aktivitas->gambar;
-
-        if ($request->hasFile('gambar')) {
-
-            // hapus gambar lama
-            if ($aktivitas->gambar) {
-
-                $pathLama = public_path('assets/images/aktivitas/' . $aktivitas->gambar);
-
-                if (File::exists($pathLama)) {
-                    File::delete($pathLama);
-                }
-            }
-
-            $file = $request->file('gambar');
-
-            $namaFile = time() . '_' . $file->getClientOriginalName();
-
-            $tujuan = public_path('assets/images/aktivitas');
-
-            if (!File::exists($tujuan)) {
-                File::makeDirectory($tujuan, 0755, true);
-            }
-
-            $file->move($tujuan, $namaFile);
-        }
 
         $aktivitas->update([
             'nama' => $request->nama,
@@ -291,7 +243,7 @@ class AdminController extends Controller
             'durasi' => $request->durasi,
             'intensitas' => $request->intensitas,
             'lokasi' => $request->lokasi,
-            'gambar' => $namaFile,
+            'link_youtube' => $request->link_youtube,
         ]);
 
         return back()->with('success', 'Aktivitas berhasil diperbarui.');
@@ -300,22 +252,9 @@ class AdminController extends Controller
     public function hapusAktivitas($id)
     {
         $aktivitas = PhysicalActivity::findOrFail($id);
-
-        // hapus file gambar
-        if ($aktivitas->gambar) {
-
-            $path = public_path('assets/images/aktivitas/' . $aktivitas->gambar);
-
-            if (File::exists($path)) {
-                File::delete($path);
-            }
-        }
-
         $aktivitas->delete();
-
         return back()->with('success', 'Aktivitas berhasil dihapus.');
     }
-
     // ============ KELOLA PENGGUNA ============
 
     public function kelolaPengguna(Request $request)
