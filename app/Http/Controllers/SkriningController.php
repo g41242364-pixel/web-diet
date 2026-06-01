@@ -75,13 +75,13 @@ class SkriningController extends Controller
     public function langkah3Simpan(Request $request)
     {
         $request->validate([
-            'berat_badan' => 'required|numeric|min:10|max:500',
+            'berat_badan'  => 'required|numeric|min:10|max:500',
             'tinggi_badan' => 'required|numeric|min:50|max:300',
         ], [
-            'berat_badan.required' => 'Berat badan wajib diisi.',
-            'berat_badan.numeric'  => 'Berat badan harus berupa angka.',
+            'berat_badan.required'  => 'Berat badan wajib diisi.',
+            'berat_badan.numeric'   => 'Berat badan harus berupa angka.',
             'tinggi_badan.required' => 'Tinggi badan wajib diisi.',
-            'tinggi_badan.numeric' => 'Tinggi badan harus berupa angka.',
+            'tinggi_badan.numeric'  => 'Tinggi badan harus berupa angka.',
         ]);
 
         $berat  = $request->berat_badan;
@@ -95,7 +95,6 @@ class SkriningController extends Controller
         $jawaban_fase2 = session('skrining_jawaban_fase2', []);
         $semua_jawaban = $jawaban_fase1 + $jawaban_fase2;
 
-        // itung skor kebiasaan (a=1, b=2, c=3, d=4 sesuai urutan)
         $total_skor = 0;
         foreach ($semua_jawaban as $question_id => $option_id) {
             $option = \App\Models\QuestionOption::find($option_id);
@@ -118,13 +117,12 @@ class SkriningController extends Controller
 
         foreach ($semua_jawaban as $question_id => $option_id) {
             ScreeningAnswer::create([
-                'screening_id'      => $screening->id,
-                'question_id'       => $question_id,
+                'screening_id'       => $screening->id,
+                'question_id'        => $question_id,
                 'question_option_id' => $option_id,
             ]);
         }
 
-        // Bersihkan session
         session()->forget(['skrining_jawaban_fase1', 'skrining_jawaban_fase2']);
 
         return view('pengguna.skrining_langkah_4', compact('screening', 'imt', 'status_imt', 'total_skor', 'status_kebiasaan'));
@@ -143,7 +141,7 @@ class SkriningController extends Controller
             $status_imt       = $screening->status_imt;
             $total_skor       = $screening->total_skor;
             $status_kebiasaan = $screening->status_kebiasaan;
-            $error            = 'Tidak ada ahli gizi yang sedang online. Coba lagi nanti.'; // ✅
+            $error            = 'Tidak ada ahli gizi yang sedang online. Coba lagi nanti.';
 
             return view('pengguna.skrining_langkah_4', compact(
                 'screening',
@@ -181,21 +179,20 @@ class SkriningController extends Controller
             ->with('success', 'Konsultasi berhasil dibuat. Ahli gizi akan segera merespons.');
     }
 
-
     private function hitungStatusIMT($imt)
     {
-        if ($imt < 18.5)  return 'Underweight';
-        if ($imt < 23.0)  return 'Normal';
-        if ($imt < 25.0)  return 'Overweight';
-        if ($imt < 30.0)  return 'Obesitas 1';
+        if ($imt < 18.5) return 'Underweight';
+        if ($imt < 23.0) return 'Normal';
+        if ($imt < 25.0) return 'Overweight';
+        if ($imt < 30.0) return 'Obesitas 1';
         return 'Obesitas 2';
     }
 
     private function hitungStatusKebiasaan($skor)
     {
-        if ($skor <= 17) return 'Hidup Sehat';
-        if ($skor <= 25) return 'Cukup Sehat';
-        if ($skor <= 32) return 'Kurang Sehat';
+        if ($skor >= 33) return 'Hidup Sehat';
+        if ($skor >= 26) return 'Cukup Sehat';
+        if ($skor >= 18) return 'Kurang Sehat';
         return 'Tidak Sehat';
     }
 }
