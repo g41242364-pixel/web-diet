@@ -9,7 +9,7 @@
 }
 
 /* =========================================
-   HEADER CARD
+   HEADER
 ========================================= */
 
 .skrining-header{
@@ -24,16 +24,16 @@
     font-size:30px;
     font-weight:800;
     color:#000;
-    margin-bottom:6px;
+    margin:0 0 6px;
 }
 
 .skrining-header p{
+    margin:0;
     color:var(--muted);
-    font-size:15px;
 }
 
 /* =========================================
-   TABLE CARD
+   CARD TABLE
 ========================================= */
 
 .table-container{
@@ -41,43 +41,17 @@
     border-radius:24px;
     padding:30px;
     box-shadow:var(--shadow);
-    overflow:hidden;
 }
 
-/* =========================================
-   SEARCH
-========================================= */
-
-.search-filter{
-    width:320px;
-    height:46px;
-
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    padding:0 16px;
-
-    background:#F8FAFC;
-    border:1px solid #E2E8F0;
-    border-radius:14px;
-
-    margin-bottom:25px;
-}
-
-.search-filter svg{
-    width:18px;
-    height:18px;
+.table-top{
+    margin-bottom:20px;
     color:var(--muted);
+    font-size:14px;
+    font-weight:500;
 }
 
-.search-filter input{
-    width:100%;
-    border:none;
-    outline:none;
-    background:transparent;
-    color:var(--text);
-    font-size:14px;
+.table-responsive{
+    overflow-x:auto;
 }
 
 /* =========================================
@@ -96,30 +70,22 @@
 .skrining-table th{
     padding:18px 14px;
     text-align:left;
-
     color:var(--text);
-    font-size:16px;
+    font-size:15px;
     font-weight:800;
-
     border-bottom:2px solid #E2E8F0;
 }
 
 .skrining-table td{
     padding:18px 14px;
-
     color:var(--muted);
     font-size:15px;
-
     border-bottom:1px solid #E2E8F0;
 }
 
 .skrining-table td:first-child{
-    color:var(--text);
     font-weight:700;
-}
-
-.skrining-table tr:last-child td{
-    border-bottom:none;
+    color:var(--text);
 }
 
 .skrining-table tbody tr{
@@ -128,6 +94,12 @@
 
 .skrining-table tbody tr:hover{
     background:#F8FAFC;
+}
+
+.empty-data{
+    text-align:center;
+    padding:30px !important;
+    color:#94A3B8 !important;
 }
 
 /* =========================================
@@ -139,7 +111,7 @@
     align-items:center;
     justify-content:center;
 
-    padding:6px 16px;
+    padding:7px 16px;
     border-radius:999px;
 
     font-size:13px;
@@ -151,14 +123,14 @@
     color:#16A34A;
 }
 
-.status-overweight{
-    background:#FEF3C7;
-    color:#D97706;
-}
-
 .status-underweight{
     background:#DBEAFE;
     color:#2563EB;
+}
+
+.status-overweight{
+    background:#FEF3C7;
+    color:#D97706;
 }
 
 .status-obesitas{
@@ -167,92 +139,92 @@
 }
 
 /* =========================================
-   PAGINATION / SWIPER FIX
+   PAGINATION
 ========================================= */
 
-.swiper{
-    overflow:hidden !important;
+.pagination-wrapper{
+    margin-top:25px;
 }
 
-.swiper-button-prev,
-.swiper-button-next{
-    width:40px !important;
-    height:40px !important;
+/* sembunyikan text showing */
+.pagination-wrapper p{
+    display:none !important;
+}
 
-    background:#FFFFFF !important;
-    border-radius:50% !important;
+/* center */
+.pagination-wrapper nav{
+    display:flex !important;
+    justify-content:center !important;
+}
 
-    box-shadow:0 6px 18px rgba(0,0,0,.10) !important;
+/* container */
+.pagination-wrapper nav > div:first-child{
+    display:none !important;
+}
 
+.pagination-wrapper nav > div:last-child{
+    display:flex !important;
+    justify-content:center !important;
+    width:100%;
+}
+
+/* list pagination */
+.pagination-wrapper nav span,
+.pagination-wrapper nav a{
     display:flex !important;
     align-items:center !important;
     justify-content:center !important;
 
-    margin-top:0 !important;
+    min-width:42px !important;
+    height:42px !important;
+
+    margin:0 4px !important;
+
+    border-radius:12px !important;
+
+    font-size:15px !important;
+    font-weight:700 !important;
+
+    text-decoration:none !important;
 }
 
-/* HILANGKAN FONT BESAR BAWAAN */
-.swiper-button-prev,
-.swiper-button-next,
-.swiper-button-prev::after,
-.swiper-button-next::after{
-    font-family:swiper-icons !important;
+/* tombol biasa */
+.pagination-wrapper nav a{
+    background:#F1F5F9 !important;
+    color:#334155 !important;
 }
 
-/* UKURAN PANAH */
-.swiper-button-prev::after,
-.swiper-button-next::after{
-    font-size:14px !important;
-    font-weight:900 !important;
-    color:#2563EB !important;
+/* hover */
+.pagination-wrapper nav a:hover{
+    background:#E2E8F0 !important;
 }
 
-/* POSISI */
-.swiper-button-prev{
-    left:10px !important;
+/* aktif */
+.pagination-wrapper span[aria-current="page"] span{
+    background:#2563EB !important;
+    color:#FFFFFF !important;
+    border-radius:12px !important;
 }
 
-.swiper-button-next{
-    right:10px !important;
+/* disable */
+.pagination-wrapper span[aria-disabled="true"]{
+    background:#F8FAFC !important;
+    color:#CBD5E1 !important;
 }
 
-/* HOVER */
-.swiper-button-prev:hover,
-.swiper-button-next:hover{
-    transform:scale(1.05);
+/* FIX SVG PANAH */
+.pagination-wrapper svg{
+    width:16px !important;
+    height:16px !important;
+    min-width:16px !important;
+    min-height:16px !important;
+    max-width:16px !important;
+    max-height:16px !important;
 }
 
-/* =========================================
-   PAGINATION NUMBER
-========================================= */
-
-.pagination{
-    margin-top:25px;
-    display:flex;
-    justify-content:center;
-    gap:8px;
-}
-
-.pagination .page-link{
-    min-width:40px;
-    height:40px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border:none;
-    border-radius:12px;
-
-    background:#F1F5F9;
-    color:#334155;
-
-    font-weight:700;
-}
-
-.pagination .active .page-link{
-    background:#2563EB;
-    color:#FFFFFF;
+/* hilangkan border bawaan tailwind */
+.pagination-wrapper *{
+    box-shadow:none !important;
 }
 
 /* =========================================
@@ -260,10 +232,6 @@
 ========================================= */
 
 @media(max-width:992px){
-
-    .table-container{
-        overflow-x:auto;
-    }
 
     .skrining-table{
         min-width:850px;
@@ -280,18 +248,7 @@
         font-size:24px;
     }
 
-    .search-filter{
-        width:100%;
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next{
-        width:34px !important;
-        height:34px !important;
-    }
-
-    .swiper-button-prev::after,
-    .swiper-button-next::after{
-        font-size:12px !important;
+    .table-container{
+        padding:20px;
     }
 }
