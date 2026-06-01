@@ -168,7 +168,7 @@ body{
 
     border:none;
 
-    background:var(--danger);
+    background:#EF4444;
     color:white;
 
     padding:14px;
@@ -182,20 +182,13 @@ body{
 
     cursor:pointer;
 
-    font-size:14px;
-    font-weight:600;
-
-    transition:all .25s ease;
+    transition:.25s;
 }
 
 .logout-btn:hover{
-    background:var(--danger-hover);
+    background:#DC2626;
     transform:translateY(-2px);
-
-    box-shadow:
-        0 10px 20px rgba(239,68,68,.25);
 }
-
 /* ==================================================
    MAIN CONTENT
 ================================================== */
