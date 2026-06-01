@@ -213,7 +213,7 @@ class DatabaseSeeder extends Seeder
                 'durasi' => '30-45 Menit',
                 'intensitas' => 'Sedang',
                 'lokasi' => 'Luar Ruangan',
-                'gambar' => 'jalan_santai.jpg',
+                'link_youtube' => null,
             ],
 
             [
@@ -223,7 +223,7 @@ class DatabaseSeeder extends Seeder
                 'durasi' => '20-30 Menit',
                 'intensitas' => 'Tinggi',
                 'lokasi' => 'Luar Ruangan',
-                'gambar' => 'lari_pagi.jpg',
+                'link_youtube' => null,
             ],
 
             [
@@ -233,7 +233,7 @@ class DatabaseSeeder extends Seeder
                 'durasi' => '30 Menit',
                 'intensitas' => 'Ringan',
                 'lokasi' => 'Dalam Ruangan',
-                'gambar' => 'yoga.jpg',
+                'link_youtube' => null,
             ],
 
             [
@@ -243,7 +243,7 @@ class DatabaseSeeder extends Seeder
                 'durasi' => '45-60 Menit',
                 'intensitas' => 'Sedang',
                 'lokasi' => 'Kolam Renang',
-                'gambar' => 'renang.jpg',
+                'link_youtube' => null,
             ],
 
             [
@@ -253,7 +253,7 @@ class DatabaseSeeder extends Seeder
                 'durasi' => '30-40 Menit',
                 'intensitas' => 'Sedang',
                 'lokasi' => 'Gym / Dalam Ruangan',
-                'gambar' => 'latihan_beban.jpg',
+                'link_youtube' => null,
             ],
 
             [
@@ -263,7 +263,7 @@ class DatabaseSeeder extends Seeder
                 'durasi' => '30-45 Menit',
                 'intensitas' => 'Sedang',
                 'lokasi' => 'Luar Ruangan',
-                'gambar' => 'bersepeda.jpg',
+                'link_youtube' => null,
             ],
 
             [
@@ -273,7 +273,7 @@ class DatabaseSeeder extends Seeder
                 'durasi' => '30 Menit',
                 'intensitas' => 'Tinggi',
                 'lokasi' => 'Studio / Dalam Ruangan',
-                'gambar' => 'senam_aerobik.jpg',
+                'link_youtube' => null,
             ],
 
             [
@@ -283,7 +283,7 @@ class DatabaseSeeder extends Seeder
                 'durasi' => '15-20 Menit',
                 'intensitas' => 'Sedang',
                 'lokasi' => 'Dalam Ruangan',
-                'gambar' => 'pushup_situp.jpg',
+                'link_youtube' => null,
             ],
         ];
 

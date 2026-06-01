@@ -1,174 +1,273 @@
-:root {
-    --primary-blue: #90D2ED;
-    --text-blue: #2FA4D8;
-    --card-welcome: #7BB9D8;
-    --bg-light: #F0F7FA;
-    --white: #ffffff;
-    --grey-card: #BDBDBD;
+:root{
+    --primary:#2563EB;
+    --primary-dark:#1E40AF;
+    --primary-light:#DBEAFE;
+
+    --bg:#F8FAFC;
+    --white:#FFFFFF;
+
+    --text:#0F172A;
+    --muted:#64748B;
+
+    --shadow:0 10px 25px rgba(0,0,0,.06);
 }
 
-.header-section {
-    margin-bottom: 25px;
+/* =====================================
+HEADER CARD
+===================================== */
+
+.header-section{
+    background:#fff;
+    border-radius:24px;
+    padding:25px 30px;
+    margin-bottom:25px;
+    box-shadow:var(--shadow);
 }
 
-.header-section h2 {
-    color: var(--text-blue);
-    font-size: 32px;
-    line-height: 1;
-    text-transform: uppercase;
+.header-section h2{
+    font-size:30px;
+    font-weight:800;
+    color:#000;
+    margin-bottom:6px;
 }
 
-.header-section p {
-    color: var(--text-blue);
-    font-size: 16px;
-    margin-top: 5px;
+.header-section p{
+    color:var(--muted);
 }
 
-.welcome-banner-gizi {
-    background-color: var(--card-welcome);
-    border-radius: 25px;
-    padding: 0 40px;
-    color: var(--white);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    position: relative;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    height: 220px;
-    overflow: hidden;
+/* =====================================
+WELCOME BANNER
+===================================== */
+
+.welcome-banner-gizi{
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #60A5FA
+    );
+
+    border-radius:24px;
+    padding:30px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:25px;
+    box-shadow:var(--shadow);
 }
 
-.banner-text-content h3 {
-    font-size: 32px;
-    font-weight: 800;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+.banner-text-content h3{
+    color:white;
+    font-size:30px;
+    font-weight:800;
 }
 
-.banner-text-content p {
-    font-size: 14px;
-    opacity: 0.9;
-    margin-bottom: 20px;
-    max-width: 400px;
+.banner-text-content p{
+    color:white;
+    opacity:.95;
+    margin-top:8px;
 }
 
-.btn-mulai-gizi {
-    background: var(--white);
-    color: var(--text-blue);
-    border: none;
-    padding: 10px 30px;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
+.doctor-img-wrapper img{
+    width:180px;
 }
 
-.doctor-img-wrapper {
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
+/* =====================================
+STATUS BUTTON
+===================================== */
+
+.btn-status{
+    margin-top:15px;
+    border:none;
+    padding:10px 24px;
+    border-radius:12px;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
 }
 
-.doctor-img-wrapper img {
-    height: 110%;
-    object-fit: contain;
+.btn-online{
+    background:#EF4444;
+    color:white;
 }
 
-.gizi-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-bottom: 30px;
+.btn-offline{
+    background:#22C55E;
+    color:white;
 }
 
-.gizi-stat-card {
-    background: var(--white);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    border-bottom: 4px solid #ccc;
-    position: relative;
+.status-text{
+    margin-top:10px;
+    font-size:13px;
+    color:white;
 }
 
-.gizi-stat-card .label-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--text-blue);
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 10px;
+/* =====================================
+STAT CARD
+===================================== */
+
+.gizi-stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin-bottom:25px;
 }
 
-.gizi-stat-card .value {
-    font-size: 32px;
-    font-weight: 800;
-    color: #5D99C6;
+.gizi-stat-card{
+    background:white;
+    border-radius:24px;
+    padding:24px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
 }
 
-.panels-grid {
-    display: grid;
-    grid-template-columns: 1fr 0.8fr;
-    gap: 25px;
+.gizi-stat-card:hover{
+    transform:translateY(-4px);
 }
 
-.panel-card {
-    background: var(--white);
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border: 1px solid #eee;
+.label-row{
+    display:block;
 }
 
-.panel-card h4 {
-    font-size: 16px;
-    font-weight: 800;
-    margin-bottom: 25px;
-    color: #000;
-    text-transform: uppercase;
+.label-row span{
+    color:var(--muted);
+    font-size:14px;
 }
 
-.chart-container-bmi {
-    height: 300px;
-    position: relative;
+.value{
+    display:block;
+    margin-top:8px;
+
+    color:#2563EB;
+    font-size:34px;
+    font-weight:800;
 }
 
-.progress-list {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+.stat-icon{
+    width:70px;
+    height:70px;
+
+    border-radius:20px;
+
+    background:#DBEAFE;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.progress-item {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.stat-icon svg{
+    width:32px;
+    height:32px;
+    color:#2563EB;
 }
 
-.progress-label-row {
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    font-weight: 600;
-    color: #333;
+/* =====================================
+PANEL
+===================================== */
+
+.panels-grid{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:20px;
 }
 
-.bar-bg {
-    background: #E0E0E0;
-    height: 10px;
-    border-radius: 10px;
-    overflow: hidden;
+.panel-card{
+    background:white;
+    border-radius:24px;
+    padding:30px;
+    box-shadow:var(--shadow);
 }
 
-.bar-fill {
-    background: var(--text-blue);
-    height: 100%;
-    border-radius: 10px;
-    transition: width 0.5s ease-in-out;
+.panel-card h4{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:10px;
 }
 
-@media (max-width: 1024px) {
-    .gizi-stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .panels-grid { grid-template-columns: 1fr; }
-    .doctor-img-wrapper { display: none; }
+.panel-subtitle{
+    color:var(--muted);
+    margin-bottom:25px;
+    font-size:14px;
+}
+
+.chart-container-bmi{
+    height:420px;
+}
+
+/* =====================================
+PROGRESS
+===================================== */
+
+.progress-list{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.progress-item{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.progress-label-row{
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+    font-weight:600;
+}
+
+.bar-bg{
+    width:100%;
+    height:12px;
+
+    background:#E2E8F0;
+
+    border-radius:999px;
+    overflow:hidden;
+}
+
+.bar-fill{
+    height:100%;
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #2563EB,
+        #60A5FA
+    );
+}
+
+/* =====================================
+RESPONSIVE
+===================================== */
+
+@media(max-width:992px){
+
+    .gizi-stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .panels-grid{
+        grid-template-columns:1fr;
+    }
+
+    .doctor-img-wrapper{
+        display:none;
+    }
+}
+
+@media(max-width:768px){
+
+    .gizi-stats-grid{
+        grid-template-columns:1fr;
+    }
 }

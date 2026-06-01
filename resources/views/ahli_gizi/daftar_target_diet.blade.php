@@ -2,9 +2,9 @@
 
 @section('title', 'Target Diet Pasien')
 
-@section('content')
     <link rel="stylesheet" href="{{ asset('assets/css/ahli_gizi/daftar_target_diet.css') }}">
 
+    @section('content')
     <div class="target-page-wrapper">
 
         <div class="header-section">
