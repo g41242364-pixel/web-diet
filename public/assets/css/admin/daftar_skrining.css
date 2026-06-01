@@ -28,12 +28,12 @@
 }
 
 .skrining-header p{
-    color:var(--muted);
     margin:0;
+    color:var(--muted);
 }
 
 /* =========================================
-   TABLE CARD
+   CARD TABLE
 ========================================= */
 
 .table-container{
@@ -70,25 +70,22 @@
 .skrining-table th{
     padding:18px 14px;
     text-align:left;
-
     color:var(--text);
     font-size:15px;
     font-weight:800;
-
     border-bottom:2px solid #E2E8F0;
 }
 
 .skrining-table td{
     padding:18px 14px;
-    font-size:15px;
     color:var(--muted);
-
+    font-size:15px;
     border-bottom:1px solid #E2E8F0;
 }
 
 .skrining-table td:first-child{
-    color:var(--text);
     font-weight:700;
+    color:var(--text);
 }
 
 .skrining-table tbody tr{
@@ -126,14 +123,14 @@
     color:#16A34A;
 }
 
-.status-overweight{
-    background:#FEF3C7;
-    color:#D97706;
-}
-
 .status-underweight{
     background:#DBEAFE;
     color:#2563EB;
+}
+
+.status-overweight{
+    background:#FEF3C7;
+    color:#D97706;
 }
 
 .status-obesitas{
@@ -149,59 +146,84 @@
     margin-top:25px;
 }
 
-/* FIX SVG PAGINATION LARAVEL */
-.pagination-wrapper svg,
-.pagination-wrapper .w-5,
-.pagination-wrapper .h-5,
-nav[role="navigation"] svg,
-nav[role="navigation"] .w-5,
-nav[role="navigation"] .h-5{
-    width:18px !important;
-    height:18px !important;
-    min-width:18px !important;
-    min-height:18px !important;
-    max-width:18px !important;
-    max-height:18px !important;
+/* sembunyikan text showing */
+.pagination-wrapper p{
+    display:none !important;
 }
 
-/* CENTER PAGINATION */
+/* center */
 .pagination-wrapper nav{
-    display:flex;
-    justify-content:center;
+    display:flex !important;
+    justify-content:center !important;
 }
 
-/* BUTTON PAGINATION */
-.pagination-wrapper a,
-.pagination-wrapper span{
-    min-width:40px !important;
-    height:40px !important;
+/* container */
+.pagination-wrapper nav > div:first-child{
+    display:none !important;
+}
 
+.pagination-wrapper nav > div:last-child{
+    display:flex !important;
+    justify-content:center !important;
+    width:100%;
+}
+
+/* list pagination */
+.pagination-wrapper nav span,
+.pagination-wrapper nav a{
     display:flex !important;
     align-items:center !important;
     justify-content:center !important;
 
+    min-width:42px !important;
+    height:42px !important;
+
+    margin:0 4px !important;
+
     border-radius:12px !important;
 
-    text-decoration:none !important;
+    font-size:15px !important;
     font-weight:700 !important;
+
+    text-decoration:none !important;
 }
 
-/* BUTTON BIASA */
-.pagination-wrapper a{
+/* tombol biasa */
+.pagination-wrapper nav a{
     background:#F1F5F9 !important;
     color:#334155 !important;
 }
 
-/* BUTTON AKTIF */
+/* hover */
+.pagination-wrapper nav a:hover{
+    background:#E2E8F0 !important;
+}
+
+/* aktif */
 .pagination-wrapper span[aria-current="page"] span{
     background:#2563EB !important;
     color:#FFFFFF !important;
     border-radius:12px !important;
 }
 
-/* HILANGKAN BORDER DEFAULT */
+/* disable */
+.pagination-wrapper span[aria-disabled="true"]{
+    background:#F8FAFC !important;
+    color:#CBD5E1 !important;
+}
+
+/* FIX SVG PANAH */
+.pagination-wrapper svg{
+    width:16px !important;
+    height:16px !important;
+    min-width:16px !important;
+    min-height:16px !important;
+    max-width:16px !important;
+    max-height:16px !important;
+}
+
+/* hilangkan border bawaan tailwind */
 .pagination-wrapper *{
-    border:none !important;
     box-shadow:none !important;
 }
 
