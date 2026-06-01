@@ -11,7 +11,19 @@
             <h2 style="font-size:28px;font-weight:800;">Kelola Artikel</h2>
             <p style="color:#666;">Tulis dan kelola artikel edukasi untuk pengguna.</p>
         </div>
-        <a href="{{ route('ahligizi.artikel.tambah') }}" style="padding:10px 20px;background:#90D2ED;color:#fff;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">+ Tambah Artikel</a>
+        <a href="{{ route('ahligizi.artikel.tambah') }}"
+            style="
+            display:inline-block;
+            padding:12px 28px;
+            background:#2563EB;
+            color:#FFFFFF;
+            border-radius:999px;
+            text-decoration:none;
+            font-size:15px;
+            font-weight:700;
+            transition:.2s;">
+            + Tambah Artikel
+        </a>
     </div>
 
     @if(session('success'))
