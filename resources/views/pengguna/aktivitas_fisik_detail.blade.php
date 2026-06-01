@@ -8,6 +8,24 @@
 
 <div class="detail-container">
 
+    {{-- HEADER --}}
+    <div class="page-header">
+
+        <div class="header-content">
+
+            <img src="{{ asset('assets/images/fisik.png') }}"
+                alt="Fisik Icon"
+                onerror="this.src='https://cdn-icons-png.flaticon.com/512/3048/3048398.png'">
+
+            <div class="header-text">
+                <h2>Aktivitas Fisik</h2>
+                <p>Panduan aktivitas fisik untuk mendukung gaya hidup sehat Anda.</p>
+            </div>
+
+        </div>
+
+    </div>
+
     {{-- BUTTON KEMBALI --}}
     <div class="back-nav">
         <a href="{{ route('pengguna.aktivitasFisik') }}" class="btn-back">
@@ -26,24 +44,6 @@
             <span>Kembali ke Daftar</span>
 
         </a>
-    </div>
-
-    {{-- HEADER --}}
-    <div class="page-header">
-
-        <div class="header-content">
-
-            <img src="{{ asset('assets/images/fisik.png') }}"
-                alt="Fisik Icon"
-                onerror="this.src='https://cdn-icons-png.flaticon.com/512/3048/3048398.png'">
-
-            <div class="header-text">
-                <h2>Aktivitas Fisik</h2>
-                <p>Panduan aktivitas fisik untuk mendukung gaya hidup sehat Anda.</p>
-            </div>
-
-        </div>
-
     </div>
 
     {{-- DETAIL --}}
