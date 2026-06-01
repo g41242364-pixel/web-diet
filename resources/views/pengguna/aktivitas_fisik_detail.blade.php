@@ -19,34 +19,52 @@
 
             <div class="header-text">
                 <h2>Aktivitas Fisik</h2>
-                <p>Panduan aktivitas fisik untuk mendukung gaya hidup sehat Anda.</p>
+                <p>
+                    Panduan aktivitas fisik untuk mendukung gaya hidup sehat Anda.
+                </p>
             </div>
 
         </div>
 
     </div>
 
-    {{-- BUTTON KEMBALI --}}
-    <div class="back-nav">
-        <a href="{{ route('pengguna.aktivitasFisik') }}" class="btn-back">
+    /* ==========================
+   BUTTON KEMBALI
+========================== */
 
-            <svg width="18" height="18" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+.back-nav {
+    margin: 24px 0;
+}
 
-                <line x1="19" y1="12" x2="5" y2="12"></line>
-                <polyline points="12 19 5 12 12 5"></polyline>
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
 
-            </svg>
+    background: #2563EB;
+    color: #FFFFFF;
 
-            <span>Kembali ke Daftar</span>
+    padding: 12px 22px;
+    border-radius: 30px;
 
-        </a>
-    </div>
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
 
-    {{-- DETAIL --}}
+    transition: all .25s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.18);
+}
+
+.btn-back:hover {
+    background: #1D4ED8;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.btn-back svg {
+    flex-shrink: 0;
+}
+    {{-- DETAIL CARD --}}
     <div class="detail-card">
 
         <div class="detail-content">
@@ -106,7 +124,8 @@
 
                         <div class="info-icon duration">
 
-                            <svg width="24" height="24"
+                            <svg width="24"
+                                height="24"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="#52C41A"
@@ -120,10 +139,15 @@
                         </div>
 
                         <div class="info-text">
-                            <span class="label">Durasi</span>
+
+                            <span class="label">
+                                Durasi
+                            </span>
+
                             <span class="value">
                                 {{ $act->durasi ?? '30-45 Menit' }}
                             </span>
+
                         </div>
 
                     </div>
@@ -133,7 +157,8 @@
 
                         <div class="info-icon intensity">
 
-                            <svg width="24" height="24"
+                            <svg width="24"
+                                height="24"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="#52C41A"
@@ -148,10 +173,15 @@
                         </div>
 
                         <div class="info-text">
-                            <span class="label">Intensitas</span>
+
+                            <span class="label">
+                                Intensitas
+                            </span>
+
                             <span class="value">
                                 {{ $act->intensitas ?? 'Sedang' }}
                             </span>
+
                         </div>
 
                     </div>
@@ -161,7 +191,8 @@
 
                         <div class="info-icon location">
 
-                            <svg width="24" height="24"
+                            <svg width="24"
+                                height="24"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="#52C41A"
@@ -175,10 +206,15 @@
                         </div>
 
                         <div class="info-text">
-                            <span class="label">Lokasi</span>
+
+                            <span class="label">
+                                Lokasi
+                            </span>
+
                             <span class="value">
                                 {{ $act->lokasi ?? 'Luar Ruangan' }}
                             </span>
+
                         </div>
 
                     </div>
