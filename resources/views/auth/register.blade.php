@@ -136,9 +136,9 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            padding: 40px 48px;
+            padding: 60px 48px 40px 48px;
             overflow-y: auto;
             background: var(--bg-page);
         }
