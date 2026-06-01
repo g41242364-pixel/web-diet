@@ -57,7 +57,11 @@ class JurnalMakananController extends Controller
 
     public function lainnya()
     {
+<<<<<<< Updated upstream
         $foods = Food::paginate(6);
+=======
+        $foods = Food::paginate(9);
+>>>>>>> Stashed changes
         return view('pengguna.jurnal_makanan', compact('foods'));
     }
 }
