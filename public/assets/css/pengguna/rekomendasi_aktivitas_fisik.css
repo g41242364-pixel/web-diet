@@ -200,14 +200,14 @@
             font-weight: 600;
             font-size: 14px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(123, 185, 216, 0.25);
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
             border: none;
         }
 
         .btn-others:hover {
-            background-color: #5BA4C4;
+            background-color: #1D4ED8;
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(91, 164, 196, 0.35);
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.35);
         }
 
         .btn-others svg {
@@ -382,7 +382,7 @@
             justify-content: center;
             padding: 8px 16px;
             background: white;
-            color: #7BB9D8 !important;
+            color: #2563EB !important;
             border-radius: 10px;
             text-decoration: none;
             font-weight: 700;
@@ -393,14 +393,14 @@
 
         .pagination-container .active span,
         .pagination-container .page-item.active .page-link {
-            background: #7BB9D8 !important;
-            border-color: #7BB9D8 !important;
+            background: #2563EB !important;
+            border-color: #2563EB !important;
             color: white !important;
         }
 
         .pagination-container a:hover {
-            background: #90D2ED;
-            border-color: #90D2ED !important;
+            background: #1D4ED8;
+            border-color: #1D4ED8 !important;
             color: white !important;
         }
 
