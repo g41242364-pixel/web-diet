@@ -86,8 +86,17 @@
 
         </div>
 
-        <button type="submit" class="btn-primary">
-            + Tambah Makanan
+        <button type="submit"
+                style="
+                background:#2563EB;
+                color:#FFFFFF;
+                border:none;
+                border-radius:999px;
+                padding:12px 28px;
+                font-size:15px;
+                font-weight:700;
+                cursor:pointer;">
+                + Tambah Makanan
         </button>
 
     </form>
