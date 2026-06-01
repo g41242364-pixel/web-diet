@@ -5,9 +5,9 @@
 
 @section('content')
     <div class="header-section">
-        <h2>Dashboard SISD</h2>
-        <p>Sistem Informasi Skrining Diet</p>
-    </div>
+    <h2>Dashboard Ahli Gizi</h2>
+    <p>Pantau pasien, skrining, konsultasi, dan progres diet dalam satu halaman.</p>
+</div>
 
     <section class="welcome-banner-gizi">
         <div class="banner-text-content">
@@ -66,17 +66,17 @@
         </div>
     </div>
 
-    <div class="panels-grid">
-        <div class="panel-card">
-            <h4>Kategori BMI Pasien</h4>
-            <div class="chart-container-bmi">
-                <canvas id="bmiGiziChart"></canvas>
-            </div>
-        </div>
+    <div class="panel-card">
+    <h4>📊 Distribusi IMT Pasien</h4>
+    <p class="panel-subtitle">
+        Persentase kategori indeks massa tubuh pasien yang ditangani.
+    </p>
 
         <div class="panel-card">
-            <h4>Progres Target Diet Pasien</h4>
-            <div class="progress-list">
+    <h4>🎯 Progres Target Diet Pasien</h4>
+    <p class="panel-subtitle">
+        Monitoring perkembangan pencapaian target berat badan pasien.
+    </p>
                 @forelse($progressDiet as $target)
                 @php
                     $checkinTerbaru = $target->checkins->first();
