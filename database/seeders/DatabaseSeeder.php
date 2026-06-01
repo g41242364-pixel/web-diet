@@ -209,11 +209,11 @@ class DatabaseSeeder extends Seeder
             [
                 'nama' => 'Jalan Santai',
                 'deskripsi' => 'Jalan kaki 30 menit dengan kecepatan sedang untuk menjaga kebugaran.',
-                'status_kebiasaan' => 'Hidup Sehat',
+                'status_kebiasaan' => 'Kurang Sehat',
                 'durasi' => '30-45 Menit',
                 'intensitas' => 'Sedang',
                 'lokasi' => 'Luar Ruangan',
-                'link_youtube' => null,
+                'link_youtube' => 'https://youtu.be/e7oWtlhWQks?si=CeORjx71A97_nh3q',
             ],
 
             [
