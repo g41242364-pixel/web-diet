@@ -42,6 +42,19 @@
                 <img src="{{ $gambar }}" alt="{{ $plan->kategori }}">
 
                 <h1>
+                    <div class="action-wrapper">
+
+    <a href="{{ route('pengguna.jurnalMakanan') }}"
+       class="btn-action">
+        Kembali
+    </a>
+
+    <a href="#total-nutrisi"
+       class="btn-action btn-outline">
+        Lihat Total Nutrisi
+    </a>
+
+</div>
                     @foreach ($plan->items as $item)
                         {{ $item->food->nama ?? '-' }}{{ !$loop->last ? ' + ' : '' }}
                     @endforeach
@@ -83,7 +96,7 @@
                     </div>
                 @endforeach
 
-                <div class="nut-box total-box">
+                <div class="nut-box total-box" id="total-nutrisi">
 
                     <h5>TOTAL Nutrisi</h5>
 
