@@ -1,377 +1,376 @@
+/* =============================================
+   ARTIKEL EDUKASI — Selaras dengan Aktivitas Fisik
+   ============================================= */
+
 :root {
-    --primary-blue: #DBEAFE;
     --dark-blue: #2563EB;
     --dark-blue-hover: #1D4ED8;
     --bg-light: #F8FAFC;
-    --white: #FFFFFF;
+    --primary-blue: #DBEAFE;
+    --container-bg: #EFF6FF;
     --text-dark: #0F172A;
-    --border-color: #BFDBFE;
-    --container-blue-bg: #DBEAFE;
+    --border-color: #DBEAFE;
+    --white: #FFFFFF;
 }
 
 /* =========================================
    PAGE
 ========================================= */
 
-.main-wrapper{
-    width:100%;
-    padding:0;
-    background:var(--bg-light);
-    min-height:100vh;
-    box-sizing:border-box;
+.main-wrapper {
+    width: 100%;
+    padding: 0;
+    background: var(--bg-light);
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* =========================================
-   HEADER
+   HEADER — sama persis dengan aktivitas fisik
 ========================================= */
 
-.article-header{
-    background:#FFFFFF;
-    border-radius:20px;
-    padding:25px 30px;
-    margin-bottom:25px;
-
-    border:1px solid var(--border-color);
-    box-shadow:0 4px 15px rgba(0,0,0,.05);
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.article-header {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header-info{
-    display:flex;
-    align-items:center;
-    gap:20px;
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.icon-box{
-    width:70px;
-    height:70px;
-
-    border-radius:18px;
-    background:var(--primary-blue);
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    flex-shrink:0;
+.icon-box {
+    width: 65px;
+    height: 65px;
+    border-radius: 16px;
+    background: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.icon-box svg{
-    width:35px;
-    height:35px;
-    color:var(--dark-blue);
+.icon-box svg {
+    width: 32px;
+    height: 32px;
+    color: var(--dark-blue);
 }
 
-.header-text h2{
-    margin:0;
-    font-size:30px;
-    font-weight:800;
-    color:var(--text-dark);
-    line-height:1.2;
+.header-text h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-dark);
 }
 
-.header-text p{
-    margin:8px 0 0;
-    font-size:14px;
-    color:#64748B;
+.header-text p {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #64748B;
 }
 
 /* =========================================
-   BUTTON REKOMENDASI
+   BUTTON — sama dengan .btn-recommendation aktivitas
 ========================================= */
 
-.btn-recommendation{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-
-    padding:12px 24px;
-
-    background:var(--dark-blue);
-    color:#FFFFFF;
-
-    text-decoration:none;
-    border-radius:30px;
-
-    font-size:14px;
-    font-weight:600;
-
-    box-shadow:0 4px 10px rgba(37,99,235,.25);
-
-    transition:all .3s ease;
+.btn-recommendation {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--dark-blue);
+    color: #fff !important;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    transition: .3s;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, .25);
+    white-space: nowrap;
 }
 
-.btn-recommendation:hover{
-    background:var(--dark-blue-hover);
-    color:#FFFFFF;
-    transform:translateY(-2px);
+.btn-recommendation:hover {
+    background: var(--dark-blue-hover);
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, .35);
 }
 
 /* =========================================
-   CONTAINER
+   CONTAINER — sama dengan .activity-container
 ========================================= */
 
-.article-container-box{
-    background:var(--container-blue-bg);
-    border-radius:30px;
-    padding:35px;
+.article-container-box {
+    background: var(--container-bg);
+    border-radius: 32px;
+    padding: 40px;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, .02);
 }
 
 /* =========================================
-   GRID
+   GRID — sama dengan .activity-grid
 ========================================= */
 
-.article-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(350px,1fr));
-    gap:30px;
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
 }
 
 /* =========================================
-   CARD
+   CARD — sama dengan .activity-card
 ========================================= */
 
-.article-card{
-    background:#FFFFFF;
-    border-radius:25px;
-    overflow:hidden;
-
-    text-decoration:none;
-    color:inherit;
-
-    display:flex;
-    flex-direction:column;
-
-    box-shadow:0 6px 16px rgba(0,0,0,.05);
-
-    transition:all .3s ease;
+.article-card {
+    background: var(--white);
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1.5px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .04);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
-.article-card:hover{
-    transform:translateY(-4px);
+.article-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .08);
 }
 
 /* =========================================
-   IMAGE
+   BANNER IMAGE
 ========================================= */
 
-.card-banner{
-    background:var(--dark-blue);
-    height:180px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    overflow:hidden;
+.card-banner {
+    background: var(--primary-blue);
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
-.card-banner img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* =========================================
-   CONTENT
-========================================= */
-
-.card-content{
-    padding:25px;
-
-    display:flex;
-    flex-direction:column;
-    flex-grow:1;
+.card-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* =========================================
-   CATEGORY
+   CARD CONTENT
 ========================================= */
 
-.category-tag{
-    background:var(--primary-blue);
-    color:var(--dark-blue);
+.card-content {
+    padding: 22px 25px 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
 
-    padding:6px 14px;
-    border-radius:12px;
+/* =========================================
+   CATEGORY TAG — diselaraskan dengan tag-pill aktivitas
+========================================= */
 
-    font-size:11px;
-    font-weight:700;
-
-    display:inline-block;
-    align-self:flex-start;
-
-    margin-bottom:12px;
+.category-tag {
+    background: var(--dark-blue);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 14px;
 }
 
 /* =========================================
    TITLE
 ========================================= */
 
-.article-card h4{
-    font-size:18px;
-    font-weight:800;
-
-    margin:0 0 10px;
-
-    color:var(--text-dark);
-    line-height:1.4;
-}
-
-.article-card p{
-    font-size:13px;
-    color:#64748B;
-
-    margin:0 0 20px;
-
-    line-height:1.6;
-    flex-grow:1;
+.article-card h4 {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 10px;
+    color: #000;
+    line-height: 1.3;
 }
 
 /* =========================================
-   READ MORE
+   DESCRIPTION
 ========================================= */
 
-.read-more{
-    display:flex;
-    align-items:center;
-    gap:5px;
-
-    font-size:13px;
-    font-weight:700;
-
-    color:var(--dark-blue);
-
-    transition:.3s;
+.article-card p {
+    font-size: 13px;
+    color: #555;
+    margin: 0 0 18px;
+    line-height: 1.6;
+    flex-grow: 1;
 }
 
-.article-card:hover .read-more{
-    gap:10px;
+/* =========================================
+   READ MORE — styling pill seperti tag aktivitas
+========================================= */
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--primary-blue);
+    color: var(--dark-blue);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    align-self: flex-start;
+    transition: .3s;
+}
+
+.article-card:hover .read-more {
+    background: var(--dark-blue);
+    color: #fff;
 }
 
 /* =========================================
    EMPTY STATE
 ========================================= */
 
-.empty-state{
-    grid-column:1/-1;
-
-    background:#FFFFFF;
-
-    border-radius:20px;
-    padding:60px 30px;
-
-    text-align:center;
-
-    color:#64748B;
-
-    box-shadow:0 4px 15px rgba(0,0,0,.04);
+.article-grid > div[style*="grid-column"] {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 60px 30px;
+    text-align: center;
+    color: #94a3b8;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .04);
+    font-size: 0.95rem;
 }
 
 /* =========================================
-   PAGINATION
+   PAGINATION — sama dengan aktivitas fisik
 ========================================= */
 
-.pagination-wrapper{
-    margin-top:40px;
-
-    display:flex;
-    justify-content:center;
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
 }
 
-.pagination{
-    display:flex !important;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    flex-wrap:wrap;
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
 }
 
-.page-item{
-    list-style:none;
+.pagination-container nav,
+.pagination-wrapper nav {
+    display: flex;
+    justify-content: center;
 }
 
-.page-link{
-    min-width:45px;
-    height:45px;
-
-    display:flex !important;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:12px !important;
-
-    border:1px solid var(--border-color) !important;
-
-    background:#FFFFFF !important;
-    color:var(--dark-blue) !important;
-
-    font-size:13px;
-    font-weight:600;
-
-    text-decoration:none;
-
-    transition:.3s;
+.pagination {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-wrap: wrap;
 }
 
-.page-link:hover{
-    background:var(--primary-blue) !important;
+.page-item {
+    margin: 0;
 }
 
-.page-item.active .page-link{
-    background:var(--dark-blue) !important;
-    border-color:var(--dark-blue) !important;
-    color:#FFFFFF !important;
+.page-link {
+    min-width: 42px;
+    height: 42px;
+    padding: 0 14px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px !important;
+    border: 1px solid var(--border-color) !important;
+    background: var(--white) !important;
+    color: var(--dark-blue) !important;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .25s ease;
 }
 
-.page-item.disabled .page-link{
-    opacity:.5;
+.page-link:hover {
+    background: var(--primary-blue) !important;
+    border-color: var(--dark-blue) !important;
+}
+
+.page-item.active .page-link {
+    background: var(--dark-blue) !important;
+    border-color: var(--dark-blue) !important;
+    color: var(--white) !important;
+}
+
+.page-item.disabled .page-link {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.pagination-container nav > div:first-child,
+.pagination-wrapper nav > div:first-child {
+    display: none !important;
 }
 
 /* =========================================
    RESPONSIVE
 ========================================= */
 
-@media (max-width:1200px){
-
-    .article-grid{
-        grid-template-columns:repeat(2,1fr);
+@media (max-width: 1024px) {
+    .article-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width:768px){
-
-    .article-header{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:20px;
+@media (max-width: 640px) {
+    .article-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px;
     }
 
-    .header-info{
-        width:100%;
+    .header-text h2 {
+        font-size: 22px;
     }
 
-    .header-text h2{
-        font-size:24px;
+    .btn-recommendation {
+        width: 100%;
+        justify-content: center;
     }
 
-    .btn-recommendation{
-        width:100%;
-        justify-content:center;
+    .article-container-box {
+        padding: 20px;
     }
 
-    .article-grid{
-        grid-template-columns:1fr;
+    .article-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .article-container-box{
-        padding:20px;
-    }
-
-    .card-banner{
-        height:200px;
+    .card-banner {
+        height: 180px;
     }
 }
