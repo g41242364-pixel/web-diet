@@ -4,13 +4,10 @@
 .art-wrap { max-width: 900px; }
 </style>
 
-@section('content')
-
 .artikel-action{
     display:flex;
     justify-content:flex-end;
-    margin-bottom:20px;
-}
+   
 
 .btn-tambah-artikel{
     display:inline-flex;
@@ -36,10 +33,16 @@
     transform:translateY(-2px);
 }
 
+@section('content')
 <div class="page-header">
 
     <div class="page-header-content">
 
+    <div class="artikel-action">
+    <a href="{{ route('ahligizi.artikel.tambah') }}" class="btn-tambah-artikel">
+        + Tambah Artikel
+    </a>
+</div>
         <div class="page-header-icon">
             <svg width="28" height="28"
                 viewBox="0 0 24 24"
