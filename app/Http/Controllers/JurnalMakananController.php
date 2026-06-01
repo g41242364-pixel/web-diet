@@ -62,3 +62,4 @@ public function lainnya()
     return view('pengguna.jurnal_makanan', compact('foods'));
 }
     }
+    
