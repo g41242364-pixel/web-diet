@@ -96,13 +96,15 @@
 
                     $class = 'obesitas';
 
-                    if(stripos($kategori,'kurus') !== false){
-                        $class = 'kurus';
+                    if(stripos($kategori,'underweight') !== false){
+                        $class = 'underweight';
                     }
                     elseif(stripos($kategori,'normal') !== false){
                         $class = 'normal';
                     }
-                    elseif(stripos($kategori,'gemuk') !== false){
+                    elseif(stripos($kategori,'gemuk') !== false ||
+                        stripos($kategori,'overweight') !== false
+                    ){
                         $class = 'gemuk';
                     }
 
@@ -145,10 +147,11 @@ document.addEventListener('DOMContentLoaded', function(){
                 data: {!! json_encode($distribusiImt->values()) !!},
 
                 backgroundColor: [
-                    '#FBBF24',
-                    '#22C55E',
-                    '#F97316',
-                    '#EF4444'
+                '#22C55E', // Normal
+                '#EF4444', // Obesitas
+                '#F97316', // Overweight
+                '#FBBF24',// Underweight
+
                 ],
 
                 borderWidth: 4,
