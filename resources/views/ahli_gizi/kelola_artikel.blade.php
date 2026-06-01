@@ -4,6 +4,8 @@
 .art-wrap { max-width: 900px; }
 </style>
 
+@section('content')
+
 .artikel-action{
     display:flex;
     justify-content:flex-end;
@@ -34,7 +36,6 @@
     transform:translateY(-2px);
 }
 
-@section('content')
 <div class="page-header">
 
     <div class="page-header-content">
