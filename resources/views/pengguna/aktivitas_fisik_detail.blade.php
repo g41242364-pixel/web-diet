@@ -27,6 +27,7 @@
     <div class="detail-container">
         <div class="detail-card">
             <div class="detail-content">
+                <div class="activity-badge">🏃 {{ $act->intensitas ?? 'Aktivitas Fisik' }}</div>
                 <h1 class="activity-title">{{ $act->nama }}</h1>
 
                 <div class="activity-illustration">
