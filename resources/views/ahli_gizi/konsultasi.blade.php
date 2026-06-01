@@ -302,7 +302,7 @@
         border:1px solid #E2E8F0;
     ">
         <h1 style="
-            font-size:48px;
+            font-size:38px;
             font-weight:700;
             color:#0F172A;
             margin-bottom:10px;
