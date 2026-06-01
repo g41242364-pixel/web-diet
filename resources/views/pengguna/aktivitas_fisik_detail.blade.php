@@ -28,42 +28,31 @@
 
     </div>
 
-    /* ==========================
-   BUTTON KEMBALI
-========================== */
+    {{-- BUTTON KEMBALI --}}
+    <div class="back-nav">
 
-.back-nav {
-    margin: 24px 0;
-}
+        <a href="{{ route('pengguna.aktivitasFisik') }}" class="btn-back">
 
-.btn-back {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+            <svg width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round">
 
-    background: #2563EB;
-    color: #FFFFFF;
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
 
-    padding: 12px 22px;
-    border-radius: 30px;
+            </svg>
 
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
+            <span>Kembali ke Daftar</span>
 
-    transition: all .25s ease;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.18);
-}
+        </a>
 
-.btn-back:hover {
-    background: #1D4ED8;
-    color: #FFFFFF;
-    transform: translateY(-2px);
-}
+    </div>
 
-.btn-back svg {
-    flex-shrink: 0;
-}
     {{-- DETAIL CARD --}}
     <div class="detail-card">
 
