@@ -93,7 +93,7 @@
                 </a>
             </li>
         </ul>
-
+s
         <form action="{{ route('logout') }}" method="POST" style="margin-top: auto;">
             @csrf
             <button type="submit" class="nav-item logout-btn">
