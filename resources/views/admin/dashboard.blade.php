@@ -145,10 +145,10 @@ document.addEventListener('DOMContentLoaded', function(){
                 data: {!! json_encode($distribusiImt->values()) !!},
 
                 backgroundColor: [
-                    '#FBBF24'  // Kuning
-                    '#22C55E'  // Hijau
-                    '#F97316'  // Orange
-                    '#EF4444'  // Merah
+                    '#FBBF24',
+                    '#22C55E',
+                    '#F97316',
+                    '#EF4444'
                 ],
 
                 borderWidth: 4,
