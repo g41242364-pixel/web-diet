@@ -1,13 +1,16 @@
 @extends('layouts.layout_ahli_gizi')
 @section('title', 'Kelola Artikel')
+
 <style>
-.art-wrap { max-width: 900px; }
-</style>
+.art-wrap{
+    max-width:900px;
+}
 
 .artikel-action{
     display:flex;
     justify-content:flex-end;
-   
+    margin-bottom:20px;
+}
 
 .btn-tambah-artikel{
     display:inline-flex;
@@ -15,13 +18,12 @@
     justify-content:center;
 
     padding:12px 24px;
-
     background:#2563EB;
     color:#fff;
 
     border-radius:999px;
-
     text-decoration:none;
+
     font-size:14px;
     font-weight:600;
 
@@ -32,17 +34,13 @@
     background:#1D4ED8;
     transform:translateY(-2px);
 }
+</style>
 
 @section('content')
 <div class="page-header">
 
     <div class="page-header-content">
-
-    <div class="artikel-action">
-    <a href="{{ route('ahligizi.artikel.tambah') }}" class="btn-tambah-artikel">
-        + Tambah Artikel
-    </a>
-</div>
+    
         <div class="page-header-icon">
             <svg width="28" height="28"
                 viewBox="0 0 24 24"
@@ -55,6 +53,13 @@
 
             </svg>
         </div>
+
+        <div class="artikel-action">
+    <a href="{{ route('ahligizi.artikel.tambah') }}"
+       class="btn-tambah-artikel">
+        + Tambah Artikel
+    </a>
+</div>
 
         <div>
             <h2>Kelola Artikel</h2>
