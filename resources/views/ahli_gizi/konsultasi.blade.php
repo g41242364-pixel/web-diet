@@ -63,6 +63,48 @@
     align-items:flex-end;
 }
 
+.page-header{
+    background:#fff;
+    border-radius:20px;
+    padding:25px 30px;
+    margin-bottom:25px;
+    border:1px solid #DBEAFE;
+    box-shadow:0 4px 15px rgba(0,0,0,.05);
+}
+
+.page-header-content{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.page-header-icon{
+    width:60px;
+    height:60px;
+    border-radius:16px;
+    background:#DBEAFE;
+    color:#2563EB;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+}
+
+.page-header h2{
+    margin:0;
+    font-size:28px;
+    font-weight:800;
+    color:#0F172A;
+}
+
+.page-header p{
+    margin-top:5px;
+    font-size:14px;
+    color:#64748B;
+}
+
 .chat-header-left{
     display:flex;
     align-items:center;
@@ -320,30 +362,23 @@
 @section('content')
 
     <!-- HEADER -->
-    <div style="
-        background:white;
-        padding:40px;
-        border-radius:20px;
-        margin-bottom:24px;
-        box-shadow:0 10px 30px rgba(15,23,42,.08);
-        border:1px solid #E2E8F0;
-    ">
-        <h1 style="
-            font-size:38px;
-            font-weight:700;
-            color:#0F172A;
-            margin-bottom:10px;
-        ">
-            Konsultasi
-        </h1>
+<div class="page-header">
+    <div class="page-header-content">
 
-        <p style="
-            color:#64748B;
-            font-size:20px;
-        ">
-            Kelola konsultasi dan komunikasi dengan pengguna.
-        </p>
+        <div class="page-header-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+        </div>
+
+        <div>
+            <h2>Konsultasi</h2>
+            <p>Kelola konsultasi dan komunikasi dengan pengguna.</p>
+        </div>
+
     </div>
+</div>
 
     <div class="consul-layout">
 
