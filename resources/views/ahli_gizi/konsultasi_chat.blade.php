@@ -5,8 +5,7 @@
 
 <style>
 .chat-page{
-    max-width:900px;
-    margin:0 auto;
+    width:100%;
 }
 
 .btn-back-chat{
@@ -30,6 +29,12 @@
     border-radius:20px;
     overflow:hidden;
     box-shadow:0 8px 24px rgba(37,99,235,.08);
+}
+
+.chat-container{
+    height:85vh;
+    display:flex;
+    flex-direction:column;
 }
 
 .chat-header{
@@ -76,17 +81,21 @@
 }
 
 .screening-info{
-    background:#DBEAFE;
+    background:#EFF6FF;
     border-bottom:1px solid #BFDBFE;
-    padding:12px 16px;
+    padding:14px 16px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
     font-size:13px;
     color:#1E40AF;
 }
 
 .message-list{
-    height:500px;
+    height:calc(100vh - 330px);
+    min-height:500px;
     overflow-y:auto;
-    padding:18px;
+    padding:20px;
     display:flex;
     flex-direction:column;
     gap:14px;
@@ -116,8 +125,9 @@
     color:#fff;
     padding:12px 15px;
     border-radius:18px 18px 4px 18px;
-    max-width:70%;
+    max-width:55%;
     line-height:1.6;
+    word-break:break-word;
 }
 
 .bubble-user{
@@ -125,9 +135,10 @@
     color:#334155;
     padding:12px 15px;
     border-radius:18px 18px 18px 4px;
-    max-width:70%;
+    max-width:55%;
     line-height:1.6;
     border:1px solid #E2E8F0;
+    word-break:break-word;
 }
 
 .bubble-meta{
@@ -234,11 +245,27 @@
 
         @if($consultation->screening)
         <div class="screening-info">
-            📋 Data Skrining :
-            BB {{ $consultation->screening->berat_badan }} kg |
-            TB {{ $consultation->screening->tinggi_badan }} cm |
-            IMT {{ $consultation->screening->imt }} |
-            Status {{ $consultation->screening->status_imt }}
+
+        <span>
+        ⚖️ BB:
+        {{ $consultation->screening->berat_badan }} kg
+        </span>
+
+        <span>
+        📏 TB:
+        {{ $consultation->screening->tinggi_badan }} cm
+        </span>
+
+        <span>
+        📊 IMT:
+        {{ $consultation->screening->imt }}
+        </span>
+
+        <span>
+        🏷️
+        {{ $consultation->screening->status_imt }}
+        </span>
+
         </div>
         @endif
 
