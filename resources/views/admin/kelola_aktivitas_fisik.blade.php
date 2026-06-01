@@ -62,10 +62,9 @@
                             <option value="Fleksibel">Fleksibel</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label>Gambar</label>
-                        <input type="file" name="gambar" accept="image/*" class="form-control-input"
-                            style="padding: 6px;">
+                    <<div class="form-group">
+                        <label>Link YouTube</label>
+                        <input type="url" name="link_youtube" placeholder="https://www.youtube.com/watch?v=..." class="form-control-input">
                     </div>
                 </div>
 
