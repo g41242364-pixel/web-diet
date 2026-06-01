@@ -103,9 +103,6 @@
                     </div>
                 </div>
 
-                <div class="long-description">
-                    <p>{{ $act->deskripsi_detail ?? $act->deskripsi }}</p>
-                </div>
             </div>
         </div>
     </div>
