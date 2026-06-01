@@ -183,21 +183,29 @@
             box-shadow: 0 8px 24px rgba(26, 79, 156, 0.45);
         }
 
-        /* ===== BACK LINK ===== */
-        .back-link {
+        /* ===== BACK BUTTON ===== */
+        .back-btn {
             display: block;
-            text-align: center;
-            margin-top: 18px;
+            width: 100%;
+            padding: 13px;
+            margin-top: 12px;
+            background: transparent;
             color: var(--accent-blue);
-            font-size: 13px;
-            font-weight: 500;
+            border: 1.5px solid var(--accent-blue);
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-align: center;
             text-decoration: none;
-            transition: color 0.2s;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
         }
 
-        .back-link:hover {
-            color: var(--sidebar-mid);
-            text-decoration: underline;
+        .back-btn:hover {
+            background: var(--accent-blue);
+            color: var(--white);
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -232,7 +240,7 @@
             <button type="submit" class="btn">Cari Akun</button>
         </form>
 
-        <a href="{{ route('login') }}" class="back-link">← Kembali ke Login</a>
+        <a href="{{ route('login') }}" class="back-btn">← Kembali ke Login</a>
     </div>
 </body>
 
