@@ -135,11 +135,11 @@ textarea.form-control-input{
 ========================== */
 
 .btn-primary{
-    background:var(--primary);
-    color:#FFFFFF;
+    background:#DBEAFE;
+    color:#2563EB;
     border:none;
-    padding:12px 24px;
     border-radius:999px;
+    padding:12px 28px;
     font-size:15px;
     font-weight:700;
     cursor:pointer;
@@ -147,7 +147,7 @@ textarea.form-control-input{
 }
 
 .btn-primary:hover{
-    background:var(--primary-dark);
+    background:#BFDBFE;
 }
 
 .btn-edit{
