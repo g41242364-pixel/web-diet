@@ -212,10 +212,10 @@
                     </div>
 
                     <div class="modal-row-custom">
-                        <div class="modal-label-custom">Gambar Baru</div>
+                        <div class="modal-label-custom">Link YouTube</div>
                         <div class="modal-input-wrapper-custom">
-                            <input type="file" name="gambar" accept="image/*" class="modal-input-custom"
-                                style="padding: 7px;">
+                            <input type="url" name="link_youtube" value="{{ $act->link_youtube }}" 
+                            placeholder="https://www.youtube.com/watch?v=..." class="modal-input-custom">
                         </div>
                     </div>
 
