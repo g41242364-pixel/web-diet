@@ -36,15 +36,25 @@
                     {{ str_pad($aktivitas->firstItem() + $i, 2, '0', STR_PAD_LEFT) }}
                 </div>
 
-                @if ($act->gambar)
-                    <img src="{{ asset('assets/images/aktivitas/' . $act->gambar) }}"
-                        class="activity-img"
-                        alt="{{ $act->nama }}">
+                @if ($act->link_youtube)
+                    @php
+                        preg_match('/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/', $act->link_youtube, $matches);
+                        $videoId = $matches[1] ?? null;
+                    @endphp
+                    @if ($videoId)
+                        <iframe
+                            src="https://www.youtube.com/embed/{{ $videoId }}"
+                            frameborder="0"
+                            allowfullscreen
+                            style="width:100%; height:180px; border-radius:10px;">
+                        </iframe>
+                    @endif
                 @else
                     <img src="https://img.freepik.com/free-vector/fast-walking-concept-illustration_114360-1567.jpg"
                         class="activity-img"
                         alt="{{ $act->nama }}">
                 @endif
+                
 
                 <h4>{{ $act->nama }}</h4>
 
