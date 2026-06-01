@@ -5,6 +5,20 @@
 @section('content')
     <link rel="stylesheet" href="{{ asset('assets/css/pengguna/detail_aktivitas.css') }}">
 
+      {{-- BUTTON KEMBALI --}}
+    <div class="back-nav">
+        <a href="{{ route('pengguna.aktivitasFisik') }}" class="btn-back">
+            <svg width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Kembali Ke Daftar
+        </a>
+    </div>
+
     <div class="page-header">
         <div class="header-content">
             <img src="{{ asset('assets/images/fisik.png') }}" alt="Fisik Icon"
