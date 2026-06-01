@@ -9,7 +9,7 @@
 
         <div class="header-section">
             <div class="logo-circle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5">
+                <svg viewBox="0 0 24 24" width="60" height="60" fill="none" stroke="black" stroke-width="2.5">
                     <circle cx="12" cy="12" r="10" />
                     <circle cx="12" cy="12" r="6" />
                     <circle cx="12" cy="12" r="2" />
