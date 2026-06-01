@@ -144,8 +144,8 @@
     background:var(--primary);
     color:#FFFFFF;
     border:none;
-    padding:14px 24px;
-    border-radius:14px;
+    padding:12px 24px;
+    border-radius:999px;
     font-size:15px;
     font-weight:700;
     cursor:pointer;

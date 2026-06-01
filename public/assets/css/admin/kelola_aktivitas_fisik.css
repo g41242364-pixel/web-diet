@@ -1,6 +1,6 @@
 :root{
-    --primary:#36A9E1;
-    --primary-dark:#2D97CB;
+    --primary:#2563EB;
+    --primary-dark:#1D4ED8;
     --bg:#F8FAFC;
     --white:#FFFFFF;
     --text:#0F172A;
@@ -135,11 +135,11 @@ textarea.form-control-input{
 ========================== */
 
 .btn-primary{
-    background:var(--primary);
-    color:#FFFFFF;
+    background:#DBEAFE;
+    color:#2563EB;
     border:none;
-    padding:14px 24px;
-    border-radius:14px;
+    border-radius:999px;
+    padding:12px 28px;
     font-size:15px;
     font-weight:700;
     cursor:pointer;
@@ -147,7 +147,7 @@ textarea.form-control-input{
 }
 
 .btn-primary:hover{
-    background:var(--primary-dark);
+    background:#BFDBFE;
 }
 
 .btn-edit{
