@@ -29,7 +29,7 @@ return new class extends Migration
             $table->string('durasi');
             $table->string('intensitas');
             $table->string('lokasi');
-            $table->string('gambar')->nullable();
+            $table->string('link_youtube')->nullable();
             $table->timestamps();
         });
 
